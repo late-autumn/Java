@@ -10,7 +10,6 @@ public static void main(String[] args)throws IOException {
 	
 	int menu = 0;
 	
-
 	
 	 do{
 		 System.out.println("메뉴를 입력해주세요");
