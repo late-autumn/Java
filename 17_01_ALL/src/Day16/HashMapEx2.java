@@ -6,31 +6,31 @@ public class HashMapEx2 {
 		
 		HashMap<String, Integer> map = new HashMap<>();
 		
-		map.put("í™ê¸¸ë™", new Integer(30));
-		map.put("ê°•ê°ì°¬", new Integer(50));
-		map.put("ì´ìˆœì‹ ", new Integer(47));
-		map.put("ê¹€ìœ ì‹ ", new Integer(97));
-		map.put("ì¥ë³´ê³ ", new Integer(84)); 
-		map.put("ì†ì˜¤ê³µ", new Integer(100));
+		map.put("È«±æµ¿", new Integer(30));
+		map.put("°­°¨Âù", new Integer(50));
+		map.put("ÀÌ¼ø½Å", new Integer(47));
+		map.put("±èÀ¯½Å", new Integer(97));
+		map.put("Àåº¸°í", new Integer(84)); 
+		map.put("¼Õ¿À°ø", new Integer(100));
 		
-		/*í‚¤ì™€ ê°’ì„ Setí˜•íƒœë¡œ ì €ì¥í•œë‹¤.
-		  (HashMapì„ ì´ìš©í•´ì„œ keyì™€ valueë¥¼ ë¬¶ì–´ ì£¼ê¸° ìœ„í•´ì„œ) ê°ì²´ë¥¼ ì´ìš©í•¨
-		   Map.Entry ì¸í„°í˜ì´ìŠ¤ ì´ìš©
-		   Map.entrySet ë©”ì†Œë“œëŠ” í´ë˜ìŠ¤ì— ì†í•˜ëŠ” ìš”ì†Œë¥¼ ê°€ì§€ëŠ” ë§µì˜ ì»¬ë ‰ì…˜  ë·°ë¥¼ ë°˜í™˜í•¨
-		   iterator ì¸í„°í˜ì´ìŠ¤ì˜ ë©”ì†Œë“œëŠ” iterator()ë¥¼ ì´ìš©í•¨
+		/*Å°¿Í °ªÀ» SetÇüÅÂ·Î ÀúÀåÇÑ´Ù.
+		  (HashMapÀ» ÀÌ¿ëÇØ¼­ key¿Í value¸¦ ¹­¾î ÁÖ±â À§ÇØ¼­) °´Ã¼¸¦ ÀÌ¿ëÇÔ
+		   Map.Entry ÀÎÅÍÆäÀÌ½º ÀÌ¿ë
+		   Map.entrySet ¸Ş¼Òµå´Â Å¬·¡½º¿¡ ¼ÓÇÏ´Â ¿ä¼Ò¸¦ °¡Áö´Â ¸ÊÀÇ ÄÃ·º¼Ç  ºä¸¦ ¹İÈ¯ÇÔ
+		   iterator ÀÎÅÍÆäÀÌ½ºÀÇ ¸Ş¼Òµå´Â iterator()¸¦ ÀÌ¿ëÇÔ
 		    
 		*/
 		Set<Map.Entry<String, Integer>> set1 = map.entrySet();
 		Iterator<Map.Entry<String, Integer>> it1 = set1.iterator();
 		while(it1.hasNext()){
 		Map.Entry<String, Integer> e= it1.next();
-		System.out.println("ì´ë¦„:"+e.getKey()+", ì ìˆ˜:"+e.getValue());
+		System.out.println("ÀÌ¸§:"+e.getKey()+", Á¡¼ö:"+e.getValue());
 		}
-		//í‚¤ë¥¼ set2ì— ì €ì¥í•´ë³´ì
-		Set set2 = map.keySet(); //í‚¤ë¥¼ setì— ì €ì¥í•¨
-		System.out.println("ì‹œí—˜ ì‘ì‹œì ëª…ë‹¨:"+set2);
+		//Å°¸¦ set2¿¡ ÀúÀåÇØº¸ÀÚ
+		Set set2 = map.keySet(); //Å°¸¦ set¿¡ ÀúÀåÇÔ
+		System.out.println("½ÃÇè ÀÀ½ÃÀÚ ¸í´Ü:"+set2);
 		
-		Collection<Integer> v= map.values(); // ê°’ë“¤ì„ ì»¬ë ‰ì…˜ì— ë„£ëŠ”ë‹¤ .
+		Collection<Integer> v= map.values(); // °ªµéÀ» ÄÃ·º¼Ç¿¡ ³Ö´Â´Ù .
 		
 		Iterator<Integer> it2 = v.iterator();
 		
@@ -40,10 +40,10 @@ public class HashMapEx2 {
 			Integer i = it2.next();
 			sum += i;
 		}
-		System.out.println("í•©ê³„ :"+sum);
-		System.out.println("í‰ê· :"+(float)sum/set2.size());
-		System.out.println("ìµœê³  ì ìˆ˜:"+Collections.max(v));
-		System.out.println("ìµœì € ì ìˆ˜:"+Collections.min(v));
+		System.out.println("ÇÕ°è :"+sum);
+		System.out.println("Æò±Õ:"+(float)sum/set2.size());
+		System.out.println("ÃÖ°í Á¡¼ö:"+Collections.max(v));
+		System.out.println("ÃÖÀú Á¡¼ö:"+Collections.min(v));
 	}
 	
 }

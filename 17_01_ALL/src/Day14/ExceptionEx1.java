@@ -15,7 +15,7 @@ public static void main(String[] args) {
 	for(int i=0;i<10;i++)
 	{
 		try{
-		sum+=num/(int)(Math.random()*5);
+		sum+=num/(int)(Math.random()*5); 
 
 		System.out.println(sum);
 		}catch(ArithmeticException e){ //을 처리해줘야한다.
