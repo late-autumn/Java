@@ -77,7 +77,7 @@ public class ScoreVO {
 	@Override
 	public String toString() {
 		return "ScoreVO [hak=" + hak + ", name=" + name + ", birth=" + birth + ", kor=" + kor + ", eng=" + eng
-				+ ", mat=" + mat + ", tot=" + tot + ", avg=" + (float)tot + "]";
+				+ ", mat=" + mat + ", tot=" + getTot() + ", avg=" + (float)getTot()/3 + "]";
 	}
 	
 	
