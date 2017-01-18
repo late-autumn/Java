@@ -18,7 +18,7 @@ public class Menu {
 			System.out.println("♥♥♥♥♥♥♥♥♥♥♥♥♥♥MENU♥♥♥♥♥♥♥♥♥♥♥♥");
 			System.out.println("==============================");
 
-			System.out.println("ㅣ      <메뉴>\t  <가격>\t  <가능>  ㅣ");
+			System.out.println("ㅣ      <메뉴>\t\t  <가격>  <가능>    ㅣ");
 			
 			for(int i=0; i<Attribute.coffee.length;i++){
 				

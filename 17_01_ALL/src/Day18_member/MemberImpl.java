@@ -4,6 +4,10 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.Iterator;
 import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -23,7 +27,7 @@ public class MemberImpl implements Member {
 		System.out.print("전화번호[000-0000-0000]:");
 		member_vo.setTel(br.readLine());
 		
-		Pattern pattern = Pattern.compile("\\d{3}\\-\\d{3}\\-\\d{4}"); //전화번호 형식 (패턴)지정 util 클래스
+		Pattern pattern = Pattern.compile("\\d{3}\\-\\d{4}\\-\\d{4}"); //전화번호 형식 (패턴)지정 util 클래스
 																	   // \\ + 문자 or 숫자 
 	
 		Matcher matcher = pattern.matcher(member_vo.getTel());		//전화 번호 형식으로 매칭시킴
@@ -83,7 +87,7 @@ public class MemberImpl implements Member {
 		System.out.println("새로운 전화번호 [000-000-0000]");
 		member_vo.setTel(br.readLine());
 		
-		Pattern pattern = Pattern.compile("\\d{3}\\-\\d{3}\\-\\d{4}"); //전화번호 형식 (패턴)지정 util 클래스
+		Pattern pattern = Pattern.compile("\\d{3}\\-\\d{4}\\-\\d{4}"); //전화번호 형식 (패턴)지정 util 클래스
 		   // \\ + 문자 or 숫자 
 		Matcher matcher = pattern.matcher(member_vo.getTel());		//전화 번호 형식으로 매칭시킴
 		
@@ -157,18 +161,103 @@ public class MemberImpl implements Member {
 	@Override
 	public void search_member() {
 		// TODO Auto-generated method stub
-
+		try{
+			BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+			String name;
+			
+			System.out.println("[회원검색]");
+			System.out.print("검색할 이름:");
+			name = br.readLine();
+			
+			Comparator<MemberVO> comparator = new Comparator<MemberVO>() { //익명 클래스 
+				
+				@Override
+				public int compare(MemberVO o1, MemberVO o2) {
+					// TODO Auto-generated method stub
+					return o1.getName().compareTo(o2.getName());
+				}
+			};
+			Collections.sort(lists,comparator);
+			
+			int n =0;
+		
+			Iterator<MemberVO> it =lists.iterator();
+			
+			while(it.hasNext()){
+				MemberVO ob = it.next();
+				if(ob.getName().startsWith(name)){
+					n++;
+				}
+				
+			}
+			
+			System.out.println("검색된 회원수 :"+n);
+			for(MemberVO ob : lists){
+				
+				if(ob.getName().startsWith(name)){
+					System.out.println(ob.toString());
+				}
+			}
+			
+		}catch(IOException ie){
+			ie.printStackTrace();
+		}
+		
+		
+		
 	}
 
 	@Override
 	public void list_member() {
 		// TODO Auto-generated method stub
-
+		try{
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		int n = lists.size();
+		System.out.println("[회원 리스트]");
+		System.out.println("전체회원수 : "+n);
+		
+		Comparator<MemberVO> comparator = new Comparator<MemberVO>() { //익명 클래스 
+			
+			@Override
+			public int compare(MemberVO o1, MemberVO o2) {
+				// TODO Auto-generated method stub
+				return o1.getName().compareTo(o2.getName());
+			}
+		};
+		Collections.sort(lists,comparator);
+		
+		Iterator<MemberVO> it =lists.iterator();
+		
+		int i =0;
+		while(it.hasNext()){
+			
+			MemberVO ob = it.next();
+			System.out.println(ob.toString());
+			i++;
+			if(n!=i && i!=0 && i%20 ==0){
+				System.out.print("엔터키를누르세요");
+				br.readLine();
+			}
+		}
+		}catch(IOException ie){
+			ie.printStackTrace();
+		}
+		
 	}
 
 	@Override
 	public MemberVO search_member(MemberVO rec) {
 		// TODO Auto-generated method stub
+		
+		Iterator<MemberVO> it = lists.iterator();
+		
+		while(it.hasNext()){
+			MemberVO ob = it.next();
+			
+			if(ob.equals(rec))
+				return ob;
+		}
+		
 		return null;
 	}
 
