@@ -11,8 +11,11 @@ public class BoxLayoutEx extends JFrame{
 		setSize(300,180);
 		
 		Container cp = getContentPane();
-		cp.setLayout(new BoxLayout(getContentPane(), BoxLayout.Y_AXIS));
-		
+		//cp.setLayout(new BoxLayout(getContentPane(), BoxLayout.Y_AXIS)); //Y축 수직으로 나열 X로 바꾸면 수평으로 나열
+		//cp.setLayout(new BoxLayout(getContentPane(), BoxLayout.LINE_AXIS));
+		cp.applyComponentOrientation(ComponentOrientation.RIGHT_TO_LEFT);	//오른쪽에서 왼쪽으로 정렬 
+		cp.setLayout(new BoxLayout(getContentPane(), BoxLayout.LINE_AXIS));
+	
 		bt1 = new JButton("버튼1");
 		bt2 = new JButton("Button2");
 		bt3 = new JButton("BoxLayout 3");
