@@ -26,7 +26,7 @@ public class PanmaiMain {
 			ch = sc.next().charAt(0);
 		
 			switch(ch)
-			{
+			{ 
 			case '1': p.insertProduct(); break;
 			case '2': p.insertQuantity(); break;
 			case '3': p.listProduct(); break;

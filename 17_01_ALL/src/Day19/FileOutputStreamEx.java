@@ -8,7 +8,7 @@ public static void main(String[] args) {
 	FileOutputStream fos = null;
 	
 	try{
-		fos = new FileOutputStream("c:\\비둘기\\조팝나무.txt");
+		fos = new FileOutputStream("c:\\비둘기\\조팝나무2.txt");
 		String message = "나는 세상에서 가장 쎈 나무야 ";
 		
 		fos.write(message.getBytes());

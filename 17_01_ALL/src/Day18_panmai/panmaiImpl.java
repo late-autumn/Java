@@ -23,7 +23,7 @@ public class panmaiImpl implements Panmai {
 		ProductVO pvo = new ProductVO();
 		System.out.println("상품등록");
 		System.out.print("코드 입력:");
-		code = sc.nextLine();
+		code = sc.nextLine(); 
 		
 		if(product.containsKey(code)){
 			System.out.println("이미 등록된 코드입니다.");
