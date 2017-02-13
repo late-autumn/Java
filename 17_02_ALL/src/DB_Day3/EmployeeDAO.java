@@ -250,7 +250,7 @@ public class EmployeeDAO {
 	      return list;
 	} //end method 
 	
-	
+	//속성 조회 
 	public ArrayList<String> getColumnName(){
 		
 		ArrayList<String> columnName = new ArrayList<>();
