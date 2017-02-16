@@ -8,9 +8,9 @@ public class Exam1 {
 		// TODO Auto-generated method stub
 
 		int Gender ;
-		System.out.println("¼ºº°À» ÀÔ·ÂÇÏ¼¼¿ä.(³²¼º:1,¿©¼º:2):");
+		System.out.println("ì„±ë³„ì„ ì…ë ¥í•˜ì„¸ìš”.(ë‚¨ì„±:1,ì—¬ì„±:2):");
 		Gender = System.in.read();
-		System.out.println((char)Gender=='1'?"´ç½ÅÀº ³²¼ºÀÔ´Ï´Ù":"´ç½ÅÀº ¿©¼ºÀÔ´Ï´Ù");
+		System.out.println((char)Gender=='1'?"ë‹¹ì‹ ì€ ë‚¨ì„±ì…ë‹ˆë‹¤":"ë‹¹ì‹ ì€ ì—¬ì„±ì…ë‹ˆë‹¤");
 		
 
 

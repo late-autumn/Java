@@ -1,22 +1,22 @@
 package Day08;
 
-public class Book extends Copy{  //Copy¸¦ »ó¼Ó¹Ş´Â´Ù.
+public class Book extends Copy{  //Copyë¥¼ ìƒì†ë°›ëŠ”ë‹¤.
 	
-	//¸â¹ö º¯¼ö ¼±¾ğ
+	//ë©¤ë²„ ë³€ìˆ˜ ì„ ì–¸
 	String name;
 	String writer;
 	int price;
 	int nowPage;
 	String isbn;
 	
-	//¸â¹ö ¸Ş¼Òµå
-	//»ı¼ºÀÚ ÇÔ¼ö
+	//ë©¤ë²„ ë©”ì†Œë“œ
+	//ìƒì„±ì í•¨ìˆ˜
 	public Book(){
 		
-	}//¿À¹ö ·Îµù 
+	}//ì˜¤ë²„ ë¡œë”© 
 	public Book(int a){
 		
-	}//¿À¹ö¶óÀÌµù
+	}//ì˜¤ë²„ë¼ì´ë”©
 	public void bbb() {
 		// TODO Auto-generated method stub
 		super.bbb();
@@ -25,12 +25,12 @@ public class Book extends Copy{  //Copy¸¦ »ó¼Ó¹Ş´Â´Ù.
 		nowPage++;
 	}
 	public void Print(){
-		System.out.println(name+"ÀÌ Ãâ·ÂµÈ´Ù.");
+		System.out.println(name+"ì´ ì¶œë ¥ëœë‹¤.");
 	}
 	
 }
 
-class Copy{ //»ó¼Ó ½ÃÄÑÁÙ Å¬·¡½º 
+class Copy{ //ìƒì† ì‹œì¼œì¤„ í´ë˜ìŠ¤ 
 	
 	public Copy(){
 		

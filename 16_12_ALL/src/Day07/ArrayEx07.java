@@ -3,7 +3,7 @@ package Day07;
 public class ArrayEx07 {
 public static void main(String[] args) {
 	/*
-	 *  ¤© ¸ð¾çÀ¸·Î Ãâ·ÂÇÏ±â 
+	 *  ã„¹ ëª¨ì–‘ìœ¼ë¡œ ì¶œë ¥í•˜ê¸° 
 	 *  1  2  3  4  5  
 	 *  10 9  8  7  6  
 	 *  11 12 13 14 15

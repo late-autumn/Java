@@ -9,16 +9,16 @@ public class PrintEx {
 		int a =100;
 		char b = 'A';
 		float c = 12.346f;
-		String d = "È«±æµ¿";
+		String d = "í™ê¸¸ë™";
 		
 		System.out.printf("%d \n",a);					//  %c, %d, %f, %s 
 		System.out.printf("%c \n",b);					//  char, int, float, String
 		System.out.printf("%f \n", c);					
 		System.out.printf("%s", d);
-		System.out.printf("%n");						// %n Àº ÇÑÄ­ ¶ç¿ì±â 
-		System.out.printf("b = %c %dÀÔ´Ï´Ù.", b,(int)b);
+		System.out.printf("%n");						// %n ì€ í•œì¹¸ ë„ìš°ê¸° 
+		System.out.printf("b = %c %dì…ë‹ˆë‹¤.", b,(int)b);
 		System.out.println();
-		System.out.printf("c = %6.3f", c);				// .µÚ¿¡ ¼ıÀÚ¿¡ µû¶ó ³ªÅ¸³ª´Â ¼Ò¼öÁ¡ Ãâ·ÂÀÌ ´Ş¶óÁø´Ù.
+		System.out.printf("c = %6.3f", c);				// .ë’¤ì— ìˆ«ìì— ë”°ë¼ ë‚˜íƒ€ë‚˜ëŠ” ì†Œìˆ˜ì  ì¶œë ¥ì´ ë‹¬ë¼ì§„ë‹¤.
 
 	}
 

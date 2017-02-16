@@ -1,5 +1,5 @@
 package Day02;
-// ¼ıÀÚ ÇÏ³ª ÀÌ»ó ÀÔ·Â¹Ş±â
+// ìˆ«ì í•˜ë‚˜ ì´ìƒ ì…ë ¥ë°›ê¸°
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -15,14 +15,14 @@ public class InputEx4 {
 		
 		int kor, eng, mat, sum =0;
 		
-		System.out.print("±¹¾îÁ¡¼ö");
+		System.out.print("êµ­ì–´ì ìˆ˜");
 		kor = Integer.parseInt(br.readLine());
-		System.out.print("¿µ¾îÁ¡¼ö");	
+		System.out.print("ì˜ì–´ì ìˆ˜");	
 		eng = Integer.parseInt(br.readLine());
-		System.out.print("¼öÇĞÁ¡¼ö");	
+		System.out.print("ìˆ˜í•™ì ìˆ˜");	
 		mat = Integer.parseInt(br.readLine());
 		sum = kor + eng + mat;
-		System.out.println("ÃÑÇÕ Á¡¼ö´Â :"+sum);
+		System.out.println("ì´í•© ì ìˆ˜ëŠ” :"+sum);
 		
 		
 	

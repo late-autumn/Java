@@ -1,7 +1,7 @@
 package Day08;
 
 public class MethodEx extends Method{
-	//¿À¹ö ¶óÀÌµù
+	//ì˜¤ë²„ ë¼ì´ë”©
 	@Override
 		public int sub(int i, int j) {
 			// TODO Auto-generated method stub
@@ -22,11 +22,11 @@ public static void main(String[] args) {
 	int result = m.sum(i, j);
 	int result2 = m.sub(i, j);
 	int result3 = m.sum(i, j, i);
-	System.out.println("µ¡¼À°á°ú:"+result);
-	System.out.println("»¬¼À°á°ú:"+result2);
-	System.out.println("µ¡¼À°á°ú:"+result3);
+	System.out.println("ë§ì…ˆê²°ê³¼:"+result);
+	System.out.println("ëº„ì…ˆê²°ê³¼:"+result2);
+	System.out.println("ë§ì…ˆê²°ê³¼:"+result3);
 
-	// ¿À¹ö¶óÀÌµù 
+	// ì˜¤ë²„ë¼ì´ë”© 
 	
 	Method M1 = new Method();
 	System.out.println(M1.sum(i, j, i));

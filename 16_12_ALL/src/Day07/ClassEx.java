@@ -21,7 +21,7 @@ public static void main(String[] args) {
 	
 	int t ;
 	ClassEx r = new ClassEx();
-	System.out.println("ÀÔ·ÂÇØ¶ó");
+	System.out.println("ì…ë ¥í•´ë¼");
 	 t  = r.add(2,8);
 System.out.println(r.add(2, 8));
 	

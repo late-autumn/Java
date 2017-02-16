@@ -30,17 +30,17 @@ public static void main(String[] args)throws IOException {
 	Test2 a2 = new Test2(8);
 	Test2 a3 = new Test2(14);
 	
-	System.out.print("Ã¹¹øÂ° Á¤¼ö :");
+	System.out.print("ì²«ë²ˆì§¸ ì •ìˆ˜ :");
 	Num1 = Integer.parseInt(br.readLine());
-	System.out.print("µÎ¹øÂ° Á¤¼ö :");
+	System.out.print("ë‘ë²ˆì§¸ ì •ìˆ˜ :");
 	Num2 = Integer.parseInt(br.readLine());
-	System.out.print("¼¼¹øÂ° Á¤¼ö :");
+	System.out.print("ì„¸ë²ˆì§¸ ì •ìˆ˜ :");
 	Num3 = Integer.parseInt(br.readLine());
 	
 
 //	Change(a1, a2);
 //	Change(a2,a3);
-//	System.out.println("¼ýÀÚÀÇ ¼ø¼­ :"+a1.value+","+a2.value+","+a3.value);
+//	System.out.println("ìˆ«ìžì˜ ìˆœì„œ :"+a1.value+","+a2.value+","+a3.value);
 
 /*	if(Num1>Num2){
 		temp = Num1;
@@ -59,7 +59,7 @@ public static void main(String[] args)throws IOException {
 			Num3 =temp;
 		}
 	*/
-	// XOR ¹æ½ÄÀ¸·Î º¯°æ
+	// XOR ë°©ì‹ìœ¼ë¡œ ë³€ê²½
 	if(Num1>Num2){
 	Num1 = Num1^Num2;
 	Num2 = Num2^Num1;
@@ -76,7 +76,7 @@ public static void main(String[] args)throws IOException {
 		Num2 = Num2^Num3;
 	}
 
-	System.out.println("Á¤·Ä°á°ú :"+Num1+","+Num2+","+Num3);
+	System.out.println("ì •ë ¬ê²°ê³¼ :"+Num1+","+Num2+","+Num3);
 
 	
 	 

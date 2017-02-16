@@ -8,26 +8,26 @@ public static void main(String[] args)throws IOException {
 	
 	BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 	
-	System.out.print("¾ËÆÄºªÀ» ÀÔ·ÂÇÏ½Ã¿À:");
+	System.out.print("ì•ŒíŒŒë²³ì„ ìž…ë ¥í•˜ì‹œì˜¤:");
 	String Input = br.readLine();
 	char Change = Input.charAt(0);
 	
 	if (Change >= 'a' && Change <= 'z') 
 	{
-		System.out.printf("Ãâ·Â°ªÀº =%c -> %c\n",Change,Change-32);
+		System.out.printf("ì¶œë ¥ê°’ì€ =%c -> %c\n",Change,Change-32);
 	}
 	else if(Change >= 'A' && Change <= 'Z')
 	{
-		System.out.printf("Ãâ·Â°ªÀº =%c -> %c \n",Change,Change+32);
+		System.out.printf("ì¶œë ¥ê°’ì€ =%c -> %c \n",Change,Change+32);
 	}
 	else
 	{
-		System.out.println("Àß¸øµÈ ¹®ÀÚÀÔ´Ï´Ù.");
+		System.out.println("ìž˜ëª»ëœ ë¬¸ìžìž…ë‹ˆë‹¤.");
 	}
 	
-	/* ==============================°­»ç´Ô ¹æ¹ý =======================
+	/* ==============================ê°•ì‚¬ë‹˜ ë°©ë²• =======================
 	 * int n =(char)br.read();
-	 * if(n>='A' && n<='Z')  È¤Àº if(n>=97 && n<=122)
+	 * if(n>='A' && n<='Z')  í˜¹ì€ if(n>=97 && n<=122)
 	 * {
 	 * 	n+=32;
 	 * ch = (char)n;

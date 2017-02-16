@@ -3,7 +3,7 @@ package Day07;
 public class Bouns {
 public static void main(String[] args) {
 
-		//run -> run_config->argument °¡¼­ ÀÔ·ÂÇÑµÚ Ãâ·Â ÇÏ¸é ³ª¿È °³ ½Å±â 
+		//run -> run_config->argument ê°€ì„œ ìž…ë ¥í•œë’¤ ì¶œë ¥ í•˜ë©´ ë‚˜ì˜´ ê°œ ì‹ ê¸° 
 	for(String s:args)
 		System.out.println(s);
 	

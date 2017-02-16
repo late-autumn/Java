@@ -8,9 +8,9 @@ public static void main(String[] args) {
 	Scanner sc = new Scanner(System.in);
 	int year, month,week,days,total=0;
 	do{
-	System.out.print("³âµµ¸¦ ÀÔ·ÂÇÏ¼¼¿ä:");
+	System.out.print("ë…„ë„ë¥¼ ì…ë ¥í•˜ì„¸ìš”:");
 	year = sc.nextInt();
-	System.out.print("¿ùÀ» ÀÔ·ÂÇÏ¼¼¿ä:");
+	System.out.print("ì›”ì„ ì…ë ¥í•˜ì„¸ìš”:");
 	month = sc.nextInt();
 	}while(month<1 ||month>12);
 	
@@ -46,8 +46,8 @@ public static void main(String[] args) {
 
 	week = total % 7;
 
-	System.out.printf("\n\t%d³â %d¿ù \n",year,month);
-	System.out.println("¿ù\t¿ù\tÈ­\t¼ö\t¸ñ\t±İ\tÅä");
+	System.out.printf("\n\t%dë…„ %dì›” \n",year,month);
+	System.out.println("ì›”\tì›”\tí™”\tìˆ˜\tëª©\tê¸ˆ\tí† ");
 	System.out.println("===================================");
 
 	for(int i=0;i<week;i++){

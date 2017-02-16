@@ -1,12 +1,12 @@
 package Day05;
 
-/* 1ºÎÅÍ 100±îÁöÀÇ ÇÕ°è
+/* 1ë¶€í„° 100ê¹Œì§€ì˜ í•©ê³„
  * 
 */
 public class WhileEx01 {
 public static void main(String[] args) {
 	
-	/*while¹®
+	/*whileë¬¸
 	 * int Start=1, Sum=0;
 	
 	while(Start<=100){
@@ -17,7 +17,7 @@ public static void main(String[] args) {
 	*/
 
 	/*
-	 * do~ while¹®
+	 * do~ whileë¬¸
 	int Start =1, Sum =0;
 	
 	do{

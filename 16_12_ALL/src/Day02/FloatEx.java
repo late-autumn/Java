@@ -4,12 +4,12 @@ public class FloatEx {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		float var1 = 3.4f;  					//float ÇüÀ» »ç¿ëÇÒ¶© ÀÚ·áÇüÀÇ ¸í½Ã¸¦ ÇØÁà¾ßÇÑ´Ù. Áï f¸¦ ºÙ¿©Áà¾ßÇÑ´Ù.
-		double var2 = 55.55f;					//ÀÖÀ»¶§¿Í ¾øÀ»¶§¿Í µÚ¿¡ ³ª¿À´Â ¼öÄ¡°¡ ´Ù¸£´Ù.
+		float var1 = 3.4f;  					//float í˜•ì„ ì‚¬ìš©í• ë• ìë£Œí˜•ì˜ ëª…ì‹œë¥¼ í•´ì¤˜ì•¼í•œë‹¤. ì¦‰ fë¥¼ ë¶™ì—¬ì¤˜ì•¼í•œë‹¤.
+		double var2 = 55.55f;					//ìˆì„ë•Œì™€ ì—†ì„ë•Œì™€ ë’¤ì— ë‚˜ì˜¤ëŠ” ìˆ˜ì¹˜ê°€ ë‹¤ë¥´ë‹¤.
 		
-		System.out.println("var1ÀÇ °ªÀº :"+var1);
-		System.out.println("var2ÀÇ °ªÀº :"+var2);
-		System.out.println("var1ÀÇ doubleÇü °ªÀº :"+(double)var1);
+		System.out.println("var1ì˜ ê°’ì€ :"+var1);
+		System.out.println("var2ì˜ ê°’ì€ :"+var2);
+		System.out.println("var1ì˜ doubleí˜• ê°’ì€ :"+(double)var1);
 
 	}
 

@@ -10,12 +10,12 @@ public static void main(String[] args) {
 	int StartNum=1;
 	
 	do{
-		//¸Ş´º ±¸¼º
-		System.out.println("1.Á¤¼öÀÇ ÇÕ");
-		System.out.println("2.Â¦¼öÀÇ ÇÕ");
-		System.out.println("3.È¦¼öÀÇ ÇÕ");
-		System.out.println("4.Á¾ ·á");
-		System.out.print("¼±ÅÃ==>");
+		//ë©”ë‰´ êµ¬ì„±
+		System.out.println("1.ì •ìˆ˜ì˜ í•©");
+		System.out.println("2.ì§ìˆ˜ì˜ í•©");
+		System.out.println("3.í™€ìˆ˜ì˜ í•©");
+		System.out.println("4.ì¢… ë£Œ");
+		System.out.print("ì„ íƒ==>");
 		menu = sc.nextInt();
 		System.out.println();
 		if(menu==4)System.exit(0);
@@ -23,17 +23,17 @@ public static void main(String[] args) {
 	while(menu<1||menu>4);
 
 	do{
-		System.out.println("¿øÇÏ´Â ¼ö ÀÔ·ÂÇÏ¼¼¿ä:");
+		System.out.println("ì›í•˜ëŠ” ìˆ˜ ì…ë ¥í•˜ì„¸ìš”:");
 		InputNum = sc.nextInt();
 	}while(InputNum<1||InputNum>1000);
 	
-	//¸Ş´º Ã³¸®ÇÏ´Â ºÎºĞ, Á¶°Ç¹® »ç¿ë 
+	//ë©”ë‰´ ì²˜ë¦¬í•˜ëŠ” ë¶€ë¶„, ì¡°ê±´ë¬¸ ì‚¬ìš© 
 		if(menu ==1){
 			for(int i=1;i<=InputNum;i++)
 			{
 				Result += i;
 			}
-			System.out.println("1¹ø ÇÕ°è Ãâ·Â:"+Result);
+			System.out.println("1ë²ˆ í•©ê³„ ì¶œë ¥:"+Result);
 		}
 		else if(menu ==2)
 		{
@@ -41,7 +41,7 @@ public static void main(String[] args) {
 			{
 				Result+=i;
 			}
-			System.out.println("2¹ø Â¦¼ö ÇÕ°è Ãâ·Â:"+Result);
+			System.out.println("2ë²ˆ ì§ìˆ˜ í•©ê³„ ì¶œë ¥:"+Result);
 		}
 			
 		else if(menu==3)
@@ -50,7 +50,7 @@ public static void main(String[] args) {
 			{
 				Result +=i;
 			}
-			System.out.println("3¹ø È¦¼ö ÇÕ°è Ãâ·Â:"+Result);
+			System.out.println("3ë²ˆ í™€ìˆ˜ í•©ê³„ ì¶œë ¥:"+Result);
 		}
 
 

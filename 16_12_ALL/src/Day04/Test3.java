@@ -10,7 +10,7 @@ public class Test3 {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
 		char Input;
-		System.out.print("¾ËÆÄºªÀ» ÀÔ·ÂÇÏ¼¼¿ä:");
+		System.out.print("ì•ŒíŒŒë²³ì„ ì…ë ¥í•˜ì„¸ìš”:");
 		Input = (char) br.read();
 
 
@@ -18,14 +18,14 @@ public class Test3 {
 			if (Input == 'a' || Input == 'e' || Input == 'o' || Input == 'i' || Input == 'u'||
 				Input == 'A' || Input == 'E' || Input == 'O' || Input == 'I' || Input == 'U')
 				{
-				System.out.printf("ÀÔ·ÂÇÏ½Å ¾ËÆÄºªÀº = %c ÀÔ´Ï´Ù\n", Input);
+				System.out.printf("ì…ë ¥í•˜ì‹  ì•ŒíŒŒë²³ì€ = %c ì…ë‹ˆë‹¤\n", Input);
 			}
 			else {
-				System.out.println("ÀÔ·ÂÇÏ½Å ¾ËÆÄºªÀº ¸ğÀ½ÀÌ ¾Æ´Õ´Ï´Ù.");
+				System.out.println("ì…ë ¥í•˜ì‹  ì•ŒíŒŒë²³ì€ ëª¨ìŒì´ ì•„ë‹™ë‹ˆë‹¤.");
 			}
 		}
 		else{
-			System.out.println("ÀÔ·ÂÇÏ½Å ¹®ÀÚ´Â Æ²·È½À´Ï´Ù.");
+			System.out.println("ì…ë ¥í•˜ì‹  ë¬¸ìëŠ” í‹€ë ¸ìŠµë‹ˆë‹¤.");
 		}
 
 	}

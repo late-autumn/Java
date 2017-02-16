@@ -10,18 +10,18 @@ public static void main(String[] args)throws IOException {
 	Scanner sc = new Scanner(System.in);
 	
 	String[] Name = new String[3];
-	String[] SubName = {"±¹¾î","¿µ¾î","¼öÇĞ","»çÈ¸","°úÇĞ","ÃÑÇÕ","µî¼ö","ÇĞÁ¡"};
+	String[] SubName = {"êµ­ì–´","ì˜ì–´","ìˆ˜í•™","ì‚¬íšŒ","ê³¼í•™","ì´í•©","ë“±ìˆ˜","í•™ì "};
 	int[][] sub = new int[Name.length][SubName.length];
 	char Grade ;
 	
 	for(int i=0;i<sub.length;i++)
 	{		
-		System.out.print("ÀÌ¸§À» ÀÔ·ÂÇÏ¼¼¿ä :");
+		System.out.print("ì´ë¦„ì„ ì…ë ¥í•˜ì„¸ìš” :");
 		Name[i] = sc.nextLine();
 		br.readLine();
 		for(int j=0;j<sub[i].length-3;j++)
 		{
-			System.out.print(SubName[j]+"¼ºÀûÀ»À» ÀÔ·ÂÇÏ¼¼¿ä :");
+			System.out.print(SubName[j]+"ì„±ì ì„ì„ ì…ë ¥í•˜ì„¸ìš” :");
 			sub[i][j] = sc.nextInt();
 			sub[i][sub[i].length-3]+=sub[i][j];
 		}
@@ -65,7 +65,7 @@ public static void main(String[] args)throws IOException {
 			Grade = 'F';
 			break;
 			default:
-				System.out.println("Àß¸øµÊ");
+				System.out.println("ì˜ëª»ë¨");
 		}
 	
 	

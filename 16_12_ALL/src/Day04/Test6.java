@@ -10,11 +10,11 @@ public static void main(String[] args)throws IOException {
 	
 
 	int Num1,Num2,result=0;
-	System.out.print("Ã¹¹øÂ° ¼ö :");
+	System.out.print("ì²«ë²ˆì§¸ ìˆ˜ :");
 	Num1 = Integer.parseInt(br.readLine());
-	System.out.print("µÎ¹øÂ° ¼ö :");
+	System.out.print("ë‘ë²ˆì§¸ ìˆ˜ :");
 	Num2 = Integer.parseInt(br.readLine());
-	System.out.print("¿¬»êÀ» ÀÔ·ÂÇÏ¼¼¿ä:");
+	System.out.print("ì—°ì‚°ì„ ì…ë ¥í•˜ì„¸ìš”:");
 	char Math = (char)br.read();
 	
 	switch(Math)
@@ -32,7 +32,7 @@ public static void main(String[] args)throws IOException {
 		result = Num1/Num2;
 		break;
 	default:
-		System.out.println("¾ø´Â ¿¬»êÀÔ´Ï´Ù.");
+		System.out.println("ì—†ëŠ” ì—°ì‚°ì…ë‹ˆë‹¤.");
 	}
 	System.out.printf("%d %c %d = %d \n",Num1,Math,Num2,result);
 	

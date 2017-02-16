@@ -14,13 +14,13 @@ public class Exam7 {
 		float a1, a2, total = 0;
 		char math , end;
 		
-		System.out.println("Ã¹¹øÂ° ¼ö =");
+		System.out.println("ì²«ë²ˆì§¸ ìˆ˜ =");
 		a1 = Integer.parseInt(br.readLine());
-		System.out.println("¿¬»êÀÚ(+,-,*,/,%)");
+		System.out.println("ì—°ì‚°ì(+,-,*,/,%)");
 		math = (char)System.in.read();
 		System.in.read();
 		System.in.read();
-		System.out.println("µÎ¹øÂ° ¼ö =");
+		System.out.println("ë‘ë²ˆì§¸ ìˆ˜ =");
 		a2 = Integer.parseInt(br.readLine());
 
 		switch(math)
@@ -42,8 +42,8 @@ public class Exam7 {
 			break;
 		}
 		System.out.println();
-		System.out.printf("°á°ú´Â %.2f \n", total);
-		System.out.println("°è¼Ó ÇÏ½Ã°Ú½À´Ï±î?(y/n)");
+		System.out.printf("ê²°ê³¼ëŠ” %.2f \n", total);
+		System.out.println("ê³„ì† í•˜ì‹œê² ìŠµë‹ˆê¹Œ?(y/n)");
 		end = (char)System.in.read();
 		System.in.read();
 		System.in.read();

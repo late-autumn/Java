@@ -7,11 +7,11 @@ public static void main(String[] args)throws IOException {
 	
 	BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
-	int human = Integer.parseInt(args[0]); //»ç¶÷ ¼ö
+	int human = Integer.parseInt(args[0]); //ì‚¬ëŒ ìˆ˜
 	String name[] = new String[human];
 	String[] subject = new String[args.length-1];
-	//°ú¸ñ¸í ÃÊ±âÈ­
-	//Á¡¼ö¿Í ÃÑÁ¡Ã³¸® ¹è¿­
+	//ê³¼ëª©ëª… ì´ˆê¸°í™”
+	//ì ìˆ˜ì™€ ì´ì ì²˜ë¦¬ ë°°ì—´
 	
 	int[][]jumsu = new int[human][args.length];
 	float[] avg = new float[human];
@@ -20,46 +20,46 @@ public static void main(String[] args)throws IOException {
 	
 	for(int i=0;i<args.length-1;i++)
 	{
-		subject[i] = args[i+1]; //°ú¸ñ¸í °¡Á®¿À±â		
+		subject[i] = args[i+1]; //ê³¼ëª©ëª… ê°€ì ¸ì˜¤ê¸°		
 	}
-	for(int i=0;i<human;i++)//»ç¶÷ ¼ö ¸¸Å­ ¹İº¹
+	for(int i=0;i<human;i++)//ì‚¬ëŒ ìˆ˜ ë§Œí¼ ë°˜ë³µ
 	{
-		System.out.print(i+1+"¹øÂ° ÇĞ»ı ÀÌ¸§:");
+		System.out.print(i+1+"ë²ˆì§¸ í•™ìƒ ì´ë¦„:");
 		name[i] = br.readLine();
-		System.out.print("ÀÀ½Ã°ú¸ñ¼ö:");
-		System.out.println(name[i]+"ÇĞ»ı Á¡¼ö ÀÔ·Â:");
+		System.out.print("ì‘ì‹œê³¼ëª©ìˆ˜:");
+		System.out.println(name[i]+"í•™ìƒ ì ìˆ˜ ì…ë ¥:");
 		for(int j=0; j<subject.length;j++)
-		{	//°ú¸ñ¼ö¸¸Å­ ÃÑÁ¡À» ±¸ÇÑ´Ù.
-			System.out.print(subject[j]+"Á¡¼ö:");
+		{	//ê³¼ëª©ìˆ˜ë§Œí¼ ì´ì ì„ êµ¬í•œë‹¤.
+			System.out.print(subject[j]+"ì ìˆ˜:");
 			jumsu[i][j] = Integer.parseInt(br.readLine());
 			
 			jumsu[i][subject.length]+=jumsu[i][j];
-			//ÃÑÁ¡ ±¸ÇÔ
+			//ì´ì  êµ¬í•¨
 		}
 	}
-	//Æò±Õ ±¸ÇÏ±â 
+	//í‰ê·  êµ¬í•˜ê¸° 
 	
-	//ÇĞÁ¡ ±¸ÇÏ±â
+	//í•™ì  êµ¬í•˜ê¸°
 	
-	//¼®Â÷ ±¸ÇÏ±â
+	//ì„ì°¨ êµ¬í•˜ê¸°
 	
-	//¼ºÀûÇ¥ Ãâ·Â
-	System.out.print("ÀÌ¸§\t");
+	//ì„±ì í‘œ ì¶œë ¥
+	System.out.print("ì´ë¦„\t");
 	for(int i=0;i<subject.length;i++)
 	{
 		System.out.print(subject[i]+"\t");	
 	}
-	System.out.println("ÃÑÁ¡ \t");
+	System.out.println("ì´ì  \t");
 	
 	for(int i=0; i<human;i++)
 	{
 		System.out.print(name[i]+"\t");
 		for(int j=0;j<subject.length+1;j++)
-		{	//°ú¸ñÁ¡¼ö¿Í ÃÑÁ¡ Ãâ·Â
+		{	//ê³¼ëª©ì ìˆ˜ì™€ ì´ì  ì¶œë ¥
 			System.out.print(jumsu[i][j]+"\t");
 		}
 		
-		System.out.print(avg[i]+"Æò±Õ \t");
+		System.out.print(avg[i]+"í‰ê·  \t");
 		System.out.println();
 	}
 	

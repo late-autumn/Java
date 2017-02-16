@@ -10,19 +10,19 @@ public static void main(String[] args)throws IOException {
 	
 	int input;
 	int i=2;
-	System.out.print("¼ıÀÚ¸¦ ÀÔ·ÂÇÏ¼¼¿ä:");
+	System.out.print("ìˆ«ìë¥¼ ì…ë ¥í•˜ì„¸ìš”:");
 	input = Integer.parseInt(br.readLine());
 	boolean flag = true;
 	while(i<input)
 	{
-		if(input % i==0) flag = false;  //¼Ò¼ö ¾Æ´Ô
+		if(input % i==0) flag = false;  //ì†Œìˆ˜ ì•„ë‹˜
 		i++;
 	}
 	if(flag && input!=1){
-			System.out.println(input+"Àº ¼Ò¼öÀÔ´Ï´Ù.");
+			System.out.println(input+"ì€ ì†Œìˆ˜ì…ë‹ˆë‹¤.");
 	}
 	else{
-			System.out.println("¼Ò¼ö°¡ ¾Æ´Õ´Ï´Ù.");
+			System.out.println("ì†Œìˆ˜ê°€ ì•„ë‹™ë‹ˆë‹¤.");
 	}
 
 		

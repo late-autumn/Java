@@ -10,7 +10,7 @@ public static void main(String[] args) {
 	{
 		res+=i;
 		if(i%10==0)
-			System.out.println("1ºÎÅÍ "+i+"±îÁöÇÕ°è"+res);
+			System.out.println("1ë¶€í„° "+i+"ê¹Œì§€í•©ê³„"+res);
 		i++;
 	}
 }

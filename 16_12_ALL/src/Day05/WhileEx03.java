@@ -12,20 +12,20 @@ public static void main(String[] args)throws IOException {
 	
 	
 	 do{
-		 System.out.println("¸Ş´º¸¦ ÀÔ·ÂÇØÁÖ¼¼¿ä");
-		 System.out.println("1.È¸¿ø°¡ÀÔ");
-		 System.out.println("2.È¸¿øÁ¶È¸");
-		 System.out.println("3.È¸¿øÅ»Åğ");
-		 System.out.println("0.Á¾ ·á");
+		 System.out.println("ë©”ë‰´ë¥¼ ì…ë ¥í•´ì£¼ì„¸ìš”");
+		 System.out.println("1.íšŒì›ê°€ì…");
+		 System.out.println("2.íšŒì›ì¡°íšŒ");
+		 System.out.println("3.íšŒì›íƒˆí‡´");
+		 System.out.println("0.ì¢… ë£Œ");
 			
 		 menu = Integer.parseInt(br.readLine());
-		 //°­»ç´Ô ½ºÅ¸ÀÏÀº ¹Ø¿¡
+		 //ê°•ì‚¬ë‹˜ ìŠ¤íƒ€ì¼ì€ ë°‘ì—
 		//menu = System.in.read()-48;
 		//System.in.read();
 		//System.in.read(); 
 	 }while(menu!=1 && menu!=2 && menu!=3 &&menu!=0);
 	 
-	 System.out.println("¼±ÅÃÇÑ ¸Ş´º´Â"+menu+"ÀÔ´Ï´Ù.");
+	 System.out.println("ì„ íƒí•œ ë©”ë‰´ëŠ”"+menu+"ì…ë‹ˆë‹¤.");
 	 
 }
 }

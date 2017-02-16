@@ -7,20 +7,20 @@ public class InputEx2 {
 	public static void main(String[] args)throws IOException {
 		// TODO Auto-generated method stub
 		
-		//¼ıÀÚ ÇÏ³ª ÀÔ·Â ¹ŞÀ»¶§
+		//ìˆ«ì í•˜ë‚˜ ì…ë ¥ ë°›ì„ë•Œ
 		
 		int num1;
 		int num2;
 		
-		System.out.print("Ã¹¹øÂ° ¼ıÀÚ:");
+		System.out.print("ì²«ë²ˆì§¸ ìˆ«ì:");
 		num1 = System.in.read()-48;
 		System.in.read();
 		System.in.read();
 		
-		System.out.print("µÎ¹øÂ° ¼ıÀÚ:");
+		System.out.print("ë‘ë²ˆì§¸ ìˆ«ì:");
 		num2 = System.in.read()-'0';
 		
-		System.out.println("µÎ ¼öÁß Å« ¼ö :"+(num1>num2?num1:num2)+"°¡ ´õ Å®´Ï´Ù");
+		System.out.println("ë‘ ìˆ˜ì¤‘ í° ìˆ˜ :"+(num1>num2?num1:num2)+"ê°€ ë” í½ë‹ˆë‹¤");
 		
 		
 	}

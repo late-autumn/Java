@@ -6,16 +6,16 @@ public static void main(String[] args) {
 
 	Scanner sc = new Scanner(System.in);
 	
-	//º¯¼ö ¼±¾ğ ¹× µÎ°³ÀÇ ½Ç¼ö ÃÊ±âÈ­
+	//ë³€ìˆ˜ ì„ ì–¸ ë° ë‘ê°œì˜ ì‹¤ìˆ˜ ì´ˆê¸°í™”
 	float Num, result;
 	Num = result = 0.0f;
-	//Ä«¿îÆ® º¯¼ö ¼±¾ğ°ú ÃÊ±âÈ­
+	//ì¹´ìš´íŠ¸ ë³€ìˆ˜ ì„ ì–¸ê³¼ ì´ˆê¸°í™”
 	int Count=0;
 	
 	for(; ;)
 	{
 		result+=Num;
-		System.out.println("Á¤¼ö¸¦ ÀÔ·ÂÇÏ¼¼¿ä:");
+		System.out.println("ì •ìˆ˜ë¥¼ ì…ë ¥í•˜ì„¸ìš”:");
 		Num = sc.nextFloat();
 		
 		if(Num<0){
@@ -23,7 +23,7 @@ public static void main(String[] args) {
 		result += Num;
 		}
 		Count++;
-		System.out.println("Æò±ÕÀº ="+(result));
+		System.out.println("í‰ê· ì€ ="+(result));
 	}
 
 	

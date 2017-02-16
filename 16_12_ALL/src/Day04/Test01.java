@@ -14,12 +14,12 @@ public class Test01 {
 		int Num1, Num2,Result;
 		char Math;
 
-		System.out.print("Ã¹¹øÂ° Á¤¼ö :");
+		System.out.print("ì²«ë²ˆì§¸ ì •ìˆ˜ :");
 		Num1 = sc.nextInt();
 		// Num1 = Integer.parseInt(br.readLine());
-		System.out.print("µÎ¹øÂ° Á¤¼ö :");
+		System.out.print("ë‘ë²ˆì§¸ ì •ìˆ˜ :");
 		Num2 = sc.nextInt();
-		System.out.print("¿¬»êÀÚ ÀÔ·Â:[+ - * /]");
+		System.out.print("ì—°ì‚°ì ì…ë ¥:[+ - * /]");
 		Math = (char) br.read();
 
 		if (Math == '+') {
@@ -39,7 +39,7 @@ public class Test01 {
 			//Result = Num1 / Num2;
 		} 
 		else {
-			System.out.println("Àß¸øµÈ ¿¬»êÀÔ´Ï´Ù.");
+			System.out.println("ì˜ëª»ëœ ì—°ì‚°ì…ë‹ˆë‹¤.");
 		}
 	}
 }

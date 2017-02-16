@@ -1,6 +1,6 @@
 package Day03;
 
-// ¹èÁ¤¿¬»êÀÚ, ´ëÀÔ¿¬»êÀÚ
+// ë°°ì •ì—°ì‚°ì, ëŒ€ì…ì—°ì‚°ì
 
 public class OperEx7 {
 
@@ -11,13 +11,13 @@ public class OperEx7 {
 		int result = 0;
 		
 		result += a;							//result = result + a 
-		System.out.println("+°æ¿ì:"+result);
+		System.out.println("+ê²½ìš°:"+result);
 		result *= a;							//result = result * a 
-		System.out.println("*°æ¿ì:"+result);
+		System.out.println("*ê²½ìš°:"+result);
 		result %= a;							//result = result % a
-		System.out.println("%°æ¿ì:"+result);
+		System.out.println("%ê²½ìš°:"+result);
 		result /= a;							//result = result / a
-		System.out.println("/°æ¿ì:"+result);
+		System.out.println("/ê²½ìš°:"+result);
 		
 		//=================================================================
 		

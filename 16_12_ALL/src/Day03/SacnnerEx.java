@@ -1,35 +1,35 @@
 package Day03;
 
-import java.util.Scanner;  //È¤½Ã ¾È½è´Ù ½ÍÀ»¶© ctrl + shift + o ¸¦ ´©¸£¸é ÀÚµ¿À¸·Î Àâ¾ÆÁØ´Ù.
+import java.util.Scanner;  //í˜¹ì‹œ ì•ˆì¼ë‹¤ ì‹¶ì„ë• ctrl + shift + o ë¥¼ ëˆ„ë¥´ë©´ ìë™ìœ¼ë¡œ ì¡ì•„ì¤€ë‹¤.
 
-//Scanner ÀÔ·Â
+//Scanner ì…ë ¥
 
 public class SacnnerEx {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
-		//ÀÌ¸§°ú ¼¼°ú¸ñÀÇ ¼ºÀûÀ» ÀÔ·Â¹Ş¾Æ ÇÕ°è¸¦ Ãâ·Â
+		//ì´ë¦„ê³¼ ì„¸ê³¼ëª©ì˜ ì„±ì ì„ ì…ë ¥ë°›ì•„ í•©ê³„ë¥¼ ì¶œë ¥
 		
 		Scanner sc = new Scanner(System.in);
 		
 		int Kor, Eng, Math, Sum =0;
 		String Name;
 		double Avg;
-		System.out.println("ÀÌ¸§À» ÀÔ·ÂÇÏ¼¼¿ä:");
-		Name = sc.nextLine();  							// sc.next()·Î »ç¿ëÇØµµ »ó°ü¾ø´Ù.
-		System.out.println("±¹¾î ¼ºÀûÀ» ÀÔ·ÂÇÏ¼¼¿ä:");
+		System.out.println("ì´ë¦„ì„ ì…ë ¥í•˜ì„¸ìš”:");
+		Name = sc.nextLine();  							// sc.next()ë¡œ ì‚¬ìš©í•´ë„ ìƒê´€ì—†ë‹¤.
+		System.out.println("êµ­ì–´ ì„±ì ì„ ì…ë ¥í•˜ì„¸ìš”:");
 		Kor = sc.nextInt();
-		System.out.println("¿µ¾î ¼ºÀûÀ» ÀÔ·ÂÇÏ¼¼¿ä:");
+		System.out.println("ì˜ì–´ ì„±ì ì„ ì…ë ¥í•˜ì„¸ìš”:");
 		Eng = sc.nextInt();
-		System.out.println("¼öÇĞ ¼ºÀûÀ» ÀÔ·ÂÇÏ¼¼¿ä:");
+		System.out.println("ìˆ˜í•™ ì„±ì ì„ ì…ë ¥í•˜ì„¸ìš”:");
 		Math = sc.nextInt();
 		
 		Sum = Kor+Eng+Math;
 		Avg = Sum /3;
 		
-		System.out.println("ÀÔ·ÂÇÏ½Å ÀÌ¸§Àº"+Name);
-		System.out.printf("¼ºÀûÀÇ ÃÑÇÕÀº = %d Á¡ÀÌ¸ç Æò±ÕÀº %fÀÔ´Ï´Ù.\n", Sum,Avg);
+		System.out.println("ì…ë ¥í•˜ì‹  ì´ë¦„ì€"+Name);
+		System.out.printf("ì„±ì ì˜ ì´í•©ì€ = %d ì ì´ë©° í‰ê· ì€ %fì…ë‹ˆë‹¤.\n", Sum,Avg);
 		
 		
 	}

@@ -9,11 +9,11 @@ public class ForEx02 {
 	int n1, n2;
 	
 	for(; ;){
-		System.out.print("µÎ°³ÀÇ Á¤¼ö¸¦ ÀÔ·Â ÇÏ¼¼¿ä:");
+		System.out.print("ë‘ê°œì˜ ì •ìˆ˜ë¥¼ ì…ë ¥ í•˜ì„¸ìš”:");
 		n1 = sc.nextInt();
 		n2 = sc.nextInt();
 		
-		System.out.println("µÎ¼öÀÇ ÇÕÀº"+(n1+n2));
+		System.out.println("ë‘ìˆ˜ì˜ í•©ì€"+(n1+n2));
 		if(n1 ==0 || n2 ==0)
 		break;
 	}

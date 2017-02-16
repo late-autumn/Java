@@ -10,7 +10,7 @@ public static void main(String[] args) {
 		result += (double)(a+1)/(a+2);
 		a++;
 	}
-	System.out.printf("ÃÑÇÕÀº = %10.2f\n",result);
+	System.out.printf("ì´í•©ì€ = %10.2f\n",result);
 	
 	
  }

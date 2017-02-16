@@ -16,7 +16,7 @@ public static void main(String[] args) {
 	*/	sum+= i%2!=0?(i*-1)*i:i*i;
 		i++;
 	}while(i<=100);
-	System.out.println("ÇÕ°è´Â="+sum);
+	System.out.println("í•©ê³„ëŠ”="+sum);
 	
 }
 }

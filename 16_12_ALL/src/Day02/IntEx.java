@@ -5,8 +5,8 @@ public class IntEx {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		int a = 100;
-		System.out.println("aÀÇ °ªÀº :"+a);
-		System.out.printf("float ÇüÀ¸·Î ¹Ù²Û aÀÇ °ªÀº %f", (float)a);
+		System.out.println("aì˜ ê°’ì€ :"+a);
+		System.out.printf("float í˜•ìœ¼ë¡œ ë°”ê¾¼ aì˜ ê°’ì€ %f", (float)a);
 	
 	}
 

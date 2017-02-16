@@ -8,26 +8,26 @@ public static void main(String[] args)throws IOException {
 	
 	BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 	
-	String[] name = new String[5];	//ÀÌ¸§
-	int[] sum = new int[5];			//ÃÑÁ¡
-	int[] avg= new int[5];			//Æò±Õ
-	char[]grade = new char[5];		//µî±Ş
+	String[] name = new String[5];	//ì´ë¦„
+	int[] sum = new int[5];			//ì´ì 
+	int[] avg= new int[5];			//í‰ê· 
+	char[]grade = new char[5];		//ë“±ê¸‰
 	int i, j , k , h ;
-	String sub[] = {"±¹¾î","¿µ¾î","¼öÇĞ","»çÈ¸","°úÇĞ"};
+	String sub[] = {"êµ­ì–´","ì˜ì–´","ìˆ˜í•™","ì‚¬íšŒ","ê³¼í•™"};
 	int [][] soc = new int[5][5];
-	int rank[] = new int[5];		//¼®Â÷
+	int rank[] = new int[5];		//ì„ì°¨
 	
 	for(i=0; i<name.length;i++)	{
-		System.out.print("ÀÌ¸§À» ÀÔ·ÂÇÏ¼¼¿ä:");
-		name[i] = br.readLine();  //ÀÌ¸§À» ÀÔ·Â¹Ş´Â´Ù.
+		System.out.print("ì´ë¦„ì„ ì…ë ¥í•˜ì„¸ìš”:");
+		name[i] = br.readLine();  //ì´ë¦„ì„ ì…ë ¥ë°›ëŠ”ë‹¤.
 		//System.out.println();
 		for(j=0;j<sub.length;j++)
 		{
-			System.out.print(sub[j]+"Á¡¼ö¸¦ ÀÔ·ÂÇÏ¼¼¿ä ");
+			System.out.print(sub[j]+"ì ìˆ˜ë¥¼ ì…ë ¥í•˜ì„¸ìš” ");
 			soc[i][j] = Integer.parseInt(br.readLine());
-			sum[i]+=soc[i][j];		//ÇÕ°è
+			sum[i]+=soc[i][j];		//í•©ê³„
 		}
-		// Æò±Õ ±¸ÇÏ±â
+		// í‰ê·  êµ¬í•˜ê¸°
 		avg[i]= sum[i]/5;
 		
 		if(avg[i]>=90)  grade[i] = 'A';
@@ -39,7 +39,7 @@ public static void main(String[] args)throws IOException {
 		
 		System.out.println();
 	}
-		//¼®Â÷ ±¸ÇÏ±â
+		//ì„ì°¨ êµ¬í•˜ê¸°
 		for(i=0;i<name.length;i++)
 		{
 			rank[i] =1;
@@ -51,8 +51,8 @@ public static void main(String[] args)throws IOException {
 				}
 			}
 		}
-									//Ãâ·Â¹®
-		System.out.println("ÀÌ¸§\t ±¹¾îÁ¡¼ö\t ¿µ¾îÁ¡¼ö\t ¼öÇĞÁ¡¼ö\t »çÈ¸Á¡¼ö\t °úÇĞÁ¡¼ö\tÃÑÁ¡\tÆò±Õ\tÇĞÁ¡\t¼®Â÷");
+									//ì¶œë ¥ë¬¸
+		System.out.println("ì´ë¦„\t êµ­ì–´ì ìˆ˜\t ì˜ì–´ì ìˆ˜\t ìˆ˜í•™ì ìˆ˜\t ì‚¬íšŒì ìˆ˜\t ê³¼í•™ì ìˆ˜\tì´ì \tí‰ê· \tí•™ì \tì„ì°¨");
 		for(i=0;i<name.length;i++)
 		{
 			System.out.print(name[i]);

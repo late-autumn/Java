@@ -13,9 +13,9 @@ public class Exam01 {
 
 		int num1, num2,result=0 ;
 		int min=0 ,max=0;
-		System.out.print("Ã¹¹øÂ° Á¤¼ö¸¦ ÀÔ·ÂÇØÁÖ¼¼¿ä:");
+		System.out.print("ì²«ë²ˆì§¸ ì •ìˆ˜ë¥¼ ì…ë ¥í•´ì£¼ì„¸ìš”:");
 		num1 = Integer.parseInt(br.readLine());
-		System.out.print("µÎ¹øÂ° Á¤¼ö¸¦ ÀÔ·ÂÇØÁÖ¼¼¿ä:");
+		System.out.print("ë‘ë²ˆì§¸ ì •ìˆ˜ë¥¼ ì…ë ¥í•´ì£¼ì„¸ìš”:");
 		num2 = Integer.parseInt(br.readLine());
 
 
@@ -31,7 +31,7 @@ public class Exam01 {
 		num1++;
 		}		
 		
-		System.out.println("ÀÛÀº¼öºÎÅÍÀÇ ¼ø¼­´Â °á°ú = :"+min+","+max+" ÇÕ°è´Â ="+result);
+		System.out.println("ì‘ì€ìˆ˜ë¶€í„°ì˜ ìˆœì„œëŠ” ê²°ê³¼ = :"+min+","+max+" í•©ê³„ëŠ” ="+result);
 		
 	}
 }

@@ -5,12 +5,12 @@ public static void main(String[] args) {
 	
 	String[] arr = {"AA","BB","CC","DD","EE","FF"};
 	
-	for(String s:arr)  //»õ·Î¿î for¹® ±â¹ý 
+	for(String s:arr)  //ìƒˆë¡œìš´ forë¬¸ ê¸°ë²• 
 	{
 		System.out.print(s+"\t");
 	}
 	System.out.println();
-	for(int i=0;i<arr.length;i++) //±âÁ¸ÀÇ for¹® ±â¹ý
+	for(int i=0;i<arr.length;i++) //ê¸°ì¡´ì˜ forë¬¸ ê¸°ë²•
 	{
 		System.out.print(arr[i]+"\t");
 	}

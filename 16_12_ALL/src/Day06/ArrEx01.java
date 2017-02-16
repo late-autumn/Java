@@ -9,38 +9,38 @@ public static void main(String[] args)throws IOException {
 	Scanner sc = new Scanner(System.in);
 	BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 	
-	/* ¿¢¼¿ ¼ºÀûÇ¥¸¦ °¡Áö°í  ÇÁ·Î±×·¥À» Â¥½Ã¿À.
-	 *  ±¹¾î ¿µ¾î ¼öÇĞ »çÈ¸ °úÇĞ ÃÑÁ¡ Æò±Õ ¼®Â÷¸¦ ±¸ÇÏ½Ã¿À 
+	/* ì—‘ì…€ ì„±ì í‘œë¥¼ ê°€ì§€ê³   í”„ë¡œê·¸ë¨ì„ ì§œì‹œì˜¤.
+	 *  êµ­ì–´ ì˜ì–´ ìˆ˜í•™ ì‚¬íšŒ ê³¼í•™ ì´ì  í‰ê·  ì„ì°¨ë¥¼ êµ¬í•˜ì‹œì˜¤ 
 	 */
 	
-	char ch[] = new char[4];		//¹è¿­ ¼±¾ğ ¹× ÃÊ±âÈ­
+	char ch[] = new char[4];		//ë°°ì—´ ì„ ì–¸ ë° ì´ˆê¸°í™”
 	
 	ch[0] = 'J';
 	ch[1] = 'A';
 	ch[2] = 'V';
 	ch[3] = 'A';
 	
-	//³»¿ëÀ» Ãâ·ÂÀº ¹«Á¶°Ç for¹®.
+	//ë‚´ìš©ì„ ì¶œë ¥ì€ ë¬´ì¡°ê±´ forë¬¸.
 	for(int i=0; i<ch.length;i++)
 	{
 		System.out.println(ch[i]);
 	}
-	for(char aa:ch)  // Á¤¼ö·Î ÇÏ·Á¸é int·Î º¯°æ¸¸ ÇØÁÖ¸é µÈ´Ù.
+	for(char aa:ch)  // ì •ìˆ˜ë¡œ í•˜ë ¤ë©´ intë¡œ ë³€ê²½ë§Œ í•´ì£¼ë©´ ëœë‹¤.
 	{
 		System.out.println("aa="+aa);
 	}
 	
 /*	
-	int [][] a ; //2Â÷¿ø ¹è¿­ ¼±¾ğ
+	int [][] a ; //2ì°¨ì› ë°°ì—´ ì„ ì–¸
 	int i =5, j = 5;
 	a= new int[i][j];
 */	
 	int [][] b;
 	b= new int[2][3];
 	b[0][0] = 100;
-	for(int i=0;i<b.length;i++)  //¹Ù±ùÂÊ
+	for(int i=0;i<b.length;i++)  //ë°”ê¹¥ìª½
 	{
-		for(int j=0;j<b.length;j++) //¾ÈÂÊ
+		for(int j=0;j<b.length;j++) //ì•ˆìª½
 			System.out.println(b[i][j]);
 		System.out.println();
 	}
@@ -54,18 +54,18 @@ public static void main(String[] args)throws IOException {
 	
 	
 	/*String[] Name = new String[3];
-	String[] SubName = {"±¹¾î","¿µ¾î","¼öÇĞ","»çÈ¸","°úÇĞ","ÃÑÇÕ","µî¼ö","ÇĞÁ¡"};
+	String[] SubName = {"êµ­ì–´","ì˜ì–´","ìˆ˜í•™","ì‚¬íšŒ","ê³¼í•™","ì´í•©","ë“±ìˆ˜","í•™ì "};
 	int[][] sub = new int[Name.length][SubName.length];
 	char Grade ;
 	
 	for(int i=0;i<sub.length;i++)
 	{		
-		System.out.print("ÀÌ¸§À» ÀÔ·ÂÇÏ¼¼¿ä :");
+		System.out.print("ì´ë¦„ì„ ì…ë ¥í•˜ì„¸ìš” :");
 		Name[i] = sc.nextLine();
 		br.readLine();
 		for(int j=0;j<sub[i].length-3;j++)
 		{
-			System.out.print(SubName[j]+"¼ºÀûÀ»À» ÀÔ·ÂÇÏ¼¼¿ä :");
+			System.out.print(SubName[j]+"ì„±ì ì„ì„ ì…ë ¥í•˜ì„¸ìš” :");
 			sub[i][j] = sc.nextInt();
 			sub[i][sub[i].length-3]+=sub[i][j];
 		}
@@ -109,7 +109,7 @@ public static void main(String[] args)throws IOException {
 			Grade = 'F';
 			break;
 			default:
-				System.out.println("Àß¸øµÊ");
+				System.out.println("ì˜ëª»ë¨");
 
 		
 	}*/

@@ -8,7 +8,7 @@ public static void main(String[] args) {
 	des[0] = "os";
 	des[1] = "network";
 	
-	System.arraycopy(src, 0, des, 2, 4);  //¿øº», À§Ä¡, º¹»çÇÒ ´ë»ó, º¹»çÇÒ ÀÎµ¦½º, ÃÑ°ª
+	System.arraycopy(src, 0, des, 2, 4);  //ì›ë³¸, ìœ„ì¹˜, ë³µì‚¬í•  ëŒ€ìƒ, ë³µì‚¬í•  ì¸ë±ìŠ¤, ì´ê°’
 	for(String te : des)
 	System.out.println(te);
 	

@@ -2,23 +2,23 @@ package Day02;
 
 import java.io.IOException;
 
-//ASCII ÄÚµå ÀÔ·Â¹Ş±â
+//ASCII ì½”ë“œ ì…ë ¥ë°›ê¸°
 
 public class INputEx {
 
 	public static void main(String[] args)throws IOException{
 		// TODO Auto-generated method stub
 
-/*		System.out.print("¹®ÀÚ ÀÔ·Â :");
+/*		System.out.print("ë¬¸ì ì…ë ¥ :");
 		int i = System.in.read();
 		
-		System.out.println("¾Æ½ºÅ° ÄÚµå °ª ÀÔ·Â :"+i);
+		System.out.println("ì•„ìŠ¤í‚¤ ì½”ë“œ ê°’ ì…ë ¥ :"+i);
 		System.out.println((char)i);
 */		
 		
-		System.out.print("¹®ÀÚ ÀÔ·Â:");
+		System.out.print("ë¬¸ì ì…ë ¥:");
 		char ch = (char)System.in.read();
-		System.out.println("ÀÔ·Â¹ŞÀº ¹®ÀÚ: "+ch);
+		System.out.println("ì…ë ¥ë°›ì€ ë¬¸ì: "+ch);
 		
 		
 	}

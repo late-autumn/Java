@@ -9,42 +9,42 @@ public class Exam5 {
 	public static void main(String[] args)throws IOException {
 		// TODO Auto-generated method stub
 		BufferedReader br = new BufferedReader (new InputStreamReader (System.in));
-		System.out.println("ÁÖ¹Î¹øÈ£ 8¹øÂ° ÀÚ¸®¸¦ ÀÔ·ÂÇÏ¼¼¿ä:");
+		System.out.println("ì£¼ë¯¼ë²ˆí˜¸ 8ë²ˆì§¸ ìë¦¬ë¥¼ ì…ë ¥í•˜ì„¸ìš”:");
 		int a = Integer.parseInt(br.readLine());
 		switch(a)
 		{
 		case 0:
-			System.out.println("´ç½ÅÀº ¼­¿ï ÁÖ¹ÎÀÌ±º¿ä");
+			System.out.println("ë‹¹ì‹ ì€ ì„œìš¸ ì£¼ë¯¼ì´êµ°ìš”");
 			break;
 		case 1:
-			System.out.println("´ç½ÅÀº °æ±â,ÀÎÃµ ÁÖ¹ÎÀÌ±º¿ä ");
+			System.out.println("ë‹¹ì‹ ì€ ê²½ê¸°,ì¸ì²œ ì£¼ë¯¼ì´êµ°ìš” ");
 			break;
 		case 2:
-			System.out.println("´ç½ÅÀº °­¿øµµ ÁÖ¹ÎÀÌ±º¿ä");
+			System.out.println("ë‹¹ì‹ ì€ ê°•ì›ë„ ì£¼ë¯¼ì´êµ°ìš”");
 			break;
 		case 3:
-			System.out.println("´ç½ÅÀº ÃæÃ»ºÏµµ ÁÖ¹ÎÀÌ±º¿ä");
+			System.out.println("ë‹¹ì‹ ì€ ì¶©ì²­ë¶ë„ ì£¼ë¯¼ì´êµ°ìš”");
 			break;
 		case 4:
-			System.out.println("´ç½ÅÀº ÃæÃ»³²µµ ÁÖ¹ÎÀÌ±º¿ä");
+			System.out.println("ë‹¹ì‹ ì€ ì¶©ì²­ë‚¨ë„ ì£¼ë¯¼ì´êµ°ìš”");
 			break;
 		case 5:
-			System.out.println("´ç½ÅÀº Àü¶óºÏµµ ÁÖ¹ÎÀÌ±º¿ä");
+			System.out.println("ë‹¹ì‹ ì€ ì „ë¼ë¶ë„ ì£¼ë¯¼ì´êµ°ìš”");
 			break;
 		case 6:
-			System.out.println("´ç½ÅÀº Àü¶ó³²µµ ÁÖ¹ÎÀÌ±º¿ä");
+			System.out.println("ë‹¹ì‹ ì€ ì „ë¼ë‚¨ë„ ì£¼ë¯¼ì´êµ°ìš”");
 			break;
 		case 7:
-			System.out.println("´ç½ÅÀº °æ»óºÏµµ ÁÖ¹ÎÀÌ±º¿ä");
+			System.out.println("ë‹¹ì‹ ì€ ê²½ìƒë¶ë„ ì£¼ë¯¼ì´êµ°ìš”");
 			break;
 		case 8:
-			System.out.println("´ç½ÅÀº °æ»ó³²µµµµ ÁÖ¹ÎÀÌ±º¿ä");
+			System.out.println("ë‹¹ì‹ ì€ ê²½ìƒë‚¨ë„ë„ ì£¼ë¯¼ì´êµ°ìš”");
 			break;
 		case 9:
-			System.out.println("´ç½ÅÀº Á¦ÁÖµµ ÁÖ¹ÎÀÌ±º¿ä");
+			System.out.println("ë‹¹ì‹ ì€ ì œì£¼ë„ ì£¼ë¯¼ì´êµ°ìš”");
 			break;
 			default:
-				System.out.println("1~9¸¦ ¹ş¾î³­ ¼ö¸¦ ÀÔ·ÂÇÏ¿´½À´Ï´Ù.");
+				System.out.println("1~9ë¥¼ ë²—ì–´ë‚œ ìˆ˜ë¥¼ ì…ë ¥í•˜ì˜€ìŠµë‹ˆë‹¤.");
 		}
 	}
 

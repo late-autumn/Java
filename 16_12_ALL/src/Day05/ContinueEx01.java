@@ -5,7 +5,7 @@ public static void main(String[] args) {
 	
 	for(int i=0;i<=20;i++)
 	{
-		if(i%2==0)continue; //È¦¼ö ÀÏ¶§¸¸ Ãâ·Â , Â¦¼öÀÏ¶© °è¼Ó ÁøÇà ½ÃÅ²´Ù.
+		if(i%2==0)continue; //í™€ìˆ˜ ì¼ë•Œë§Œ ì¶œë ¥ , ì§ìˆ˜ì¼ë• ê³„ì† ì§„í–‰ ì‹œí‚¨ë‹¤.
 		
 		System.out.print(i+" ");
 	}

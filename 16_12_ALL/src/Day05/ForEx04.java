@@ -8,7 +8,7 @@ public static void main(String[] args) {
 	
 	int num ;
 	
-	System.out.println("¼ıÀÚ¸¦ ÀÔ·ÂÇÏ¼¼¿ä:");
+	System.out.println("ìˆ«ìë¥¼ ì…ë ¥í•˜ì„¸ìš”:");
 	num = sc.nextInt();
 	for(int i=1;i<=num;i++){
 		System.out.print((i*3)+" ");

@@ -7,9 +7,9 @@ public class ShortEx
 		// TODO Auto-generated method stub
 
 		short s = 100;
-		System.out.println("sÀÇ °ªÀº : "+s);
+		System.out.println("sì˜ ê°’ì€ : "+s);
 		s += 100;
-		System.out.printf("sÀÇ °ªÀº : %d",s);	
+		System.out.printf("sì˜ ê°’ì€ : %d",s);	
 		System.out.println();
 	
 	}

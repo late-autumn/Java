@@ -1,18 +1,18 @@
 package Day04;
-//±¸±¸´Ü Á¾·ùº°·Î 
+//êµ¬êµ¬ë‹¨ ì¢…ë¥˜ë³„ë¡œ 
 import java.io.IOException;
 public class kukudan {
 public static void main(String[] args)throws IOException {
 	
-	/* ±âº» ±¸±¸´Ü
-	System.out.print("´Ü¼ö¸¦ ÀÔ·ÂÇÏ½Ã¿À:");
+	/* ê¸°ë³¸ êµ¬êµ¬ë‹¨
+	System.out.print("ë‹¨ìˆ˜ë¥¼ ìž…ë ¥í•˜ì‹œì˜¤:");
 	int dan = System.in.read()-48;
 	for(int i=1; i<=9;i++)
 	{
 		System.out.printf("%d * %d = %d \n",dan,i,dan*i);
 	}
 */	  
-	//°¡·Î·Î ³ª¿À°Ô ÇÏ´Â ±¸±¸´Ü
+	//ê°€ë¡œë¡œ ë‚˜ì˜¤ê²Œ í•˜ëŠ” êµ¬êµ¬ë‹¨
 /*	for(int i=2;i<=9;i++)
 	{
 		for(int j=1;j<=9;j++)
@@ -22,7 +22,7 @@ public static void main(String[] args)throws IOException {
 		System.out.println();
 	}*/
 	
-	//¼¼·Î·Î ³ª¿À°Ô ÇÏ´Â ±¸±¸´Ü 
+	//ì„¸ë¡œë¡œ ë‚˜ì˜¤ê²Œ í•˜ëŠ” êµ¬êµ¬ë‹¨ 
 	for(int i=1;i<=9;i++)
 	{
 		for(int j=2;j<=9;j++)
@@ -33,7 +33,7 @@ public static void main(String[] args)throws IOException {
 	}
 	
 	
-	/* »ïÁß for¹® ±¸±¸´Ü
+	/* ì‚¼ì¤‘ forë¬¸ êµ¬êµ¬ë‹¨
 	 * for(int i=2; i<9;i+=4)
 	{
 		for(int j=1;j<=9;j++)

@@ -5,9 +5,9 @@ public class ArrayEx06 {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		/*/
-		 * ¹®Á¦ 5]
+		 * ë¬¸ì œ 5]
 
-		2Â÷¿ø ¹è¿­À» ÀÌ¿ëÇÏ¿© ´ÙÀ½°ú °°ÀÌ °á°ú¸¦ Ãâ·ÂÇÏ½Ã¿À 
+		2ì°¨ì› ë°°ì—´ì„ ì´ìš©í•˜ì—¬ ë‹¤ìŒê³¼ ê°™ì´ ê²°ê³¼ë¥¼ ì¶œë ¥í•˜ì‹œì˜¤ 
 
 	      1 2 3 4 5
 	      2 3 4 5 6

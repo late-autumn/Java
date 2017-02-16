@@ -2,15 +2,15 @@ package Day08;
 
 class Salary{
 
-	private int pay;  //ÀÌ»óÅÂ¿¡¼­ source-> generate getter, setter ´©¸£¸é ÀÌ·¸°Ô »ı¼ºµÈ´Ù.
+	private int pay;  //ì´ìƒíƒœì—ì„œ source-> generate getter, setter ëˆ„ë¥´ë©´ ì´ë ‡ê²Œ ìƒì„±ëœë‹¤.
 
 	public int getPay() {
 		return pay;
 	}
 
 	public void setPay(int pay, String pass) {
-		if(pass.equals("1234"))  //¿©±â¼­ ; ºÙÀÌ°Ô µÇ¸é ÀÌ¹Ì equals ÇÔ¼ö°¡ ½ÇÇàÇÏ°í ³¡³ª¹ö¸²À¸·Î ¿Ã¹Ù¸¥ ºñ±³°¡ ¾ÈµÈ´Ù.
-		this.pay = pay;  //ÇöÀç Å¬·¡½º¿¡ ¼ÓÇÑ ÀÚ±â ÀÚ½ÅÀÇ º¯¼ö 
+		if(pass.equals("1234"))  //ì—¬ê¸°ì„œ ; ë¶™ì´ê²Œ ë˜ë©´ ì´ë¯¸ equals í•¨ìˆ˜ê°€ ì‹¤í–‰í•˜ê³  ëë‚˜ë²„ë¦¼ìœ¼ë¡œ ì˜¬ë°”ë¥¸ ë¹„êµê°€ ì•ˆëœë‹¤.
+		this.pay = pay;  //í˜„ì¬ í´ë˜ìŠ¤ì— ì†í•œ ìê¸° ìì‹ ì˜ ë³€ìˆ˜ 
 		
 	}
 }

@@ -5,9 +5,9 @@ import java.io.IOException;
 public class Exam2 {
 	public static void main(String[] args)throws IOException {
 		
-		System.out.println("»ê¼ú ¿¬»êÀÚ¸¦ ÀÔ·ÂÇÏ¼¼¿ä('+','-','*','/','%'):");
+		System.out.println("ì‚°ìˆ  ì—°ì‚°ìë¥¼ ì…ë ¥í•˜ì„¸ìš”('+','-','*','/','%'):");
 		char Input = (char)System.in.read();
 		System.out.println(Input =='+' || Input == '-' || Input == '*' || Input == '/' || Input =='%' ?
-				"'"+Input+"'´Â »ê¼ú ¿¬»êÀÚÀÔ´Ï´Ù." : "'" +Input+"'´Â »ê¼ú ¿¬»êÀÚ°¡ ¾Æ´Õ´Ï´Ù");
+				"'"+Input+"'ëŠ” ì‚°ìˆ  ì—°ì‚°ìì…ë‹ˆë‹¤." : "'" +Input+"'ëŠ” ì‚°ìˆ  ì—°ì‚°ìê°€ ì•„ë‹™ë‹ˆë‹¤");
 	}
 }

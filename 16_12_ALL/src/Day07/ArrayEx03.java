@@ -7,8 +7,8 @@ public static void main(String[] args) {
 	
 	int input ;
 	do{
-		System.out.print("¸Ş´º¸¦ ÀÔ·ÂÇØÁÖ¼¼¿ä:");
-		System.out.print("Äİ¶ó-1, »çÀÌ´Ù-2, ¸¶¿îÆ¾µà-3, ÃÊÄÚ¼ÛÀÌ-4, ¿¡ÀÌ½º-5, ¿şÇÏ½º-6(0 Á¾·á)");
+		System.out.print("ë©”ë‰´ë¥¼ ì…ë ¥í•´ì£¼ì„¸ìš”:");
+		System.out.print("ì½œë¼-1, ì‚¬ì´ë‹¤-2, ë§ˆìš´í‹´ë“€-3, ì´ˆì½”ì†¡ì´-4, ì—ì´ìŠ¤-5, ì›¨í•˜ìŠ¤-6(0 ì¢…ë£Œ)");
 		input = sc.nextInt();
 		
 		switch(input)
@@ -17,25 +17,25 @@ public static void main(String[] args) {
 			System.exit(0);
 			break;
 		case 1:
-			System.out.print("Äİ¶ó");
+			System.out.print("ì½œë¼");
 			break;
 		case 2:
-			System.out.print("»çÀÌ´Ù");
+			System.out.print("ì‚¬ì´ë‹¤");
 			break;
 		case 3:
-			System.out.print("¸¶¿îÆ¾µà");
+			System.out.print("ë§ˆìš´í‹´ë“€");
 			break;
 		case 4:
-			System.out.print("ÃÊÄÚ¼ÛÀÌ");
+			System.out.print("ì´ˆì½”ì†¡ì´");
 			break;
 		case 5:
-			System.out.print("¿¡ÀÌ½º");
+			System.out.print("ì—ì´ìŠ¤");
 			break;
 		case 6:
-			System.out.print("¿şÇÏ½º");
+			System.out.print("ì›¨í•˜ìŠ¤");
 			break;
 			default:
-				System.out.print("¼±ÅÃÇÏ½Å »óÇ°ÀÌ ¾ø½À´Ï´Ù.");
+				System.out.print("ì„ íƒí•˜ì‹  ìƒí’ˆì´ ì—†ìŠµë‹ˆë‹¤.");
 		}
 		System.out.println();
 		

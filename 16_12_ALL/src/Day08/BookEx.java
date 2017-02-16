@@ -12,9 +12,9 @@ public class BookEx {
 		Book myBook;
 		myBook = new Book();
 		
-		b.name = "È«±æµ¿";
-		b2.name = "°­°¨Âù";
-		myBook.name = "¿À¿À";
+		b.name = "í™ê¸¸ë™";
+		b2.name = "ê°•ê°ì°¬";
+		myBook.name = "ì˜¤ì˜¤";
 		myBook.Print();
 		b.Print();
 		b2.Print();

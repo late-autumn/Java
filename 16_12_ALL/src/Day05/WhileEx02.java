@@ -1,6 +1,6 @@
 package Day05;
 
-//´Ş·Â ¸ğ¾çÀ¸·Î ¼ıÀÚ Ãâ·ÂÇÏ±â
+//ë‹¬ë ¥ ëª¨ì–‘ìœ¼ë¡œ ìˆ«ì ì¶œë ¥í•˜ê¸°
 
 public class WhileEx02 {
 public static void main(String[] args) {

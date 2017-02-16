@@ -2,7 +2,7 @@ package Day03;
 
 import java.io.IOException;
 import java.util.Scanner;
-// ´Ü¼ø if¹®
+// ë‹¨ìˆœ ifë¬¸
 
 public class IFEx01 {
 
@@ -12,80 +12,80 @@ public class IFEx01 {
 		int a = 30;
 
 		if (a > 100) {
-			System.out.println("aÀÇ °ªÀº 100º¸´Ù Å©´Ù.");
+			System.out.println("aì˜ ê°’ì€ 100ë³´ë‹¤ í¬ë‹¤.");
 		} else {
-			System.out.println("aÀÇ °ªÀº 100º¸´Ù ÀÛ´Ù.");
+			System.out.println("aì˜ ê°’ì€ 100ë³´ë‹¤ ì‘ë‹¤.");
 		}
 
-		// ¹®Á¦ 1 ) int a =51 ÀÏ¶§ Â¦¼öÀÎÁö È¦¼ö ÀÎÁö¸¦ ÆÇº°ÇÏ½Ã¿À
+		// ë¬¸ì œ 1 ) int a =51 ì¼ë•Œ ì§ìˆ˜ì¸ì§€ í™€ìˆ˜ ì¸ì§€ë¥¼ íŒë³„í•˜ì‹œì˜¤
 
 		int b = 51;
 
 		if (b % 2 == 0) {
-			System.out.println("Â¦¼öÀÔ´Ï´Ù");
+			System.out.println("ì§ìˆ˜ì…ë‹ˆë‹¤");
 		} else {
-			System.out.println("È¦¼öÀÔ´Ï´Ù");
+			System.out.println("í™€ìˆ˜ì…ë‹ˆë‹¤");
 		}
 
-		// ¹®Á¦ 2 ) »ç¿ëÀÚ·ÎºÎÅÍ ÀÓÀÇÀÇ Á¤¼ö¸¦ ÀÔ·Â ¹Ş¾Æ ÀÔ·Â ¹ŞÀº Á¤¼ö°¡ ¾ç¼öÀÎÁö, À½¼öÀÎÁö,0ÀÎÁö¸¦ ÆÇº°ÇÏ½Ã¿À ´Ü »ïÇ×¿¬»êÀÚ »ç¿ë
+		// ë¬¸ì œ 2 ) ì‚¬ìš©ìë¡œë¶€í„° ì„ì˜ì˜ ì •ìˆ˜ë¥¼ ì…ë ¥ ë°›ì•„ ì…ë ¥ ë°›ì€ ì •ìˆ˜ê°€ ì–‘ìˆ˜ì¸ì§€, ìŒìˆ˜ì¸ì§€,0ì¸ì§€ë¥¼ íŒë³„í•˜ì‹œì˜¤ ë‹¨ ì‚¼í•­ì—°ì‚°ì ì‚¬ìš©
 
 		int number;
 		Scanner sr = new Scanner(System.in);
-		System.out.println("ÀÓÀÇÀÇ ¼ö¸¦ ÀÔ·ÂÇÏ¼¼¿ä:");
+		System.out.println("ì„ì˜ì˜ ìˆ˜ë¥¼ ì…ë ¥í•˜ì„¸ìš”:");
 		number = sr.nextInt();
 		String s;
-		s = number <0 ? "À½¼ö": (number==0 ? "0":"¾ç¼ö");
+		s = number <0 ? "ìŒìˆ˜": (number==0 ? "0":"ì–‘ìˆ˜");
 		System.out.println(number+"==>"+s);
 
 
 		
-		//4ÀÇ ¹è¼ö ¸é¼­ 100ÀÇ ¹è¼ö°¡ ¾Æ´Ï¸é¼­ 400ÀÇ ¹è¼öÀÎ À±´ŞÀ» ±¸ÇÏ±â 
+		//4ì˜ ë°°ìˆ˜ ë©´ì„œ 100ì˜ ë°°ìˆ˜ê°€ ì•„ë‹ˆë©´ì„œ 400ì˜ ë°°ìˆ˜ì¸ ìœ¤ë‹¬ì„ êµ¬í•˜ê¸° 
 		int year;
 		String s;
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		Scanner sr = new Scanner(System.in);
-		System.out.println("³âµµ¸¦ ÀÔ·ÂÇÏ¼¼¿ä:");
+		System.out.println("ë…„ë„ë¥¼ ì…ë ¥í•˜ì„¸ìš”:");
 		year = sr.nextInt();
-		s =((year%4 ==0)&&(year%100!=0)||(year%400==0))?"À±³â":"Æò³â";
+		s =((year%4 ==0)&&(year%100!=0)||(year%400==0))?"ìœ¤ë…„":"í‰ë…„";
 		System.out.println(year+"==>"+s);
 	
 		if((year%4==0)&&(year%100!=0)||(year%400==0))
 		{
-			System.out.println("À±³âÀÔ´Ï´Ù");
+			System.out.println("ìœ¤ë…„ì…ë‹ˆë‹¤");
 		}
 		else
 		{
-			System.out.println("Æò³âÀÔ´Ï´Ù");
+			System.out.println("í‰ë…„ì…ë‹ˆë‹¤");
 		}
 		
 		*/
 		
-		//»ç¿ëÀÚ·ÎºÎÅÍ ÀÌ¸§, ±¹¾î, ¿µ¾î, ¼öÇĞ, »çÈ¸, °úÇĞ °ú¸ñÀÇ Á¡¼ö¸¦ ÀÔ·Â¹Ş¾Æ ÃÑÁ¡°ú Æò±ÕÀ» ±¸ÇÏ°í ÇĞÁ¡À» ÆÇÁ¤ÇÏ´Â ÇÁ·Î±×·¥À» ÀÛ¼ºÇÏ½Ã¿À.
-		//´Ü Æò±ÕÀº ¹ø¼ö ¼±¾ğ½Ã ½Ç¼öÇüÀ¸·Î Ãâ·ÂÀº Á¤¼öÇüÅÂ·Î Ãâ·ÂÇÏ½Ã¿À
-		// Á¶°Ç : 90~100 => AÇĞÁ¡ , 80~90 => BÇĞÁ¡ , 70~80 => CÇĞÁ¡, 60~70 => DÇĞÁ¡, 60ÀÌÇÏ´Â F·Î Ã³¸®ÇÏ½Ã¿À
-		// ÇĞÁ¡ ÆÇÁ¤ ±âÁØÀº Æò±Õ°ªÀ¸·Î Ã³¸®ÇÑ´Ù.
+		//ì‚¬ìš©ìë¡œë¶€í„° ì´ë¦„, êµ­ì–´, ì˜ì–´, ìˆ˜í•™, ì‚¬íšŒ, ê³¼í•™ ê³¼ëª©ì˜ ì ìˆ˜ë¥¼ ì…ë ¥ë°›ì•„ ì´ì ê³¼ í‰ê· ì„ êµ¬í•˜ê³  í•™ì ì„ íŒì •í•˜ëŠ” í”„ë¡œê·¸ë¨ì„ ì‘ì„±í•˜ì‹œì˜¤.
+		//ë‹¨ í‰ê· ì€ ë²ˆìˆ˜ ì„ ì–¸ì‹œ ì‹¤ìˆ˜í˜•ìœ¼ë¡œ ì¶œë ¥ì€ ì •ìˆ˜í˜•íƒœë¡œ ì¶œë ¥í•˜ì‹œì˜¤
+		// ì¡°ê±´ : 90~100 => Aí•™ì  , 80~90 => Bí•™ì  , 70~80 => Cí•™ì , 60~70 => Dí•™ì , 60ì´í•˜ëŠ” Fë¡œ ì²˜ë¦¬í•˜ì‹œì˜¤
+		// í•™ì  íŒì • ê¸°ì¤€ì€ í‰ê· ê°’ìœ¼ë¡œ ì²˜ë¦¬í•œë‹¤.
 		
 		Scanner sr = new Scanner(System.in);
 		String Name;
 		int Kor, Eng, Math, Soci, Sin, Sum;
 		double Avg;
-		System.out.println("ÀÌ¸§À» ÀÔ·ÂÇÏ¼¼¿ä:");
+		System.out.println("ì´ë¦„ì„ ì…ë ¥í•˜ì„¸ìš”:");
 		Name = sr.nextLine();
-		System.out.println("±¹¾î ¼ºÀûÀ» ÀÔ·ÂÇÏ½Ã¿À:");
+		System.out.println("êµ­ì–´ ì„±ì ì„ ì…ë ¥í•˜ì‹œì˜¤:");
 		Kor = sr.nextInt();
-		System.out.println("¿µ¾î ¼ºÀûÀ» ÀÔ·ÂÇÏ½Ã¿À:");
+		System.out.println("ì˜ì–´ ì„±ì ì„ ì…ë ¥í•˜ì‹œì˜¤:");
 		Eng = sr.nextInt();
-		System.out.println("¼öÇĞ¼ºÀûÀ» ÀÔ·ÂÇÏ½Ã¿À:");
+		System.out.println("ìˆ˜í•™ì„±ì ì„ ì…ë ¥í•˜ì‹œì˜¤:");
 		Math = sr.nextInt();
-		System.out.println("»çÈ¸¼ºÀûÀ» ÀÔ·ÂÇÏ½Ã¿À:");
+		System.out.println("ì‚¬íšŒì„±ì ì„ ì…ë ¥í•˜ì‹œì˜¤:");
 		Soci = sr.nextInt();
-		System.out.println("°úÇĞ¼ºÀûÀ» ÀÔ·ÂÇÏ½Ã¿À:");
+		System.out.println("ê³¼í•™ì„±ì ì„ ì…ë ¥í•˜ì‹œì˜¤:");
 		Sin = sr.nextInt();
 		
 		Sum = Kor+Eng+Math+Soci+Sin;
 		Avg = Sum/5;
 		
-		System.out.printf("ÃÑÇÕÀº %d Á¡ÀÌ¸ç Æò±ÕÀº %dÀÌ´Ù.\n", Sum,(int)Avg);
+		System.out.printf("ì´í•©ì€ %d ì ì´ë©° í‰ê· ì€ %dì´ë‹¤.\n", Sum,(int)Avg);
 		
 		if(Avg>=90)
 		{

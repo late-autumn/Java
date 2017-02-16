@@ -4,7 +4,7 @@ public class ArrayEx04 {
 public static void main(String[] args) {
 	
 	
-	//°­»ç´Ô ÀÇ ¶Ç´Ù¸¥ ¹æ¹ı
+	//ê°•ì‚¬ë‹˜ ì˜ ë˜ë‹¤ë¥¸ ë°©ë²•
 	/*
 	 * int num =3;
 	
@@ -26,7 +26,7 @@ public static void main(String[] args) {
 		System.out.println();
 	}
 	*/
-	//³»°¡ ÇÑ °Å
+	//ë‚´ê°€ í•œ ê±°
 	 for(int i=2; i<9;i+=4)
 	{
 		for(int j=1;j<=9;j++)

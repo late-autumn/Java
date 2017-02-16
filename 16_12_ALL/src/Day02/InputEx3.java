@@ -1,5 +1,5 @@
 package Day02;
-//¹®ÀÚ¿­ ÀÔ·Â¹Ş±â
+//ë¬¸ìì—´ ì…ë ¥ë°›ê¸°
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -15,15 +15,15 @@ public class InputEx3 {
 		InputStreamReader is = new InputStreamReader(System.in);
 		BufferedReader br = new BufferedReader(is);
 		
-		//¶Ç ´Ù¸¥ ÀÔ·Â¹ı ½ºÄ³³Ê
+		//ë˜ ë‹¤ë¥¸ ì…ë ¥ë²• ìŠ¤ìºë„ˆ
 		Scanner sc = new Scanner(System.in);
 		
-		System.out.print("ÀÌ¸§ ÀÔ·Â:");
+		System.out.print("ì´ë¦„ ì…ë ¥:");
 		name = br.readLine();
-		System.out.print("³ªÀÌ ÀÔ·Â :");
+		System.out.print("ë‚˜ì´ ì…ë ¥ :");
 		age = br.readLine();
 		
-		System.out.println("ÀÌ¸§Àº "+name+"ÀÔ´Ï´Ù. ³ªÀÌ´Â "+age+"»ì ÀÔ´Ï´Ù.");
+		System.out.println("ì´ë¦„ì€ "+name+"ì…ë‹ˆë‹¤. ë‚˜ì´ëŠ” "+age+"ì‚´ ì…ë‹ˆë‹¤.");
 	
 	}
 

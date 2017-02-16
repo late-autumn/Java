@@ -1,5 +1,5 @@
 package Day04;
-//1ºÎÅÍ 100±îÁö ÇÕ Âï±â for, while, do while
+//1ë¶€í„° 100ê¹Œì§€ í•© ì°ê¸° for, while, do while
 public class Test7 {
 public static void main(String[] args) {
 	
@@ -12,24 +12,24 @@ public static void main(String[] args) {
 	/*for(int i=1;i<=100;i++){
 		result1 +=i;
 	}
-	System.out.println("for¹® °á°ú = "+result1);
+	System.out.println("forë¬¸ ê²°ê³¼ = "+result1);
 	
 	int j=1;
 	while(j<=100){
 		result2 +=j;
 		j++;
 	}
-	System.out.println("while¹® °á°ú = "+result2);
+	System.out.println("whileë¬¸ ê²°ê³¼ = "+result2);
 	
 	int k=1;
 	do{
 	 result3+=k;
 	 k++;
 	}while(k<=100);
-		System.out.println("do~while °á°ú ="+result3);
+		System.out.println("do~while ê²°ê³¼ ="+result3);
 	*/
 	
-	//for¹®Àº °­»çÆÀ ½ºÅ¸ÀÏ 
+	//forë¬¸ì€ ê°•ì‚¬íŒ€ ìŠ¤íƒ€ì¼ 
 	int v, sum =0;
 	int even =0;
 	int old = 0;
@@ -41,12 +41,12 @@ public static void main(String[] args) {
 			old+=v;
 	}
 	sum = even+old;
-	System.out.println("Â¦¼öÀÇ ÇÕ°è :"+even);
-	System.out.println("È¦¼öÀÇ ÇÕ°è:"+old);
-	System.out.println("ÃÑÇÕ°è:"+sum);
+	System.out.println("ì§ìˆ˜ì˜ í•©ê³„ :"+even);
+	System.out.println("í™€ìˆ˜ì˜ í•©ê³„:"+old);
+	System.out.println("ì´í•©ê³„:"+sum);
 	
 	
-	//ÀÌ°Ç ±×³É C½ºÅ¸ÀÏ ³»½ºÅ¸ÀÏ 
+	//ì´ê±´ ê·¸ëƒ¥ CìŠ¤íƒ€ì¼ ë‚´ìŠ¤íƒ€ì¼ 
 	int j=1;
 	while(j<=100){
 		result3 +=j;
@@ -57,9 +57,9 @@ public static void main(String[] args) {
 		result4 +=j2;
 		j2+=2;
 	}
-	System.out.println("while¹® Â¦¼ö ÇÕ °á°ú = "+result4);
-	System.out.println("while¹® È¦¼ö ÇÕ °á°ú = "+result3);
-	System.out.println("while¹® ÃÑÇÕ °á°ú = "+(result3+result4));
+	System.out.println("whileë¬¸ ì§ìˆ˜ í•© ê²°ê³¼ = "+result4);
+	System.out.println("whileë¬¸ í™€ìˆ˜ í•© ê²°ê³¼ = "+result3);
+	System.out.println("whileë¬¸ ì´í•© ê²°ê³¼ = "+(result3+result4));
 
 	int k=1;
 	do{
@@ -72,9 +72,9 @@ public static void main(String[] args) {
 	 result6+=k2;
 	 k2+=2;
 	}while(k2<=100);
-		System.out.println("do~while Â¦¼ö ÇÕ °á°ú ="+result6);	
-		System.out.println("do~while È¦¼ö ÇÕ °á°ú ="+result5);
-		System.out.println("do~while ÃÑ ÇÕ °á°ú ="+(result5+result6));
+		System.out.println("do~while ì§ìˆ˜ í•© ê²°ê³¼ ="+result6);	
+		System.out.println("do~while í™€ìˆ˜ í•© ê²°ê³¼ ="+result5);
+		System.out.println("do~while ì´ í•© ê²°ê³¼ ="+(result5+result6));
 
 		
 		

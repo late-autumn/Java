@@ -9,12 +9,12 @@ public static void main(String[] args)throws IOException {
 	int num1, result =0;
 	
 	do{
-		System.out.print("Á¤¼ö¸¦ ÀÔ·ÂÇÏ¼¼¿ä (0:Á¾·á):");
+		System.out.print("ì •ìˆ˜ë¥¼ ì…ë ¥í•˜ì„¸ìš” (0:ì¢…ë£Œ):");
 		num1 = Integer.parseInt(br.readLine());
 		result+=num1;
 		
 	}while(num1!=0);
-	System.out.println("ÃÑÇÕÀº ="+result);
+	System.out.println("ì´í•©ì€ ="+result);
 	
 }
 }

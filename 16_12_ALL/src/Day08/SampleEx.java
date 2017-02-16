@@ -2,26 +2,26 @@ package Day08;
 
 
 
-class Sample{ //¿©±â´Ù public ºÙÀÌ¸é µÑ´Ù Áßº¹µÇ¼­ ¾ÈµÊ. defaultÀÎ »óÅÂ·Î ÇØÁà¾ß ÇÑ´Ù. ÄÄÇ»ÅÍ°¡ ÇÑ¸¶µð·Î ¹Ùº¸°¡ µÊ 
+class Sample{ //ì—¬ê¸°ë‹¤ public ë¶™ì´ë©´ ë‘˜ë‹¤ ì¤‘ë³µë˜ì„œ ì•ˆë¨. defaultì¸ ìƒíƒœë¡œ í•´ì¤˜ì•¼ í•œë‹¤. ì»´í“¨í„°ê°€ í•œë§ˆë””ë¡œ ë°”ë³´ê°€ ë¨ 
 	
-	int x;	//ÃÊ±â default °ªÀÌ 0À¸·Î ÀÚµ¿À¸·Î »ý¼ºÀÌ µÈ´Ù.
+	int x;	//ì´ˆê¸° default ê°’ì´ 0ìœ¼ë¡œ ìžë™ìœ¼ë¡œ ìƒì„±ì´ ëœë‹¤.
 	int y;
 	
 }
-//class A{ //¸¸¾à ¿ÞÂÊ ÆÐÅ°Áö¿¡¼­ µû·Î A¶ó´Â Å¬·¡½º¸¦ ¸¸µé¶© publicÀÌ ºÙÀ» ¼ö ÀÖ´Ù. ÆÄÀÏ ÀÚÃ¼°¡ ´Ù¸£±â ¶§¹®¿¡. È®ÀåÀÚ º¯¼öÀÌ±â ¶§¹®¿¡
-		  //ÇÏÁö¸¸ ÀúÀåÇÏ°ÔµÇ¸é ¿¡·¯°¡ ¹ß»ýÇÑ´Ù. ÆÐÅ°Áö°¡ °°±â¶§¹®¿¡ A¶ó´Â Å¬·¡½º¸¦ ¶Ç´Ù½Ã ¸¸µé ¼ö ¾ø´Ù. 
+//class A{ //ë§Œì•½ ì™¼ìª½ íŒ¨í‚¤ì§€ì—ì„œ ë”°ë¡œ Aë¼ëŠ” í´ëž˜ìŠ¤ë¥¼ ë§Œë“¤ë• publicì´ ë¶™ì„ ìˆ˜ ìžˆë‹¤. íŒŒì¼ ìžì²´ê°€ ë‹¤ë¥´ê¸° ë•Œë¬¸ì—. í™•ìž¥ìž ë³€ìˆ˜ì´ê¸° ë•Œë¬¸ì—
+		  //í•˜ì§€ë§Œ ì €ìž¥í•˜ê²Œë˜ë©´ ì—ëŸ¬ê°€ ë°œìƒí•œë‹¤. íŒ¨í‚¤ì§€ê°€ ê°™ê¸°ë•Œë¬¸ì— Aë¼ëŠ” í´ëž˜ìŠ¤ë¥¼ ë˜ë‹¤ì‹œ ë§Œë“¤ ìˆ˜ ì—†ë‹¤. 
 	
 
 
 public class SampleEx {
 public static void main(String[] args) {
 	
-	Sample ss = new Sample(); //°´Ã¼ »ý¼º
+	Sample ss = new Sample(); //ê°ì²´ ìƒì„±
 	System.out.println(ss.y);
 	ss.x +=1;
 	System.out.println(ss.x);
 	
-	//ÀÚ¹Ù¿¡¼­ Æ÷ÇÔ ¸â¹öµéÀÌ °¢°¢ Á¢±Ù º¯°æÀÚ¸¦ °¡Áø´Ù.
+	//ìžë°”ì—ì„œ í¬í•¨ ë©¤ë²„ë“¤ì´ ê°ê° ì ‘ê·¼ ë³€ê²½ìžë¥¼ ê°€ì§„ë‹¤.
 	
 	
 	

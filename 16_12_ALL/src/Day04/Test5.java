@@ -10,17 +10,17 @@ public class Test5 {
 		char grade;
 		int Kor, Eng, Math, Soci, Sin, Sum;
 		double Avg;
-		System.out.println("ÀÌ¸§À» ÀÔ·ÂÇÏ¼¼¿ä:");
+		System.out.println("ì´ë¦„ì„ ì…ë ¥í•˜ì„¸ìš”:");
 		Name = sr.nextLine();
-		System.out.println("±¹¾î ¼ºÀûÀ» ÀÔ·ÂÇÏ½Ã¿À:");
+		System.out.println("êµ­ì–´ ì„±ì ì„ ì…ë ¥í•˜ì‹œì˜¤:");
 		Kor = sr.nextInt();
-		System.out.println("¿µ¾î ¼ºÀûÀ» ÀÔ·ÂÇÏ½Ã¿À:");
+		System.out.println("ì˜ì–´ ì„±ì ì„ ì…ë ¥í•˜ì‹œì˜¤:");
 		Eng = sr.nextInt();
-		System.out.println("¼öÇĞ¼ºÀûÀ» ÀÔ·ÂÇÏ½Ã¿À:");
+		System.out.println("ìˆ˜í•™ì„±ì ì„ ì…ë ¥í•˜ì‹œì˜¤:");
 		Math = sr.nextInt();
-		System.out.println("»çÈ¸¼ºÀûÀ» ÀÔ·ÂÇÏ½Ã¿À:");
+		System.out.println("ì‚¬íšŒì„±ì ì„ ì…ë ¥í•˜ì‹œì˜¤:");
 		Soci = sr.nextInt();
-		System.out.println("°úÇĞ¼ºÀûÀ» ÀÔ·ÂÇÏ½Ã¿À:");
+		System.out.println("ê³¼í•™ì„±ì ì„ ì…ë ¥í•˜ì‹œì˜¤:");
 		Sin = sr.nextInt();
 
 		Sum = Kor + Eng + Math + Soci + Sin;
@@ -44,7 +44,7 @@ public class Test5 {
 		default:
 			grade = 'F';
 		}
-		System.out.printf("ÃÑÇÕÀº %d Á¡ÀÌ¸ç Æò±ÕÀº %dÀÌ´Ù.\n", Sum, (int) Avg);
-		System.out.println("µî±ŞÀº =" + grade + "ÀÔ´Ï´Ù.");
+		System.out.printf("ì´í•©ì€ %d ì ì´ë©° í‰ê· ì€ %dì´ë‹¤.\n", Sum, (int) Avg);
+		System.out.println("ë“±ê¸‰ì€ =" + grade + "ì…ë‹ˆë‹¤.");
 	}
 }

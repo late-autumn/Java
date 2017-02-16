@@ -12,27 +12,27 @@ public class ExTest {
 	
 		BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
 
-		System.out.println("¼ºº°À» ÀÔ·ÂÇÏ¼¼¿ä (1.³²ÀÚ, 2.¿©ÀÚ)");
+		System.out.println("ì„±ë³„ì„ ì…ë ¥í•˜ì„¸ìš” (1.ë‚¨ì, 2.ì—¬ì)");
 		int a = (char)in.read();
-		System.out.println(a=='1'? "´ç½ÅÀº ³²ÀÚÀÔ´Ï´Ù":"´ç½ÅÀº ¿©ÀÚÀÔ´Ï´Ù");
+		System.out.println(a=='1'? "ë‹¹ì‹ ì€ ë‚¨ìì…ë‹ˆë‹¤":"ë‹¹ì‹ ì€ ì—¬ìì…ë‹ˆë‹¤");
 
 		//System.out.println(a==1 ? "1":"2");
 		
 	/*	String str = in.readLine();
 	//	System.out.println(str);
-	//	System.out.println(str=="1"?"³²ÀÚ":"¿©ÀÚ");
+	//	System.out.println(str=="1"?"ë‚¨ì":"ì—¬ì");
 		
-		System.out.println("»ê¼ú ¿¬»êÀÚ¸¦ ÀÔ·ÂÇÏ¼¼¿ä");
+		System.out.println("ì‚°ìˆ  ì—°ì‚°ìë¥¼ ì…ë ¥í•˜ì„¸ìš”");
 		int b = in.read();
 		
 		
 		if(b=='+')
 		{
-			System.out.println("+ÀÔ´Ï´Ù.");
+			System.out.println("+ì…ë‹ˆë‹¤.");
 		}
 		else if(b=='-')
 		{
-			System.out.println("-ÀÔ´Ï´Ù");
+			System.out.println("-ì…ë‹ˆë‹¤");
 					
 		}
 		*/

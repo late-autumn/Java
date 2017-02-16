@@ -1,5 +1,5 @@
 package Day04;
-//1ºÎÅÍ 10±îÁöÀÇ ÇÕ°è
+//1ë¶€í„° 10ê¹Œì§€ì˜ í•©ê³„
 public class ForEx1 {
 public static void main(String[] args) {
 	
@@ -8,7 +8,7 @@ public static void main(String[] args) {
 	{
 		sum+=i;
 	}
-	System.out.println("10±îÁöÀÇ ÇÕ°è´Â="+sum);
+	System.out.println("10ê¹Œì§€ì˜ í•©ê³„ëŠ”="+sum);
 	
 }
 }

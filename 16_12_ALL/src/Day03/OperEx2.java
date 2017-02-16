@@ -7,13 +7,13 @@ public class OperEx2 {
 		// TODO Auto-generated method stub
 		
 		short a,b;
-		a = b = 10;							// a,b µÑ´Ù 10À¸·Î ´ëÀÔÇÑ´Ù´Â ÀÇ¹Ì
-		//short c = a+b; 					¹üÀ§°¡ ³Ñ¾î°¡±â ¶§¹®¿¡ short¸¦ »ç¿ëÇÒ ¼ö ¾ø´Ù. int·Î º¯È¯ÇØ¾ßÇÑ´Ù.
+		a = b = 10;							// a,b ë‘˜ë‹¤ 10ìœ¼ë¡œ ëŒ€ì…í•œë‹¤ëŠ” ì˜ë¯¸
+		//short c = a+b; 					ë²”ìœ„ê°€ ë„˜ì–´ê°€ê¸° ë•Œë¬¸ì— shortë¥¼ ì‚¬ìš©í•  ìˆ˜ ì—†ë‹¤. intë¡œ ë³€í™˜í•´ì•¼í•œë‹¤.
 		int c = a + b;
 		System.out.println("c:"+c);
 		
 		/*
-		 * byte, short, char, int ÀÚ·áÇü »çÀÌÀÇ ¿¬»êÀÚ¿¡¼­´Â °á°ú°¡ intÀÌ´Ù.
+		 * byte, short, char, int ìë£Œí˜• ì‚¬ì´ì˜ ì—°ì‚°ìì—ì„œëŠ” ê²°ê³¼ê°€ intì´ë‹¤.
 		 * 
 		 */
 		

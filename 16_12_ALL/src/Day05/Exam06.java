@@ -7,13 +7,13 @@ public static void main(String[] args) {
 	Scanner sc = new Scanner(System.in);
 
 	int s,n,num;
-	char ch; // y,nÀ» ÀÔ·ÂÇÒ º¯¼ö 
+	char ch; // y,nì„ ì…ë ¥í•  ë³€ìˆ˜ 
 	while(true)
 	{
 		do{
-			System.out.println("¿øÇÏ´Â ¼ö ÀÔ·Â:");
+			System.out.println("ì›í•˜ëŠ” ìˆ˜ ì…ë ¥:");
 			num = sc.nextInt();
-			//¿øÇÏ´Â ¼ö ÀÔ·Â
+			//ì›í•˜ëŠ” ìˆ˜ ì…ë ¥
 		}while(1>num ||num>1000);
 		
 		s = 0;
@@ -21,8 +21,8 @@ public static void main(String[] args) {
 		{
 			s+=n;
 		}
-		System.out.println("1¿¡¼­ºÎÅÍ"+num+"±îÁöÀÇ ´©Àû ÃÑÇÕÀº ="+s);
-		System.out.println("°è¼Ó ÇÏ½Ã°Ú½À´Ï±î? y or n");
+		System.out.println("1ì—ì„œë¶€í„°"+num+"ê¹Œì§€ì˜ ëˆ„ì  ì´í•©ì€ ="+s);
+		System.out.println("ê³„ì† í•˜ì‹œê² ìŠµë‹ˆê¹Œ? y or n");
 		ch = sc.next().charAt(0);
 		if(ch!='Y'&&ch!='y')
 		break;

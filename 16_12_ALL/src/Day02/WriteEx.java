@@ -6,13 +6,13 @@ public class WriteEx {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
-		System.out.write(65);               // write() : È­¸é Ãâ·Â½Ã ¹öÆÛ¿¡ ´ã´Â´Ù.
-		System.out.flush(); 				// flush() : ¹öÆÛ¿¡ ÀÖ´Â °ÍÀ» Áö¿ï½Ã »ç¿ëÇÑ´Ù.
+		System.out.write(65);               // write() : í™”ë©´ ì¶œë ¥ì‹œ ë²„í¼ì— ë‹´ëŠ”ë‹¤.
+		System.out.flush(); 				// flush() : ë²„í¼ì— ìˆëŠ” ê²ƒì„ ì§€ìš¸ì‹œ ì‚¬ìš©í•œë‹¤.
 		
-		System.out.println();				// ÇÑÁÙ ¶ç¿ì±â
+		System.out.println();				// í•œì¤„ ë„ìš°ê¸°
 		
 		byte[]by = {'J','A','V','A'};
-		System.out.write(by,0,4);			// ¹è¿­ »ç¿ëÀÇ ¿ÀÅäÇÃ·¡½¬ ±â´É ¿ªÇÒ 	
+		System.out.write(by,0,4);			// ë°°ì—´ ì‚¬ìš©ì˜ ì˜¤í† í”Œë˜ì‰¬ ê¸°ëŠ¥ ì—­í•  	
 
 		
 	}

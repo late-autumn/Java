@@ -1,6 +1,6 @@
 package Day06;
 
-//·¹±âµå ¹è¿­ (°¡º¯ ¹è¿­)
+//ë ˆê¸°ë“œ ë°°ì—´ (ê°€ë³€ ë°°ì—´)
 
 import java.util.Scanner;
 
@@ -9,17 +9,17 @@ public static void main(String[] args) {
 
 	Scanner sc = new Scanner(System.in);
 
-	int[][]score; //Á¡¼ö
-	String[] name;//ÀÌ¸§
-	String[] grade;//ÇĞÁ¡
-	double[] avg;//Æò±Õ
+	int[][]score; //ì ìˆ˜
+	String[] name;//ì´ë¦„
+	String[] grade;//í•™ì 
+	double[] avg;//í‰ê· 
 	
 	int total =0, student, subnum, sco;
 	String Sname;
-	System.out.print("ÇĞ»ı ¼ö ÀÔ·Â:");
+	System.out.print("í•™ìƒ ìˆ˜ ì…ë ¥:");
 	student = sc.nextInt();
 	
-	score =new int[student][]; //ÀÔ·Â ¹ŞÀº ÇĞ»ı ¼ö ¸¸Å­ ¹è¿­ Å©±â ÇÒ´ç
+	score =new int[student][]; //ì…ë ¥ ë°›ì€ í•™ìƒ ìˆ˜ ë§Œí¼ ë°°ì—´ í¬ê¸° í• ë‹¹
 	
 	name = new String[student];
 	
@@ -27,26 +27,26 @@ public static void main(String[] args) {
 	grade = new String[student];
 	
 	for(int i=0;i<score.length;i++){
-		System.out.print((i+1)+"¹ø ÇĞ»ı ÀÌ¸§ ÀÔ·Â:");
+		System.out.print((i+1)+"ë²ˆ í•™ìƒ ì´ë¦„ ì…ë ¥:");
 		Sname = sc.next();
 		name[i] = Sname;
 		
-		//°ú¸ñ ¼ö ÀÔ·Â
-		System.out.print((i+1)+"¹øÀÇ ÇĞ»ıÀÇ °ú¸ñ¼ö ÀÔ·Â:");
+		//ê³¼ëª© ìˆ˜ ì…ë ¥
+		System.out.print((i+1)+"ë²ˆì˜ í•™ìƒì˜ ê³¼ëª©ìˆ˜ ì…ë ¥:");
 		subnum = sc.nextInt();
 		score[i] = new int[subnum];
-		//·¹±âµå ¹è¿­ 
-		//ÇĞ»ı¸¶´Ù ´Ù¸¥ °ú¸ñ¼ö¸¦ ÀÔ·Â¹Ş¾Æ ¹è¿­ÀÇ ±æÀÌ°¡ ¸ğµÎ ´Ù¸¦ ¼ö ÀÖÀ½
+		//ë ˆê¸°ë“œ ë°°ì—´ 
+		//í•™ìƒë§ˆë‹¤ ë‹¤ë¥¸ ê³¼ëª©ìˆ˜ë¥¼ ì…ë ¥ë°›ì•„ ë°°ì—´ì˜ ê¸¸ì´ê°€ ëª¨ë‘ ë‹¤ë¥¼ ìˆ˜ ìˆìŒ
 		
 		
 		for(int j=0;j<score[i].length;j++)
 		{
-			System.out.print((i+1)+"¹ø ÇĞ»ı"+(j+1)+"°ú¸ñ¼ºÀûÀÔ·Â:");
+			System.out.print((i+1)+"ë²ˆ í•™ìƒ"+(j+1)+"ê³¼ëª©ì„±ì ì…ë ¥:");
 			sco = sc.nextInt();
-			total += sco;		//ÇÕ°è
+			total += sco;		//í•©ê³„
 			score[i][j] = sco;
 		}
-		//Æò±Õ
+		//í‰ê· 
 		avg[i] = (double)total/subnum;
 		//total = 0;
 		
@@ -60,19 +60,19 @@ public static void main(String[] args) {
 			default: grade[i] = "F"; break;
 		}
 	}
-	// ¼®Â÷ ±¸ÇÏ±â
+	// ì„ì°¨ êµ¬í•˜ê¸°
 	
-	//====================Ãâ·Â=======================
+	//====================ì¶œë ¥=======================
 	
 	for(int i=0; i<score.length;i++)
 	{
-		System.out.printf("ÀÌ¸§ = %s \t",name[i]);
+		System.out.printf("ì´ë¦„ = %s \t",name[i]);
 		for(int j=0; j<score[i].length;j++)
 		{
-			System.out.printf("%d °ú¸ñ : %d \t",j+1,score[i][j]);
+			System.out.printf("%d ê³¼ëª© : %d \t",j+1,score[i][j]);
 		}
-		System.out.printf("Æò±Õ : %.1f\t", avg[i]);
-		System.out.printf("ÇĞÁ¡ : %s \t \n", grade[i]);
+		System.out.printf("í‰ê·  : %.1f\t", avg[i]);
+		System.out.printf("í•™ì  : %s \t \n", grade[i]);
 	}
   }
 }
