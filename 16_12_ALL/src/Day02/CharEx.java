@@ -10,7 +10,7 @@ public class CharEx {
 
 		int temp, sum, result =0;
 		int B = 8;
-		System.out.printf("BÀÇ 10Áø¼ö·Î´Â %d \n", B);
+		System.out.printf("Bì˜ 10ì§„ìˆ˜ë¡œëŠ” %d \n", B);
 		for (int i = 1; B> 0; i *= 10) 
 		   { 
 		      temp = B % 2; 
@@ -18,15 +18,15 @@ public class CharEx {
 		      result = result + sum; 
 		      B /= 2; 
 		   } 
-		System.out.printf("BÀÇ 2Áø¼ö·Î´Â %d\n", result);
-		System.out.printf("A ´Â %c \n",ch1);
-		System.out.printf("10Áø¼ö·Î´Â %d \n",(int)ch1);
-		System.out.printf("8Áø¼ö·Î´Â : %o \n",(int)ch1);
-		System.out.printf("16Áø¼ö·Î´Â : %x \n",(int)ch1);
+		System.out.printf("Bì˜ 2ì§„ìˆ˜ë¡œëŠ” %d\n", result);
+		System.out.printf("A ëŠ” %c \n",ch1);
+		System.out.printf("10ì§„ìˆ˜ë¡œëŠ” %d \n",(int)ch1);
+		System.out.printf("8ì§„ìˆ˜ë¡œëŠ” : %o \n",(int)ch1);
+		System.out.printf("16ì§„ìˆ˜ë¡œëŠ” : %x \n",(int)ch1);
 
-		System.out.println("ch1+2ÀÇ À¯´ÏÄÚµå °ªÀº : "+(ch1+ch2));  	//°è»êÀÌ °¡´ÉÇÑ °æ¿ì ¼ıÀÚ·Î º¯°æÇÔ
-		System.out.println("ch1+2ÀÇ ¾Æ½ºÅ°ÄÚµå °ªÀº : "+(char)(ch1+ch2));
-		System.out.println("str+str2ÀÇ ¹®ÀÚ´Â :"+(str+str2));
+		System.out.println("ch1+2ì˜ ìœ ë‹ˆì½”ë“œ ê°’ì€ : "+(ch1+ch2));  	//ê³„ì‚°ì´ ê°€ëŠ¥í•œ ê²½ìš° ìˆ«ìë¡œ ë³€ê²½í•¨
+		System.out.println("ch1+2ì˜ ì•„ìŠ¤í‚¤ì½”ë“œ ê°’ì€ : "+(char)(ch1+ch2));
+		System.out.println("str+str2ì˜ ë¬¸ìëŠ” :"+(str+str2));
 		
 		String s = "1000";                     
 

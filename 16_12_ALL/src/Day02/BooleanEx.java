@@ -6,10 +6,10 @@ public class BooleanEx {
 		// TODO Auto-generated method stub
 		
 		boolean b = true;
-		System.out.println("º¯¼öÀÇ °ª : "+b+" ÀÔ´Ï´Ù");
-		System.out.print("º¯¼öÀÇ °ª : "+b+" ÀÔ´Ï´Ù");
+		System.out.println("ë³€ìˆ˜ì˜ ê°’ : "+b+" ì…ë‹ˆë‹¤");
+		System.out.print("ë³€ìˆ˜ì˜ ê°’ : "+b+" ì…ë‹ˆë‹¤");
 		System.out.print("\n");
-		System.out.printf("º¯¼öÀÇ °ª : \n", b);
+		System.out.printf("ë³€ìˆ˜ì˜ ê°’ : \n", b);
 
 	}
 

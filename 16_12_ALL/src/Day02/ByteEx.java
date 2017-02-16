@@ -4,11 +4,11 @@ public class ByteEx {
 	public static void main(String[] args) {
 	
 		byte bb = 127;
-		System.out.println("byte bbÀÇ °ªÀº : "+bb);
+		System.out.println("byte bbì˜ ê°’ì€ : "+bb);
 		bb++;
-		System.out.println("byte bbÀÇ °ªÀº : "+bb); //127¿¡¼­ +1°ªÀ» ¿Ã¶ó°¡¸é 128ÀÌÁö¸¸ Ç¥Çö°¡´ÉÇÑ ¹üÀ§¸¦ ³Ñ¾ú±â¶§¹®¿¡ -128·Î º¯°æ
+		System.out.println("byte bbì˜ ê°’ì€ : "+bb); //127ì—ì„œ +1ê°’ì„ ì˜¬ë¼ê°€ë©´ 128ì´ì§€ë§Œ í‘œí˜„ê°€ëŠ¥í•œ ë²”ìœ„ë¥¼ ë„˜ì—ˆê¸°ë•Œë¬¸ì— -128ë¡œ ë³€ê²½
 		bb++;
-		System.out.println("byte bbÀÇ °ªÀº : "+bb);
+		System.out.println("byte bbì˜ ê°’ì€ : "+bb);
 
 		
 	}
