@@ -2,11 +2,11 @@ package Day11;
 
 public class Record {
 
-	String name;//ÀÌ¸§
-	int[]score = new int[3]; //Á¡¼ö
-	double avg;//Æò±Õ
-	int total =0;//ÇÕ°è
-	int rank;	//·©Å©
-	int student; //ÀÎ¿ø¼ö
+	String name;//ì´ë¦„
+	int[]score = new int[3]; //ì ìˆ˜
+	double avg;//í‰ê· 
+	int total =0;//í•©ê³„
+	int rank;	//ë­í¬
+	int student; //ì¸ì›ìˆ˜
 	
 }

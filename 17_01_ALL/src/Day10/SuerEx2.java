@@ -14,7 +14,7 @@ class PointEx{
 	}
 	
 	public PointEx(int x,int y) {
-		this(x); 		//»ı¼ºÀÚ ÇÔ¼ö¸¦ °¡¸£Å°°í ÀÖ´Ù. = PointEx(int x)!! ±»ÀÌ this.x = x¸¦ ¾ÈÇØµµ µÇ´Â ÀåÁ¡! 		
+		this(x); 		//ìƒì„±ì í•¨ìˆ˜ë¥¼ ê°€ë¥´í‚¤ê³  ìˆë‹¤. = PointEx(int x)!! êµ³ì´ this.x = xë¥¼ ì•ˆí•´ë„ ë˜ëŠ” ì¥ì ! 		
 		this.y = y;
 	}
 	public int getX() {
@@ -30,9 +30,9 @@ class PointEx{
 		this.y = y;
 	}
 	
-	public void display(){ //Ãâ·ÂÇÔ¼ö
-		System.out.println("xÀÇ °ª:"+x );
-		System.out.println("yÀÇ °ª:"+y );
+	public void display(){ //ì¶œë ¥í•¨ìˆ˜
+		System.out.println("xì˜ ê°’:"+x );
+		System.out.println("yì˜ ê°’:"+y );
 		
 	}
 
@@ -45,15 +45,15 @@ public class SuerEx2 extends PointEx{
 		// TODO Auto-generated constructor stub
 	}
 	public SuerEx2(int x) {
-		super(x);			//x¶ó´Â ¾ê¸¦ ¹Ş¾Æ¿Ô±â¶§¹®¿¡
+		super(x);			//xë¼ëŠ” ì–˜ë¥¼ ë°›ì•„ì™”ê¸°ë•Œë¬¸ì—
 		r = 1;
 	}
 	public SuerEx2(int x,int y) {
-		super(x,y);			//x¶ó´Â ¾ê¸¦ ¹Ş¾Æ¿Ô±â¶§¹®¿¡
+		super(x,y);			//xë¼ëŠ” ì–˜ë¥¼ ë°›ì•„ì™”ê¸°ë•Œë¬¸ì—
 		r = 2;
 	}
 	public SuerEx2(int x,int y, int r) {
-		super(x,y);			//x¶ó´Â ¾ê¸¦ ¹Ş¾Æ¿Ô±â¶§¹®¿¡
+		super(x,y);			//xë¼ëŠ” ì–˜ë¥¼ ë°›ì•„ì™”ê¸°ë•Œë¬¸ì—
 		this.r = r;
 	}
 	
@@ -66,7 +66,7 @@ public class SuerEx2 extends PointEx{
 	
 	public void display(){
 		super.display();
-		System.out.println("rÀÇ °ª:"+r);
+		System.out.println("rì˜ ê°’:"+r);
 	}
 	
 	

@@ -9,22 +9,22 @@ public class JFrameEx extends JFrame{
 	public JFrameEx() {
 		super("JFrame Swing");
 		
-		JButton bt1 = new JButton("ºÏ");
-		JButton bt2 = new JButton("³²");
-		JButton bt3 = new JButton("µ¿");
-		JButton bt4 = new JButton("¼­");
+		JButton bt1 = new JButton("ë¶");
+		JButton bt2 = new JButton("ë‚¨");
+		JButton bt3 = new JButton("ë™");
+		JButton bt4 = new JButton("ì„œ");
 
-		//swingÀº ´ãÀ»¶§ ÄÁÅ×ÀÌ³Ê¸¦ »ç¿ëÇØ¼­ addÇØÁà¾ßÇÑ´Ù. ÄÁÅ×ÀÌ³Ê¿¡¼­ ÄÄÆ÷³ÍÆ®¸¦ °¡Á®¿È
+		//swingì€ ë‹´ì„ë•Œ ì»¨í…Œì´ë„ˆë¥¼ ì‚¬ìš©í•´ì„œ addí•´ì¤˜ì•¼í•œë‹¤. ì»¨í…Œì´ë„ˆì—ì„œ ì»´í¬ë„ŒíŠ¸ë¥¼ ê°€ì ¸ì˜´
 		Container con = getContentPane();
-		//swing ÀÌ¿ë ¹öÆ° 
+		//swing ì´ìš© ë²„íŠ¼ 
 		con.add("North", bt1);
 		
-		//ÀÌ°Ç ÇÁ·¹ÀÓ¿¡ ¿Ã¸®±â À§ÇÑ add
+		//ì´ê±´ í”„ë ˆì„ì— ì˜¬ë¦¬ê¸° ìœ„í•œ add
 		add("South",bt2);
 		
 		setSize(300, 200);
 		setVisible(true);
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);		//x¹öÆ°À» ´­·¶À»¶§ Á¾·á Ã³¸®
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);		//xë²„íŠ¼ì„ ëˆŒë €ì„ë•Œ ì¢…ë£Œ ì²˜ë¦¬
  
 	}
 	

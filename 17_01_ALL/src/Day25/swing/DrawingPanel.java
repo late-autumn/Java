@@ -21,9 +21,9 @@ public class DrawingPanel extends JPanel {
 		g.drawLine(50, 250-20*cnt, 350, 250-20*cnt);
 	}
 	g.drawLine(50, 20, 50, 250);
-	g.drawString("±¹¾î", 100, 270);
-	g.drawString("¿µ¾î", 200, 270);
-	g.drawString("¼öÇÐ", 300, 270);
+	g.drawString("êµ­ì–´", 100, 270);
+	g.drawString("ì˜ì–´", 200, 270);
+	g.drawString("ìˆ˜í•™", 300, 270);
 	
 	g.setColor(Color.RED);
 	if(kor>0){

@@ -4,23 +4,23 @@ import java.io.*;
 public class FileEx3 {
 public static void main(String[] args)throws IOException {
 
-	//ÆÄÀÏ°ú °æ·Î ¼³Á¤ ÇÏ´Â¹ı
+	//íŒŒì¼ê³¼ ê²½ë¡œ ì„¤ì • í•˜ëŠ”ë²•
 	String file_name = "fileIO.txt";
-	String file_folder = "c:/ºñµÑ±â";
+	String file_folder = "c:/ë¹„ë‘˜ê¸°";
 	
 	
-	//ÆÄÀÏ »ı¼º
-	File f1 = new File("c:/ºñµÑ±â/newFile.txt");
-	//ºó ÆÄÀÏÀÌ ¸¸µé¾îÁü
+	//íŒŒì¼ ìƒì„±
+	File f1 = new File("c:/ë¹„ë‘˜ê¸°/newFile.txt");
+	//ë¹ˆ íŒŒì¼ì´ ë§Œë“¤ì–´ì§
 	if(f1.exists()){
-		System.out.println("ÆÄÀÏÀÇ ÀÌ¸§:"+f1.getName());
+		System.out.println("íŒŒì¼ì˜ ì´ë¦„:"+f1.getName());
 	}
 	else{
 		if(f1.createNewFile()){
-			System.out.println("»õ·Î¿î ÆÄÀÏ »ı¼º");
+			System.out.println("ìƒˆë¡œìš´ íŒŒì¼ ìƒì„±");
 		}
 	}
-	//Æú´õ »ı¼º
+	//í´ë” ìƒì„±
 	
 	File f2 = new File("c:/workspace/pk");
 	
@@ -28,10 +28,10 @@ public static void main(String[] args)throws IOException {
 		f2.mkdirs();
 	}
 	else{
-		System.out.println("Æú´õ ÀÌ¸§:"+f2.getPath());
+		System.out.println("í´ë” ì´ë¦„:"+f2.getPath());
 	}
 	
-	/*//ÆÄÀÏ È¤Àº Æú´õ »èÁ¦
+	/*//íŒŒì¼ í˜¹ì€ í´ë” ì‚­ì œ
 	
 	File f3 = new File("c:/workspace/newFile.txt");
 	if(f3.exists()){
@@ -42,19 +42,19 @@ public static void main(String[] args)throws IOException {
 		f4.delete();
 	}*/
 	
-	//ÆÄÀÏ È¤Àº Æú´õ ÀÌ¸§ º¯°æ
+	//íŒŒì¼ í˜¹ì€ í´ë” ì´ë¦„ ë³€ê²½
 	
-	File src = new File("c:/ºñµÑ±â/newFile.txt");
-	//¿øº» ÆÄÀÏ
+	File src = new File("c:/ë¹„ë‘˜ê¸°/newFile.txt");
+	//ì›ë³¸ íŒŒì¼
 	
-	File des = new File("c:/ºñµÑ±â/dest.txt");
-	File des2 = new File("c:/ºñµÑ±â/dest2.txt");
+	File des = new File("c:/ë¹„ë‘˜ê¸°/dest.txt");
+	File des2 = new File("c:/ë¹„ë‘˜ê¸°/dest2.txt");
 	
 	if(src.exists()){
 		des.renameTo(des);
 		des.renameTo(des2);
 	}
-	//Æú´õ ¸ñ·ÏÀÇ Ãâ·Â
+	//í´ë” ëª©ë¡ì˜ ì¶œë ¥
 	if(f2.isDirectory()){
 		String dir[] = f2.list();
 		for(String sss:dir){

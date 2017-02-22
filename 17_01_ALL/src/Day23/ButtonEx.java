@@ -13,13 +13,13 @@ public class ButtonEx extends Frame{
 	private Button[] bt = new Button[str.length];
 
 	public ButtonEx() {
-		super("¹öÆ°");
+		super("ë²„íŠ¼");
 		
-		setLayout(new GridLayout(4,3,5,5)); 		//°¡·Î¿Í ¼¼·Î ±×¸®°í °¡·Î¿Í ¼¼·Î »çÀÌÀÇ °£°İ 
+		setLayout(new GridLayout(4,3,5,5)); 		//ê°€ë¡œì™€ ì„¸ë¡œ ê·¸ë¦¬ê³  ê°€ë¡œì™€ ì„¸ë¡œ ì‚¬ì´ì˜ ê°„ê²© 
 		
 		for(int i=0; i<bt.length;i++){
 			bt[i] = new Button(str[i]);
-			bt[i].setFont(new Font("±¼¸²Ã¼",Font.BOLD,40));
+			bt[i].setFont(new Font("êµ´ë¦¼ì²´",Font.BOLD,40));
 			add(bt[i]);
 		}
 		

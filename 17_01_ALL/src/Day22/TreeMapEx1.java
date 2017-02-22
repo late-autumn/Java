@@ -9,20 +9,20 @@ public class TreeMapEx1 {
 		
 		TreeMap<String,String> map = new TreeMap<String,String>();
 		
-		map.put("¸¸È­", "¸¶³à¹è´ŞºÎ Å°Å°");
-		map.put("È£·¯", "·¹Áö´øÆ®ÀÌºí");
-		map.put("¿µÈ­", "È²È¥¿¡¼­ »õº®±îÁö");
-		map.put("TV", "ºÒÅ¸´Â Ã»Ãá");
-		map.put("OK", "È¯ºÒÇØÁà");
-		Map<String, String>subMap = map.subMap("OK","¿µÈ­");
+		map.put("ë§Œí™”", "ë§ˆë…€ë°°ë‹¬ë¶€ í‚¤í‚¤");
+		map.put("í˜¸ëŸ¬", "ë ˆì§€ë˜íŠ¸ì´ë¸”");
+		map.put("ì˜í™”", "í™©í˜¼ì—ì„œ ìƒˆë²½ê¹Œì§€");
+		map.put("TV", "ë¶ˆíƒ€ëŠ” ì²­ì¶˜");
+		map.put("OK", "í™˜ë¶ˆí•´ì¤˜");
+		Map<String, String>subMap = map.subMap("OK","ì˜í™”");
 		System.out.println(subMap);
 		System.out.println(map);
 	
 		/*
-		 * TreeMap Å¬·¡½º´Â sort µÈ »óÅÂ·Î ÀÚ·á¸¦ Ãß°¡ÇÑ´Ù.
-		 * TreeMap Å¬·¡½ºÀÇ sortedMap<k,v> subMap(K fromKey, K toKey)¸Ş¼Òµå
-		 * ¸ÊÀÇ fromkey(ÀÌ°ÍÀº Æ÷ÇÔ) ~tokey(ÀÌ°ÍÀº Æ÷ÇÔÇÏÁö¾Ê´Â´Ù.)ÀÇ ¹üÀ§¸¦
-		 * °¡Áö´Â ºÎºĞÀÇ ºä¸¦ ¸®ÅÏÇÑ´Ù.
+		 * TreeMap í´ë˜ìŠ¤ëŠ” sort ëœ ìƒíƒœë¡œ ìë£Œë¥¼ ì¶”ê°€í•œë‹¤.
+		 * TreeMap í´ë˜ìŠ¤ì˜ sortedMap<k,v> subMap(K fromKey, K toKey)ë©”ì†Œë“œ
+		 * ë§µì˜ fromkey(ì´ê²ƒì€ í¬í•¨) ~tokey(ì´ê²ƒì€ í¬í•¨í•˜ì§€ì•ŠëŠ”ë‹¤.)ì˜ ë²”ìœ„ë¥¼
+		 * ê°€ì§€ëŠ” ë¶€ë¶„ì˜ ë·°ë¥¼ ë¦¬í„´í•œë‹¤.
 		 * 
 		 */
 		

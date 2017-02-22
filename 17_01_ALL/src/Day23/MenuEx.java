@@ -2,25 +2,25 @@ package Day23;
 import java.awt.*;
 public class MenuEx extends Frame {
 
-	private MenuBar mb = new MenuBar();			//¸Ş´º¹Ù ÀÎ½ºÅÏ½º »ı¼º
+	private MenuBar mb = new MenuBar();			//ë©”ë‰´ë°” ì¸ìŠ¤í„´ìŠ¤ ìƒì„±
 	
-	private Menu file = new Menu("ÆÄÀÏ");
-	private Menu edit = new Menu("µµ±¸");
-	private Menu view = new Menu("º¸±â");
-	private Menu help = new Menu("µµ¿ò¸»");
+	private Menu file = new Menu("íŒŒì¼");
+	private Menu edit = new Menu("ë„êµ¬");
+	private Menu view = new Menu("ë³´ê¸°");
+	private Menu help = new Menu("ë„ì›€ë§");
 	
-	private MenuItem fnew = new MenuItem("»õ ÆÄÀÏ");
-	private MenuItem fopen = new MenuItem("ÆÄÀÏ ¿­±â");
-	private MenuItem fsave = new MenuItem("ÆÄÀÏ ÀúÀå");
-	private MenuItem fsaveas = new MenuItem("´Ù¸¥ÀÌ¸§À¸·Î ÀúÀå");
-	private MenuItem fexit = new MenuItem("³ª°¡±â");
+	private MenuItem fnew = new MenuItem("ìƒˆ íŒŒì¼");
+	private MenuItem fopen = new MenuItem("íŒŒì¼ ì—´ê¸°");
+	private MenuItem fsave = new MenuItem("íŒŒì¼ ì €ì¥");
+	private MenuItem fsaveas = new MenuItem("ë‹¤ë¥¸ì´ë¦„ìœ¼ë¡œ ì €ì¥");
+	private MenuItem fexit = new MenuItem("ë‚˜ê°€ê¸°");
 	
-	private Menu ecolor = new Menu("»ö»ó");
-	private Menu esize = new Menu("Å©±â");
+	private Menu ecolor = new Menu("ìƒ‰ìƒ");
+	private Menu esize = new Menu("í¬ê¸°");
 	
-	private CheckboxMenuItem ecred = new CheckboxMenuItem("·¹µå");
-	private CheckboxMenuItem ecgreen = new CheckboxMenuItem("±×¸°");
-	private CheckboxMenuItem ecblue = new CheckboxMenuItem("ºí·ç");
+	private CheckboxMenuItem ecred = new CheckboxMenuItem("ë ˆë“œ");
+	private CheckboxMenuItem ecgreen = new CheckboxMenuItem("ê·¸ë¦°");
+	private CheckboxMenuItem ecblue = new CheckboxMenuItem("ë¸”ë£¨");
 	
 	private CheckboxMenuItem es10 = new CheckboxMenuItem("10");
 	private CheckboxMenuItem es20 = new CheckboxMenuItem("20");
@@ -30,7 +30,7 @@ public class MenuEx extends Frame {
 	
 	
 	public MenuEx() {
-		super("¸Ş´º¿Í ÆĞ³Î");
+		super("ë©”ë‰´ì™€ íŒ¨ë„");
 		
 		setMenuBar(mb);
 		mb.add(file);
@@ -47,7 +47,7 @@ public class MenuEx extends Frame {
 		esize.add(es30);
 		
 		edit.add(ecolor);
-		edit.addSeparator();		//ÁÙ »ı¼º ÇØÁÖ±â.
+		edit.addSeparator();		//ì¤„ ìƒì„± í•´ì£¼ê¸°.
 		edit.add(esize);
 		
 		file.add(fnew);
@@ -64,8 +64,8 @@ public class MenuEx extends Frame {
 		add("Center",new TextArea());
 		
 		Panel p = new Panel(new GridLayout(1, 2));
-		p.add(new Button("È®ÀÎ"));
-		p.add(new Button("Ãë¼Ò"));
+		p.add(new Button("í™•ì¸"));
+		p.add(new Button("ì·¨ì†Œ"));
 		
 		add("South",p);
 		

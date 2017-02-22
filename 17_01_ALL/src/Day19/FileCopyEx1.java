@@ -6,31 +6,31 @@ import java.io.FileOutputStream;
 
 public class FileCopyEx1 {
 	
-	//byte À» ÀÌ¿ëÇØ¼­ º¹»ç 
+	//byte ì„ ì´ìš©í•´ì„œ ë³µì‚¬ 
 	public static void main(String[] args) {
-		System.out.println("ÆÄÀÏº¹»ç ½ÃÀÛ");
+		System.out.println("íŒŒì¼ë³µì‚¬ ì‹œì‘");
 		
 		long start = System.currentTimeMillis();
-		//½Ã½ºÅÛ¿¡¼­ Á¦°øÇÏ´Â ÇöÀç ½Ã°¢
+		//ì‹œìŠ¤í…œì—ì„œ ì œê³µí•˜ëŠ” í˜„ì¬ ì‹œê°
 		
-		FileInputStream src = null;		//ÆÄÀÏ ¿øº»
+		FileInputStream src = null;		//íŒŒì¼ ì›ë³¸
 		
-		FileOutputStream dest = null;	//º¹»çµÈ ÆÄÀÏ
+		FileOutputStream dest = null;	//ë³µì‚¬ëœ íŒŒì¼
 		
 		try{
-			//¿øº»ÆÄÀÏÀ» ÀĞ±âÀ§ÇÑ FileInputStream °´Ã¼ »ı¼º
-			src = new FileInputStream(new File("c:/ºñµÑ±â/src.zip"));
+			//ì›ë³¸íŒŒì¼ì„ ì½ê¸°ìœ„í•œ FileInputStream ê°ì²´ ìƒì„±
+			src = new FileInputStream(new File("c:/ë¹„ë‘˜ê¸°/src.zip"));
 			
-			//º¹»çº» ÆÄÀÏÀ» »ı¼ºÇÏ±âÀ§ÇÑ fileoutputsteam °´Ã¼ »ı¼º
-			dest = new FileOutputStream(new File("c:/ºñµÑ±â/dest.zip"));
+			//ë³µì‚¬ë³¸ íŒŒì¼ì„ ìƒì„±í•˜ê¸°ìœ„í•œ fileoutputsteam ê°ì²´ ìƒì„±
+			dest = new FileOutputStream(new File("c:/ë¹„ë‘˜ê¸°/dest.zip"));
 			
-			//FileinputStreamÀ» ÅëÇØ¼­ ÀĞ¾îµéÀÎ °ªÀ» ÀúÀåÇÒ º¯¼ö ¼±¾ğ
+			//FileinputStreamì„ í†µí•´ì„œ ì½ì–´ë“¤ì¸ ê°’ì„ ì €ì¥í•  ë³€ìˆ˜ ì„ ì–¸
 			int readValue = 0;
 			
-			//FileInputStreamÀÇ read()¸Ş¼Òµå¸¦ ÅëÇØ¼­ ÀĞ¾îµéÀÎ °ªÀ» readValueº¯¼ö¿¡ ÀúÀå
+			//FileInputStreamì˜ read()ë©”ì†Œë“œë¥¼ í†µí•´ì„œ ì½ì–´ë“¤ì¸ ê°’ì„ readValueë³€ìˆ˜ì— ì €ì¥
 			while((readValue=src.read())!=-1){
 				
-				//readValue¿¡ ÀúÀåµÈ°ªÀ» FileOutputStreamÀÇ write()¸Ş¼Òµå¸¦ ÅëÇØ¼­ ÆÄÀÏ¿¡±â·Ï
+				//readValueì— ì €ì¥ëœê°’ì„ FileOutputStreamì˜ write()ë©”ì†Œë“œë¥¼ í†µí•´ì„œ íŒŒì¼ì—ê¸°ë¡
 				dest.write(readValue);
 				
 				
@@ -49,7 +49,7 @@ public class FileCopyEx1 {
 		
 		long end = System.currentTimeMillis();
 		long copyTime = (end - start)/1000;
-		System.out.println("º¹»çÇÏ´Âµ¥ °É¸°½Ã°£:"+copyTime+"ÃÊ");
+		System.out.println("ë³µì‚¬í•˜ëŠ”ë° ê±¸ë¦°ì‹œê°„:"+copyTime+"ì´ˆ");
 		
 	}
 

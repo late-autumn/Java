@@ -6,7 +6,7 @@ class ThreadEx5 extends Thread {
 
 	public ThreadEx5(String name) {
 		// TODO Auto-generated constructor stub
-		super(name);// ThreadÀÇ ÀÌ¸§ ÁöÁ¤
+		super(name);// Threadì˜ ì´ë¦„ ì§€ì •
 
 	}
 
@@ -16,7 +16,7 @@ class ThreadEx5 extends Thread {
 		try {
 			for (int i = 0; i < 5; i++) {
 				Thread.sleep(100);
-				m_iRandomNum = (int) (Math.random() * 1000); // MathÅ¬·¡½ºÀÇ random ¸Ş¼Òµå¸¦ ÀÌ¿ëÇØ¼­ ³­¼ö»ı¼º
+				m_iRandomNum = (int) (Math.random() * 1000); // Mathí´ë˜ìŠ¤ì˜ random ë©”ì†Œë“œë¥¼ ì´ìš©í•´ì„œ ë‚œìˆ˜ìƒì„±
 				System.out.println(getName() + ":" + m_iRandomNum);
 
 			}
@@ -35,10 +35,10 @@ public class ThreadExam5 {
 	public static void main(String[] args) {
 
 		
-		ThreadEx5 t1 = new ThreadEx5("Ã¹¹øÂ°");
-		ThreadEx5 t2 = new ThreadEx5("µÎ¹øÂ°");
-		ThreadEx5 t3 = new ThreadEx5("¼¼¹øÂ°");
-		System.out.println("°¢ ½º·¹µåÀÇ ·£´ı°ªÀ» Ãâ·ÂÇÑ´Ù.");
+		ThreadEx5 t1 = new ThreadEx5("ì²«ë²ˆì§¸");
+		ThreadEx5 t2 = new ThreadEx5("ë‘ë²ˆì§¸");
+		ThreadEx5 t3 = new ThreadEx5("ì„¸ë²ˆì§¸");
+		System.out.println("ê° ìŠ¤ë ˆë“œì˜ ëœë¤ê°’ì„ ì¶œë ¥í•œë‹¤.");
 		t1.start();
 		t2.start();
 		t3.start();

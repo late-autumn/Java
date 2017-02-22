@@ -1,8 +1,8 @@
 package Day11;
 
-class OuterEx{ //¿ÜºÎ
+class OuterEx{ //ì™¸ë¶€
 	
-	class InnerEx{ //³»ºÎ
+	class InnerEx{ //ë‚´ë¶€
 		int x = 5;
 	}
 	
@@ -10,9 +10,9 @@ class OuterEx{ //¿ÜºÎ
 
 public class InnerEx1 {
 public static void main(String[] args) {
-	//°´Ã¼¸¦ »ı¼ºÇÒ¶© ¿ÜºÎ Å¬·¡½ººÎÅÍ »ı¼ºÇØ¾ßÇÑ´Ù.
+	//ê°ì²´ë¥¼ ìƒì„±í• ë• ì™¸ë¶€ í´ë˜ìŠ¤ë¶€í„° ìƒì„±í•´ì•¼í•œë‹¤.
 	OuterEx eo = new OuterEx();
-	//¿ÜºÎ °´Ã¼¸¦ ÅëÇØ¼­ ³»ºÎ Å¬·¡½ºÀÇ °´Ã¼¸¦ »ı¼ºÇÑ´Ù.
+	//ì™¸ë¶€ ê°ì²´ë¥¼ í†µí•´ì„œ ë‚´ë¶€ í´ë˜ìŠ¤ì˜ ê°ì²´ë¥¼ ìƒì„±í•œë‹¤.
 	OuterEx.InnerEx ei = eo.new InnerEx();
 	System.out.println(ei.x);
 

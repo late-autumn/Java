@@ -2,7 +2,7 @@ package Day13;
 
 public class Packtwo {
 	public void mypackTwo(){
-		System.out.println("ÆÑ Åõ ¸Þ¼Òµå");
+		System.out.println("íŒ© íˆ¬ ë©”ì†Œë“œ");
 		
 	}
 }

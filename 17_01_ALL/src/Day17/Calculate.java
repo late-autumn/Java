@@ -15,11 +15,11 @@ public class Calculate {
 	public void input(){
 		try{
 
-		System.out.println("Ã¹¹øÂ° Á¤¼ö¸¦ ÀÔ·ÂÇÏ¼¼¿ä :");
+		System.out.println("ì²«ë²ˆì§¸ ì •ìˆ˜ë¥¼ ì…ë ¥í•˜ì„¸ìš” :");
 		input1 = sc.nextInt();
-		System.out.println("µÎ¹øÂ° Á¤¼ö¸¦ ÀÔ·ÂÇÏ¼¼¿ä :");
+		System.out.println("ë‘ë²ˆì§¸ ì •ìˆ˜ë¥¼ ì…ë ¥í•˜ì„¸ìš” :");
 		input2 = sc.nextInt();
-		System.out.println("¿øÇÏ´Â »çÄ¢ ¿¬»êÀ» ´­·¯ÁÖ¼¼¿ä: [+]  [-]  [*]  [/]  [0] Á¾·á");
+		System.out.println("ì›í•˜ëŠ” ì‚¬ì¹™ ì—°ì‚°ì„ ëˆŒëŸ¬ì£¼ì„¸ìš”: [+]  [-]  [*]  [/]  [0] ì¢…ë£Œ");
 		input4 = (char)br.read();
 		cal();
 		}catch (Exception e) {
@@ -47,7 +47,7 @@ public class Calculate {
 			print();
 			break;
 		case 0:
-			System.out.println("½Ã½ºÅÛÀ» Á¾·áÇÕ´Ï´Ù.");
+			System.out.println("ì‹œìŠ¤í…œì„ ì¢…ë£Œí•©ë‹ˆë‹¤.");
 			System.exit(0);
 			break;
 		}
@@ -56,7 +56,7 @@ public class Calculate {
 	}
 
 	public void print() {
-		System.out.println("°á°ú´Â :" + result + "ÀÔ´Ï´Ù");
+		System.out.println("ê²°ê³¼ëŠ” :" + result + "ì…ë‹ˆë‹¤");
 	}
 
 }

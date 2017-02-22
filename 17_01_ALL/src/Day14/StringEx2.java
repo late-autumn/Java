@@ -10,11 +10,11 @@ public static void main(String[] args) {
 	System.out.println(str);
 	
 	String str1 = "ABCD";
-	char ch = str1.charAt(0); //charAT(int)¿¡ µû¶ó ¿øÇÏ´Â À§Ä¡ ¹®ÀÚ¸¦ Ãâ·ÂÇÑ´Ù. 
+	char ch = str1.charAt(0); //charAT(int)ì— ë”°ë¼ ì›í•˜ëŠ” ìœ„ì¹˜ ë¬¸ìë¥¼ ì¶œë ¥í•œë‹¤. 
 	System.out.println(ch);
 	
-	String so = str1.toLowerCase(); // ¼Ò¹®ÀÚ·Î º¯È¯ÇÏ´Â ÇÔ¼ö 
-	String imsi = str1.substring(0,2); //0ºÎÅÍ 2±îÁö Ãâ·ÂÀÌÁö¸¸ µÚ¿¡ end´Â -1 À» ÇØÁà¾ßÇØ¼­ µÎ°³¸¸ Ãâ·ÂµÈ´Ù Áï 0,1 ¸¸ Ãâ·Â 
+	String so = str1.toLowerCase(); // ì†Œë¬¸ìë¡œ ë³€í™˜í•˜ëŠ” í•¨ìˆ˜ 
+	String imsi = str1.substring(0,2); //0ë¶€í„° 2ê¹Œì§€ ì¶œë ¥ì´ì§€ë§Œ ë’¤ì— endëŠ” -1 ì„ í•´ì¤˜ì•¼í•´ì„œ ë‘ê°œë§Œ ì¶œë ¥ëœë‹¤ ì¦‰ 0,1 ë§Œ ì¶œë ¥ 
 	System.out.println(so);
 	System.out.println(imsi);
 }

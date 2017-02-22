@@ -1,6 +1,6 @@
 package Day22;
 
-//¹öºí Á¤·Ä
+//ë²„ë¸” ì •ë ¬
 
 public class Bouble_sort {
 
@@ -8,7 +8,7 @@ public class Bouble_sort {
 		
 		int a[] = {52,42,12,62,50,67,21,1};
 		int temp;
-		System.out.println("Á¤·ÄÀü ");
+		System.out.println("ì •ë ¬ì „ ");
 		for(int n :a){
 			System.out.print(n+" ");
 		}
@@ -23,7 +23,7 @@ public class Bouble_sort {
 			}
 		}
 		System.out.println();
-		System.out.println("Á¤·ÄÈÄ ");
+		System.out.println("ì •ë ¬í›„ ");
 		for(int n :a){
 			System.out.print(n+" ");
 		}

@@ -19,19 +19,19 @@ public class JTable_PrintActionListener implements ActionListener {
 	public void actionPerformed(ActionEvent arg0) {
 		// TODO Auto-generated method stub
 
-		//¸ğµ¨À» °¡Á®¿Â´Ù.
+		//ëª¨ë¸ì„ ê°€ì ¸ì˜¨ë‹¤.
 		TableModel model = table.getModel();
 		
-		//¸ğµ¨¿¡¼­ Çà°ú ¿­ÀÇ ¼ö¸¦ °¡Á®¿È
+		//ëª¨ë¸ì—ì„œ í–‰ê³¼ ì—´ì˜ ìˆ˜ë¥¼ ê°€ì ¸ì˜´
 		int rowNum = model.getRowCount();
 		int colNum = model.getColumnCount();
 		
-		//ÄÃ·³ ÀÌ¸§À» °¡Á®¿Í¼­ Ãâ·Â
+		//ì»¬ëŸ¼ ì´ë¦„ì„ ê°€ì ¸ì™€ì„œ ì¶œë ¥
 		for(int col = 0; col<colNum;col++){
 			String colName = model.getColumnName(col);
 			System.out.print(colName+"\t");
 		}
-		//Å×ÀÌºíÀ» µ¥ÀÌÅÍ·Î °¡Á®¿Í Ãâ·Â 
+		//í…Œì´ë¸”ì„ ë°ì´í„°ë¡œ ê°€ì ¸ì™€ ì¶œë ¥ 
 		System.out.println();
 		
 		for(int row=0;row<rowNum;row++){

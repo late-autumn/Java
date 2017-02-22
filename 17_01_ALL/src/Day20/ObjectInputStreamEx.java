@@ -11,17 +11,17 @@ public class ObjectInputStreamEx {
 		ObjectInputStream ois = null;
 		
 		try{
-			//ÆÄÀÏ¿¡ ÀúÀåµÈ °´Ã¼¸¦ ÀĞ¾î ¿À±â À§ÇØ 
-			//ObjectInputStream °´Ã¼ »ı¼º
-			ois = new ObjectInputStream(new FileInputStream("c:/ºñµÑ±â/obj.sav"));
+			//íŒŒì¼ì— ì €ì¥ëœ ê°ì²´ë¥¼ ì½ì–´ ì˜¤ê¸° ìœ„í•´ 
+			//ObjectInputStream ê°ì²´ ìƒì„±
+			ois = new ObjectInputStream(new FileInputStream("c:/ë¹„ë‘˜ê¸°/obj.sav"));
 			
-			//ObjectInputStreamÀº ½ºÆ®¸²À¸·Î ºÎÅÍ 
-			//ÀĞ¾îµéÀÎ Á÷·ÄÈ­µÈ °´Ã¼¸¦ ¿ª Á÷·ÄÈ­ÇØ¼­ °´Ã¼¸¦ »ı¼ºÇÒ ¼ö ÀÖ´Ù.
-			//¿ª Á÷·ÄÈ­ ÇÒ¶§ ÇÊ¿äÇÑ Å¬·¡½º ÆÄÀÏ Ã£Áö ¸øÇÏ´Â °æ¿ì°¡ ÀÖ´Ù.
+			//ObjectInputStreamì€ ìŠ¤íŠ¸ë¦¼ìœ¼ë¡œ ë¶€í„° 
+			//ì½ì–´ë“¤ì¸ ì§ë ¬í™”ëœ ê°ì²´ë¥¼ ì—­ ì§ë ¬í™”í•´ì„œ ê°ì²´ë¥¼ ìƒì„±í•  ìˆ˜ ìˆë‹¤.
+			//ì—­ ì§ë ¬í™” í• ë•Œ í•„ìš”í•œ í´ë˜ìŠ¤ íŒŒì¼ ì°¾ì§€ ëª»í•˜ëŠ” ê²½ìš°ê°€ ìˆë‹¤.
 			Data data = (Data)ois.readObject();
-			System.out.println("¹øÈ£:"+data.getNo());
-			System.out.println("ÀÌ¸§:"+data.getName());
-			System.out.println("ÀÌ¸ŞÀÏ:"+data.getEmail());
+			System.out.println("ë²ˆí˜¸:"+data.getNo());
+			System.out.println("ì´ë¦„:"+data.getName());
+			System.out.println("ì´ë©”ì¼:"+data.getEmail());
 		}catch(ClassNotFoundException ce){
 			ce.getMessage();
 		}catch(FileNotFoundException fe){

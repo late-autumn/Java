@@ -14,9 +14,9 @@ class MyComparator<T>implements Comparator<T>{
 		
 		int n = s1.getTot() - s2.getTot();
 		
-		if(n>1){						//¿À¸§Â÷¼ø
+		if(n>1){						//ì˜¤ë¦„ì°¨ìˆœ
 			return 1; 					 
-		}else if(n<1){					//³»¸²Â÷¼ø
+		}else if(n<1){					//ë‚´ë¦¼ì°¨ìˆœ
 			return -1;					
 		}else{
 		return 0;
@@ -31,8 +31,8 @@ public class Map_Sung_Method implements Map_Sung_Iterface {
 	
 	public Map_Sung_Method() {
 
-	map = new TreeMap<String, Map_SungVO>();		//key°ªÀº ÇĞ¹øÀ¸·Î ¹Ş´Â´Ù.		
-	//map = new HashMap<String,Map_SungVO>();  hashMapÀ» ÀÌ¿ëÇÒ °æ¿ì¿£ ÀÌ·¸°Ô ÇØÁØ´Ù.
+	map = new TreeMap<String, Map_SungVO>();		//keyê°’ì€ í•™ë²ˆìœ¼ë¡œ ë°›ëŠ”ë‹¤.		
+	//map = new HashMap<String,Map_SungVO>();  hashMapì„ ì´ìš©í•  ê²½ìš°ì—” ì´ë ‡ê²Œ í•´ì¤€ë‹¤.
 	
 	}
 	
@@ -40,57 +40,57 @@ public class Map_Sung_Method implements Map_Sung_Iterface {
 	public int insert() throws IOException {
 		// TODO Auto-generated method stub
 		String hak;
-		System.out.print("ÇĞ¹ø:");
+		System.out.print("í•™ë²ˆ:");
 		hak = br.readLine();
-		if(map.containsKey(hak)){					//ÇĞ¹øÀÌ Å°°ªÀ»°¡Áö°í¿Â´Ù.
-			System.out.println("ÀÌ¹Ì Á¸ÀçÇÏ´Â ÇĞ¹øÀÔ´Ï´Ù.");
+		if(map.containsKey(hak)){					//í•™ë²ˆì´ í‚¤ê°’ì„ê°€ì§€ê³ ì˜¨ë‹¤.
+			System.out.println("ì´ë¯¸ ì¡´ì¬í•˜ëŠ” í•™ë²ˆì…ë‹ˆë‹¤.");
 			return 0;
 		}
 		Map_SungVO ob = new Map_SungVO();
 		ob.setHak(hak);
 		
-		System.out.print("ÀÌ¸§:");
+		System.out.print("ì´ë¦„:");
 		ob.setName(br.readLine());
 		
-		System.out.print("±¹¾î:");
+		System.out.print("êµ­ì–´:");
 		ob.setKor(Integer.parseInt(br.readLine()));
 		
-		System.out.print("¿µ¾î:");
+		System.out.print("ì˜ì–´:");
 		ob.setEng(Integer.parseInt(br.readLine()));
 
-		System.out.print("¼öÇĞ:");
+		System.out.print("ìˆ˜í•™:");
 		ob.setMat(Integer.parseInt(br.readLine()));
 		
-		map.put(hak, ob);							//map¿¡ Ãß°¡  
-		return 1;									//intÇüÀÌ¶ó ÀÚ·áÇü°ªÀ». Áà¾ßÇØ¼­ return 1À» ÁØ´Ù. 
+		map.put(hak, ob);							//mapì— ì¶”ê°€  
+		return 1;									//intí˜•ì´ë¼ ìë£Œí˜•ê°’ì„. ì¤˜ì•¼í•´ì„œ return 1ì„ ì¤€ë‹¤. 
 	}
 
 	@Override
 	public int update() throws IOException {
 		// TODO Auto-generated method stub
 		String hak;
-		System.out.print("\n ¼öÁ¤ÇÒ ÇĞ¹ø:");
+		System.out.print("\n ìˆ˜ì •í•  í•™ë²ˆ:");
 		hak = br.readLine();
 		
 		if(!map.containsKey(hak)){
-			System.out.println("Á¸ÀçÇÏÁö ¾Ê´Â ÇĞ¹øÀÔ´Ï´Ù.");
+			System.out.println("ì¡´ì¬í•˜ì§€ ì•ŠëŠ” í•™ë²ˆì…ë‹ˆë‹¤.");
 			return 0;
 		}
 		Map_SungVO ob = new Map_SungVO();
 		ob.setHak(hak);
-		System.out.print("ÀÌ¸§:");
+		System.out.print("ì´ë¦„:");
 		ob.setName(br.readLine());
 		
-		System.out.print("±¹¾î:");
+		System.out.print("êµ­ì–´:");
 		ob.setKor(Integer.parseInt(br.readLine()));
 		
-		System.out.print("¿µ¾î:");
+		System.out.print("ì˜ì–´:");
 		ob.setEng(Integer.parseInt(br.readLine()));
 
-		System.out.print("¼öÇĞ:");
+		System.out.print("ìˆ˜í•™:");
 		ob.setMat(Integer.parseInt(br.readLine()));
 		
-		map.put(hak, ob);							//map¿¡ Ãß°¡  
+		map.put(hak, ob);							//mapì— ì¶”ê°€  
 		
 		return 1;
 	}
@@ -99,7 +99,7 @@ public class Map_Sung_Method implements Map_Sung_Iterface {
 	public void search() throws IOException {
 		// TODO Auto-generated method stub
 		String name;
-		System.out.print("ÀÌ¸§À¸·Î °Ë»ö:");
+		System.out.print("ì´ë¦„ìœ¼ë¡œ ê²€ìƒ‰:");
 		name = br.readLine();
 		Set<String>set = map.keySet();
 		Iterator<String> it = set.iterator();
@@ -109,17 +109,17 @@ public class Map_Sung_Method implements Map_Sung_Iterface {
 			String key = it.next();
 			Map_SungVO data = map.get(key);
 			
-			if(data.getName().equals(name))						//map¿¡ ÀúÀåµÇ¾î ÀÖ´Â ÀÌ¸§°ú ÀÔ·ÂÇÑ ÀÌ¸§ ºñ±³
+			if(data.getName().equals(name))						//mapì— ì €ì¥ë˜ì–´ ìˆëŠ” ì´ë¦„ê³¼ ì…ë ¥í•œ ì´ë¦„ ë¹„êµ
 				System.out.println(data.toString());
 		}
 		
 		
 		
 		String hak;
-		System.out.println("ÇĞ¹øÀ¸·Î °Ë»ö : ");					//ÇĞ¹ø °Ë»ö
+		System.out.println("í•™ë²ˆìœ¼ë¡œ ê²€ìƒ‰ : ");					//í•™ë²ˆ ê²€ìƒ‰
 		hak = br.readLine();
 		if(!map.containsKey(hak)){
-			System.out.println("Á¸ÀçÇÏÁö ¾Ê´Â ÇĞ¹øÀÔ´Ï´Ù.");
+			System.out.println("ì¡´ì¬í•˜ì§€ ì•ŠëŠ” í•™ë²ˆì…ë‹ˆë‹¤.");
 			return;
 		}
 		System.out.println(map.get(hak).toString());
@@ -132,14 +132,14 @@ public class Map_Sung_Method implements Map_Sung_Iterface {
 		// TODO Auto-generated method stub
 		
 		String hak;
-		System.out.print("»èÁ¦ÇÒ ÇĞ¹ø:");
+		System.out.print("ì‚­ì œí•  í•™ë²ˆ:");
 		hak = br.readLine();
 		if(!map.containsKey(hak)){
-			System.out.println("Á¸ÀçÇÏÁö ¾Ê´Â ÇĞ¹ø ÀÔ´Ï´Ù.");
+			System.out.println("ì¡´ì¬í•˜ì§€ ì•ŠëŠ” í•™ë²ˆ ì…ë‹ˆë‹¤.");
 			return 0;
 		}
 		map.remove(hak);
-		System.out.println("»èÁ¦ ¿Ï·á");
+		System.out.println("ì‚­ì œ ì™„ë£Œ");
 		return 1;
 	}
 
@@ -150,7 +150,7 @@ public class Map_Sung_Method implements Map_Sung_Iterface {
 		Set<String> set = map.keySet();
 		Iterator<String>it = set.iterator();
 		
-		System.out.println("\n ÀüÃ¼Ãâ·Â :");
+		System.out.println("\n ì „ì²´ì¶œë ¥ :");
 		
 		while(it.hasNext()){
 			
@@ -179,11 +179,11 @@ public class Map_Sung_Method implements Map_Sung_Iterface {
 			lists.add(map.get(key));
 		}
 		
-		Collections.sort(lists,new MyComparator<Map_SungVO>());					//¿À¸§Â÷¼ø
+		Collections.sort(lists,new MyComparator<Map_SungVO>());					//ì˜¤ë¦„ì°¨ìˆœ
 		
-		Collections.sort(lists,Collections.reverseOrder(new MyComparator<Map_SungVO>()));// ³»¸²Â÷¼ø
+		Collections.sort(lists,Collections.reverseOrder(new MyComparator<Map_SungVO>()));// ë‚´ë¦¼ì°¨ìˆœ
 		
-		System.out.println("\n ÇÕ°è¼øÀ¸·Î Ãâ·Â");
+		System.out.println("\n í•©ê³„ìˆœìœ¼ë¡œ ì¶œë ¥");
 		Iterator<Map_SungVO>it2 = lists.iterator();
 		
 		while(it2.hasNext()){

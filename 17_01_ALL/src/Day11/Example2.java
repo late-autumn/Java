@@ -13,12 +13,12 @@ public class Example2 {
 	void Input()throws IOException
 	{
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-		System.out.println("1~1000±îÁöÀÇ ¼ıÀÚ¸¦ ÀÔ·ÂÇÏ¼¼¿ä:");
+		System.out.println("1~1000ê¹Œì§€ì˜ ìˆ«ìë¥¼ ì…ë ¥í•˜ì„¸ìš”:");
 		InputNum = Integer.parseInt(br.readLine());
 
 		if(InputNum<1 || InputNum>1000)
 		{
-			System.out.println("Àß¸ø ÀÔ·ÂÇÏ¼Ì½À´Ï´Ù . ´Ù½ÃÀÔ·ÂÇÏ¼¼¿ä");
+			System.out.println("ì˜ëª» ì…ë ¥í•˜ì…¨ìŠµë‹ˆë‹¤ . ë‹¤ì‹œì…ë ¥í•˜ì„¸ìš”");
 			Input();
 		}
 	
@@ -33,8 +33,8 @@ public class Example2 {
 	}
 	void display()
 	{
-		System.out.println("ÀÔ·ÂÇÏ½Å °ªÀº : "+InputNum+"ÀÔ´Ï´Ù.");
-		System.out.println("1ºÎÅÍÀÇ ÃÑ ÇÕÀº:"+Sum+"ÀÔ´Ï´Ù.");
+		System.out.println("ì…ë ¥í•˜ì‹  ê°’ì€ : "+InputNum+"ì…ë‹ˆë‹¤.");
+		System.out.println("1ë¶€í„°ì˜ ì´ í•©ì€:"+Sum+"ì…ë‹ˆë‹¤.");
 	}
 
 	

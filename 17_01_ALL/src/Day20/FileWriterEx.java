@@ -11,14 +11,14 @@ public class FileWriterEx {
 		FileWriter writer = null;
 
 		try {
-			// ÆÄÀÏ¿¡ ÇÑ¹®ÀÚ ´ÜÀ§·Î ±â·ÏÇÒ ¼ö ÀÖ´Â FileWriter °´Ã¼ »ý¼º
-			writer = new FileWriter("c:/ºñµÑ±â/song.txt");
-			// writer´Â ¹®ÀÚ¿­À» ¹Ù·Î ±â·ÏÇÒ ¼ö ÀÖ´Ù.
-			String str = "Á¶ÆË³ª¹«´Â ¼¼»ó¿¡¼­ Á¦ÀÏ °­ÇÑ ³ª¹«´Ù.";
+			// íŒŒì¼ì— í•œë¬¸ìž ë‹¨ìœ„ë¡œ ê¸°ë¡í•  ìˆ˜ ìžˆëŠ” FileWriter ê°ì²´ ìƒì„±
+			writer = new FileWriter("c:/ë¹„ë‘˜ê¸°/song.txt");
+			// writerëŠ” ë¬¸ìžì—´ì„ ë°”ë¡œ ê¸°ë¡í•  ìˆ˜ ìžˆë‹¤.
+			String str = "ì¡°íŒë‚˜ë¬´ëŠ” ì„¸ìƒì—ì„œ ì œì¼ ê°•í•œ ë‚˜ë¬´ë‹¤.";
 			writer.write(str);
 			/*
-			 * ÇÑ±ÛÀÚ ´ÜÀ§·Î ÀÐ°í ¾µ¼ö ÀÖ´Â Reader, Writer°è¿­ÀÇ ½ºÆ®¸²ÀÇ ³»ºÎÀûÀ¸·Î ¹öÆÛ¿¡ ÀúÀåÇÑ´Ù. ÀúÀåµÈ ¹öÆÛ´Â
-			 * ¹öÆÛ°¡ °¡µæ Ã¤¿ö Áú¶§¸¸ ½ºÆ®¸²À» ÅëÇØ ¹ÛÀ¸·Î ³»º¸³½´Ù. flush(): ¹öÆÛ°¡ °¡µæÂ÷Áö ¾Ê¾Æµµ ºñ¿ì°Ô ÇÑ´Ù.
+			 * í•œê¸€ìž ë‹¨ìœ„ë¡œ ì½ê³  ì“¸ìˆ˜ ìžˆëŠ” Reader, Writerê³„ì—´ì˜ ìŠ¤íŠ¸ë¦¼ì˜ ë‚´ë¶€ì ìœ¼ë¡œ ë²„í¼ì— ì €ìž¥í•œë‹¤. ì €ìž¥ëœ ë²„í¼ëŠ”
+			 * ë²„í¼ê°€ ê°€ë“ ì±„ì›Œ ì§ˆë•Œë§Œ ìŠ¤íŠ¸ë¦¼ì„ í†µí•´ ë°–ìœ¼ë¡œ ë‚´ë³´ë‚¸ë‹¤. flush(): ë²„í¼ê°€ ê°€ë“ì°¨ì§€ ì•Šì•„ë„ ë¹„ìš°ê²Œ í•œë‹¤.
 			 */
 
 			writer.flush();

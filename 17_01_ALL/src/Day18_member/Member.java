@@ -2,13 +2,13 @@ package Day18_member;
 
 public interface Member {
 
-	public void insert_member();		//È¸¿ø °¡ÀÔ
-	public void update_member();		//È¸¿ø ¼öÁ¤
-	public void delete_member();		//È¸¿ø »èÁ¦
-	public void search_member();		//È¸¿ø °Ë»ö
-	public void list_member();			//È¸¿ø Ãâ·Â
+	public void insert_member();		//íšŒì› ê°€ì…
+	public void update_member();		//íšŒì› ìˆ˜ì •
+	public void delete_member();		//íšŒì› ì‚­ì œ
+	public void search_member();		//íšŒì› ê²€ìƒ‰
+	public void list_member();			//íšŒì› ì¶œë ¥
 	
-	public MemberVO search_member(MemberVO rec); //È¸¿ø°Ë»ö (¸Ş¼Òµå)
+	public MemberVO search_member(MemberVO rec); //íšŒì›ê²€ìƒ‰ (ë©”ì†Œë“œ)
 	
 	
 }

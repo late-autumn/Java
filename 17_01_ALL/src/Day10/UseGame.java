@@ -16,14 +16,14 @@ class Marine extends Unit
 	@Override
 	void move(int x, int y) {
 		// TODO Auto-generated method stub
-		System.out.println("¸¶¸°ÀÇ À§Ä¡ ÁÂÇ¥´Â "+x+","+y+"ÀÔ´Ï´Ù.");
+		System.out.println("ë§ˆë¦°ì˜ ìœ„ì¹˜ ì¢Œí‘œëŠ” "+x+","+y+"ì…ë‹ˆë‹¤.");
 		this.x  = x;
 		this.y = y;
 	}
 	@Override
 	void stop() {
 		// TODO Auto-generated method stub
-		System.out.println("¸¶¸°ÀÌ ´ë±â½Ç¿¡¼­ ´ë±â »óÅÂ¿¡ ÀÖ½À´Ï´Ù.");
+		System.out.println("ë§ˆë¦°ì´ ëŒ€ê¸°ì‹¤ì—ì„œ ëŒ€ê¸° ìƒíƒœì— ìˆìŠµë‹ˆë‹¤.");
 		
 	}
 	@Override
@@ -32,7 +32,7 @@ class Marine extends Unit
 		System.out.println("Message : go go go");
 	}
 	void stimPack(){
-		System.out.println("¸¶¸°ÀÌ ½ºÆÀÆÑÀ» »ç¿ëÇÏ¿´´Ù.");
+		System.out.println("ë§ˆë¦°ì´ ìŠ¤íŒ€íŒ©ì„ ì‚¬ìš©í•˜ì˜€ë‹¤.");
 	}
 }
 
@@ -41,12 +41,12 @@ class SiegeTank extends Unit
 	@Override
 	void move(int x, int y) {
 		// TODO Auto-generated method stub
-		System.out.println("ÅÊÅ©ÀÇ À§Ä¡ ÁÂÇ¥´Â "+x+","+y+"ÀÔ´Ï´Ù.");
+		System.out.println("íƒ±í¬ì˜ ìœ„ì¹˜ ì¢Œí‘œëŠ” "+x+","+y+"ì…ë‹ˆë‹¤.");
 	}
 	@Override
 	void stop() {
 		// TODO Auto-generated method stub
-		System.out.println("½ÃÁîÅÊÅ©°¡ ´ë±â »óÅÂ¿¡ ÀÖ½À´Ï´Ù.");
+		System.out.println("ì‹œì¦ˆíƒ±í¬ê°€ ëŒ€ê¸° ìƒíƒœì— ìˆìŠµë‹ˆë‹¤.");
 	}
 	@Override
 	void message() {
@@ -54,7 +54,7 @@ class SiegeTank extends Unit
 		System.out.println("yes sir~!");
 	}
 	void changeMode(){
-		System.out.println("ÅÊÅ©°¡ ¸ğµå¸¦ º¯°æÇÕ´Ï´Ù.");
+		System.out.println("íƒ±í¬ê°€ ëª¨ë“œë¥¼ ë³€ê²½í•©ë‹ˆë‹¤.");
 	}
 	
 }
@@ -63,12 +63,12 @@ class Dropship extends Unit
 	@Override
 	void move(int x, int y) {
 		// TODO Auto-generated method stub
-		System.out.println("µå¶ø½±ÀÇ À§Ä¡ ÁÂÇ¥´Â "+x+","+y+"ÀÔ´Ï´Ù.");
+		System.out.println("ë“œëì‰½ì˜ ìœ„ì¹˜ ì¢Œí‘œëŠ” "+x+","+y+"ì…ë‹ˆë‹¤.");
 	}
 	@Override
 	void stop() {
 		// TODO Auto-generated method stub
-		System.out.println("µå¶ø½±ÀÌ ´ë±â »óÅÂ¿¡ ÀÖ½À´Ï´Ù.");
+		System.out.println("ë“œëì‰½ì´ ëŒ€ê¸° ìƒíƒœì— ìˆìŠµë‹ˆë‹¤.");
 	}
 	@Override
 	void message() {

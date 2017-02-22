@@ -7,15 +7,15 @@ public static void main(String[] args)throws IOException {
 	
 	char ch;
 	Score score = new ScoreImpl();
-	//ÀÎ½ºÅÏ½º °´Ã¼ »ı¼º
+	//ì¸ìŠ¤í„´ìŠ¤ ê°ì²´ ìƒì„±
 	
-	//¸Ş´º ±¸¼º
+	//ë©”ë‰´ êµ¬ì„±
 	
 	while(true){
 		do{
-			System.out.print("1.Ãß°¡ 2.¼öÁ¤ 3.»èÁ¦ 4.ÀüÃ¼Ãâ·Â 5.ÇĞ¹ø°Ë»ö 6. ÀÌ¸§ °Ë»ö 7.Á¾·á");
+			System.out.print("1.ì¶”ê°€ 2.ìˆ˜ì • 3.ì‚­ì œ 4.ì „ì²´ì¶œë ¥ 5.í•™ë²ˆê²€ìƒ‰ 6. ì´ë¦„ ê²€ìƒ‰ 7.ì¢…ë£Œ");
 			ch = (char)System.in.read();
-			System.in.skip(2); // system.in.read();system.in.read(); µÎ¹ø ÇÑ°Í°ú °°´Ù.
+			System.in.skip(2); // system.in.read();system.in.read(); ë‘ë²ˆ í•œê²ƒê³¼ ê°™ë‹¤.
 			
 		}while(ch<'1'||ch>'7');
 		

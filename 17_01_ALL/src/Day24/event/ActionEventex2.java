@@ -25,7 +25,7 @@ public class ActionEventex2 extends Frame implements ActionListener {
 		Panel p = new Panel(new GridLayout(1, 4));
 		
 		for(int i=0; i<bt.length;i++){
-			bt[i] = new Button(i+1+"¹ø ¹öÆ°");
+			bt[i] = new Button(i+1+"ë²ˆ ë²„íŠ¼");
 			bt[i].addActionListener(this);
 			p.add(bt[i]);
 		}

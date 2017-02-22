@@ -6,7 +6,7 @@ public class WindowEventEx3 extends Frame{
 
 	public WindowEventEx3() {
 		// TODO Auto-generated constructor stub
-		super("ÀÍ¸íÅ¬·¡½º¸¦ ÀÌ¿ëÇÑ À©µµ¿ì Á¾·á ");
+		super("ìµëª…í´ë˜ìŠ¤ë¥¼ ì´ìš©í•œ ìœˆë„ìš° ì¢…ë£Œ ");
 	
 		addWindowListener(new WindowAdapter() {
 			@Override

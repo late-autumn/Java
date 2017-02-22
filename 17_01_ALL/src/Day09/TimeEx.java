@@ -1,33 +1,33 @@
 package Day09;
 
 class Time{
-	private int hour ; // ½Ã°£ = 0 ~ 23
-	private int minute; //ºÐ = 0~ 59
-	private int second; //ºÐ = 0~ 59
+	private int hour ; // ì‹œê°„ = 0 ~ 23
+	private int minute; //ë¶„ = 0~ 59
+	private int second; //ë¶„ = 0~ 59
 	
-	//Ã¹¹øÀç »ý¼ºÀÚ
+	//ì²«ë²ˆìž¬ ìƒì„±ìž
 	public Time()
 	{
 		this(0,0,0);
 	}
-	//µÎ¹øÂ° »ý¼ºÀÚ
+	//ë‘ë²ˆì§¸ ìƒì„±ìž
 	public Time(int h, int m, int s)
 	{
 		setTime(h,m,s);
 	}
-	//½Ã°£ ¼³Á¤ ÇÔ¼ö
+	//ì‹œê°„ ì„¤ì • í•¨ìˆ˜
 	public void setTime(int h, int m, int s)
 	{
-		hour = ((h>=0&&h<24)?h:0); //½Ã°£À» ±¸ÇÏ´Â
-		minute = ((m>=0&&m<60)?m:0); //ºÐÀ» ±¸ÇÏ´Â
-		second = ((s>=0&&s<60)?s:0); //ÃÊ¸¦ ±¸ÇÏ´Â
+		hour = ((h>=0&&h<24)?h:0); //ì‹œê°„ì„ êµ¬í•˜ëŠ”
+		minute = ((m>=0&&m<60)?m:0); //ë¶„ì„ êµ¬í•˜ëŠ”
+		second = ((s>=0&&s<60)?s:0); //ì´ˆë¥¼ êµ¬í•˜ëŠ”
 	}
 	
-	//½Ã : ºÐ: ÃÊ Çü½ÄÀ¸·Î Ãâ·Â
+	//ì‹œ : ë¶„: ì´ˆ í˜•ì‹ìœ¼ë¡œ ì¶œë ¥
 	@Override
 	public String toString() {
 		return "Time [hour=" + hour + ", minute=" + minute + ", second=" + second + "]";
-		//return String.format(~); À¸·Î ÇÒ¼ö ÀÖÀ½
+		//return String.format(~); ìœ¼ë¡œ í• ìˆ˜ ìžˆìŒ
 	}
 
 
@@ -37,16 +37,16 @@ class Time{
 
 public class TimeEx {
 public static void main(String[] args) {
-	//Time °´Ã¼¸¦ »ý¼ºÇÏ°í ÃÊ±âÈ­ ÇÑ´Ù.
+	//Time ê°ì²´ë¥¼ ìƒì„±í•˜ê³  ì´ˆê¸°í™” í•œë‹¤.
 	Time t1 = new Time();
-	System.out.println("±âº» »ý¼ºÀÚ È£Ãâ ÈÄ ½Ã°£:");
+	System.out.println("ê¸°ë³¸ ìƒì„±ìž í˜¸ì¶œ í›„ ì‹œê°„:");
 	System.out.println(t1);
 	
-	//µÎ¹øÂ° »ý¼ºÀÚ È£Ãâ 
+	//ë‘ë²ˆì§¸ ìƒì„±ìž í˜¸ì¶œ 
 	Time t2 = new Time(15,11,20);
 	System.out.println(t2);
 	
-	//¿Ã¹Ù¸£Áö ¾Ê´Â ½Ã°£ ¼³Á¤
+	//ì˜¬ë°”ë¥´ì§€ ì•ŠëŠ” ì‹œê°„ ì„¤ì •
 	Time t3 = new Time(26,61,99);
 	System.out.println(t3);
 	

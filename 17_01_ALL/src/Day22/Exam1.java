@@ -13,17 +13,17 @@ class RecordEx{
 
 class Grade{
 	
-	RecordEx[] rec;					//·¹ÄÚµå Å¬·¡½º¸¦ ÂüÁ¶ º¯¼ö·Î ¼±¾ğ
-	int n;							//ÀÎ¿ø¼ö º¯¼ö Á¤ÀÇ
+	RecordEx[] rec;					//ë ˆì½”ë“œ í´ë˜ìŠ¤ë¥¼ ì°¸ì¡° ë³€ìˆ˜ë¡œ ì„ ì–¸
+	int n;							//ì¸ì›ìˆ˜ ë³€ìˆ˜ ì •ì˜
 	
 	Scanner sc = new Scanner(System.in);
 	
-	//ÀÎ¿ø¼ö¸¦ ÀÔ·Â ¹ŞÀ» ¸Ş¼Òµå Á¤ÀÇ
+	//ì¸ì›ìˆ˜ë¥¼ ì…ë ¥ ë°›ì„ ë©”ì†Œë“œ ì •ì˜
 	
 	void set(){
 		
 		do{
-			System.out.print("ÀÎ¿ø ¼ö ÀÔ·Â(1~100):");
+			System.out.print("ì¸ì› ìˆ˜ ì…ë ¥(1~100):");
 			n = sc.nextInt();
 			sc.nextLine();
 		}while(n<1||n>100);
@@ -32,14 +32,14 @@ class Grade{
 		
 	}
 	
-	void input(){					//ÀÌ¸§°ú ¼ºÀûÀ» ÀÔ·Â¹Ş´Â´Ù. 
+	void input(){					//ì´ë¦„ê³¼ ì„±ì ì„ ì…ë ¥ë°›ëŠ”ë‹¤. 
 		
 		for(int i=0; i<rec.length;i++){
 			
 		rec[i]= new RecordEx();
-		System.out.println("ÀÌ¸§À» ÀÔ·ÂÇØÁÖ¼¼¿ä:");
+		System.out.println("ì´ë¦„ì„ ì…ë ¥í•´ì£¼ì„¸ìš”:");
 		rec[i].name = sc.nextLine();
-		System.out.println("¼ºÀûÀ» ÀÔ·ÂÇØÁÖ¼¼¿ä:");
+		System.out.println("ì„±ì ì„ ì…ë ¥í•´ì£¼ì„¸ìš”:");
 		rec[i].sco = sc.nextInt();
 		sc.nextLine();
 		}
@@ -73,7 +73,7 @@ class Grade{
 		System.out.println("----------------------");
 		
 		for(int i=0; i<rec.length;i++){
-			System.out.printf("%4d µî %5s %4d\n",i+1,rec[i].name,rec[i].sco);
+			System.out.printf("%4d ë“± %5s %4d\n",i+1,rec[i].name,rec[i].sco);
 		}
 		
 		

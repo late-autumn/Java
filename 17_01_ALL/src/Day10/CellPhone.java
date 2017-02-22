@@ -2,10 +2,10 @@ package Day10;
 
 public class CellPhone {
 
-	//¼Ó¼º(¸â¹öº¯¼ö)
-	String Model;	//¸ğµ¨¸í
-	String Number; 	//ÀüÈ­¹øÈ£
-	int chord;		//È­À½
+	//ì†ì„±(ë©¤ë²„ë³€ìˆ˜)
+	String Model;	//ëª¨ë¸ëª…
+	String Number; 	//ì „í™”ë²ˆí˜¸
+	int chord;		//í™”ìŒ
 	
 	public String getNumber() {
 		return Number;

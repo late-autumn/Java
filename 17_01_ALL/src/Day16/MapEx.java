@@ -9,15 +9,15 @@ public class MapEx {
 		
 		HashMap<Integer, String>map = 
 				new HashMap<Integer, String>();
-		//Hashmap »ı¼º
-		//¸Ê¿¡ ÀúÀå
+		//Hashmap ìƒì„±
+		//ë§µì— ì €ì¥
 		
 		for(int i=0; i<msg.length;i++){
 			map.put(i, msg[i]);
 		}
 		
 		Set<Integer>keys = map.keySet();
-		//¸Ê¿¡¼­ ÀĞ¾î¿Â´Ù
+		//ë§µì—ì„œ ì½ì–´ì˜¨ë‹¤
 		for(Integer n : keys)
 		System.out.println(map.get(n));
 	}

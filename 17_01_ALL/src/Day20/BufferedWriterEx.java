@@ -8,13 +8,13 @@ public class BufferedWriterEx {
 		BufferedWriter bw = null;
 		
 		try{
-			fw = new FileWriter("c:/ºñµÑ±â/hello.txt");
+			fw = new FileWriter("c:/ë¹„ë‘˜ê¸°/hello.txt");
 			bw = new BufferedWriter(fw);
 			
 			bw.newLine();
-			bw.write("¾È³çÇÏ¼¼¿ä:"+System.getProperty("line.separator"));
-			bw.write("¾È³çÇÏ¼¼¿ä2:"+System.lineSeparator());
-			bw.write("¹æ°©½À´Ï´Ù");
+			bw.write("ì•ˆë…•í•˜ì„¸ìš”:"+System.getProperty("line.separator"));
+			bw.write("ì•ˆë…•í•˜ì„¸ìš”2:"+System.lineSeparator());
+			bw.write("ë°©ê°‘ìŠµë‹ˆë‹¤");
 			bw.flush();
 		}catch(IOException e){
 			e.getMessage();

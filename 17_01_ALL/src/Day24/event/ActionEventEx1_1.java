@@ -7,11 +7,11 @@ import java.awt.event.ActionListener;
 import Day24.awt.WinEvent;
 public class ActionEventEx1_1 extends Frame{
 
-	private Button bt = new Button("¹öÆ°");
+	private Button bt = new Button("ë²„íŠ¼");
 	
 	
 	public ActionEventEx1_1() {
-		super("this¿Ü Ã³¸®¹ı");
+		super("thisì™¸ ì²˜ë¦¬ë²•");
 		setLayout(new BorderLayout());
 		add(bt);
 		bt.addActionListener(new ActionListener() {
@@ -19,7 +19,7 @@ public class ActionEventEx1_1 extends Frame{
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				// TODO Auto-generated method stub
-				System.out.println("ÀÚÃ¼ Ã³¸® ¿À¹ö¶óÀÌµù");
+				System.out.println("ìì²´ ì²˜ë¦¬ ì˜¤ë²„ë¼ì´ë”©");
 				
 			}
 		});

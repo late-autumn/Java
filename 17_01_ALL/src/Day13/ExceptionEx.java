@@ -6,7 +6,7 @@ public static void main(String[] args) {
 	try{
 	int i =0;
 	int s= 0;
-	s = i/0;	//¾Ë°í¸®Áò¿¡´ëÇÑ Exception ¹ß»ıÇÑ´Ù.
+	s = i/0;	//ì•Œê³ ë¦¬ì¦˜ì—ëŒ€í•œ Exception ë°œìƒí•œë‹¤.
 	System.out.println(s);
 	} catch (ArithmeticException e) {
 		e.printStackTrace();

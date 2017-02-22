@@ -2,46 +2,46 @@ package Day16;
 import java.util.*;
 public class HashMapEx {
 private static final String[] name = {
-		"È«±æµ¿","ÀÌ¼ø½Å","±èÀ¯½Å","°­°¨Âù","¼Õ¿À°ø","»ç¿ÀÁ¤"};
+		"í™ê¸¸ë™","ì´ìˆœì‹ ","ê¹€ìœ ì‹ ","ê°•ê°ì°¬","ì†ì˜¤ê³µ","ì‚¬ì˜¤ì •"};
 
-	//Å° : µ¿ÀÏÇÑ °ªÀÌ Á¸Àç ÇÒ ¼ö ¾ø´Ù.(¸¸¾à µ¿ÀÏÇÑ Å°°¡ Á¸ÀçÇÒ °æ¿ì ¸¶Áö¸· µ¥ÀÌÅÍ°¡ ÀúÀåµÊ)³ÎÀÌ µÉ ¼ö ¾ø´Ù.
+	//í‚¤ : ë™ì¼í•œ ê°’ì´ ì¡´ìž¬ í•  ìˆ˜ ì—†ë‹¤.(ë§Œì•½ ë™ì¼í•œ í‚¤ê°€ ì¡´ìž¬í•  ê²½ìš° ë§ˆì§€ë§‰ ë°ì´í„°ê°€ ì €ìž¥ë¨)ë„ì´ ë  ìˆ˜ ì—†ë‹¤.
 	private static final String[] tel = {"111-111","222-2222","233-3333",
 			"111-111","222-2222","555-5555"};
-	//°ª : µ¿ÀÏÇÑ °ªÀÌ Á¸ÀçÇØµµ °¡´ÉÇÏ´Ù. why : key°ª¿¡ ÀÇÇØ µ¥ÀÌÅÍ°ªÀ» ºÒ·¯¿À±â ¶§¹®
+	//ê°’ : ë™ì¼í•œ ê°’ì´ ì¡´ìž¬í•´ë„ ê°€ëŠ¥í•˜ë‹¤. why : keyê°’ì— ì˜í•´ ë°ì´í„°ê°’ì„ ë¶ˆëŸ¬ì˜¤ê¸° ë•Œë¬¸
 	
 
 public static void main(String[] args) {
 	
 	Hashtable<String, String>ht = new Hashtable<>();
-	//ÇØ½¬Å×ÀÌºí¿¡ Å°, °ª ÀÔ·Â put(k,v)
+	//í•´ì‰¬í…Œì´ë¸”ì— í‚¤, ê°’ ìž…ë ¥ put(k,v)
 	for(int i=0;i<name.length;i++)
 		ht.put(name[i], tel[i]);
 	
-	//ÇØ½¬Å×ÀÌºí °ªÀ» Å°¸¦ ÀÌ¿ëÇÏ¿© °Ë»öÇÔ
+	//í•´ì‰¬í…Œì´ë¸” ê°’ì„ í‚¤ë¥¼ ì´ìš©í•˜ì—¬ ê²€ìƒ‰í•¨
 	
-	String str = ht.get("È«±æµ¿");
+	String str = ht.get("í™ê¸¸ë™");
 	if(str!=null)
-	System.out.println("È«±æµ¿ÀÇ ÀüÈ­¹øÈ£:"+str);
-	//Å°°¡ Á¸ÀçÇÏ´Â °Ë»ö
-	if(ht.containsKey("ÀÓ²©Á¤")){
-		System.out.println("ÀÓ²©Á¤ÀÇ µ¥ÀÌÅÍ°¡ Á¸ÀçÇÕ´Ï´Ù.");
+	System.out.println("í™ê¸¸ë™ì˜ ì „í™”ë²ˆí˜¸:"+str);
+	//í‚¤ê°€ ì¡´ìž¬í•˜ëŠ” ê²€ìƒ‰
+	if(ht.containsKey("ìž„êº½ì •")){
+		System.out.println("ìž„êº½ì •ì˜ ë°ì´í„°ê°€ ì¡´ìž¬í•©ë‹ˆë‹¤.");
 	}
 	else 
-		System.out.println("ÀÓ²©Á¤ÀÇ µ¥ÀÌÅÍ°¡ Á¸ÀçÇÏÁö ¾Ê½À´Ï´Ù.");
+		System.out.println("ìž„êº½ì •ì˜ ë°ì´í„°ê°€ ì¡´ìž¬í•˜ì§€ ì•ŠìŠµë‹ˆë‹¤.");
 	
 	if(ht.containsKey("666-666"))
 	{
-		System.out.println("Á¸ÀçÇÕ´Ï´Ù");
+		System.out.println("ì¡´ìž¬í•©ë‹ˆë‹¤");
 	}
 	else
-		System.out.println("Á¸Àç¾ÈÇÏ´Â ¹øÈ£");
+		System.out.println("ì¡´ìž¬ì•ˆí•˜ëŠ” ë²ˆí˜¸");
 	
-	//Å° °ª »èÁ¦
-	ht.remove("»ç¿ÀÁ¤");
-	if(ht.containsKey("»ç¿ÀÁ¤"))
-		System.out.println("Á¸ÀçÇÔ");
+	//í‚¤ ê°’ ì‚­ì œ
+	ht.remove("ì‚¬ì˜¤ì •");
+	if(ht.containsKey("ì‚¬ì˜¤ì •"))
+		System.out.println("ì¡´ìž¬í•¨");
 	else
-		System.out.println("»ç¿ÀÁ¤ Áö¿öÁü");
+		System.out.println("ì‚¬ì˜¤ì • ì§€ì›Œì§");
 	
 
 }

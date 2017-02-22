@@ -7,7 +7,7 @@ import java.util.Scanner;
 
 public class Banking {
 public static void main(String[] args)throws IOException {
-		Account na = new Account("È«±æµ¿");
+		Account na = new Account("í™ê¸¸ë™");
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		Scanner sc = new Scanner(System.in);
 		int input;
@@ -16,12 +16,12 @@ public static void main(String[] args)throws IOException {
 		int switchInt = 0;
 
 		do{
-			System.out.println("¸Ş´º¸¦ ÀÔ·ÂÇØÁÖ¼¼¿ä.");
+			System.out.println("ë©”ë‰´ë¥¼ ì…ë ¥í•´ì£¼ì„¸ìš”.");
 			System.out.println("===============");
-			System.out.println("1¹ø ÀÔ±İ");
-			System.out.println("2¹ø Ãâ±İ");
-			System.out.println("3¹ø Á¶È¸");
-			System.out.println("0¹ø Á¾·á");
+			System.out.println("1ë²ˆ ì…ê¸ˆ");
+			System.out.println("2ë²ˆ ì¶œê¸ˆ");
+			System.out.println("3ë²ˆ ì¡°íšŒ");
+			System.out.println("0ë²ˆ ì¢…ë£Œ");
 			System.out.println("===============");
 			strWork = br.readLine();
 		if(strWork!=null)
@@ -30,37 +30,37 @@ public static void main(String[] args)throws IOException {
 		}
 		else
 		{
-			System.out.println("ÀÛ¾÷ ³»¿ëÀ» ÀÔ·ÂÇÏÁö ¾ÊÀ¸¼Ì½À´Ï´Ù.");
+			System.out.println("ì‘ì—… ë‚´ìš©ì„ ì…ë ¥í•˜ì§€ ì•Šìœ¼ì…¨ìŠµë‹ˆë‹¤.");
 			System.exit(0);
 		}
 		
-		//switch¹® ½ÃÀÛ
+		//switchë¬¸ ì‹œì‘
 		switch(switchInt)
 		{
 		case 1:
-			System.out.println("ÀÔ±İ ÇÏ½Ç ±İ¾×À» ÀÔ·ÂÇÏ¼¼¿ä :");
+			System.out.println("ì…ê¸ˆ í•˜ì‹¤ ê¸ˆì•¡ì„ ì…ë ¥í•˜ì„¸ìš” :");
 			System.out.println("===============");
 			money = sc.nextInt();
 			na.deposit(money);
 			break;
 		case 2:
-			System.out.println("Ãâ±İÇÏ½Ç ±İ¾×À» ÀÔ·ÂÇÏ¼¼¿ä:");
+			System.out.println("ì¶œê¸ˆí•˜ì‹¤ ê¸ˆì•¡ì„ ì…ë ¥í•˜ì„¸ìš”:");
 			System.out.println("===============");
 			money = sc.nextInt();
 			na.withdraw(money);
 			break;
 		case 3:
-			System.out.println("ÀÜ¾× Á¶È¸ ÀÔ´Ï´Ù.");
+			System.out.println("ì”ì•¡ ì¡°íšŒ ì…ë‹ˆë‹¤.");
 			System.out.println("===============");
 			na.display();
 			break;
 		case 0:
-			System.out.println("Á¾·á ¼­ºñ½º ÀÔ´Ï´Ù.");
+			System.out.println("ì¢…ë£Œ ì„œë¹„ìŠ¤ ì…ë‹ˆë‹¤.");
 			System.exit(0);
 			default:
-				System.out.println("Àß¸ø ´©¸£¼Ì½À´Ï´Ù.0¿¡¼­ 3 »çÀÌÀÇ ¼ıÀÚ¸¦ ´­·¯ÁÖ¼¼¿ä");
+				System.out.println("ì˜ëª» ëˆ„ë¥´ì…¨ìŠµë‹ˆë‹¤.0ì—ì„œ 3 ì‚¬ì´ì˜ ìˆ«ìë¥¼ ëˆŒëŸ¬ì£¼ì„¸ìš”");
 
-		}//end switch¹®
+		}//end switchë¬¸
 		
 		}while(!strWork.equals(0));
 

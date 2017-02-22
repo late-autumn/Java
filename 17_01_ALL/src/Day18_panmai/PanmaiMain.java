@@ -8,21 +8,21 @@ public class PanmaiMain {
 	Scanner sc = new Scanner(System.in);
 	
 	public void product(){
-		//»óÇ° µî·Ï È­¸é
+		//ìƒí’ˆ ë“±ë¡ í™”ë©´
 		char ch;
 		
 		while(true){
 			
-			System.out.println("[»óÇ° µî·Ï È­¸é]");
+			System.out.println("[ìƒí’ˆ ë“±ë¡ í™”ë©´]");
 			System.out.println("----------------");
-			System.out.println("  1.»óÇ° µî·Ï");
-			System.out.println("  2.¼ö·® µî·Ï");
-			System.out.println("  3.»óÇ° ¸®½ºÆ®");
-			System.out.println("  4.»óÇ°ÄÚµå °Ë»ö");
-			System.out.println("  5.º¹±Í");
+			System.out.println("  1.ìƒí’ˆ ë“±ë¡");
+			System.out.println("  2.ìˆ˜ëŸ‰ ë“±ë¡");
+			System.out.println("  3.ìƒí’ˆ ë¦¬ìŠ¤íŠ¸");
+			System.out.println("  4.ìƒí’ˆì½”ë“œ ê²€ìƒ‰");
+			System.out.println("  5.ë³µê·€");
 			
 			System.out.println("----------------");
-			System.out.print("¼±ÅÃ ==> ");
+			System.out.print("ì„ íƒ ==> ");
 			ch = sc.next().charAt(0);
 		
 			switch(ch)
@@ -40,18 +40,18 @@ public class PanmaiMain {
 	}//end method
 	
 	public void sale(){
-		//»óÇ° ÆÇ¸Å È­¸é
+		//ìƒí’ˆ íŒë§¤ í™”ë©´
 		char ch;
 		
 		while(true){
-			System.out.println("[»óÇ° ÆÇ¸Å È­¸é]");
+			System.out.println("[ìƒí’ˆ íŒë§¤ í™”ë©´]");
 			System.out.println("----------------");
-			System.out.println("  1.»óÇ° ÆÇ¸Å");
-			System.out.println("  2.ÆÇ¸ÅÇöÈ² ¸®½ºÆ®");
-			System.out.println("  3.ÆÇ¸ÅÇöÈ² °Ë»ö");
-			System.out.println("  4.º¹±Í");
+			System.out.println("  1.ìƒí’ˆ íŒë§¤");
+			System.out.println("  2.íŒë§¤í˜„í™© ë¦¬ìŠ¤íŠ¸");
+			System.out.println("  3.íŒë§¤í˜„í™© ê²€ìƒ‰");
+			System.out.println("  4.ë³µê·€");
 			System.out.println("----------------");
-			System.out.print("¼±ÅÃ ==> ");
+			System.out.print("ì„ íƒ ==> ");
 			ch = sc.next().charAt(0);
 			switch(ch)
 			{
@@ -73,13 +73,13 @@ public class PanmaiMain {
 		char ch;
 		PanmaiMain pp = new PanmaiMain();
 		while(true){
-			System.out.println("  [¸ÞÀÎ¸Þ´º]");
+			System.out.println("  [ë©”ì¸ë©”ë‰´]");
 			System.out.println("----------------");
-			System.out.println("  1.»óÇ°µî·Ï");
-			System.out.println("  2.»óÇ°ÆÇ¸Å");
-			System.out.println("  3.Á¾·á");
+			System.out.println("  1.ìƒí’ˆë“±ë¡");
+			System.out.println("  2.ìƒí’ˆíŒë§¤");
+			System.out.println("  3.ì¢…ë£Œ");
 			System.out.println("----------------");
-			System.out.print("¼±ÅÃ ==> ");
+			System.out.print("ì„ íƒ ==> ");
 			ch = sc.next().charAt(0);
 			switch(ch){
 			case '1': pp.product(); break;

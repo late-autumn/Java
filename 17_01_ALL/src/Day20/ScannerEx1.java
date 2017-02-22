@@ -12,11 +12,11 @@ public class ScannerEx1 {
 		
 		Scanner scan = null;
 		try{
-			//½ºÄ³³Ê °´Ã¼¸¦ »ı¼º
-			scan = new Scanner(new File("c:/ºñµÑ±â/song.txt"));
+			//ìŠ¤ìºë„ˆ ê°ì²´ë¥¼ ìƒì„±
+			scan = new Scanner(new File("c:/ë¹„ë‘˜ê¸°/song.txt"));
 			
 			while(scan.hasNext()){
-				System.out.printf("½ºÄµ:%s \n",scan.next());
+				System.out.printf("ìŠ¤ìº”:%s \n",scan.next());
 			}
 			scan.close();
 		}catch(FileNotFoundException fe)

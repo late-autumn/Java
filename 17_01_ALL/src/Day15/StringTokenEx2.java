@@ -3,27 +3,27 @@ import java.util.StringTokenizer;
 
 public class StringTokenEx2 {
 	
-	/*String Å¬·¡½ºÀÇ split()¸Ş¼Òµå¿Í StringTokenizerÀÇ  Â÷ÀÌ
+	/*String í´ë˜ìŠ¤ì˜ split()ë©”ì†Œë“œì™€ StringTokenizerì˜  ì°¨ì´
 	 * 
-	 * split() : ÀÌ ¸Ş¼ÒµåÀÇ °æ¿ì ¹«ÀÇ¹ÌÇÑ °ø¹é(white space)µµ ÀÚ¸®¸¦ Â÷ÁöÇÔ
-	 * StringTokenizer : ÀÌ °æ¿ì¿¡´Â ¹«ÀÇ¹ÌÇÑ °ø¹éÀº ¹«½ÃÇÏ°í Á¦°ÅÇÔ
+	 * split() : ì´ ë©”ì†Œë“œì˜ ê²½ìš° ë¬´ì˜ë¯¸í•œ ê³µë°±(white space)ë„ ìë¦¬ë¥¼ ì°¨ì§€í•¨
+	 * StringTokenizer : ì´ ê²½ìš°ì—ëŠ” ë¬´ì˜ë¯¸í•œ ê³µë°±ì€ ë¬´ì‹œí•˜ê³  ì œê±°í•¨
 	 * 
 	 * 
 	 */
 public static void main(String[] args) {
 	
-	String str = "¶÷º¸¸£±â´Ï, ¾Æ¿ìµğ,, Æä¶ó¸®, Æ÷¸£½¦, ¸µÄÁ";
+	String str = "ëŒë³´ë¥´ê¸°ë‹ˆ, ì•„ìš°ë””,, í˜ë¼ë¦¬, í¬ë¥´ì‰, ë§ì»¨";
 	StringTokenizer tokens = new StringTokenizer(str, ",");
 	for(int i = 1; tokens.hasMoreTokens();i++)
 	{
-		System.out.println("¹®ÀÚ"+i+":"+tokens.nextToken()+"\t");
+		System.out.println("ë¬¸ì"+i+":"+tokens.nextToken()+"\t");
 	}
 	System.out.println();
 	System.out.println("==========================================");
 	
 	String[] values = str.split(",");
 	for(int i=0; i<values.length;i++)
-		System.out.println("¹®ÀÚ"+(i+1)+":"+values[i]+"\t");
+		System.out.println("ë¬¸ì"+(i+1)+":"+values[i]+"\t");
 	
 	System.out.println("==========================================");
 	double da;

@@ -8,7 +8,7 @@ public class WindowEventEx extends Frame implements WindowListener {
 
 	public WindowEventEx() {
 		// TODO Auto-generated constructor stub
-		super("Listener ÀÌ¿ë À©µµ¿ì Á¾·á");
+		super("Listener ì´ìš© ìœˆë„ìš° ì¢…ë£Œ");
 		addWindowListener(this);
 		
 		setSize(300,200);
@@ -27,13 +27,13 @@ public class WindowEventEx extends Frame implements WindowListener {
 	@Override
 	public void windowClosed(WindowEvent arg0) {
 		// TODO Auto-generated method stub
-		// À©µµ¿ì°¡ ´İÈ÷°í ³ª¼­ 
+		// ìœˆë„ìš°ê°€ ë‹«íˆê³  ë‚˜ì„œ 
 	}
 
 	@Override
 	public void windowClosing(WindowEvent arg0) {
 		// TODO Auto-generated method stub
-		//Á¾·á¹öÆ° ´­·¶À»¶§ Ã³¸®
+		//ì¢…ë£Œë²„íŠ¼ ëˆŒë €ì„ë•Œ ì²˜ë¦¬
 		System.exit(0);
 	}
 
@@ -58,7 +58,7 @@ public class WindowEventEx extends Frame implements WindowListener {
 	@Override
 	public void windowOpened(WindowEvent arg0) {
 		// TODO Auto-generated method stub
-		//À©µµ¿ì ¿­¸± ¶§ 
+		//ìœˆë„ìš° ì—´ë¦´ ë•Œ 
 	}
 	
 	public static void main(String[] args) {

@@ -20,12 +20,12 @@ public class JTableEx2 {
 		
 		
 		// TODO Auto-generated method stub
-		JFrame f = new JFrame("ÇĞ»ıÁ¤º¸");
+		JFrame f = new JFrame("í•™ìƒì •ë³´");
 		f.setPreferredSize(new Dimension(300,200));
 		f.setLocation(500, 400);
 		Container content_Pane = f.getContentPane();
 		
-		String[] col_names = {"ÀÌ¸§","³ªÀÌ","¼ºº°"};		//ÄÃ·³ ÀÌ¸§
+		String[] col_names = {"ì´ë¦„","ë‚˜ì´","ì„±ë³„"};		//ì»¬ëŸ¼ ì´ë¦„
 		
 		DefaultTableModel model = new DefaultTableModel(col_names, 0);
 		JTable table = new JTable(model);
@@ -33,24 +33,24 @@ public class JTableEx2 {
 		JScrollPane scrollPane = new JScrollPane(table);
 		content_Pane.add(scrollPane, BorderLayout.CENTER);
 		
-		//ÆĞ³Î Ãß°¡ 
+		//íŒ¨ë„ ì¶”ê°€ 
 		Panel panel = new Panel();
 		
-		//ÅØ½ºÆ® ÇÊµå Ãß°¡ 
+		//í…ìŠ¤íŠ¸ í•„ë“œ ì¶”ê°€ 
 		JTextField tx1 = new JTextField(10);
 		JTextField tx2 = new JTextField(3);
 		JTextField tx3 = new JTextField(2);
 		
-		//¹öÆ° Ãß°¡
+		//ë²„íŠ¼ ì¶”ê°€
 		
-		JButton button1 = new JButton("Ãß°¡");
-		JButton button2 = new JButton("»èÁ¦");
+		JButton button1 = new JButton("ì¶”ê°€");
+		JButton button2 = new JButton("ì‚­ì œ");
 
-		panel.add(new Label("ÀÌ¸§"));
+		panel.add(new Label("ì´ë¦„"));
 		panel.add(tx1);
-		panel.add(new Label("³ªÀÌ"));
+		panel.add(new Label("ë‚˜ì´"));
 		panel.add(tx2);
-		panel.add(new Label("¼ºº°"));
+		panel.add(new Label("ì„±ë³„"));
 		panel.add(tx3);
 		
 		panel.add(button1);
@@ -58,9 +58,9 @@ public class JTableEx2 {
 		
 		content_Pane.add(panel,BorderLayout.SOUTH);
 		
-		//Ãß°¡¹öÆ° 
+		//ì¶”ê°€ë²„íŠ¼ 
 		button1.addActionListener(new JTable_AddActionListener(table, tx1, tx2, tx3));
-		//»èÁ¦¹öÆ°
+		//ì‚­ì œë²„íŠ¼
 		button2.addActionListener(new JTable_RemoveActionListener(table));
 		
 		

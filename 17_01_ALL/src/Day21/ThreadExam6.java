@@ -1,31 +1,31 @@
 package Day21;
 
 class Data{
-	//µÎ ½º·¹µå°¡ °øÀ¯ÇÒ ¼ö ÀÖ´Â Å¬·¡½º Á¤ÀÇ
+	//ë‘ ìŠ¤ë ˆë“œê°€ ê³µìœ í•  ìˆ˜ ìˆëŠ” í´ë˜ìŠ¤ ì •ì˜
 	
-	int m_iRandomNum = 0; 			//µÎ ½º·¹µå°¡ Á¢±Ù ÇÒ ¼ö ÀÖ´Â ÇÊµå Á¤ÀÇ
-									//Á¤ÀÇµÈ ÇÊµå °ªÀ» ¼³Á¤ÇÏ°Å³ª ÀĞ¾î¿À´Â ¸Ş¼Òµå Á¤ÀÇ
+	int m_iRandomNum = 0; 			//ë‘ ìŠ¤ë ˆë“œê°€ ì ‘ê·¼ í•  ìˆ˜ ìˆëŠ” í•„ë“œ ì •ì˜
+									//ì •ì˜ëœ í•„ë“œ ê°’ì„ ì„¤ì •í•˜ê±°ë‚˜ ì½ì–´ì˜¤ëŠ” ë©”ì†Œë“œ ì •ì˜
 
 	public int getM_iRandomNum() {
-		return m_iRandomNum;								//·£´ı°ªÀ» ¸®ÅÏÇÔ
+		return m_iRandomNum;								//ëœë¤ê°’ì„ ë¦¬í„´í•¨
 	}
 
 	public void setM_iRandomNum() {
-		this.m_iRandomNum = (int)(Math.random()*1000);		//·£´ıÀ¸·Î °ªÀ» ¼³Á¤
+		this.m_iRandomNum = (int)(Math.random()*1000);		//ëœë¤ìœ¼ë¡œ ê°’ì„ ì„¤ì •
 	}
 	
 }
 
 class Thread_Ex6_1 extends Thread{
-	Data m_RandomNum;										//°øÀ¯ µ¥ÀÌÅÍ¸¦ ½º·¹µåÀÇ ÇÊµå·Î ¼±¾ğ
+	Data m_RandomNum;										//ê³µìœ  ë°ì´í„°ë¥¼ ìŠ¤ë ˆë“œì˜ í•„ë“œë¡œ ì„ ì–¸
 	
 	public Thread_Ex6_1(Data RandomNum, String name) {
-		super(name);										//Ã¹¹øÂ° ½º·¹µå 
+		super(name);										//ì²«ë²ˆì§¸ ìŠ¤ë ˆë“œ 
 		m_RandomNum = RandomNum;
 	}
 	
 	@Override
-	public void run() {										//°øÀ¯µÈ º¯¼ö°ªÀ» ³»ºÎÇÊµå¿¡ ÀúÀå 
+	public void run() {										//ê³µìœ ëœ ë³€ìˆ˜ê°’ì„ ë‚´ë¶€í•„ë“œì— ì €ì¥ 
 		
 		try {
 			for(int i=0; i<5; i++){
@@ -43,10 +43,10 @@ class Thread_Ex6_1 extends Thread{
 	
 }
 class Thread_Ex6_2 extends Thread{
-	Data m_RandomNum;										//°øÀ¯ µ¥ÀÌÅÍ¸¦ ½º·¹µåÀÇ ÇÊµå·Î ¼±¾ğ
+	Data m_RandomNum;										//ê³µìœ  ë°ì´í„°ë¥¼ ìŠ¤ë ˆë“œì˜ í•„ë“œë¡œ ì„ ì–¸
 	
 	public Thread_Ex6_2(Data RandomNum, String name) {
-		super(name);										//µÎ¹øÂ° ½º·¹µå 
+		super(name);										//ë‘ë²ˆì§¸ ìŠ¤ë ˆë“œ 
 		m_RandomNum = RandomNum;
 	}
 	
@@ -71,10 +71,10 @@ public class ThreadExam6 {
 
 	public static void main(String[] args) {
 		
-		Data RData = new Data();			//°øÀ¯ º¯¼ö¸¦ À§ÇÑ Å¬·¡½º ÀÎ½ºÅÏ½º »ı¼º
+		Data RData = new Data();			//ê³µìœ  ë³€ìˆ˜ë¥¼ ìœ„í•œ í´ë˜ìŠ¤ ì¸ìŠ¤í„´ìŠ¤ ìƒì„±
 		
-		Thread t1 = new Thread_Ex6_1(RData, "»ı¼ºÀÚ");
-		Thread t2 = new Thread_Ex6_2(RData,"¼ÒºñÀÚ");
+		Thread t1 = new Thread_Ex6_1(RData, "ìƒì„±ì");
+		Thread t2 = new Thread_Ex6_2(RData,"ì†Œë¹„ì");
 		t1.start();
 		t2.start();
 		

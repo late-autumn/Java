@@ -6,7 +6,7 @@ public class Coffee {
 		// TODO Auto-generated method stub
 		
 		Menu mm = new Menu();
-		mm.Menu(); //¸Þ´º¸Þ¼­µå È£Ãâ
+		mm.Menu(); //ë©”ë‰´ë©”ì„œë“œ í˜¸ì¶œ
 		
 		
 

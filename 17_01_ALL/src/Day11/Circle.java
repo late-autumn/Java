@@ -6,26 +6,26 @@ public class Circle {
 	Scanner sc = new Scanner(System.in);
 	int r;
 	final double PI = 3.141592;
-	void input() //ÀÔ·Â¸Ş¼Òµå
+	void input() //ì…ë ¥ë©”ì†Œë“œ
 	{
-		System.out.println("¹İÁö¸§À» ÀÔ·ÂÇÏ¼¼¿ä:");
+		System.out.println("ë°˜ì§€ë¦„ì„ ì…ë ¥í•˜ì„¸ìš”:");
 		r = sc.nextInt();
 	}
-	double area()//³ĞÀÌ ±¸ÇÏ´Â ¸Ş¼Òµå
+	double area()//ë„“ì´ êµ¬í•˜ëŠ” ë©”ì†Œë“œ
 	{
 		double result = r*r*PI;
 		return result;
 	}
-	double length()//µÑ·¹ ±¸ÇÏ´Â ¸Ş¼Òµå
+	double length()//ë‘˜ë ˆ êµ¬í•˜ëŠ” ë©”ì†Œë“œ
 	{
 		double result = r*2*PI;
 		return result;
 	}
-	void display(double a, double b)//Ãâ·Â ¸Ş¼Òµå 
+	void display(double a, double b)//ì¶œë ¥ ë©”ì†Œë“œ 
 	{
-		System.out.println("¹İÁö¸§:"+r);
-		System.out.printf("¿øÀÇ µÑ·¹:%.2f\n",a);
-		System.out.printf("¿øÀÇ ³ĞÀÌ:%.2f\n",b);
+		System.out.println("ë°˜ì§€ë¦„:"+r);
+		System.out.printf("ì›ì˜ ë‘˜ë ˆ:%.2f\n",a);
+		System.out.printf("ì›ì˜ ë„“ì´:%.2f\n",b);
 	}
 
 	

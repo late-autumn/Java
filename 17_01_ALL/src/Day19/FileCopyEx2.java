@@ -4,40 +4,40 @@ import java.io.*;
 public class FileCopyEx2 {
 
 
-	//byte[] À» ÀÌ¿ëÇØ¼­ º¹»ç 
+	//byte[] ì„ ì´ìš©í•´ì„œ ë³µì‚¬ 
 	public static void main(String[] args) {
-		System.out.println("ÆÄÀÏº¹»ç ½ÃÀÛ");
+		System.out.println("íŒŒì¼ë³µì‚¬ ì‹œì‘");
 		
 		long start = System.currentTimeMillis();
-		//½Ã½ºÅÛ¿¡¼­ Á¦°øÇÏ´Â ÇöÀç ½Ã°¢
+		//ì‹œìŠ¤í…œì—ì„œ ì œê³µí•˜ëŠ” í˜„ì¬ ì‹œê°
 		
-		FileInputStream src = null;		//ÆÄÀÏ ¿øº»
+		FileInputStream src = null;		//íŒŒì¼ ì›ë³¸
 		
-		FileOutputStream dest = null;	//º¹»çµÈ ÆÄÀÏ
+		FileOutputStream dest = null;	//ë³µì‚¬ëœ íŒŒì¼
 		
 
 		try{
 
-			//¿øº»ÆÄÀÏÀ» ÀĞ±âÀ§ÇÑ FileInputStream °´Ã¼ »ı¼º
-			src = new FileInputStream(new File("c:/ºñµÑ±â/win.zip"));
+			//ì›ë³¸íŒŒì¼ì„ ì½ê¸°ìœ„í•œ FileInputStream ê°ì²´ ìƒì„±
+			src = new FileInputStream(new File("c:/ë¹„ë‘˜ê¸°/win.zip"));
 			
-			//º¹»çº» ÆÄÀÏÀ» »ı¼ºÇÏ±âÀ§ÇÑ fileoutputsteam °´Ã¼ »ı¼º
-			dest = new FileOutputStream(new File("c:/ºñµÑ±â/win_dest.zip"));
+			//ë³µì‚¬ë³¸ íŒŒì¼ì„ ìƒì„±í•˜ê¸°ìœ„í•œ fileoutputsteam ê°ì²´ ìƒì„±
+			dest = new FileOutputStream(new File("c:/ë¹„ë‘˜ê¸°/win_dest.zip"));
 	
-			//ÀÓ½ÃÀúÀå¼Ò¿¡ ÀúÀåµÈ dataÀÇ ÀüÃ¼ °³¼ö¸¦ ÀúÀåÇÒ º¯¼ö ¼±¾ğ
+			//ì„ì‹œì €ì¥ì†Œì— ì €ì¥ëœ dataì˜ ì „ì²´ ê°œìˆ˜ë¥¼ ì €ì¥í•  ë³€ìˆ˜ ì„ ì–¸
 			int length = 0;
 			
-			//ÀÓ½Ã ÀúÀå¼Ò·Î »ç¿ëµÉ byte[] ¹è¿­ ¼±¾ğ
-			byte[] buffer = new byte [1024*8];	//¹è¿­ÀÇ Å©±â´Â 8byte
+			//ì„ì‹œ ì €ì¥ì†Œë¡œ ì‚¬ìš©ë  byte[] ë°°ì—´ ì„ ì–¸
+			byte[] buffer = new byte [1024*8];	//ë°°ì—´ì˜ í¬ê¸°ëŠ” 8byte
 			
-			//¹è¿­ÀÇ Å©±â´Â 8Kbyte
+			//ë°°ì—´ì˜ í¬ê¸°ëŠ” 8Kbyte
 			
-			//inputStreamÀ» ÅëÇØ¼­ ÀĞ¾îµéÀÎ data¸¦ ÀÓ½ÃÀúÀå¼Ò¿¡ 
-			//½×¾Æ ÀúÀåÇÏ°í ÀúÀåµÈ dataÀÇ °³¼ö¸¦ length¿¡ ÀúÀåÇÔ
+			//inputStreamì„ í†µí•´ì„œ ì½ì–´ë“¤ì¸ dataë¥¼ ì„ì‹œì €ì¥ì†Œì— 
+			//ìŒ“ì•„ ì €ì¥í•˜ê³  ì €ì¥ëœ dataì˜ ê°œìˆ˜ë¥¼ lengthì— ì €ì¥í•¨
 			
 			while((length = src.read(buffer))!= -1)
 			{
-				//OutputStreamÀ» ÅëÇØ¼­ ÀÓ½ÃÀúÀå¼Ò¿¡ ½×¿©ÀÖ´Â Data¸¦ length ¸¸Å­ ÆÄÀÏ¿¡ ±â·ÏÇÔ
+				//OutputStreamì„ í†µí•´ì„œ ì„ì‹œì €ì¥ì†Œì— ìŒ“ì—¬ìˆëŠ” Dataë¥¼ length ë§Œí¼ íŒŒì¼ì— ê¸°ë¡í•¨
 				dest.write(buffer, 0, length);
 			}
 			
@@ -55,7 +55,7 @@ public class FileCopyEx2 {
 		
 		long end = System.currentTimeMillis();
 		long copyTime = (end - start)/1000;
-		System.out.println("º¹»çÇÏ´Âµ¥ °É¸°½Ã°£:"+copyTime+"ÃÊ");
+		System.out.println("ë³µì‚¬í•˜ëŠ”ë° ê±¸ë¦°ì‹œê°„:"+copyTime+"ì´ˆ");
 		
 	}
 }

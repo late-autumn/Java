@@ -6,21 +6,21 @@ public class TesteCoffee {
 	
 	void menu(){
 		
-		//stocktest() ¸Þ¼Òµå¸¦ ÅëÇØ Àç·áÀÇ Àç°í¸¦ È®ÀÎÇÏ°í 
-		//Àç°í¿¡ µû¶ó if¹® ½ÇÇà
+		//stocktest() ë©”ì†Œë“œë¥¼ í†µí•´ ìž¬ë£Œì˜ ìž¬ê³ ë¥¼ í™•ì¸í•˜ê³  
+		//ìž¬ê³ ì— ë”°ë¼ ifë¬¸ ì‹¤í–‰
 		if(st.stockTest()){
-			//Àç°í°¡ ÀÖ´Ù¸é choice()¸Þ¼Òµå¸¦ ÀÌ¿ëÇÏ¿© ÃëÇâ Ä¿ÇÇ ½ÇÇà
+			//ìž¬ê³ ê°€ ìžˆë‹¤ë©´ choice()ë©”ì†Œë“œë¥¼ ì´ìš©í•˜ì—¬ ì·¨í–¥ ì»¤í”¼ ì‹¤í–‰
 			st.choice();
 			
-			//Ä¿ÇÇ ¼±ÅÃÀÌ ³¡³ª¸é °¡°ÝÀ» »©°í Ä«¿îÅÍ¸¦ ¼À
+			//ì»¤í”¼ ì„ íƒì´ ëë‚˜ë©´ ê°€ê²©ì„ ë¹¼ê³  ì¹´ìš´í„°ë¥¼ ì…ˆ
 			Attribute.deposit -= Attribute.price[6];
-			System.out.println("ÁÖ¹®ÇÏ½Å Ä¿ÇÇ°¡ ³ª¿Ô½À´Ï´Ù.");
+			System.out.println("ì£¼ë¬¸í•˜ì‹  ì»¤í”¼ê°€ ë‚˜ì™”ìŠµë‹ˆë‹¤.");
 			System.out.println();
 			Attribute.frequency[6]++;			
 		}
 		else{
-			//Àç°í°¡ ¾ø´Ù¸é choice¸Þ¼Òµå¸¦ ½ÇÇàÇÏÁö ¾Ê´Â´Ù.
-			System.out.println("ÁË¼ÛÇÕ´Ï´Ù. Àç°í°¡ ¾ø½À´Ï´Ù. °ü¸®ÀÚ¿¡°Ô ¹®ÀÇÇÏ¼¼¿ä");
+			//ìž¬ê³ ê°€ ì—†ë‹¤ë©´ choiceë©”ì†Œë“œë¥¼ ì‹¤í–‰í•˜ì§€ ì•ŠëŠ”ë‹¤.
+			System.out.println("ì£„ì†¡í•©ë‹ˆë‹¤. ìž¬ê³ ê°€ ì—†ìŠµë‹ˆë‹¤. ê´€ë¦¬ìžì—ê²Œ ë¬¸ì˜í•˜ì„¸ìš”");
 			System.out.println();
 		}
 	}

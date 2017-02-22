@@ -3,14 +3,14 @@ package Day10;
 class Animal{
 	
 	public String Scream(){
-		return "µ¿¹° ¿ïÀ½¼Ò¸®";
+		return "ë™ë¬¼ ìš¸ìŒì†Œë¦¬";
 	}
 	public String getName(){
 		return null;
 	}
 }
 
-//°­¾ÆÁö, °í¾çÀÌ, È£¶ûÀÌ
+//ê°•ì•„ì§€, ê³ ì–‘ì´, í˜¸ë‘ì´
 
 class Dog extends Animal{
 	private String name;
@@ -20,7 +20,7 @@ class Dog extends Animal{
 	}
 	@Override
 	public String Scream() {
-		return "¸Û¸Û¸Û";
+		return "ë©ë©ë©";
 	}
 	public String getName() {
 		return name;
@@ -34,7 +34,7 @@ class Cat extends Animal{
 	}
 	@Override
 	public String Scream() {
-		return "³Ä¾Æ¿Ë";
+		return "ëƒì•„ì˜¹";
 	}
 	public String getName() {
 		return name;
@@ -48,7 +48,7 @@ class Tigger extends Animal{
 	}
 	@Override
 	public String Scream() {
-		return "Å©¾Æ¾Ó";
+		return "í¬ì•„ì•™";
 	}
 	public String getName() {
 		return name;
@@ -59,7 +59,7 @@ class Hospital
 {
 	public void inject(Animal animal)
 	{
-	System.out.println(animal.getName()+"ÀÌ ¿î´Ù."+animal.Scream());	
+	System.out.println(animal.getName()+"ì´ ìš´ë‹¤."+animal.Scream());	
 	}
 }
 public class HospitalMain {

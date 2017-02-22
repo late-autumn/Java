@@ -2,7 +2,7 @@ package Day10;
 
 abstract class AbsEx1{
 	int a =100;
-	final String str = "³ª´Â Ãß»ó Å¬·¡½º »ó¼öÈ­µÈ º¯¼ö´Ù";
+	final String str = "ë‚˜ëŠ” ì¶”ìƒ í´ë˜ìŠ¤ ìƒìˆ˜í™”ëœ ë³€ìˆ˜ë‹¤";
 	public String getStr()
 	{
 		return str;
@@ -24,8 +24,8 @@ public class AbsEx extends AbsEx2{
 	@Override
 	public String getStr() {
 		// TODO Auto-generated method stub
-		//absEx2ÀÇ Ãß»ó ¸Ş¼Òµå ÀçÁ¤ÀÇ
-		return str; //strÀº absEx1ÀÇ ¸â¹öº¯¼öÀÌ´Ù.    
+		//absEx2ì˜ ì¶”ìƒ ë©”ì†Œë“œ ì¬ì •ì˜
+		return str; //strì€ absEx1ì˜ ë©¤ë²„ë³€ìˆ˜ì´ë‹¤.    
 	}
 public static void main(String[] args) {
 	

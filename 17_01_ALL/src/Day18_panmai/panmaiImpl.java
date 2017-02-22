@@ -5,11 +5,11 @@ import java.util.*;
 
 public class panmaiImpl implements Panmai {
 
-	//»óÇ° Á¤º¸
+	//ìƒí’ˆ ì •ë³´
 	
 	private Map<String, ProductVO> product = new HashMap<>();
 	
-	//ÆÇ¸ÅÇöÈ²
+	//íŒë§¤í˜„í™©
 	
 	private List<SaleVO> sale = new ArrayList<>();
 	
@@ -18,26 +18,26 @@ public class panmaiImpl implements Panmai {
 	
 	@Override
 	public void insertProduct() {
-		//»óÇ° µî·Ï
+		//ìƒí’ˆ ë“±ë¡
 		String code;
 		ProductVO pvo = new ProductVO();
-		System.out.println("»óÇ°µî·Ï");
-		System.out.print("ÄÚµå ÀÔ·Â:");
+		System.out.println("ìƒí’ˆë“±ë¡");
+		System.out.print("ì½”ë“œ ì…ë ¥:");
 		code = sc.nextLine(); 
 		
 		if(product.containsKey(code)){
-			System.out.println("ÀÌ¹Ì µî·ÏµÈ ÄÚµåÀÔ´Ï´Ù.");
+			System.out.println("ì´ë¯¸ ë“±ë¡ëœ ì½”ë“œì…ë‹ˆë‹¤.");
 			return;
 		}
 
 		
-		System.out.println("»óÇ°¸í:");
+		System.out.println("ìƒí’ˆëª…:");
 		pvo.setPname(sc.nextLine());
 		
-		System.out.println("´Ü°¡:");
+		System.out.println("ë‹¨ê°€:");
 		pvo.setPrice(sc.nextInt());
 		
-		System.out.println("¼ö·®:");
+		System.out.println("ìˆ˜ëŸ‰:");
 		pvo.setQuantity(sc.nextInt());
 		
 		
@@ -47,22 +47,22 @@ public class panmaiImpl implements Panmai {
 
 	@Override
 	public void insertQuantity() {
-		// »óÇ° ¼ö·® µî·Ï
+		// ìƒí’ˆ ìˆ˜ëŸ‰ ë“±ë¡
 		String code;
-		System.out.println("»óÇ° ¼ö·® µî·Ï");
-		System.out.print("»óÇ° ÄÚµå:");
+		System.out.println("ìƒí’ˆ ìˆ˜ëŸ‰ ë“±ë¡");
+		System.out.print("ìƒí’ˆ ì½”ë“œ:");
 		code = sc.nextLine();
 		
 		if(! product.containsKey(code)){
 			
-			System.out.println("µî·ÏµÇÁö ¾ÊÀº ÄÚµåÀÔ´Ï´Ù.");
+			System.out.println("ë“±ë¡ë˜ì§€ ì•Šì€ ì½”ë“œì…ë‹ˆë‹¤.");
 			return;
 		}
 		int su;
 		ProductVO pvo = product.get(code);
 		
-		System.out.println("»óÇ°¸í:"+pvo.getPname());
-		System.out.println("¼ö·®:");
+		System.out.println("ìƒí’ˆëª…:"+pvo.getPname());
+		System.out.println("ìˆ˜ëŸ‰:");
 		su = sc.nextInt();
 		
 		pvo.setQuantity(pvo.getQuantity()+su);
@@ -71,13 +71,13 @@ public class panmaiImpl implements Panmai {
 
 	@Override
 	public void searchProduct() {
-		// »óÇ° ÄÚµå Á¶È¸
+		// ìƒí’ˆ ì½”ë“œ ì¡°íšŒ
 		String code;
-		System.out.println("»óÇ° ÄÚµå Á¶È¸");
-		System.out.print("»óÇ°ÄÚµå:");
+		System.out.println("ìƒí’ˆ ì½”ë“œ ì¡°íšŒ");
+		System.out.print("ìƒí’ˆì½”ë“œ:");
 		code = sc.nextLine();
 		
-		System.out.println("ÄÚµå\t\t »óÇ°¸í\t\t ´Ü°¡\t\t¼ö·®");
+		System.out.println("ì½”ë“œ\t\t ìƒí’ˆëª…\t\t ë‹¨ê°€\t\tìˆ˜ëŸ‰");
 		
 		if(product.containsKey(code)){
 			ProductVO pvo = product.get(code);
@@ -88,9 +88,9 @@ public class panmaiImpl implements Panmai {
 
 	@Override
 	public void listProduct() {
-		// »óÇ° ÀüÃ¼ ¸®½ºÆ®
-		System.out.println("»óÇ° ÀüÃ¼ ¸®½ºÆ®");
-		System.out.println("ÄÚµå\t\t »óÇ°¸í \t\t ´Ü°¡ \t\t ¼ö·®");
+		// ìƒí’ˆ ì „ì²´ ë¦¬ìŠ¤íŠ¸
+		System.out.println("ìƒí’ˆ ì „ì²´ ë¦¬ìŠ¤íŠ¸");
+		System.out.println("ì½”ë“œ\t\t ìƒí’ˆëª… \t\t ë‹¨ê°€ \t\t ìˆ˜ëŸ‰");
 		System.out.println("-----------------------------------");
 		
 		Iterator<String> it = product.keySet().iterator();
@@ -108,43 +108,43 @@ public class panmaiImpl implements Panmai {
 
 	@Override
 	public void insertSale() {
-		// ÆÇ¸Å
+		// íŒë§¤
 		
 		String code;
 		System.out.println("\t\t");
-		System.out.print("»óÇ°ÄÚµå:");
+		System.out.print("ìƒí’ˆì½”ë“œ:");
 		code = sc.nextLine();
 		
 		if(!product.containsKey(code)){
-			System.out.println("µî·ÏµÇÁö¾ÊÀº »óÇ°ÀÔ´Ï´Ù.");
+			System.out.println("ë“±ë¡ë˜ì§€ì•Šì€ ìƒí’ˆì…ë‹ˆë‹¤.");
 			return;
 		}
 		ProductVO pvo = product.get(code);
 		System.out.println();
-		System.out.println("»óÇ°¸í:"+pvo.getPname()+",³²Àº ¼ö·®:"+pvo.getQuantity());
+		System.out.println("ìƒí’ˆëª…:"+pvo.getPname()+",ë‚¨ì€ ìˆ˜ëŸ‰:"+pvo.getQuantity());
 		
 		SaleVO svo = new SaleVO();
 		svo.setCode(code);
 		
-		System.out.print("\t°í°´¸í :");
+		System.out.print("\tê³ ê°ëª… :");
 		svo.setSname(sc.nextLine());
-		System.out.print("\tµî·ÏÀÏ :");
+		System.out.print("\të“±ë¡ì¼ :");
 		svo.setCreated(sc.nextLine());
 		
-		int quantity = sc.nextInt();	//ÆÇ¸Å¼ö·®
+		int quantity = sc.nextInt();	//íŒë§¤ìˆ˜ëŸ‰
 
-		//ÆÇ¸Å·®°ú Àç°í·®À» ºñ±³ÇÑ´Ù.
-		//ÆÇ¸Å·®ÀÌ Àç°í·®º¸´Ù ¸¹Àº ¼ö´Â ¾ø´Ù.
+		//íŒë§¤ëŸ‰ê³¼ ì¬ê³ ëŸ‰ì„ ë¹„êµí•œë‹¤.
+		//íŒë§¤ëŸ‰ì´ ì¬ê³ ëŸ‰ë³´ë‹¤ ë§ì€ ìˆ˜ëŠ” ì—†ë‹¤.
 		if(quantity>pvo.getQuantity()){
-			System.out.println("ÆÇ¸Å·®ÀÌ Àç°í·®º¸´Ù ¸¹À» ¼ö´Â ¾ø´Ù.");
+			System.out.println("íŒë§¤ëŸ‰ì´ ì¬ê³ ëŸ‰ë³´ë‹¤ ë§ì„ ìˆ˜ëŠ” ì—†ë‹¤.");
 			return;
 		}
 		
-		//Àç°í·® °¨¼Ò
+		//ì¬ê³ ëŸ‰ ê°ì†Œ
 		pvo.setQuantity(pvo.getQuantity()-quantity);
 		svo.setQuantity(quantity);
 
-		//¸®½ºÆ®¿¡ µî·Ï
+		//ë¦¬ìŠ¤íŠ¸ì— ë“±ë¡
 		
 		sale.add(svo);
 		System.out.println();
@@ -154,14 +154,14 @@ public class panmaiImpl implements Panmai {
 
 	@Override
 	public void searchSale() {
-		//»óÇ°¸íÀ¸·Î ÆÇ¸ÅÇöÈ² Á¶È¸
+		//ìƒí’ˆëª…ìœ¼ë¡œ íŒë§¤í˜„í™© ì¡°íšŒ
 		String pname;
-		System.out.println("ÆÇ¸ÅµÈ »óÇ°¸í Á¶È¸:");
+		System.out.println("íŒë§¤ëœ ìƒí’ˆëª… ì¡°íšŒ:");
 		
-		System.out.print("°Ë»öÇÒ »óÇ°¸í: ");
+		System.out.print("ê²€ìƒ‰í•  ìƒí’ˆëª…: ");
 		pname = sc.nextLine();
 		
-		System.out.println("ÄÚµå\t\t »óÇ°¸í\t\t°í°´¸í\t\tÆÇ¸ÅÀÏÀÚ\t\t´Ü°¡\t\t ¼ö·®\t\t±İ¾×");
+		System.out.println("ì½”ë“œ\t\t ìƒí’ˆëª…\t\tê³ ê°ëª…\t\tíŒë§¤ì¼ì\t\të‹¨ê°€\t\t ìˆ˜ëŸ‰\t\tê¸ˆì•¡");
 		System.out.println("-------------------------------------------");
 		Iterator<SaleVO> it = sale.iterator();
 		
@@ -185,10 +185,10 @@ public class panmaiImpl implements Panmai {
 
 	@Override
 	public void listSale() {
-		// ÀüÃ¼ÆÇ¸Å ¸®½ºÆ®
-		System.out.println("\t\tÀüÃ¼ÆÇ¸Å¸®½ºÆ®");
+		// ì „ì²´íŒë§¤ ë¦¬ìŠ¤íŠ¸
+		System.out.println("\t\tì „ì²´íŒë§¤ë¦¬ìŠ¤íŠ¸");
 
-		System.out.println("ÄÚµå\t\t »óÇ°¸í\t\t°í°´¸í\t\tÆÇ¸ÅÀÏÀÚ\t\t´Ü°¡\t\t ¼ö·®\t\t±İ¾×");
+		System.out.println("ì½”ë“œ\t\t ìƒí’ˆëª…\t\tê³ ê°ëª…\t\tíŒë§¤ì¼ì\t\të‹¨ê°€\t\t ìˆ˜ëŸ‰\t\tê¸ˆì•¡");
 		System.out.println("-------------------------------------------");
 		
 		

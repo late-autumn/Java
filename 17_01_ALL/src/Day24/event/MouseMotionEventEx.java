@@ -9,7 +9,7 @@ import Day24.awt.WinEvent;
 public class MouseMotionEventEx extends Frame implements MouseMotionListener {
 
 	public MouseMotionEventEx() {
-		super("¸¶¿ì½º ¸ğ¼Ç ÀÌº¥Æ®");
+		super("ë§ˆìš°ìŠ¤ ëª¨ì…˜ ì´ë²¤íŠ¸");
 		
 		
 		setSize(300,200);

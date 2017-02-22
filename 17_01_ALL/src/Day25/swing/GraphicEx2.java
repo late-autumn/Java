@@ -6,7 +6,7 @@ public class GraphicEx2 {
 	
 	public static void main(String[] args) {
 		
-		JFrame f =new JFrame("ÇĞ»ı ¼ºÀû ±×·¡ÇÁ");
+		JFrame f =new JFrame("í•™ìƒ ì„±ì  ê·¸ë˜í”„");
 		f.setPreferredSize(new Dimension(500, 500));
 		f.setLocation(500, 400);
 		Container contentPane = f.getContentPane();
@@ -21,13 +21,13 @@ public class GraphicEx2 {
 		JTextField text2 = new JTextField(3);
 		JTextField text3 = new JTextField(3);
 		
-		JButton button = new JButton("±×·¡ÇÁ ±×¸®±â");
+		JButton button = new JButton("ê·¸ë˜í”„ ê·¸ë¦¬ê¸°");
 		
-		controlPanel.add(new JLabel("±¹¾îÁ¡¼ö"));
+		controlPanel.add(new JLabel("êµ­ì–´ì ìˆ˜"));
 		controlPanel.add(text1);
-		controlPanel.add(new JLabel("¿µ¾îÁ¡¼ö"));
+		controlPanel.add(new JLabel("ì˜ì–´ì ìˆ˜"));
 		controlPanel.add(text2);
-		controlPanel.add(new JLabel("¼öÇĞÁ¡¼ö"));
+		controlPanel.add(new JLabel("ìˆ˜í•™ì ìˆ˜"));
 		controlPanel.add(text3);
 		controlPanel.add(button);
 		

@@ -7,16 +7,16 @@ public class BoxLayoutEx extends JFrame{
 	
 	public BoxLayoutEx(){
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setTitle("¹Ú½º ·¹ÀÌ¾Æ¿ô");
+		setTitle("ë°•ìŠ¤ ë ˆì´ì•„ì›ƒ");
 		setSize(300,180);
 		
 		Container cp = getContentPane();
-		//cp.setLayout(new BoxLayout(getContentPane(), BoxLayout.Y_AXIS)); //YÃà ¼öÁ÷À¸·Î ³ª¿­ X·Î ¹Ù²Ù¸é ¼öÆòÀ¸·Î ³ª¿­
+		//cp.setLayout(new BoxLayout(getContentPane(), BoxLayout.Y_AXIS)); //Yì¶• ìˆ˜ì§ìœ¼ë¡œ ë‚˜ì—´ Xë¡œ ë°”ê¾¸ë©´ ìˆ˜í‰ìœ¼ë¡œ ë‚˜ì—´
 		//cp.setLayout(new BoxLayout(getContentPane(), BoxLayout.LINE_AXIS));
-		cp.applyComponentOrientation(ComponentOrientation.RIGHT_TO_LEFT);	//¿À¸¥ÂÊ¿¡¼­ ¿ŞÂÊÀ¸·Î Á¤·Ä 
+		cp.applyComponentOrientation(ComponentOrientation.RIGHT_TO_LEFT);	//ì˜¤ë¥¸ìª½ì—ì„œ ì™¼ìª½ìœ¼ë¡œ ì •ë ¬ 
 		cp.setLayout(new BoxLayout(getContentPane(), BoxLayout.LINE_AXIS));
 	
-		bt1 = new JButton("¹öÆ°1");
+		bt1 = new JButton("ë²„íŠ¼1");
 		bt2 = new JButton("Button2");
 		bt3 = new JButton("BoxLayout 3");
 		bt4 = new JButton("BoxLayout.X_AXIS 4");

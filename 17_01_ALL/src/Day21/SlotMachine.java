@@ -2,14 +2,14 @@ package Day21;
  
 class Slot extends Thread {
 	
-	//Å¬·¡½º º¯¼ö ¼±¾ğ
+	//í´ë˜ìŠ¤ ë³€ìˆ˜ ì„ ì–¸
 	int m_nNumber;
 	boolean flag;
 	
 	
 	public Slot(String name) {
 		// TODO Auto-generated constructor stub
-		super(name); //½º·¹µåÀÌ¸§
+		super(name); //ìŠ¤ë ˆë“œì´ë¦„
 		flag=true;
 	}
 	
@@ -17,14 +17,14 @@ class Slot extends Thread {
 	@Override
 	public void run() {
 		// TODO Auto-generated method stub
-		//³­¼ö¸¦ ±¸ÇÏ´Â ¸Ş¼­µå ±¸Çö
+		//ë‚œìˆ˜ë¥¼ êµ¬í•˜ëŠ” ë©”ì„œë“œ êµ¬í˜„
 		try
 		{
 			while(flag){
 				m_nNumber=(int)(Math.random()*10);
-				//1~10±îÁöÀÇ ³­¼ö ¹ß»ı
+				//1~10ê¹Œì§€ì˜ ë‚œìˆ˜ ë°œìƒ
 				Thread.sleep((int)(Math.random()*100));
-				//½Ã°£µµ ·£´ıÀ¸·Î
+				//ì‹œê°„ë„ ëœë¤ìœ¼ë¡œ
 			}
 			
 		}catch(Exception e){
@@ -49,7 +49,7 @@ public class SlotMachine {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
  
-		//½º·¹µå ¼¼°³ »ı¼º
+		//ìŠ¤ë ˆë“œ ì„¸ê°œ ìƒì„±
 		Slot s1 = new Slot("s1");
 		Slot s2 = new Slot("s2");
 		Slot s3 = new Slot("s3");
@@ -57,7 +57,7 @@ public class SlotMachine {
 		boolean bFlag=true;
 		int n1,n2,n3;
 		
-		//½º·¹µå ½ÃÀÛ
+		//ìŠ¤ë ˆë“œ ì‹œì‘
 		s1.start();
 		s2.start();
 		s3.start();
@@ -65,23 +65,23 @@ public class SlotMachine {
 		while(bFlag)
 		{
 		
-			//·£´ıÀ¸·Î ¾òÀº ¼ö¸¦ º¯¼ö¿¡ ÀúÀå
+			//ëœë¤ìœ¼ë¡œ ì–»ì€ ìˆ˜ë¥¼ ë³€ìˆ˜ì— ì €ì¥
 			n1 = s1.getM_nNumber();
 			n2 = s2.getM_nNumber();
 			n3 = s3.getM_nNumber();
  
-			//Ãâ·Â
+			//ì¶œë ¥
 			System.out.println(n1+" "+n2+" "+n3);
 			
-			//¼¼ ¼ö°¡ °°ÀºÁö È®ÀÎ
-			//¼¼ ¼ö°¡ µ¿½Ã¿¡ °°À¸¸é ´çÃ·
+			//ì„¸ ìˆ˜ê°€ ê°™ì€ì§€ í™•ì¸
+			//ì„¸ ìˆ˜ê°€ ë™ì‹œì— ê°™ìœ¼ë©´ ë‹¹ì²¨
 			if(n1 != 0)
 			{
 				
 				if(n1==n2 && n2==n3)
 				{
-					System.out.println("´çÃ· µÇ¼Ì½À´Ï´Ù!!!");
-					bFlag = false; //Á¾·á
+					System.out.println("ë‹¹ì²¨ ë˜ì…¨ìŠµë‹ˆë‹¤!!!");
+					bFlag = false; //ì¢…ë£Œ
 					s1.setFinish();
 					s2.setFinish();
 					s3.setFinish();

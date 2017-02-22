@@ -16,7 +16,7 @@ public class ImageEx2LoadActionListener implements ActionListener {
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		// TODO Auto-generated method stub
-		imagePanel.setPath(text.getText());	//text¿¡¼­ getText·Î ÀÌ¸§À» °¡Á®¿Ã¼öÀÖ´Ù.
+		imagePanel.setPath(text.getText());	//textì—ì„œ getTextë¡œ ì´ë¦„ì„ ê°€ì ¸ì˜¬ìˆ˜ìˆë‹¤.
 		imagePanel.repaint();
 		
 	}

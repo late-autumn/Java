@@ -10,20 +10,20 @@ public class DataInputStreamEx {
 		DataInputStream dis = null;
 		
 		try{
-			fis = new FileInputStream("c:/ºñµÑ±â/t2.sav");
+			fis = new FileInputStream("c:/ë¹„ë‘˜ê¸°/t2.sav");
 			dis = new DataInputStream(fis);
 			
-			//DataInputStreamÀº ±âº» ÀÚ·áÇüÀ» À¯ÁöÇÑÃ¤·Î ÀúÀåµÈ 
-			//°ªÀ» ÀĞ¾î µéÀÏ ¼ö ÀÖ´Âread()¸Ş¼Òµå°¡ Á¸ÀçÇÔ
-			//ÀĞ¾î µéÀÏ¶§ ¹İµå½Ã ±â·ÏÇÑ ¼ø¼­´ë·Î ÀĞ¾îµå¸²
+			//DataInputStreamì€ ê¸°ë³¸ ìë£Œí˜•ì„ ìœ ì§€í•œì±„ë¡œ ì €ì¥ëœ 
+			//ê°’ì„ ì½ì–´ ë“¤ì¼ ìˆ˜ ìˆëŠ”read()ë©”ì†Œë“œê°€ ì¡´ì¬í•¨
+			//ì½ì–´ ë“¤ì¼ë•Œ ë°˜ë“œì‹œ ê¸°ë¡í•œ ìˆœì„œëŒ€ë¡œ ì½ì–´ë“œë¦¼
 			
 			int i = dis.readInt();
 			double b= dis.readDouble();
 			String s= dis.readUTF();
 			
-			System.out.println("i°ª:"+i);
-			System.out.println("i°ª:"+b);
-			System.out.println("i°ª:"+s);
+			System.out.println("iê°’:"+i);
+			System.out.println("iê°’:"+b);
+			System.out.println("iê°’:"+s);
 			
 		}catch(FileNotFoundException fe){
 			fe.printStackTrace();

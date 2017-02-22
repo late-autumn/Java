@@ -10,33 +10,33 @@ public class LabelEx extends Frame{
 	
 	public LabelEx() {
 		// TODO Auto-generated constructor stub
-		super("¶óº§");
+		super("ë¼ë²¨");
 		
-		f1 = new Font("±¼¸²Ã¼",Font.BOLD,20);
-		f2 = new Font("¹ÙÅÁÃ¼",Font.ITALIC,25);
+		f1 = new Font("êµ´ë¦¼ì²´",Font.BOLD,20);
+		f2 = new Font("ë°”íƒ•ì²´",Font.ITALIC,25);
 		
-		la1 = new Label("È«±æµ¿");
-		la2 = new Label("°­°¨Âù",Label.CENTER);
-		la3 = new Label("¶óº§3",Label.RIGHT);
-		la4 = new Label("¿ä°Å 4");
+		la1 = new Label("í™ê¸¸ë™");
+		la2 = new Label("ê°•ê°ì°¬",Label.CENTER);
+		la3 = new Label("ë¼ë²¨3",Label.RIGHT);
+		la4 = new Label("ìš”ê±° 4");
 		
-		setLayout(new GridLayout(4,4)); 				//·¹ÀÌ¾Æ¿ô °ü¸®ÀÚ¿¡ ÀÇÇÑ ±×¸®µå ·¹ÀÌ¾Æ¿ô »ı¼º
+		setLayout(new GridLayout(4,4)); 				//ë ˆì´ì•„ì›ƒ ê´€ë¦¬ìì— ì˜í•œ ê·¸ë¦¬ë“œ ë ˆì´ì•„ì›ƒ ìƒì„±
 		
 		la1.setFont(f1);
 		la2.setFont(f1);
 		la3.setFont(f2);
 		la4.setFont(f2);
 		
-		//·¹ÀÌ¾Æ¿ô¿¡ Ãß°¡
+		//ë ˆì´ì•„ì›ƒì— ì¶”ê°€
 		
 		add(la1);add(la2);add(la3);add(la4);
 		
-		//¶óº§¿¡ ¹ÙÅÁ»ö Àû¿ë
+		//ë¼ë²¨ì— ë°”íƒ•ìƒ‰ ì ìš©
 		la1.setBackground(Color.CYAN);
 		la2.setBackground(Color.LIGHT_GRAY);
 		la3.setBackground(Color.blue);
 		la4.setBackground(Color.green);
-		//ÇÁ·¹ÀÓ Å©±â ¼³Á¤
+		//í”„ë ˆì„ í¬ê¸° ì„¤ì •
 		setSize(400, 300);
 		setVisible(true);
 		WinEvent event = new WinEvent();

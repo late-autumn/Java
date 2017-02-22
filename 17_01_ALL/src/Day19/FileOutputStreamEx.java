@@ -8,12 +8,12 @@ public static void main(String[] args) {
 	FileOutputStream fos = null;
 	
 	try{
-		fos = new FileOutputStream("c:\\ºñµÑ±â\\Á¶ÆË³ª¹«2.txt");
-		String message = "³ª´Â ¼¼»ó¿¡¼­ °¡Àå ½ë ³ª¹«¾ß ";
+		fos = new FileOutputStream("c:\\ë¹„ë‘˜ê¸°\\ì¡°íŒë‚˜ë¬´2.txt");
+		String message = "ë‚˜ëŠ” ì„¸ìƒì—ì„œ ê°€ì¥ ìˆ ë‚˜ë¬´ì•¼ ";
 		
 		fos.write(message.getBytes());
 		fos.close();
-		System.out.println("ÀÌ°Å ½ÇÇàÇÑ´Ù.");
+		System.out.println("ì´ê±° ì‹¤í–‰í•œë‹¤.");
 		
 		
 	}catch(FileNotFoundException fe){
@@ -23,7 +23,7 @@ public static void main(String[] args) {
 	}finally{
 		try {
 			if(fos!= null){
-				System.out.println("µÎ¹øÂ°²¨¾ß");
+				System.out.println("ë‘ë²ˆì§¸êº¼ì•¼");
 				fos.close();
 			}
 		} catch (Exception e) {

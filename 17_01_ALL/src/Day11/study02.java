@@ -29,9 +29,9 @@ class Rectangle{
 	}
 	void show()
 	{
-		System.out.println("»ç°¢ÇüÀÇ ÁÂÇ¥:("+x1+","+x2+"),("+y1+","+y2+")");
-		System.out.println("»ç°¢ÇüÀÇ ³ĞÀÌ:"+square());
-		System.out.println("»ç°¢Çü ¸¸µé¾îÁø °¹¼ö:"+count);
+		System.out.println("ì‚¬ê°í˜•ì˜ ì¢Œí‘œ:("+x1+","+x2+"),("+y1+","+y2+")");
+		System.out.println("ì‚¬ê°í˜•ì˜ ë„“ì´:"+square());
+		System.out.println("ì‚¬ê°í˜• ë§Œë“¤ì–´ì§„ ê°¯ìˆ˜:"+count);
 
 	}
 	void set(int x1, int y1, int x2, int y2)
@@ -48,15 +48,15 @@ public class study02 {
 public static void main(String[] args) {
 	Rectangle r1 = new Rectangle();
 	
-	System.out.println("r1ÀÇ Á¤º¸");
+	System.out.println("r1ì˜ ì •ë³´");
 	r1.show();
 	
 	Rectangle r2 = new Rectangle(1,1,3,3);
-	System.out.println("r2ÀÇ Á¤º¸");
+	System.out.println("r2ì˜ ì •ë³´");
 	r2.show();
 	
 	r1.set(4,4,1,1);
-	System.out.println("º¯°æµÈ r1ÀÇ Á¤º¸");
+	System.out.println("ë³€ê²½ëœ r1ì˜ ì •ë³´");
 	r1.show();
 	
 	

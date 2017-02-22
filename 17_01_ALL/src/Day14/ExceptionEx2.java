@@ -8,12 +8,12 @@ public static void main(String[] args) {
 	try {
 		System.out.println(3);
 		System.out.println(0/0);
-		System.out.println(4); //À§¿¡¼­ exception ¹ß»ıÇÏ±â´ë¹®¿¡ ¼öÇàÇÏÁö ¾Ê´Â´Ù.
+		System.out.println(4); //ìœ„ì—ì„œ exception ë°œìƒí•˜ê¸°ëŒ€ë¬¸ì— ìˆ˜í–‰í•˜ì§€ ì•ŠëŠ”ë‹¤.
 	} catch (Exception e) {
 		System.out.println(5);
 		// TODO: handle exception
 	}finally{
-		System.out.println("¹«Á¶°Ç Ãâ·Â ºÎºĞ");
+		System.out.println("ë¬´ì¡°ê±´ ì¶œë ¥ ë¶€ë¶„");
 	}
 	System.out.println(6);
 }

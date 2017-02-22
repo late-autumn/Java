@@ -6,19 +6,19 @@ public class StaticInner {
 	private int b = 20;
 	static int c= 200;
 	
-	static class Inner{        // ¹Ù·Î ¿©±â°÷¿¡ 
-		static int d = 1000;  // static À» »©¸é ¿À·ù°¡ ³­´Ù. ¾îÂ¿  ¼ö ¾øÀÌ ºÙ¿©Áà¾ßÇÑ´Ù. 
+	static class Inner{        // ë°”ë¡œ ì—¬ê¸°ê³³ì— 
+		static int d = 1000;  // static ì„ ë¹¼ë©´ ì˜¤ë¥˜ê°€ ë‚œë‹¤. ì–´ì©”  ìˆ˜ ì—†ì´ ë¶™ì—¬ì¤˜ì•¼í•œë‹¤. 
 		
 		public void printData()
 		{
-			//System.out.println("a:"+a);  //staticÀÌ ¾Æ´Ï±â¶§¹®¿¡ »ç¿ëÇÒ ¼ö°¡ ¾ø´Ù.
+			//System.out.println("a:"+a);  //staticì´ ì•„ë‹ˆê¸°ë•Œë¬¸ì— ì‚¬ìš©í•  ìˆ˜ê°€ ì—†ë‹¤.
 			//System.out.println("b:"+b); 
 			System.out.println("c:"+c);
 			System.out.println("d:"+d);
 		}
 	}
 /*	public class INN{
-		static int df = 300;	//Áï ÀÌ·¸°Ô ÇÏ¸é ¿À·ù°¡ ³­´Ù. µÑÁß ÇÏ³ª´Ù. staticÀ» ºÙ¿©ÁÖ´øÁö º¯¼ö¿¡¼­ staticÀ» »©´øÁö	
+		static int df = 300;	//ì¦‰ ì´ë ‡ê²Œ í•˜ë©´ ì˜¤ë¥˜ê°€ ë‚œë‹¤. ë‘˜ì¤‘ í•˜ë‚˜ë‹¤. staticì„ ë¶™ì—¬ì£¼ë˜ì§€ ë³€ìˆ˜ì—ì„œ staticì„ ë¹¼ë˜ì§€	
 	}*/							
 	public static void main(String[] args) {
 		

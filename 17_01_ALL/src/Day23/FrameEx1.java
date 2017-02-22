@@ -7,12 +7,12 @@ public class FrameEx1 {
 
 	public static void main(String[] args) {
 		
-		Frame f = new Frame();				//ÇÁ·¹ÀÓ °´Ã¼ »ı¼º
-		WinEvent event = new WinEvent();	//À©µµ¿ì ÀÌº¥Æ® °´Ã¼ »ı¼º
-		f.addWindowListener(event);			//À©µµ¿ì ¸®½º³Ê¸¦ ÅëÇØ ÀÌº¥Æ®¸¦ ³Ö¾îÁØ´Ù. 
+		Frame f = new Frame();				//í”„ë ˆì„ ê°ì²´ ìƒì„±
+		WinEvent event = new WinEvent();	//ìœˆë„ìš° ì´ë²¤íŠ¸ ê°ì²´ ìƒì„±
+		f.addWindowListener(event);			//ìœˆë„ìš° ë¦¬ìŠ¤ë„ˆë¥¼ í†µí•´ ì´ë²¤íŠ¸ë¥¼ ë„£ì–´ì¤€ë‹¤. 
 
-		f.setSize(800, 600);				//ÇÁ·¹ÀÓÀÇ °¡·Î,¼¼·Î¼³Á¤
-		f.setVisible(true);					//ÇÁ·¹ÀÓ º¸ÀÌ±â ¼³Á¤ trueÀÏ´ë´Â º¸ÀÓ
+		f.setSize(800, 600);				//í”„ë ˆì„ì˜ ê°€ë¡œ,ì„¸ë¡œì„¤ì •
+		f.setVisible(true);					//í”„ë ˆì„ ë³´ì´ê¸° ì„¤ì • trueì¼ëŒ€ëŠ” ë³´ì„
 		
 		
 		/*JFrame j = new JFrame();

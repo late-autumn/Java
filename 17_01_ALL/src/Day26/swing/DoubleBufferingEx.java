@@ -67,7 +67,7 @@ public class DoubleBufferingEx extends Frame implements KeyListener, Runnable {
 	public void keyTyped(KeyEvent e) {}
 	
 	public DoubleBufferingEx(){
-		super("ÆÑ¸Ç");
+		super("íŒ©ë§¨");
 		
 		image = Toolkit.getDefaultToolkit().getImage("src/img/packman.jpg");
 		x = 255; y = 255; mx = 0; my = 0;  sel =0;
@@ -101,12 +101,12 @@ public class DoubleBufferingEx extends Frame implements KeyListener, Runnable {
 		Dimension d = getSize();
 		
 		if(bufferGraphics==null){
-			bufferImage = createImage(d.width,d.height);	//±×·¡ÇÈÀ»¸¸µé¾îÁØ´Ù.
-			bufferGraphics = bufferImage.getGraphics();		//¸¸µç ±×·¡ÇÈÀ» °¡Á®¿Â´Ù.
+			bufferImage = createImage(d.width,d.height);	//ê·¸ë˜í”½ì„ë§Œë“¤ì–´ì¤€ë‹¤.
+			bufferGraphics = bufferImage.getGraphics();		//ë§Œë“  ê·¸ë˜í”½ì„ ê°€ì ¸ì˜¨ë‹¤.
 		}
-		bufferGraphics.setColor(getBackground());			//±×·¡ÇÈ¿¡ ¹é±×¶ó¿îµå ¼³Á¤
-		bufferGraphics.fillRect(0, 0, 500, 500);			//½ÃÀÛÁ¡Àº 0,0 °¡·Î ¼¼·Î Å©±â 500 500
-		//·ÎµùµÈ ÀÌ¹ÌÁö x,yÁÂÇ¥ ±âÁØÀ¸·Î ÇÏ¿© ³ĞÀÌ¿Í Æø¸¸Å­±×·ÁÁØ´Ù.
+		bufferGraphics.setColor(getBackground());			//ê·¸ë˜í”½ì— ë°±ê·¸ë¼ìš´ë“œ ì„¤ì •
+		bufferGraphics.fillRect(0, 0, 500, 500);			//ì‹œì‘ì ì€ 0,0 ê°€ë¡œ ì„¸ë¡œ í¬ê¸° 500 500
+		//ë¡œë”©ëœ ì´ë¯¸ì§€ x,yì¢Œí‘œ ê¸°ì¤€ìœ¼ë¡œ í•˜ì—¬ ë„“ì´ì™€ í­ë§Œí¼ê·¸ë ¤ì¤€ë‹¤.
 		bufferGraphics.drawImage(image,x,y, x+50, y+50, sel*50,0,sel*50+50,50,this);
 		
 		paint(g);

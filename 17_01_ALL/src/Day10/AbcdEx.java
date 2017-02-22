@@ -16,7 +16,7 @@ public static void main(String[] args) {
 	
 	BClass bp = new BClass();
 	Object obj = new Object();
-	//°´Ã¼ »ı¼º
+	//ê°ì²´ ìƒì„±
 
 	System.out.println(bp instanceof Object);
 	System.out.println(bp instanceof AClass);

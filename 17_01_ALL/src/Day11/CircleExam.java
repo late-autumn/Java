@@ -4,10 +4,10 @@ package Day11;
 public class CircleExam {
 public static void main(String[] args) {
 	
-	Circle cr = new Circle();		//°´Ã¼ = ÀÎ½ºÅÏ½º »ı¼º 
-	cr.input();						//ÀÔ·Â ¸Ş¼Òµå È£Ãâ
-	double a = cr.area();			//³ĞÀÌ ±¸ÇÏ´Â ¸Ş¼Òµå È£Ãâ
-	double b = cr.length();			//µÑ·¹ ±¸ÇÏ´Â ¸Ş¼Òµå È£Ãâ
+	Circle cr = new Circle();		//ê°ì²´ = ì¸ìŠ¤í„´ìŠ¤ ìƒì„± 
+	cr.input();						//ì…ë ¥ ë©”ì†Œë“œ í˜¸ì¶œ
+	double a = cr.area();			//ë„“ì´ êµ¬í•˜ëŠ” ë©”ì†Œë“œ í˜¸ì¶œ
+	double b = cr.length();			//ë‘˜ë ˆ êµ¬í•˜ëŠ” ë©”ì†Œë“œ í˜¸ì¶œ
 	cr.display(a, b);
 }
 }

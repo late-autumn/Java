@@ -10,10 +10,10 @@ public class FileReaderEx {
 		
 		FileReader reader = null;
 		try{
-			//ÆÄÀÏ·ÎºÎÅÍ ÇÑ¹®ÀÚ ´ÜÀ§·Î ÀĞ¾î ¿Ã ¼ö ÀÖ´Â FileReader°´Ã¼ »ı¼º
-			reader = new FileReader("c:/ºñµÑ±â/song.txt");
+			//íŒŒì¼ë¡œë¶€í„° í•œë¬¸ì ë‹¨ìœ„ë¡œ ì½ì–´ ì˜¬ ìˆ˜ ìˆëŠ” FileReaderê°ì²´ ìƒì„±
+			reader = new FileReader("c:/ë¹„ë‘˜ê¸°/song.txt");
 			
-			//½ºÆ®¸²À» ÅëÇØ¼­ ÀĞ¾îµéÀÎ °ªÀ» ÀúÀåÇÒ ¼ö ÀÖ´Â º¯¼ö ¼±¾ğ ¹× ÃÊ±âÈ­
+			//ìŠ¤íŠ¸ë¦¼ì„ í†µí•´ì„œ ì½ì–´ë“¤ì¸ ê°’ì„ ì €ì¥í•  ìˆ˜ ìˆëŠ” ë³€ìˆ˜ ì„ ì–¸ ë° ì´ˆê¸°í™”
 			int readValue = 0;
 			
 			while((readValue = reader.read())!= -1){

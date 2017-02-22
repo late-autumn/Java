@@ -4,55 +4,55 @@ import java.util.Scanner;
 
 
 public class Sung extends Record{
-	//ÁÖ¿ä º¯¼ö (¼Ó¼º ¼±¾ğ)
+	//ì£¼ìš” ë³€ìˆ˜ (ì†ì„± ì„ ì–¸)
 	Scanner sc = new Scanner(System.in);
-	Record[] rec; //Record Å¬·¡½º ¹è¿­ È­ 
+	Record[] rec; //Record í´ë˜ìŠ¤ ë°°ì—´ í™” 
 	
 	
-	//±â´É(¸Ş¼Òµå)
-	//1.ÀÎ¿ø¼ö ÀÔ·Â
+	//ê¸°ëŠ¥(ë©”ì†Œë“œ)
+	//1.ì¸ì›ìˆ˜ ì…ë ¥
 	void Input_people()
 	{
 		do{
-		System.out.print("ÇĞ»ı ¼ö ÀÔ·Â:");
+		System.out.print("í•™ìƒ ìˆ˜ ì…ë ¥:");
 		student = sc.nextInt();
 		rec = new Record[student];
 		}while(student<1 || student>10);
 	}
-	//2.µ¥ÀÌÅÍ ÀÔ·Â ¹× °è»ê
-	//ÃÑÁ¡, Æò±Õ °è»ê
-	//¼®Â÷ °è»ê
+	//2.ë°ì´í„° ì…ë ¥ ë° ê³„ì‚°
+	//ì´ì , í‰ê·  ê³„ì‚°
+	//ì„ì°¨ ê³„ì‚°
 	void Data_Input()
 	{
-		String[] title = {"±¹¾î","¿µ¾î","¼öÇĞ"};       
+		String[] title = {"êµ­ì–´","ì˜ì–´","ìˆ˜í•™"};       
 		for(int i=0;i<student;i++)
 		{
-			rec[i] = new Record(); //ÀÌ°Ô ÇÙ½É Æ÷ÀÎÆ® ¾ÆÁÖ¾ÆÁÖ Áß¿äÇÏ´Ù 
+			rec[i] = new Record(); //ì´ê²Œ í•µì‹¬ í¬ì¸íŠ¸ ì•„ì£¼ì•„ì£¼ ì¤‘ìš”í•˜ë‹¤ 
 			
-			System.out.print((i+1)+"¹øÂ° ÀÌ¸§ÀÔ·Â:");
+			System.out.print((i+1)+"ë²ˆì§¸ ì´ë¦„ì…ë ¥:");
 			rec[i].name = sc.next();
 			
 			for(int j=0; j <title.length;j++)
 			{
 				System.out.print(title[j]);
-				//ÀÔ·Â ¹ŞÀº µ¥ÀÌÅÍ¸¦ ½ºÄÚ¾î¿¡ ÀúÀåÇÑ´Ù.
+				//ì…ë ¥ ë°›ì€ ë°ì´í„°ë¥¼ ìŠ¤ì½”ì–´ì— ì €ì¥í•œë‹¤.
 				rec[i].score[j] = sc.nextInt();
-				//¹İº¹µÇ´Â µ¿¾È ÀÔ·Â¹ŞÀº Á¡¼öÀÇ ÃÑÇÕÀ» ±¸ÇÔ
+				//ë°˜ë³µë˜ëŠ” ë™ì•ˆ ì…ë ¥ë°›ì€ ì ìˆ˜ì˜ ì´í•©ì„ êµ¬í•¨
 				rec[i].total += rec[i].score[j];
 			}
-			//Æò±Õ ±¸ÇÏ±â 
+			//í‰ê·  êµ¬í•˜ê¸° 
 			rec[i].avg = rec[i].total/student;
 		}
 	}
 	
-	//¼®Â÷ °è»êÇÏ±â
+	//ì„ì°¨ ê³„ì‚°í•˜ê¸°
 	void ranking()
 	{
-		//¸ğµç ÇĞ»ıÀÇ µî¼ö¸¦ 1·Î ÃÊ±âÈ­ ÇØ¾ßÇÑ´Ù.
+		//ëª¨ë“  í•™ìƒì˜ ë“±ìˆ˜ë¥¼ 1ë¡œ ì´ˆê¸°í™” í•´ì•¼í•œë‹¤.
 		for(int i=0; i< student;i++)
 		{
 			rec[i].rank = 1;
-		//¼®Â÷ °è»ê
+		//ì„ì°¨ ê³„ì‚°
 			for(int j=0;j<student;j++)
 			{
 				if(rec[i].rank<rec[i].rank)
@@ -63,21 +63,21 @@ public class Sung extends Record{
 		}
 	}
 	
-	//Ãâ·Â
+	//ì¶œë ¥
 	void print()
 	{
 		System.out.println();
-		System.out.println("ÀÌ¸§	±¹¾î  ¿µ¾î  ¼öÇĞ  ÃÑÁ¡  Æò±Õ  ¼®Â÷");
-		//ÇĞ»ı 1¸í´ç ¹İº¹ Ãâ·Â
+		System.out.println("ì´ë¦„	êµ­ì–´  ì˜ì–´  ìˆ˜í•™  ì´ì   í‰ê·   ì„ì°¨");
+		//í•™ìƒ 1ëª…ë‹¹ ë°˜ë³µ ì¶œë ¥
 		for(int i=0;i<student;i++)
 		{
-			//ÀÌ¸§ Ãâ·Â
-			System.out.print(rec[i].name+"ÀÇ ¼ºÀûÀº:");
-			//¼ºÀû Ãâ·Â
+			//ì´ë¦„ ì¶œë ¥
+			System.out.print(rec[i].name+"ì˜ ì„±ì ì€:");
+			//ì„±ì  ì¶œë ¥
 			for(int j= 0; j<rec[i].score.length;j++){
 			System.out.printf("%5d",rec[i].score[j]);
 			}
-			//ÃÑÁ¡ °ú Æò±Õ
+			//ì´ì  ê³¼ í‰ê· 
 			System.out.printf("%5d",rec[i].total);
 			System.out.printf("%7.2f",rec[i].avg);
 			System.out.printf("%d",rec[i].rank);

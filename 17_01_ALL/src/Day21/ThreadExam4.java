@@ -1,6 +1,6 @@
 package Day21;
 
-//runnable ÀÎÅÍÆäÀÌ½º¸¦ »ó¼Ó¹Ş¾Æ ½º·¹µå Å¬·¡½º Á¤ÀÇ 
+//runnable ì¸í„°í˜ì´ìŠ¤ë¥¼ ìƒì†ë°›ì•„ ìŠ¤ë ˆë“œ í´ë˜ìŠ¤ ì •ì˜ 
 
 class ThreadEx4 implements Runnable{
 	
@@ -10,10 +10,10 @@ class ThreadEx4 implements Runnable{
 		try{
 			for(int i=0; i<20;i++){
 				Thread.sleep(10);
-				System.out.println(i+"¹ø:"+i+"*"+i+"="+(i*i));
+				System.out.println(i+"ë²ˆ:"+i+"*"+i+"="+(i*i));
 			}
 			}catch(InterruptedException e){
-				//¿¹±âÄ¡ ¸øÇÑ »óÈ²¿¡ ´ëÇÑ ¿¹¿ÜÃ³¸®
+				//ì˜ˆê¸°ì¹˜ ëª»í•œ ìƒí™©ì— ëŒ€í•œ ì˜ˆì™¸ì²˜ë¦¬
 				e.printStackTrace();
 			}
 		
@@ -28,10 +28,10 @@ public class ThreadExam4 {
 		
 		ThreadEx4 ex1 = new ThreadEx4();
 		
-		//Runnable ÀÎÅÍÆäÀÌ½º ÀÎ½ºÅÏ½º »ı¼º 
-		//¿©±â¼­ ex1¿¡°Õ start()°¡ ¾ø´Ù. ÀÎÅÍÆäÀÌ½º¸¦ ¹Ş¾Æ¿Ô±â ¶§¹®ÀÌ´Ù.
-		//°´Ã¼°¡ »ı¼ºµÈ ÀÎÅÍÆäÀÌ½º¸¦ ThreadÅ¬·¡½º¸¦ ÀÌ¿ëÇØ¼­ ´Ù½Ã ÀÎ½ºÅÏ½º¸¦ »ı¼ºÇÑ ´ÙÀ½
-		//½ÃÀÛ ¸Ş¼Òµå¸¦ È£ÃâÇÑ´Ù.
+		//Runnable ì¸í„°í˜ì´ìŠ¤ ì¸ìŠ¤í„´ìŠ¤ ìƒì„± 
+		//ì—¬ê¸°ì„œ ex1ì—ê² start()ê°€ ì—†ë‹¤. ì¸í„°í˜ì´ìŠ¤ë¥¼ ë°›ì•„ì™”ê¸° ë•Œë¬¸ì´ë‹¤.
+		//ê°ì²´ê°€ ìƒì„±ëœ ì¸í„°í˜ì´ìŠ¤ë¥¼ Threadí´ë˜ìŠ¤ë¥¼ ì´ìš©í•´ì„œ ë‹¤ì‹œ ì¸ìŠ¤í„´ìŠ¤ë¥¼ ìƒì„±í•œ ë‹¤ìŒ
+		//ì‹œì‘ ë©”ì†Œë“œë¥¼ í˜¸ì¶œí•œë‹¤.
 		Thread ex2 = new Thread(ex1);
 		ex2.start();
 		

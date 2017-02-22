@@ -4,7 +4,7 @@ class ThreadEx3 extends Thread{
 	
 	public ThreadEx3(String name) {
 		// TODO Auto-generated constructor stub
-		super(name);//½º·¹µå ÀÌ¸§ ÁöÁ¤ 
+		super(name);//ìŠ¤ë ˆë“œ ì´ë¦„ ì§€ì • 
 		
 	}
 	@Override
@@ -13,9 +13,9 @@ class ThreadEx3 extends Thread{
 		try{
 			for(int i=0; i<5;i++){
 				Thread.sleep(1000);
-				System.out.println(i+"¹ø"+getName()+" ¾²·¹µå ");
-				//ºÎ¸ğ Å¬·¡½ºÀÎ Thread Å¬·¡½ºÀÇ getName()¸Ş¼Òµå¸¦ ÀÌ¿ëÇØ¼­
-				//super¸Ş¼Òµå·Î ÀúÀåÇÑ ÀÌ¸§À» ÀĞ¾î ¿Â´Ù 
+				System.out.println(i+"ë²ˆ"+getName()+" ì“°ë ˆë“œ ");
+				//ë¶€ëª¨ í´ë˜ìŠ¤ì¸ Thread í´ë˜ìŠ¤ì˜ getName()ë©”ì†Œë“œë¥¼ ì´ìš©í•´ì„œ
+				//superë©”ì†Œë“œë¡œ ì €ì¥í•œ ì´ë¦„ì„ ì½ì–´ ì˜¨ë‹¤ 
 			}
 
 		}catch(InterruptedException e){

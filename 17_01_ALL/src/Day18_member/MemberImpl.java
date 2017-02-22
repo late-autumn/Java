@@ -18,43 +18,43 @@ public class MemberImpl implements Member {
 	
 	@Override
 	public void insert_member() {
-		// È¸¿ø Ãß°¡
+		// íšŒì› ì¶”ê°€
 		try {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		MemberVO member_vo = new MemberVO();
 
-		System.out.println("[È¸¿ø Ãß°¡]");
-		System.out.print("ÀüÈ­¹øÈ£[000-0000-0000]:");
+		System.out.println("[íšŒì› ì¶”ê°€]");
+		System.out.print("ì „í™”ë²ˆí˜¸[000-0000-0000]:");
 		member_vo.setTel(br.readLine());
 		
-		Pattern pattern = Pattern.compile("\\d{3}\\-\\d{4}\\-\\d{4}"); //ÀüÈ­¹øÈ£ Çü½Ä (ÆĞÅÏ)ÁöÁ¤ util Å¬·¡½º
-																	   // \\ + ¹®ÀÚ or ¼ıÀÚ 
+		Pattern pattern = Pattern.compile("\\d{3}\\-\\d{4}\\-\\d{4}"); //ì „í™”ë²ˆí˜¸ í˜•ì‹ (íŒ¨í„´)ì§€ì • util í´ë˜ìŠ¤
+																	   // \\ + ë¬¸ì or ìˆ«ì 
 	
-		Matcher matcher = pattern.matcher(member_vo.getTel());		//ÀüÈ­ ¹øÈ£ Çü½ÄÀ¸·Î ¸ÅÄª½ÃÅ´
+		Matcher matcher = pattern.matcher(member_vo.getTel());		//ì „í™” ë²ˆí˜¸ í˜•ì‹ìœ¼ë¡œ ë§¤ì¹­ì‹œí‚´
 		
 		if(matcher.matches()){
-			throw new Exception("ÀüÈ­¹øÈ£ Çü½Ä ¿À·ù·Î ÀÎÇÏ¿© Ãß°¡ ½ÇÆĞÇÏ¿´½À´Ï´Ù.");
+			throw new Exception("ì „í™”ë²ˆí˜¸ í˜•ì‹ ì˜¤ë¥˜ë¡œ ì¸í•˜ì—¬ ì¶”ê°€ ì‹¤íŒ¨í•˜ì˜€ìŠµë‹ˆë‹¤.");
 		}
-		System.out.print("ÀÌ¸§:");
+		System.out.print("ì´ë¦„:");
 		member_vo.setName(br.readLine());
 		
 		if(member_vo.getName()==null || member_vo.getName().equals("")){
-			//ÀÌ¸§ÀÌ nullÀÌ°Å³ª ÃÊ±âÈ­ µÈ °æ¿ì
-			throw new Exception("ÀÌ¸§À» ÀÔ·ÂÇÏ¼¼¿ä !!");
+			//ì´ë¦„ì´ nullì´ê±°ë‚˜ ì´ˆê¸°í™” ëœ ê²½ìš°
+			throw new Exception("ì´ë¦„ì„ ì…ë ¥í•˜ì„¸ìš” !!");
 		}
 		
-		System.out.print("ÁÖ¼Ò:");
+		System.out.print("ì£¼ì†Œ:");
 		member_vo.setAddr(br.readLine());
 		
 		if(member_vo.getAddr()==null || member_vo.getAddr().equals("")){
-			//ÁÖ¼Ò°¡ nullÀÌ°Å³ª ÃÊ±âÈ­ µÈ °æ¿ì
-			throw new Exception("ÁÖ¼Ò¸¦ ÀÔ·ÂÇÏ¼¼¿ä !!");
+			//ì£¼ì†Œê°€ nullì´ê±°ë‚˜ ì´ˆê¸°í™” ëœ ê²½ìš°
+			throw new Exception("ì£¼ì†Œë¥¼ ì…ë ¥í•˜ì„¸ìš” !!");
 		}
 		if(search_member(member_vo)!=null){
-			throw new Exception("ÀÌ¹Ì µî·ÏµÈ ÀÚ·áÀÔ´Ï´Ù.");
+			throw new Exception("ì´ë¯¸ ë“±ë¡ëœ ìë£Œì…ë‹ˆë‹¤.");
 		}
 		lists.add(member_vo);
-		System.out.println("È¸¿øµî·Ï ¼º°ø");	
+		System.out.println("íšŒì›ë“±ë¡ ì„±ê³µ");	
 		
 		} catch (IOException e) {
 			e.printStackTrace();
@@ -66,58 +66,58 @@ public class MemberImpl implements Member {
 
 	@Override
 	public void update_member() {
-		// È¸¿ø ¼öÁ¤
+		// íšŒì› ìˆ˜ì •
 		try {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		MemberVO member_vo = new MemberVO();
 
-		System.out.println("[È¸¿ø Á¤º¸ ¼öÁ¤]");
-		System.out.print("ÀüÈ­¹øÈ£[000-0000-0000]:");
+		System.out.println("[íšŒì› ì •ë³´ ìˆ˜ì •]");
+		System.out.print("ì „í™”ë²ˆí˜¸[000-0000-0000]:");
 		member_vo.setTel(br.readLine());
 		
-		System.out.print("¼öÁ¤ÇÒ ÀÌ¸§:");
+		System.out.print("ìˆ˜ì •í•  ì´ë¦„:");
 		member_vo.setName(br.readLine());
 		
 		MemberVO sub_vo = search_member(member_vo);
 		
 		if(sub_vo ==null){
-			throw new Exception("ÀÚ·á°¡ µî·Ï µÇ¾î ÀÖÁö ¾Ê½À´Ï´Ù.");
+			throw new Exception("ìë£Œê°€ ë“±ë¡ ë˜ì–´ ìˆì§€ ì•ŠìŠµë‹ˆë‹¤.");
 		}
 		
-		System.out.println("»õ·Î¿î ÀüÈ­¹øÈ£ [000-000-0000]");
+		System.out.println("ìƒˆë¡œìš´ ì „í™”ë²ˆí˜¸ [000-000-0000]");
 		member_vo.setTel(br.readLine());
 		
-		Pattern pattern = Pattern.compile("\\d{3}\\-\\d{4}\\-\\d{4}"); //ÀüÈ­¹øÈ£ Çü½Ä (ÆĞÅÏ)ÁöÁ¤ util Å¬·¡½º
-		   // \\ + ¹®ÀÚ or ¼ıÀÚ 
-		Matcher matcher = pattern.matcher(member_vo.getTel());		//ÀüÈ­ ¹øÈ£ Çü½ÄÀ¸·Î ¸ÅÄª½ÃÅ´
+		Pattern pattern = Pattern.compile("\\d{3}\\-\\d{4}\\-\\d{4}"); //ì „í™”ë²ˆí˜¸ í˜•ì‹ (íŒ¨í„´)ì§€ì • util í´ë˜ìŠ¤
+		   // \\ + ë¬¸ì or ìˆ«ì 
+		Matcher matcher = pattern.matcher(member_vo.getTel());		//ì „í™” ë²ˆí˜¸ í˜•ì‹ìœ¼ë¡œ ë§¤ì¹­ì‹œí‚´
 		
 		if(matcher.matches()){
-			throw new Exception("ÀüÈ­¹øÈ£ Çü½Ä ¿À·ù·Î ÀÎÇÏ¿© Ãß°¡¸¦ ½ÇÆĞÇÏ¿´½À´Ï´Ù.");
+			throw new Exception("ì „í™”ë²ˆí˜¸ í˜•ì‹ ì˜¤ë¥˜ë¡œ ì¸í•˜ì—¬ ì¶”ê°€ë¥¼ ì‹¤íŒ¨í•˜ì˜€ìŠµë‹ˆë‹¤.");
 		}
 		
-		System.out.print("»õ·Î¿î ÀÌ¸§:");
+		System.out.print("ìƒˆë¡œìš´ ì´ë¦„:");
 		member_vo.setName(br.readLine());
 		
 		if(member_vo.getName()==null || member_vo.getName().equals("")){
-			//ÀÌ¸§ÀÌ nullÀÌ°Å³ª ÃÊ±âÈ­ µÈ °æ¿ì
-			throw new Exception("ÀÌ¸§À» ÀÔ·ÂÇÏ¼¼¿ä !!");
+			//ì´ë¦„ì´ nullì´ê±°ë‚˜ ì´ˆê¸°í™” ëœ ê²½ìš°
+			throw new Exception("ì´ë¦„ì„ ì…ë ¥í•˜ì„¸ìš” !!");
 		}
 		
-		System.out.print("»õ·Î¿î ÁÖ¼Ò:");
+		System.out.print("ìƒˆë¡œìš´ ì£¼ì†Œ:");
 		member_vo.setAddr(br.readLine());
 		
 		if(member_vo.getAddr()==null || member_vo.getAddr().equals("")){
-			//ÁÖ¼Ò°¡ nullÀÌ°Å³ª ÃÊ±âÈ­ µÈ °æ¿ì
-			throw new Exception("ÁÖ¼Ò¸¦ ÀÔ·ÂÇÏ¼¼¿ä !!");
+			//ì£¼ì†Œê°€ nullì´ê±°ë‚˜ ì´ˆê¸°í™” ëœ ê²½ìš°
+			throw new Exception("ì£¼ì†Œë¥¼ ì…ë ¥í•˜ì„¸ìš” !!");
 		}
 								
 		if(sub_vo!= member_vo && search_member(member_vo) != null){
-			throw new Exception("ÀÌ¹Ì µî·ÏµÈ ÀÚ·áÀÔ´Ï´Ù.");
+			throw new Exception("ì´ë¯¸ ë“±ë¡ëœ ìë£Œì…ë‹ˆë‹¤.");
 		}
-		lists.remove(sub_vo); 	//±âÁ¸ ÀÚ·á »èÁ¦
-		lists.add(member_vo);	//¼öÁ¤ÇÑ ÀÚ·á Ã·°¡
+		lists.remove(sub_vo); 	//ê¸°ì¡´ ìë£Œ ì‚­ì œ
+		lists.add(member_vo);	//ìˆ˜ì •í•œ ìë£Œ ì²¨ê°€
 		
-		System.out.println("È¸¿øÁ¤º¸ ¼öÁ¤ÀÌ ¼º°ø");
+		System.out.println("íšŒì›ì •ë³´ ìˆ˜ì •ì´ ì„±ê³µ");
 		
 		}catch(IOException ie){
 			ie.printStackTrace();
@@ -129,25 +129,25 @@ public class MemberImpl implements Member {
 
 	@Override
 	public void delete_member() {
-		// È¸¿ø »èÁ¦
+		// íšŒì› ì‚­ì œ
 
 		try {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		MemberVO member_vo = new MemberVO();
 
-		System.out.println("[È¸¿ø Á¤º¸ »èÁ¦]");
-		System.out.print("ÀüÈ­¹øÈ£[000-0000-0000]:");
+		System.out.println("[íšŒì› ì •ë³´ ì‚­ì œ]");
+		System.out.print("ì „í™”ë²ˆí˜¸[000-0000-0000]:");
 		member_vo.setTel(br.readLine());
 		
-		System.out.print("»èÁ¦ÇÒ ÀÌ¸§:");
+		System.out.print("ì‚­ì œí•  ì´ë¦„:");
 		member_vo.setName(br.readLine());
 
 		MemberVO sub_vo = search_member(member_vo);
 		if(sub_vo ==null){
-			throw new Exception("µî·ÏµÈ ÀÚ·á°¡ ¾ø½À´Ï´Ù.");
+			throw new Exception("ë“±ë¡ëœ ìë£Œê°€ ì—†ìŠµë‹ˆë‹¤.");
 		}
-		lists.remove(sub_vo);//±âÁ¸ ÀÚ·á »èÁ¦
-		System.out.println("È¸¿ø »èÁ¦ ¼º°ø");
+		lists.remove(sub_vo);//ê¸°ì¡´ ìë£Œ ì‚­ì œ
+		System.out.println("íšŒì› ì‚­ì œ ì„±ê³µ");
 		
 		
 		}catch(IOException ie){
@@ -165,11 +165,11 @@ public class MemberImpl implements Member {
 			BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 			String name;
 			
-			System.out.println("[È¸¿ø°Ë»ö]");
-			System.out.print("°Ë»öÇÒ ÀÌ¸§:");
+			System.out.println("[íšŒì›ê²€ìƒ‰]");
+			System.out.print("ê²€ìƒ‰í•  ì´ë¦„:");
 			name = br.readLine();
 			
-			Comparator<MemberVO> comparator = new Comparator<MemberVO>() { //ÀÍ¸í Å¬·¡½º 
+			Comparator<MemberVO> comparator = new Comparator<MemberVO>() { //ìµëª… í´ë˜ìŠ¤ 
 				
 				@Override
 				public int compare(MemberVO o1, MemberVO o2) {
@@ -191,7 +191,7 @@ public class MemberImpl implements Member {
 				
 			}
 			
-			System.out.println("°Ë»öµÈ È¸¿ø¼ö :"+n);
+			System.out.println("ê²€ìƒ‰ëœ íšŒì›ìˆ˜ :"+n);
 			for(MemberVO ob : lists){
 				
 				if(ob.getName().startsWith(name)){
@@ -213,10 +213,10 @@ public class MemberImpl implements Member {
 		try{
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		int n = lists.size();
-		System.out.println("[È¸¿ø ¸®½ºÆ®]");
-		System.out.println("ÀüÃ¼È¸¿ø¼ö : "+n);
+		System.out.println("[íšŒì› ë¦¬ìŠ¤íŠ¸]");
+		System.out.println("ì „ì²´íšŒì›ìˆ˜ : "+n);
 		
-		Comparator<MemberVO> comparator = new Comparator<MemberVO>() { //ÀÍ¸í Å¬·¡½º 
+		Comparator<MemberVO> comparator = new Comparator<MemberVO>() { //ìµëª… í´ë˜ìŠ¤ 
 			
 			@Override
 			public int compare(MemberVO o1, MemberVO o2) {
@@ -235,7 +235,7 @@ public class MemberImpl implements Member {
 			System.out.println(ob.toString());
 			i++;
 			if(n!=i && i!=0 && i%20 ==0){
-				System.out.print("¿£ÅÍÅ°¸¦´©¸£¼¼¿ä");
+				System.out.print("ì—”í„°í‚¤ë¥¼ëˆ„ë¥´ì„¸ìš”");
 				br.readLine();
 			}
 		}

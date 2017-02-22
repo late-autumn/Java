@@ -10,7 +10,7 @@ public int getVar() {
 
 	public void setVar(int var) {
 		this.var = var;
-		var = var;	//ÀÌ·² °æ¿ì¿£ ¸Ş¼ÒµåÀÇ ¸â¹ö·Î¸¸ ÀÎ½ÄÇÏ°Ô µÈ´Ù.
+		var = var;	//ì´ëŸ´ ê²½ìš°ì—” ë©”ì†Œë“œì˜ ë©¤ë²„ë¡œë§Œ ì¸ì‹í•˜ê²Œ ëœë‹¤.
 	}
 
 public static void main(String[] args) {

@@ -12,8 +12,8 @@ public class lotto {
 	int[][] lotto;
 	int[] num;
 	void menu() {
-		System.out.println("º¹±ÇÁ¡¿¡ ¿À½Å°É È¯¿µÇÕ´Ï´Ù.");
-		System.out.println("±¸¸ÅÇÏ°íÀÚ ÇÏ½Ã´Â º¹±ÇÀÇ ¼ö·®À» Àû¾îÁÖ¼¼¿ä:");
+		System.out.println("ë³µê¶Œì ì— ì˜¤ì‹ ê±¸ í™˜ì˜í•©ë‹ˆë‹¤.");
+		System.out.println("êµ¬ë§¤í•˜ê³ ì í•˜ì‹œëŠ” ë³µê¶Œì˜ ìˆ˜ëŸ‰ì„ ì ì–´ì£¼ì„¸ìš”:");
 		input_num = sc.nextInt();
 		lotto = new int[input_num][6];
 		lotto();
@@ -30,7 +30,7 @@ public lotto() {
 			for (int j = 0; j < lotto[i].length; j++) {
 				lotto_num = (int) (Math.random() * 45 + 1);
 				/*
-				 * Random r = new Random(); r.nextInt(45)+1; ·£´ı ÇÔ¼ö Àû¿ë ÇÏ´Â ¶Ç ´Ù¸¥ ±â¹ı
+				 * Random r = new Random(); r.nextInt(45)+1; ëœë¤ í•¨ìˆ˜ ì ìš© í•˜ëŠ” ë˜ ë‹¤ë¥¸ ê¸°ë²•
 				 */
 
 				lotto[i][j] = lotto_num;

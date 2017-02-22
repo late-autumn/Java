@@ -5,11 +5,11 @@ public class MemberInner {
 	int a = 10;
 	private int b = 100;
 	static int c = 200;
-	class Inner{ // ³»ºÎ Å¬·¡½º 
+	class Inner{ // ë‚´ë¶€ í´ë˜ìŠ¤ 
 		
 		public void Data(){
-			System.out.println(a);//Å¬·¡½º ¸â¹öº¯¼ö
-			System.out.println(b);//private ÀÎµ¥µµ ³»ºÎ Å¬·¡½º¶ó¼­ Á¢±ÙÇÏ´Âµ¥ Çã¿ëÇÑ´Ù.
+			System.out.println(a);//í´ë˜ìŠ¤ ë©¤ë²„ë³€ìˆ˜
+			System.out.println(b);//private ì¸ë°ë„ ë‚´ë¶€ í´ë˜ìŠ¤ë¼ì„œ ì ‘ê·¼í•˜ëŠ”ë° í—ˆìš©í•œë‹¤.
 			System.out.println(c);//static
 		}
 	}

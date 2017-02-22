@@ -7,7 +7,7 @@ public class WindowEventEx2 extends Frame{
 
 	public WindowEventEx2() {
 		// TODO Auto-generated constructor stub
-		super("³»ºÎ Å¬·¡½º¸¦ ÀÌ¿ëÇØ¼­ À©µµ¿ì Á¾·á");
+		super("ë‚´ë¶€ í´ë˜ìŠ¤ë¥¼ ì´ìš©í•´ì„œ ìœˆë„ìš° ì¢…ë£Œ");
 		addWindowListener(new WinEventExam());
 		setSize(300, 200);
 		setVisible(true);

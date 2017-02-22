@@ -8,16 +8,16 @@ public static void main(String[] args) {
 	try {
 		System.out.println(3);
 		System.out.println(0/0);
-	} catch (ArithmeticException ae) {	//ÇÏÀ§ ¿¹¿ÜÃ³¸®ºÎÅÍ ÇØÁà¾ß ¿À·ù¹ß»ıÇÏÁö ¾Ê´Â´Ù. 
+	} catch (ArithmeticException ae) {	//í•˜ìœ„ ì˜ˆì™¸ì²˜ë¦¬ë¶€í„° í•´ì¤˜ì•¼ ì˜¤ë¥˜ë°œìƒí•˜ì§€ ì•ŠëŠ”ë‹¤. 
 		// TODO: handle exception
 		if(ae instanceof Exception)
 		System.out.println(true);
-		System.out.println("°è»êÂø¿À ¾Ë°í¸®Áò");
+		System.out.println("ê³„ì‚°ì°©ì˜¤ ì•Œê³ ë¦¬ì¦˜");
 	}
 	catch(Exception e){
-		System.out.println("¿¹¿Ü¹ß»ı");
+		System.out.println("ì˜ˆì™¸ë°œìƒ");
 	}
 	
-	System.out.println("³¡");
+	System.out.println("ë");
 }
 }

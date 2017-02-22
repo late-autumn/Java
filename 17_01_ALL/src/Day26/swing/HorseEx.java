@@ -15,7 +15,7 @@ public class HorseEx extends JFrame implements Runnable {
 	private Canvas canvas;
 	private Image buffer;
 	private Image[] horse;
-	//¹İº¹Ã³¸®
+	//ë°˜ë³µì²˜ë¦¬
 	private boolean bRepeat = true;
 	
 	public HorseEx() {
@@ -50,7 +50,7 @@ public class HorseEx extends JFrame implements Runnable {
 			case KeyEvent.VK_SPACE:
 				bRepeat = !bRepeat;
 				
-				if(bRepeat)		//¾²·¹µå °¡µ¿
+				if(bRepeat)		//ì“°ë ˆë“œ ê°€ë™
 					makeThread();
 					break;
 			
@@ -67,10 +67,10 @@ public class HorseEx extends JFrame implements Runnable {
 	}
 	
 	public void makeThread(){
-		new Thread(this).start();	//¤¶·¹µå ½ÃÀÛ ¸Ş¼Òµå È£Ãâ 
+		new Thread(this).start();	//ã…†ë ˆë“œ ì‹œì‘ ë©”ì†Œë“œ í˜¸ì¶œ 
 	}
 	
-	//ÃÊ±âÈ­
+	//ì´ˆê¸°í™”
 	
 	public void initHorse(){
 		

@@ -1,6 +1,6 @@
 package Day22;
 
-//¼±ÅÃ Á¤·Ä(selection_sort)
+//ì„ íƒ ì •ë ¬(selection_sort)
 
 public class Selection_sort {
 
@@ -10,7 +10,7 @@ public class Selection_sort {
 		
 		int i, j ,temp;
 		int min;
-		System.out.println("¿øº» µ¥ÀÌÅÍ:");
+		System.out.println("ì›ë³¸ ë°ì´í„°:");
 		
 		for(int n : a)
 		{
@@ -30,7 +30,7 @@ public class Selection_sort {
 				a[i] = a[min];
 				a[min] = temp;
 
-			System.out.printf("\n%d ´Ü°è : ", i+1);
+			System.out.printf("\n%d ë‹¨ê³„ : ", i+1);
 			for(int t=0; t<a.length; t++) System.out.printf("%3d ", a[t]);
 		}
 			

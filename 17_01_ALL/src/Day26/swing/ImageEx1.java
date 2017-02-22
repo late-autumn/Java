@@ -12,9 +12,9 @@ public class ImageEx1 {
 
 	public static void main(String[] args) {
 		
-		JFrame f = new JFrame("ÀÌ¹ÌÁö ·Îµù");
+		JFrame f = new JFrame("ì´ë¯¸ì§€ ë¡œë”©");
 		
-		//ÇÁ·¹ÀÓÀÇ À§Ä¡ ¼³Á¤
+		//í”„ë ˆì„ì˜ ìœ„ì¹˜ ì„¤ì •
 
 		f.setPreferredSize(new Dimension(500, 400));
 		f.setLocation(500,200);		
@@ -23,10 +23,10 @@ public class ImageEx1 {
 		
 		contentPane.add(imagePanel,BorderLayout.CENTER);
 				
-		//ÅØ½ºÆ® ÇÊµå¿Í ¹öÆ°À» ÆĞ³Î¿¡ À§Ä¡
+		//í…ìŠ¤íŠ¸ í•„ë“œì™€ ë²„íŠ¼ì„ íŒ¨ë„ì— ìœ„ì¹˜
 		JPanel controlPanel = new JPanel();
 		JTextField text = new JTextField(30);
-		JButton button = new JButton("ÀÌ¹ÌÁö ·Îµù");
+		JButton button = new JButton("ì´ë¯¸ì§€ ë¡œë”©");
 		
 		controlPanel.add(text);
 		controlPanel.add(button);

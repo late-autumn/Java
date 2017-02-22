@@ -3,15 +3,15 @@ package Day23;
 import java.awt.*;
 public class TextEx extends Frame{
 
-	private TextField textfield = new TextField("Á¦¸ñ:");
-	private TextArea textarea = new TextArea("¸Ş¸ğ:",5,10);
+	private TextField textfield = new TextField("ì œëª©:");
+	private TextArea textarea = new TextArea("ë©”ëª¨:",5,10);
 	
-	private Button button = new Button("È®ÀÎ");
-	private Label label = new Label("³»¿ë");
+	private Button button = new Button("í™•ì¸");
+	private Label label = new Label("ë‚´ìš©");
 	
 	public TextEx() {
 		// TODO Auto-generated constructor stub
-		super("¸Ş¸ğÀå");
+		super("ë©”ëª¨ì¥");
 	
 		setLayout(new BorderLayout());
 		add("North",textfield);

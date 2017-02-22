@@ -5,19 +5,19 @@ import java.util.*;
 public class QueueEx2 {
 	
 	private static final String colors[] ={
-			"»¡°­","ºĞÈ«","ÁÖÈ²","ÆÄ¶û","¿¬µÎ","³²»ö"
+			"ë¹¨ê°•","ë¶„í™","ì£¼í™©","íŒŒë‘","ì—°ë‘","ë‚¨ìƒ‰"
 	};
 	public QueueEx2() {
 		// TODO Auto-generated constructor stub
 		Queue<String>queue = new LinkedList<>();
-		//Á¦³×¸¯¹æ½Ä		
+		//ì œë„¤ë¦­ë°©ì‹		
 		for(String n : colors)
 			queue.offer(n);
 
 		popStack(queue);		
 	}
 
-	public void popStack(Queue<String>q){ //Ãâ·Â
+	public void popStack(Queue<String>q){ //ì¶œë ¥
 		while(q.peek()!=null)
 			System.out.println(q.poll());
 	}

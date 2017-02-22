@@ -6,15 +6,15 @@ public class FileEx1 {
 public static void main(String[] args) {
 	
 	File f = new File("c:/workspace/aa.txt");
-	System.out.println("ÆÄÀÏÀÎÁö:"+f.isFile());
-	System.out.println("µğ·ºÅä¸®ÀÎÁö:"+f.isDirectory());
-	System.out.println("»ó´ë°æ·Î:"+f.getPath());
-	System.out.println("Àı´ë°æ·Î:"+f.getAbsolutePath());
+	System.out.println("íŒŒì¼ì¸ì§€:"+f.isFile());
+	System.out.println("ë””ë ‰í† ë¦¬ì¸ì§€:"+f.isDirectory());
+	System.out.println("ìƒëŒ€ê²½ë¡œ:"+f.getPath());
+	System.out.println("ì ˆëŒ€ê²½ë¡œ:"+f.getAbsolutePath());
 
-	System.out.println("ÆÄÀÏÀÇ ÀÌ¸§:"+f.getName());
-	System.out.println("ÆÄÀÏÀÇ ±æÀÌ:"+f.length());
+	System.out.println("íŒŒì¼ì˜ ì´ë¦„:"+f.getName());
+	System.out.println("íŒŒì¼ì˜ ê¸¸ì´:"+f.length());
 	
-	System.out.println("ÆÄÀÏ ÃÖÁ¾ ¼öÁ¤ ³¯Â¥:"+f.lastModified());
+	System.out.println("íŒŒì¼ ìµœì¢… ìˆ˜ì • ë‚ ì§œ:"+f.lastModified());
 	
 	
 	

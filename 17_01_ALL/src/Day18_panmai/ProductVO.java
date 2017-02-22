@@ -2,10 +2,10 @@ package Day18_panmai;
 
 public class ProductVO {
 
-	//»óÇ° Á¤º¸
+	//ìƒí’ˆ ì •ë³´
 	
-	private String pname;				//»óÇ°¸í
-	private int price, quantity;		//´Ü°¡, ¼ö·®
+	private String pname;				//ìƒí’ˆëª…
+	private int price, quantity;		//ë‹¨ê°€, ìˆ˜ëŸ‰
 
 	public String getPname() {
 		return pname;

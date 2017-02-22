@@ -12,9 +12,9 @@ public class AudioEx {
 
 	public static void main(String[] args) {
 		
-	JFrame f = new JFrame("¿Àµğ¿À ÇÃ·¹ÀÌ¾î");
+	JFrame f = new JFrame("ì˜¤ë””ì˜¤ í”Œë ˆì´ì–´");
 		
-		//ÇÁ·¹ÀÓÀÇ À§Ä¡ ¼³Á¤
+		//í”„ë ˆì„ì˜ ìœ„ì¹˜ ì„¤ì •
 
 		f.setPreferredSize(new Dimension(500, 400));
 		f.setLocation(500,200);		
@@ -23,7 +23,7 @@ public class AudioEx {
 		contentPane.setLayout(new FlowLayout());
 		
 		JTextField text = new JTextField(30);
-		JButton button = new JButton("ÇÃ·¹ÀÌ");
+		JButton button = new JButton("í”Œë ˆì´");
 		
 		contentPane.add(text);
 		contentPane.add(button);

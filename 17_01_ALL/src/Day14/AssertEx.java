@@ -3,8 +3,8 @@ package Day14;
 import static java.lang.System.out;
 public class AssertEx {
 	public void gugu(int dan){
-		assert dan > 1 && dan < 10 : "2~9´ÜÁßÇÏ³ª¸¦ÀÔ·ÂÇÏ¼¼¿ä:";
-		out.println(dan +"´Ü");
+		assert dan > 1 && dan < 10 : "2~9ë‹¨ì¤‘í•˜ë‚˜ë¥¼ì…ë ¥í•˜ì„¸ìš”:";
+		out.println(dan +"ë‹¨");
 		out.println("-----------------------------");
 		StringBuffer sb = new StringBuffer();
 		for(int i=0; i<9;i++)

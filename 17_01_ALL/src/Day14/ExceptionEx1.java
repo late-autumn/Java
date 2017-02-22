@@ -1,16 +1,16 @@
 package Day14;
 
-/*½ÇÇà µµÁß Á¤¼ö¸¦ 0À¸·Î ³ª´­ °æ¿ì »ı±æ ¼ö ÀÖ´Â ¿¹¿ÜÃ³¸®
+/*ì‹¤í–‰ ë„ì¤‘ ì •ìˆ˜ë¥¼ 0ìœ¼ë¡œ ë‚˜ëˆŒ ê²½ìš° ìƒê¸¸ ìˆ˜ ìˆëŠ” ì˜ˆì™¸ì²˜ë¦¬
  * 
  */
 
 public class ExceptionEx1 {
 public static void main(String[] args) {
 	
-	//º¯¼ö ¼±¾ğºÎºĞ
+	//ë³€ìˆ˜ ì„ ì–¸ë¶€ë¶„
 	int num = 50,sum =0;
 	
-	//¿¬»ê ¹× Ã³¸® ºÎºĞ
+	//ì—°ì‚° ë° ì²˜ë¦¬ ë¶€ë¶„
 
 	for(int i=0;i<10;i++)
 	{
@@ -18,7 +18,7 @@ public static void main(String[] args) {
 		sum+=num/(int)(Math.random()*5); 
 
 		System.out.println(sum);
-		}catch(ArithmeticException e){ //À» Ã³¸®ÇØÁà¾ßÇÑ´Ù.
+		}catch(ArithmeticException e){ //ì„ ì²˜ë¦¬í•´ì¤˜ì•¼í•œë‹¤.
 			//e.printStackTrace();
 			//e.getMessage();
 			System.out.println(e.getMessage());

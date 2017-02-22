@@ -30,8 +30,8 @@ public class DrawActionListener implements ActionListener {
 		drawingPanel.repaint();
 		
 		}catch(NumberFormatException ne){
-			JOptionPane.showMessageDialog(drawingPanel, "Àß¸øµÈ ¼ıÀÚ Æ÷¸ËÀÔ´Ï´Ù",
-					"¿¡·¯¸Ş¼¼Áö",JOptionPane.ERROR_MESSAGE);
+			JOptionPane.showMessageDialog(drawingPanel, "ì˜ëª»ëœ ìˆ«ì í¬ë§·ì…ë‹ˆë‹¤",
+					"ì—ëŸ¬ë©”ì„¸ì§€",JOptionPane.ERROR_MESSAGE);
 		}
 		
 

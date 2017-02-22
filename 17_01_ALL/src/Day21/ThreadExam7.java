@@ -1,41 +1,41 @@
 package Day21;
 
-class ATM2{							//ATMÀÇ °èÁÂ Á¤º¸¸¦ °ü¸®ÇÏ´Â Å¬·¡½º 
+class ATM2{							//ATMì˜ ê³„ì¢Œ ì •ë³´ë¥¼ ê´€ë¦¬í•˜ëŠ” í´ë˜ìŠ¤ 
 	
-	private int total;				//°èÁÂÀÇ ÃÑ ±İ¾×
+	private int total;				//ê³„ì¢Œì˜ ì´ ê¸ˆì•¡
 	public ATM2(int total) {
 		// TODO Auto-generated constructor stub
 		this.total  = total;
 	}
 	
-	//ÀÔ±İ
+	//ì…ê¸ˆ
 	void deposit(int amount, String name){
 		
 		total += amount;
-		System.out.println(name+":ÀÔ±İ±İ¾×:"+amount);
+		System.out.println(name+":ì…ê¸ˆê¸ˆì•¡:"+amount);
 		
 	}
-	//Ãâ±İ
+	//ì¶œê¸ˆ
 	void withdraw(int amount, String name){
 		
-		if((total-amount)>0){		//Ãâ±İ °¡´ÉÇÑ Á¶°Ç
+		if((total-amount)>0){		//ì¶œê¸ˆ ê°€ëŠ¥í•œ ì¡°ê±´
 			total -= amount;
-			System.out.println(name+":Ãâ±İ±İ¾×:"+amount);
+			System.out.println(name+":ì¶œê¸ˆê¸ˆì•¡:"+amount);
 		}
 		else{
-			System.out.println(name+"´ÔÀÇ ÀÜ¾×ÀÌ ºÎÁ·ÇÏ¿© Ãâ±İµÇÁö¾Ê¾Ò½À´Ï´Ù");
+			System.out.println(name+"ë‹˜ì˜ ì”ì•¡ì´ ë¶€ì¡±í•˜ì—¬ ì¶œê¸ˆë˜ì§€ì•Šì•˜ìŠµë‹ˆë‹¤");
 		}
 	}
 	public void getTotal(){
-		System.out.println("ÇöÀç °èÁÂ ÀÜ¾×Àº:"+total);
+		System.out.println("í˜„ì¬ ê³„ì¢Œ ì”ì•¡ì€:"+total);
 	}
 	
 	
 }
 
-class ATM_USER2 extends Thread{				//ATM »ç¿ëÀÚ °ü·Ã ¼±¾ğ Å¬·¡½º
+class ATM_USER2 extends Thread{				//ATM ì‚¬ìš©ì ê´€ë ¨ ì„ ì–¸ í´ë˜ìŠ¤
 	
-	boolean flag = false; 				//ÀÔ±İ°ú Ãâ±İ
+	boolean flag = false; 				//ì…ê¸ˆê³¼ ì¶œê¸ˆ
 	ATM2 obj;
 	
 	public ATM_USER2(ATM2 obj, String name) {
@@ -53,8 +53,8 @@ class ATM_USER2 extends Thread{				//ATM »ç¿ëÀÚ °ü·Ã ¼±¾ğ Å¬·¡½º
 				// TODO: handle exception
 			e.printStackTrace();
 			}
-			//ATM Å¬·¡½º¿¡ µ¿±âÈ­¸¦ À¯ÁöÇØ ÁÙ ¼ö ÀÖ´Â ÄÚµå »ğÀÔ
-			//Áß°ıÈ£ ³»¿¡¼­´Â ÀÔ±İÁß Ãâ±İÀ» ÇÒ ¼ö ¾øµµ·Ï ±¸Çö
+			//ATM í´ë˜ìŠ¤ì— ë™ê¸°í™”ë¥¼ ìœ ì§€í•´ ì¤„ ìˆ˜ ìˆëŠ” ì½”ë“œ ì‚½ì…
+			//ì¤‘ê´„í˜¸ ë‚´ì—ì„œëŠ” ì…ê¸ˆì¤‘ ì¶œê¸ˆì„ í•  ìˆ˜ ì—†ë„ë¡ êµ¬í˜„
 			
 			synchronized (obj) {
 				if(flag){
@@ -65,7 +65,7 @@ class ATM_USER2 extends Thread{				//ATM »ç¿ëÀÚ °ü·Ã ¼±¾ğ Å¬·¡½º
 					obj.withdraw((int)(Math.random()*10000), getName());
 					obj.getTotal();	
 				}
-			}//end µ¿±âÈ­
+			}//end ë™ê¸°í™”
 			
 			flag = !flag;
 		}
@@ -79,12 +79,12 @@ public class ThreadExam7 {
 
 	public static void main(String[] args) {
 		
-		ATM2 obj = new ATM2(10000);	//°øÀ¯ ±İ¾× ¼³Á¤(°èÁÂ¿¡ ¸¸¿øÀÌ ÀÖÀ½)
-		//¼¼¸íÀÇ °èÁÂ¸¦ Ã³¸®ÇÔ
+		ATM2 obj = new ATM2(10000);	//ê³µìœ  ê¸ˆì•¡ ì„¤ì •(ê³„ì¢Œì— ë§Œì›ì´ ìˆìŒ)
+		//ì„¸ëª…ì˜ ê³„ì¢Œë¥¼ ì²˜ë¦¬í•¨
 		
-		ATM_USER2 u1 = new ATM_USER2(obj,"¹«"); 
-		ATM_USER2 u2 = new ATM_USER2(obj,"½º");
-		ATM_USER2 u3 = new ATM_USER2(obj,"ºñ");
+		ATM_USER2 u1 = new ATM_USER2(obj,"ë¬´"); 
+		ATM_USER2 u2 = new ATM_USER2(obj,"ìŠ¤");
+		ATM_USER2 u3 = new ATM_USER2(obj,"ë¹„");
 		
 		u1.start();
 		u2.start();

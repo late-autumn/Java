@@ -2,14 +2,14 @@ package Day23;
 import java.awt.*;
 public class CheckBoxEx extends Frame{
 
-	private Label label = new Label("ÁÁ¾ÆÇÏ´Â °úÀÏ?");
+	private Label label = new Label("ì¢‹ì•„í•˜ëŠ” ê³¼ì¼?");
 	
-	private Checkbox[] cb = {new Checkbox("¹Ù³ª³ª"),
-			new Checkbox("µş±â"),new Checkbox("ÆÄÀÎ¾ÖÇÃ",true),
-			new Checkbox("»ç°ú"),new Checkbox("Æ÷µµ")
+	private Checkbox[] cb = {new Checkbox("ë°”ë‚˜ë‚˜"),
+			new Checkbox("ë”¸ê¸°"),new Checkbox("íŒŒì¸ì• í”Œ",true),
+			new Checkbox("ì‚¬ê³¼"),new Checkbox("í¬ë„")
 	};
 	
-	private Button button = new Button("È®ÀÎ");
+	private Button button = new Button("í™•ì¸");
 	
 	public CheckBoxEx() {
 		super("CheckBox");

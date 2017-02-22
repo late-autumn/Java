@@ -3,10 +3,10 @@ import java.awt.*;
 
 public class ListEx extends Frame{
 
-	private Label label = new Label("ÀÎ¿ø¸ñ·Ï");
-	private List list = new List(4,true);		//true°¡ ºÙ¾îÀÖÀ¸¸é ´ÙÁß ¸ğµå Áö¿ø ¿©ºÎ 
+	private Label label = new Label("ì¸ì›ëª©ë¡");
+	private List list = new List(4,true);		//trueê°€ ë¶™ì–´ìˆìœ¼ë©´ ë‹¤ì¤‘ ëª¨ë“œ ì§€ì› ì—¬ë¶€ 
 
-	private Button button = new Button("È®ÀÎ");
+	private Button button = new Button("í™•ì¸");
 	private String[] name;
 		
 	
@@ -16,14 +16,14 @@ public class ListEx extends Frame{
 		setLayout(new BorderLayout());
 		
 		for(int i=0; i<name.length;i++){
-			list.add(name[i]);	 		//list¿¡ Ãß°¡
+			list.add(name[i]);	 		//listì— ì¶”ê°€
 		}
 		
-		add("North",label);				//¶óº§À» À§·Î
-		add("South",button);			//¹öÆ°À» ¾Æ·¡·Î
-		add("Center",list);				//¸®½ºÆ®¸¦ Áß¾Ó¿¡
+		add("North",label);				//ë¼ë²¨ì„ ìœ„ë¡œ
+		add("South",button);			//ë²„íŠ¼ì„ ì•„ë˜ë¡œ
+		add("Center",list);				//ë¦¬ìŠ¤íŠ¸ë¥¼ ì¤‘ì•™ì—
 		
-		list.setFont(new Font("±¼¸²Ã¼",Font.BOLD,35));
+		list.setFont(new Font("êµ´ë¦¼ì²´",Font.BOLD,35));
 		
 		
 		setSize(300,200);

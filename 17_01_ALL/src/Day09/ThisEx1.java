@@ -12,7 +12,7 @@ class ThisEx
 	}
 	public ThisEx(String name)
 	{
-		this(); //ÇöÀç °´Ã¼ÀÇ »ı¼ºÀÚ 
+		this(); //í˜„ì¬ ê°ì²´ì˜ ìƒì„±ì 
 		this.name = name;
 	}
 	public ThisEx(String name, String jumin)
@@ -41,9 +41,9 @@ public class ThisEx1 {
 public static void main(String[] args) {
 	
 	ThisEx ex = new ThisEx();
-	ThisEx ex1 = new ThisEx("ÀÌ¸§1");
-	ThisEx ex2 = new ThisEx("ÀÌ¸§2","³ªÀÌ");
-	ThisEx ex3 = new ThisEx("ÀÌ¸§3","³ªÀÌ","¹øÈ£");
+	ThisEx ex1 = new ThisEx("ì´ë¦„1");
+	ThisEx ex2 = new ThisEx("ì´ë¦„2","ë‚˜ì´");
+	ThisEx ex3 = new ThisEx("ì´ë¦„3","ë‚˜ì´","ë²ˆí˜¸");
 	
 	System.out.println(ex.getName()+","+ex.getJumin()+","+ex.getTel());
 	System.out.println(ex1.getName()+","+ex1.getJumin()+","+ex1.getTel());

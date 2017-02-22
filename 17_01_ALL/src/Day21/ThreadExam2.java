@@ -8,7 +8,7 @@ class ThreadEx2 extends Thread{
 		try{
 			for(int i=0; i<5;i++){
 				Thread.sleep(1000);
-				System.out.println(i+"¹ø ¾²·¹µå ");
+				System.out.println(i+"ë²ˆ ì“°ë ˆë“œ ");
 
 			}
 		}catch(InterruptedException e){
@@ -25,13 +25,13 @@ public static void main(String[] args) {
 
 	ThreadEx2 t = new ThreadEx2();
 	t.start();
-	//¾²·¹µå ÀÎ½ºÅÏ½º »ý¼º(°´Ã¼)
+	//ì“°ë ˆë“œ ì¸ìŠ¤í„´ìŠ¤ ìƒì„±(ê°ì²´)
 	
 	try{
 		for(int i=0; i<5;i++){
 			Thread.sleep(1000);
-			System.out.println(i+"¹ø main ¾²·¹µå ");
-			//main¸Þ¼Òµå¿¡¼­ i°ªÀ» Ãâ·Â 
+			System.out.println(i+"ë²ˆ main ì“°ë ˆë“œ ");
+			//mainë©”ì†Œë“œì—ì„œ iê°’ì„ ì¶œë ¥ 
 
 		}
 	}catch(InterruptedException e){

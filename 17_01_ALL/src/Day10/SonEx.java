@@ -1,7 +1,7 @@
 package Day10;
 
-//´ÙÇü¼º¿¡¼­ ¸Ş¼Òµå´Â ÀÚ½Ä, ¸â¹öº¯¼ö´Â ºÎ¸ğÀÇ °ÍÀ» »ç¿ëÇÑ´Ù.
-class ParentEx{ //ºÎ¸ğ Å¬·¡½º
+//ë‹¤í˜•ì„±ì—ì„œ ë©”ì†Œë“œëŠ” ìì‹, ë©¤ë²„ë³€ìˆ˜ëŠ” ë¶€ëª¨ì˜ ê²ƒì„ ì‚¬ìš©í•œë‹¤.
+class ParentEx{ //ë¶€ëª¨ í´ë˜ìŠ¤
 	
 	int foo = 5;
 	
@@ -23,7 +23,7 @@ public class SonEx extends ParentEx{
 public static void main(String[] args) {
 	
 	ParentEx pe = new SonEx();
-	System.out.println(pe.getNumber(0));  //¸Ş¼Òµå´Â ÀÚ½Ä²¨ ¸â¹öº¯¼ö´Â ºÎ¸ğ²¨ Ãâ·ÂÇÑ´Ù. ÀÌ°ÍÀÌ ´ÙÇü¼ºÀÇ Æ¯Â¡ 
+	System.out.println(pe.getNumber(0));  //ë©”ì†Œë“œëŠ” ìì‹êº¼ ë©¤ë²„ë³€ìˆ˜ëŠ” ë¶€ëª¨êº¼ ì¶œë ¥í•œë‹¤. ì´ê²ƒì´ ë‹¤í˜•ì„±ì˜ íŠ¹ì§• 
 	System.out.println(pe.foo);
 }
 }

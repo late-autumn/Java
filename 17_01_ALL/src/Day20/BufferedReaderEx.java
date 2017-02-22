@@ -14,14 +14,14 @@ public class BufferedReaderEx {
 		
 		try{
 			
-			fis =new FileInputStream("c:/ºñµÑ±â/hello.txt");
+			fis =new FileInputStream("c:/ë¹„ë‘˜ê¸°/hello.txt");
 			ist = new InputStreamReader(fis);
 			br = new BufferedReader(ist);
-			//ÇÑ ¶óÀÎ¾¿ ÀĞ¾îµéÀÎ ¹®ÀÚ¿­À» ÀúÀåÇÒ º¯¼ö ¼±¾ğ
+			//í•œ ë¼ì¸ì”© ì½ì–´ë“¤ì¸ ë¬¸ìì—´ì„ ì €ì¥í•  ë³€ìˆ˜ ì„ ì–¸
 			
 		String str = null;
-			//readline() °³Çà¹®ÀÚ¸¦ ¸¸³ª¸é °³Çà ¹®ÀÚ ÀÌÀü±îÁöÀÇ ¹®ÀÚ¿­À» ¹İÈ¯ÇÏ°í 
-			//½ºÆ®¸²ÀÇ ³¡¿¡ µµ´ŞÇÏ¸é nullÀ» ¹İÈ¯ÇÔ
+			//readline() ê°œí–‰ë¬¸ìë¥¼ ë§Œë‚˜ë©´ ê°œí–‰ ë¬¸ì ì´ì „ê¹Œì§€ì˜ ë¬¸ìì—´ì„ ë°˜í™˜í•˜ê³  
+			//ìŠ¤íŠ¸ë¦¼ì˜ ëì— ë„ë‹¬í•˜ë©´ nullì„ ë°˜í™˜í•¨
 		while((str=br.readLine())!=null){
 			
 			System.out.println(str);

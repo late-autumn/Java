@@ -11,10 +11,10 @@ public class Example3 {
 	char CAL ;
 	void input()
 	{
-		System.out.println("Ã¹¹øÂ° Á¤¼ö¿Í µÎ¹øÂ° Á¤¼ö¸¦ ÀÔ·ÂÇÏ¼¼¿ä:");
+		System.out.println("ì²«ë²ˆì§¸ ì •ìˆ˜ì™€ ë‘ë²ˆì§¸ ì •ìˆ˜ë¥¼ ì…ë ¥í•˜ì„¸ìš”:");
 		InputNum = sc.nextInt();
 		InputNum2 = sc.nextInt();
-		System.out.print("¿øÇÏ´Â »çÄ¢ ¿¬»êÀ» ÀÔ·ÂÇÏ¼¼¿ä:");
+		System.out.print("ì›í•˜ëŠ” ì‚¬ì¹™ ì—°ì‚°ì„ ì…ë ¥í•˜ì„¸ìš”:");
 		CAL = sc.next().charAt(0);
 	}
 	
@@ -24,27 +24,27 @@ public class Example3 {
 		{
 		case '+':
 			result = InputNum+InputNum2;
-			System.out.println("µ¡¼ÀÀ» ÇÏ¿´½À´Ï´Ù");
+			System.out.println("ë§ì…ˆì„ í•˜ì˜€ìŠµë‹ˆë‹¤");
 			break;
 		case '-':
 			result = InputNum-InputNum2;
-			System.out.println("»¬¼ÀÀ» ÇÏ¿´½À´Ï´Ù");
+			System.out.println("ëº„ì…ˆì„ í•˜ì˜€ìŠµë‹ˆë‹¤");
 			break;
 		case '*':
 			result = InputNum*InputNum2;
-			System.out.println("°ö¼ÀÀ» ÇÏ¿´½À´Ï´Ù");
+			System.out.println("ê³±ì…ˆì„ í•˜ì˜€ìŠµë‹ˆë‹¤");
 			break;
 		case '/':
 			result = InputNum/InputNum2;
-			System.out.println("³ª´°¼ÀÀ» ÇÏ¿´½À´Ï´Ù");
+			System.out.println("ë‚˜ëˆ—ì…ˆì„ í•˜ì˜€ìŠµë‹ˆë‹¤");
 			break;
 			default:
-				System.out.println("ÀÔ·Â ¿À·ù");
+				System.out.println("ì…ë ¥ ì˜¤ë¥˜");
 		}
 	}
 	void print()
 	{
-		System.out.println("°á°ú´Â :"+result);
+		System.out.println("ê²°ê³¼ëŠ” :"+result);
 	}
 	
 }

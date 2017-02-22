@@ -1,34 +1,34 @@
 package Day12_Machine;
 
 
-//¸Ş´º¸¦ ¼±ÅÃÇÒ ¼ö ÀÖ´Â Å¬·¡½º
+//ë©”ë‰´ë¥¼ ì„ íƒí•  ìˆ˜ ìˆëŠ” í´ë˜ìŠ¤
 public class Menu {
 	
-	Money mon = new Money(); //Money °´Ã¼(ÀÎ½ºÅÏ½º) »ı¼º
+	Money mon = new Money(); //Money ê°ì²´(ì¸ìŠ¤í„´ìŠ¤) ìƒì„±
 	
 	void Menu(){
-	//¸Ş´ºÀÇ »ı¼ºÀÚ ÇÔ¼ö ÀÌ¿ë
+	//ë©”ë‰´ì˜ ìƒì„±ì í•¨ìˆ˜ ì´ìš©
 		
-		char valid = 'x'; 	//Á¦Ç°Ãâ·Â »óÅÂ¸¦ ¾Ë¸®´Â º¯¼ö
+		char valid = 'x'; 	//ì œí’ˆì¶œë ¥ ìƒíƒœë¥¼ ì•Œë¦¬ëŠ” ë³€ìˆ˜
 
 		do
 		{
-			//ÀÚÆÇ±âÀÇ ±âº»¸ğ¾ç
+			//ìíŒê¸°ì˜ ê¸°ë³¸ëª¨ì–‘
 			System.out.println("==============================");
-			System.out.println("¢¾¢¾¢¾¢¾¢¾¢¾¢¾¢¾¢¾¢¾¢¾¢¾¢¾¢¾MENU¢¾¢¾¢¾¢¾¢¾¢¾¢¾¢¾¢¾¢¾¢¾¢¾");
+			System.out.println("â™¥â™¥â™¥â™¥â™¥â™¥â™¥â™¥â™¥â™¥â™¥â™¥â™¥â™¥MENUâ™¥â™¥â™¥â™¥â™¥â™¥â™¥â™¥â™¥â™¥â™¥â™¥");
 			System.out.println("==============================");
 
-			System.out.println("¤Ó      <¸Ş´º>\t\t  <°¡°İ>  <°¡´É>    ¤Ó");
+			System.out.println("ã…£      <ë©”ë‰´>\t\t  <ê°€ê²©>  <ê°€ëŠ¥>    ã…£");
 			
 			for(int i=0; i<Attribute.coffee.length;i++){
 				
-				//ÀÔ±İ±İ¾×¿¡ Ä¿ÇÇ ±¸¸Å°¡ °¡´ÉÇÑÁö È®ÀÎ
+				//ì…ê¸ˆê¸ˆì•¡ì— ì»¤í”¼ êµ¬ë§¤ê°€ ê°€ëŠ¥í•œì§€ í™•ì¸
 				if(Attribute.deposit >= Attribute.price[i])
 					valid = 'o';
 				else
 					valid = 'x';
 				
-			System.out.printf("¤Ó   %6s[%d]\t%5d¿ø\t\b\b(%c)\t    ¤Ó\n",Attribute.coffee[i],(i+1),Attribute.price[i],valid);
+			System.out.printf("ã…£   %6s[%d]\t%5dì›\t\b\b(%c)\t    ã…£\n",Attribute.coffee[i],(i+1),Attribute.price[i],valid);
 				
 			}
 			

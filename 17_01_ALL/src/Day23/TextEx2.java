@@ -28,11 +28,11 @@ public class TextEx2 extends Frame implements ActionListener {
 	
 	@Override
 	public void actionPerformed(ActionEvent e) {
-		// ÀÌº¥Æ® ½ÇÇà ¸Ş¼Òµå 
+		// ì´ë²¤íŠ¸ ì‹¤í–‰ ë©”ì†Œë“œ 
 
 		if(e.getSource()==tf){
 			String imsi = tf.getText();
-			System.out.println("¸Ş¼¼Áö:"+imsi);
+			System.out.println("ë©”ì„¸ì§€:"+imsi);
 			tf.setText("");
 		}
 		

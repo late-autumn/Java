@@ -4,12 +4,12 @@ import java.awt.*;
 
 public class FileDialogEx extends Frame{
 
-	FileDialog fd = new FileDialog(this, "³»²¨ ÀúÀå", FileDialog.LOAD);	//mode : save, load
+	FileDialog fd = new FileDialog(this, "ë‚´êº¼ ì €ì¥", FileDialog.LOAD);	//mode : save, load
 			
 	
 	public FileDialogEx() {
 		// TODO Auto-generated constructor stub
-		super("ÆÄÀÏ ´ëÈ­ »óÀÚ");
+		super("íŒŒì¼ ëŒ€í™” ìƒì");
 		setSize(300,200);
 		setVisible(true);
 		fd.setVisible(true);

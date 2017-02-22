@@ -4,16 +4,16 @@ public class StringBufferEx2 {
 public static void main(String[] args) {
 	
 	StringBuffer sb2= new StringBuffer("1234567890");
-	//sb.capacity();//¿ë·®À» 
+	//sb.capacity();//ìš©ëŸ‰ì„ 
 	StringBuffer sb= new StringBuffer("1234");
 	
-	System.out.println(sb.capacity()); // 1ÀÌ ¾Æ´Ñ 17ÀÎ ÀÌÀ¯´Â ¹öÆÛ ÀÚÃ¼·Î 16ÀÌ ÀâÇôÀÖ±â ¶§¹®ÀÌ´Ù.
+	System.out.println(sb.capacity()); // 1ì´ ì•„ë‹Œ 17ì¸ ì´ìœ ëŠ” ë²„í¼ ìì²´ë¡œ 16ì´ ì¡í˜€ìˆê¸° ë•Œë¬¸ì´ë‹¤.
 	System.out.println(sb.length());
 	
-	sb.append("12345678910111200011"); //¸Ş¸ğ¸®´Â ¹«Á¶°Ç ¾Õ¿¡ ¹öÆÛ *2 +2 ·Î »ı¼ºµÈ´Ù. 
+	sb.append("12345678910111200011"); //ë©”ëª¨ë¦¬ëŠ” ë¬´ì¡°ê±´ ì•ì— ë²„í¼ *2 +2 ë¡œ ìƒì„±ëœë‹¤. 
 	System.out.println(sb.capacity()); 
 
-	sb.append("¤±¤·¤¤¤©¤±¤¤¤·¤©¤±¤¤¤·¤©¤·¤¤¤©¤¤¤¤¤±¤·¤©¤·¤¤¤©"); //17Ä­ ÀÎµ¦½º Áõ°¡ 
+	sb.append("ã…ã…‡ã„´ã„¹ã…ã„´ã…‡ã„¹ã…ã„´ã…‡ã„¹ã…‡ã„´ã„¹ã„´ã„´ã…ã…‡ã„¹ã…‡ã„´ã„¹"); //17ì¹¸ ì¸ë±ìŠ¤ ì¦ê°€ 
 	System.out.println(sb.capacity()); 
 }
 }

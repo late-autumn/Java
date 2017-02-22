@@ -3,9 +3,9 @@ package Day15;
 import java.util.*;
 
 /*
- * vector : ¹«ÇÑ µ¥ÀÌÅÍ ÀÔ·Â ¹Þ±â
- * ¹Ýµå½Ã import java.util.*; ¼±¾ð ÇØ¾ßÇÑ´Ù.
- * object°¡ ¹«ÇÑ¹è¿­·Î Ãß°¡°¡´É µ¿ÀÏÇÑ Å¬·¡½º ³»¿¡¼­ È¿À²ÀûÀÌ´Ù.
+ * vector : ë¬´í•œ ë°ì´í„° ìž…ë ¥ ë°›ê¸°
+ * ë°˜ë“œì‹œ import java.util.*; ì„ ì–¸ í•´ì•¼í•œë‹¤.
+ * objectê°€ ë¬´í•œë°°ì—´ë¡œ ì¶”ê°€ê°€ëŠ¥ ë™ì¼í•œ í´ëž˜ìŠ¤ ë‚´ì—ì„œ íš¨ìœ¨ì ì´ë‹¤.
  * 
  */
 

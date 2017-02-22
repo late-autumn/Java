@@ -5,19 +5,19 @@ public class JTableEx {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		JFrame f = new JFrame("ÇĞ»ıÁ¤º¸");
+		JFrame f = new JFrame("í•™ìƒì •ë³´");
 		f.setPreferredSize(new Dimension(300,200));
 		f.setLocation(500, 400);
 		Container content_Pane = f.getContentPane();
 		
-		String[] col_name = {"ÀÌ¸§","³ªÀÌ","¼ºº°"};		//ÄÃ·³ ÀÌ¸§
+		String[] col_name = {"ì´ë¦„","ë‚˜ì´","ì„±ë³„"};		//ì»¬ëŸ¼ ì´ë¦„
 		
 		Object data[][] = {
-				{"°¡³ª´Ù",60,'³²'},
-				{"¶ó¸¶¹Ù",50,'¿©'},
-				{"»ç¾ÆÀÚ",40,'³²'},
-				{"Â÷Ä«Å¸",30,'¿©'},
-				{"ÆÄÇÏ",20,'³²'}				
+				{"ê°€ë‚˜ë‹¤",60,'ë‚¨'},
+				{"ë¼ë§ˆë°”",50,'ì—¬'},
+				{"ì‚¬ì•„ì",40,'ë‚¨'},
+				{"ì°¨ì¹´íƒ€",30,'ì—¬'},
+				{"íŒŒí•˜",20,'ë‚¨'}				
 		};
 		JTable table = new JTable(data,col_name);
 		JScrollPane scroll_pane = new JScrollPane(table);
@@ -25,12 +25,12 @@ public class JTableEx {
 		
 		JPanel panl = new JPanel(new GridLayout(2, 1));
 		
-		JButton button = new JButton("Ãâ·Â");
+		JButton button = new JButton("ì¶œë ¥");
 		
 		button.addActionListener(new JTable_PrintActionListener(table)); 
 		//content_Pane.add(button, BorderLayout.SOUTH);
 		
-		JButton button2 = new JButton("Ãß°¡");
+		JButton button2 = new JButton("ì¶”ê°€");
 		button2.addActionListener(new JTable_PrintActionListener(table));
 		panl.add("West",button);
 		panl.add("South", button2);

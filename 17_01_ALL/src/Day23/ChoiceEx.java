@@ -2,9 +2,9 @@ package Day23;
 import java.awt.*;
 public class ChoiceEx extends Frame{
 
-	private Label label = new Label("»ıÀÏ");
+	private Label label = new Label("ìƒì¼");
 	private Choice choice = new Choice();
-	private Button button = new Button("È®ÀÎ");
+	private Button button = new Button("í™•ì¸");
 	
 	public ChoiceEx() {
 		super("Choice");
@@ -13,7 +13,7 @@ public class ChoiceEx extends Frame{
 		
 		add(label);
 		for(int i=1;i<=12;i++){
-			choice.add(String.valueOf(i)+"¿ù");
+			choice.add(String.valueOf(i)+"ì›”");
 		}
 		add(choice);
 		add(button);

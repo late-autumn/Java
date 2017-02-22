@@ -12,17 +12,17 @@ public class Exam2_Method implements Exam2_Function {
 		int input;
 				
 		do{
-			System.out.print("ÀÎ¿ø ¼ö ÀÔ·Â:");
+			System.out.print("ì¸ì› ìˆ˜ ì…ë ¥:");
 			input = sc.nextInt();
 			
 			VO = new Exam2_VO[input];
 	
 			for(int i=0; i<VO.length;i++){
 				VO[i]= new Exam2_VO();
-				System.out.printf("%d ¹øÂ° ÇĞ»ıÀÇ ÇĞ¹ø ÀÌ¸§ ÀÔ·Â(°ø¹é±¸ºĞ):",(i+1));
+				System.out.printf("%d ë²ˆì§¸ í•™ìƒì˜ í•™ë²ˆ ì´ë¦„ ì…ë ¥(ê³µë°±êµ¬ë¶„):",(i+1));
 				VO[i].hak = sc.nextInt();
 				VO[i].name = sc.next();
-				System.out.print("±¹¾î ¿µ¾î ¼öÇĞ Á¡¼ö ÀÔ·Â(°ø¹é±¸ºĞ):");
+				System.out.print("êµ­ì–´ ì˜ì–´ ìˆ˜í•™ ì ìˆ˜ ì…ë ¥(ê³µë°±êµ¬ë¶„):");
 				for(int j=0; j<VO[i].subject.length;j++){
 					VO[i].subject[j] = sc.nextInt();
 					//sc.nextLine();
@@ -42,19 +42,19 @@ public class Exam2_Method implements Exam2_Function {
 			VO[i].avg = VO[i].sum/3;
 			
 			if(VO[i].subject[j]>90){
-				VO[i].scor[j] = "¼ö";
+				VO[i].scor[j] = "ìˆ˜";
 			}
 			else if(VO[i].subject[j]>80){
-				VO[i].scor[j] = "¿ì";
+				VO[i].scor[j] = "ìš°";
 			}
 			else if(VO[i].subject[j]>70){
-				VO[i].scor[j] = "¹Ì";
+				VO[i].scor[j] = "ë¯¸";
 			}
 			else if(VO[i].subject[j]>60){
-				VO[i].scor[j] = "¾ç";
+				VO[i].scor[j] = "ì–‘";
 			}
 			else{
-				VO[i].scor[j] = "°¡";
+				VO[i].scor[j] = "ê°€";
 			}
 				
 			}

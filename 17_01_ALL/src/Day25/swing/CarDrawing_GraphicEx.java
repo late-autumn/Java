@@ -8,7 +8,7 @@ public class CarDrawing_GraphicEx {
 	
 	public static void main(String[] args) {
 
-		JFrame f = new JFrame("ÀÚµ¿Â÷ ±×¸®±â");
+		JFrame f = new JFrame("ìë™ì°¨ ê·¸ë¦¬ê¸°");
 		
 		f.setLocation(500, 200);
 		f.setPreferredSize(new Dimension(400,300));

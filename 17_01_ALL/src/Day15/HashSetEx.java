@@ -28,8 +28,8 @@ public static void main(String[] args) {
 	hs.add(ap);
 	hs.add(bp);
 	hs.add(cp);
-	System.out.println("ÇØ½ÃÄÚµå:"+hs.hashCode());
-	System.out.println("»çÀÌÁî´Â:"+hs.size());
+	System.out.println("í•´ì‹œì½”ë“œ:"+hs.hashCode());
+	System.out.println("ì‚¬ì´ì¦ˆëŠ”:"+hs.size());
 	Iterator it = hs.iterator();
 	while(it.hasNext())
 		((AData)it.next()).dispoit();

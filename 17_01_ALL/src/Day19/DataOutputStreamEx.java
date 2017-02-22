@@ -7,25 +7,25 @@ public class DataOutputStreamEx {
 		
 	
 	/*/
-	 * DataOutputStreamÀº ±âº» ÀÚ·áÇü Å¸ÀÔ ±×´ë·Î ½ºÆ®¸²À» ÅëÇØ¼­ ±â·Ï ÇÒ ¼ö ÀÖ´Ù.
-	 * DataOutputStreamÀº 1Â÷ ½ºÆ®¸²ÀÌ ¾Æ´Ï±â ´ë¹®¿¡ ´Ù¸¥ ½ºÆ®¸²À» ÀÌ¿ëÇØ¼­
-	 * Æ¯Á¤ µğ¹ÙÀÌ½º¿Í ¿¬°áÇÒ ¼ö ÀÖÀ½.
+	 * DataOutputStreamì€ ê¸°ë³¸ ìë£Œí˜• íƒ€ì… ê·¸ëŒ€ë¡œ ìŠ¤íŠ¸ë¦¼ì„ í†µí•´ì„œ ê¸°ë¡ í•  ìˆ˜ ìˆë‹¤.
+	 * DataOutputStreamì€ 1ì°¨ ìŠ¤íŠ¸ë¦¼ì´ ì•„ë‹ˆê¸° ëŒ€ë¬¸ì— ë‹¤ë¥¸ ìŠ¤íŠ¸ë¦¼ì„ ì´ìš©í•´ì„œ
+	 * íŠ¹ì • ë””ë°”ì´ìŠ¤ì™€ ì—°ê²°í•  ìˆ˜ ìˆìŒ.
 	 */
 		
 		DataOutputStream dos = null;
 		FileOutputStream fos = null;
 	
 	try {
-		//DataOutputStream°ú ¿¬°áÇÒ FileOutputStream°´Ã¼ »ı¼º
-		fos = new FileOutputStream("c:/ºñµÑ±â/t2.sav");
-		//±âº» ÀÚ·áÇü Å¸ÀÔÀ» À¯ÁöÇÑÃ¤ ±â·Ï ÇÒ ¼ö ÀÖ´Â DataOutputStream°´Ã¼ »ı¼º
+		//DataOutputStreamê³¼ ì—°ê²°í•  FileOutputStreamê°ì²´ ìƒì„±
+		fos = new FileOutputStream("c:/ë¹„ë‘˜ê¸°/t2.sav");
+		//ê¸°ë³¸ ìë£Œí˜• íƒ€ì…ì„ ìœ ì§€í•œì±„ ê¸°ë¡ í•  ìˆ˜ ìˆëŠ” DataOutputStreamê°ì²´ ìƒì„±
 		dos = new DataOutputStream(fos);
 		
 		int i =10;
 		double d = 3.14;
-		String s = "¾È³çÈ÷~ ¶Ç ¿ÀÇØ¿µ";
+		String s = "ì•ˆë…•íˆ~ ë˜ ì˜¤í•´ì˜";
 		
-		//DataOutputStreamÀº ±âº»ÀÚ·áÇü º°·Î write()¸Ş¼Òµå°¡ Á¸ÀçÇÔ
+		//DataOutputStreamì€ ê¸°ë³¸ìë£Œí˜• ë³„ë¡œ write()ë©”ì†Œë“œê°€ ì¡´ì¬í•¨
 		
 		dos.writeInt(i);
 		dos.writeDouble(d);

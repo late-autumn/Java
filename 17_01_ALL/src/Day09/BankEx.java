@@ -27,7 +27,7 @@ class Account
 		this.balance = balance;
 	}
 	
-	//ÀÔ±Þ ±â´É
+	//ìž…ê¸‰ ê¸°ëŠ¥
 	public void deposit(long amount)
 	{
 		balance += amount;
@@ -36,14 +36,14 @@ class Account
 	{
 		if(balance <amount)
 		{
-			System.out.println("ÀÜ¾×ÀÌ ºÎÁ·ÇÕ´Ï´Ù.");
+			System.out.println("ìž”ì•¡ì´ ë¶€ì¡±í•©ë‹ˆë‹¤.");
 		}
 		else
 		balance -= amount;
 	}
 	public void display()
 	{
-		System.out.println(getName()+"ÀÇ ³²Àº ÀÜ°í´Â "+getBalance()+"ÀÔ´Ï´Ù.");
+		System.out.println(getName()+"ì˜ ë‚¨ì€ ìž”ê³ ëŠ” "+getBalance()+"ìž…ë‹ˆë‹¤.");
 	}
 	
 }

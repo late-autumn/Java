@@ -10,24 +10,24 @@ public static void main(String[] args) {
 	
 	int com = r.nextInt(3)+1; // 1,2,3
 	int user ;
-	String[] str = {"°¡À§","¹ÙÀ§","º¸"};
+	String[] str = {"ê°€ìœ„","ë°”ìœ„","ë³´"};
 
 	do{
-		System.out.println("1:°¡À§ 2:¹ÙÀ§ 3: º¸ Áß¿¡ ÀÔ·Â:");
+		System.out.println("1:ê°€ìœ„ 2:ë°”ìœ„ 3: ë³´ ì¤‘ì— ì…ë ¥:");
 		user = sc.nextInt();
 		
 	}while(user <1 ||user >3);
-	//Áß°£ Ãâ·Â ÇöÈ²
-	System.out.println("À¯Àú :"+str[user-1]);
-	System.out.println("ÄÄÇ»ÅÍ:"+str[com-1]);
+	//ì¤‘ê°„ ì¶œë ¥ í˜„í™©
+	System.out.println("ìœ ì € :"+str[user-1]);
+	System.out.println("ì»´í“¨í„°:"+str[com-1]);
 	
-	//½ÂºÎÃ³¸® °á°ú Ãâ·Â
+	//ìŠ¹ë¶€ì²˜ë¦¬ ê²°ê³¼ ì¶œë ¥
 	String result;
-	result = "¹«½ÂºÎ";
+	result = "ë¬´ìŠ¹ë¶€";
 	if((user==1 && com ==3)||(user==2 && com ==1) ||(user ==3 && com ==2))
-		result = "À¯Àú ½Â¸®";
+		result = "ìœ ì € ìŠ¹ë¦¬";
 	if((user==1 && com ==2)||(user==2 && com ==3) ||(user ==3 && com ==1))
-		result = "ÄÄÇ»ÅÍ ½Â¸®";
+		result = "ì»´í“¨í„° ìŠ¹ë¦¬";
 
 	System.out.println(result);
 }

@@ -21,7 +21,7 @@ public static void main(String[] args) {
 	System.out.println("t2:"+t2.toString());	
 	System.out.println("t1.hashCode:"+t1.hashCode());
 	System.out.println("t2.hashCode:"+t2.hashCode());
-	System.out.println("t1°ú t2°¡ °°Àº°¡?"+t1.equals(t2));
+	System.out.println("t1ê³¼ t2ê°€ ê°™ì€ê°€?"+t1.equals(t2));
 	
 	
 }

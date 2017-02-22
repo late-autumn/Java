@@ -35,7 +35,7 @@ public static void main(String[] args) {
 	InterfaceEx2 ex = new InterfaceEx2();
 	
 	Inter1 it1 = new InterfaceEx2();
-	Inter2 it2 = ex;  //new InterfaceEx2()³ª ex³ª ÀÌ·¸°Ô ÇØµµ »ó°ü ¾ø´Ù.
+	Inter2 it2 = ex;  //new InterfaceEx2()ë‚˜ exë‚˜ ì´ë ‡ê²Œ í•´ë„ ìƒê´€ ì—†ë‹¤.
 	Inter3 it3 = ex;
 	
 	System.out.println(it1.getA());

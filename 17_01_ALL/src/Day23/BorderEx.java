@@ -13,39 +13,39 @@ public class BorderEx extends Frame{
 
 		setLayout(new BorderLayout());
 		
-		a = new Label("¡è",Label.CENTER);
-		b = new Label("¡é",Label.CENTER);
-		c = new Label("¡ç",Label.CENTER);
-		d = new Label("¡æ",Label.CENTER);
-		e = new Label("¡Û",Label.CENTER);
+		a = new Label("â†‘",Label.CENTER);
+		b = new Label("â†“",Label.CENTER);
+		c = new Label("â†",Label.CENTER);
+		d = new Label("â†’",Label.CENTER);
+		e = new Label("â—‹",Label.CENTER);
 		
-		//ÀüÃ¼ ¹è°æ ¼³Á¤
+		//ì „ì²´ ë°°ê²½ ì„¤ì •
 		setBackground(Color.GRAY);
-		//¹ÙÅÁ»ö ¼³Á¤
+		//ë°”íƒ•ìƒ‰ ì„¤ì •
 		a.setBackground(Color.red);
 		b.setBackground(Color.YELLOW);
 		c.setBackground(Color.GREEN);
 		d.setBackground(Color.blue);
 		e.setBackground(Color.magenta);
 		
-		//Àü°æ»ö ¼³Á¤
+		//ì „ê²½ìƒ‰ ì„¤ì •
 		a.setForeground(Color.WHITE);
 		b.setForeground(Color.WHITE);
 		c.setForeground(Color.WHITE);
 		d.setForeground(Color.WHITE);
 		e.setForeground(Color.WHITE);
 		
-		//border¿¡ ·¹ÀÌ¾Æ¿ô Ãß°¡
+		//borderì— ë ˆì´ì•„ì›ƒ ì¶”ê°€
 		add("North",a);
 		add("South",b);
 		add(c,BorderLayout.WEST);
 		add("East",d);
 		add(e);
 		
-		setLocation(500, 300);	//½ÇÇàÃ¢ À§Ä¡ 
+		setLocation(500, 300);	//ì‹¤í–‰ì°½ ìœ„ì¹˜ 
 		
-		//setSize(400, 300);	//size ´ë½Å pack() »ç¿ë 
-		pack();					//Å©±â º¯°æ °¡´É 
+		//setSize(400, 300);	//size ëŒ€ì‹  pack() ì‚¬ìš© 
+		pack();					//í¬ê¸° ë³€ê²½ ê°€ëŠ¥ 
 		
 		setVisible(true);
 		

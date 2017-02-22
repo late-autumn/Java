@@ -6,13 +6,13 @@ import java.awt.event.KeyListener;
 
 public class KeyEventEx extends Frame implements KeyListener {
 
-	Label label = new Label("�ֹι�ȣ:",Label.RIGHT);
+	Label label = new Label("주민번호:",Label.RIGHT);
 	Label label2 = new Label("-",Label.CENTER);
 	
 	TextField text_field = new TextField(10);
 	TextField text_field2 = new TextField(10);
 	
-	Button button = new Button("Ȯ��");
+	Button button = new Button("확인");
 	
 	public KeyEventEx() {
 		// TODO Auto-generated constructor stub

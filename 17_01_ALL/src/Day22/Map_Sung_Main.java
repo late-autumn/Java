@@ -8,18 +8,18 @@ public class Map_Sung_Main {
 		
 		char ch;
 		Map_Sung_Method sung = new Map_Sung_Method();
-		System.out.println("¼ºÀû Ã³¸®");
+		System.out.println("ì„±ì  ì²˜ë¦¬");
 		while(true){
 			do{
-				System.out.print("1.ÀÔ·Â:");
-				System.out.print("2.¼öÁ¤:");
-				System.out.print("3.ÀÌ¸§°Ë»ö:");
-				System.out.print("4.»èÁ¦:");
-				System.out.print("5.ÀüÃ¼ Ãâ·Â:");
-				System.out.print("6.ÇÕ°è¼ø ÀüÃ¼Ãâ·Â:");
-				System.out.print("7.Á¾·á:");
+				System.out.print("1.ì…ë ¥:");
+				System.out.print("2.ìˆ˜ì •:");
+				System.out.print("3.ì´ë¦„ê²€ìƒ‰:");
+				System.out.print("4.ì‚­ì œ:");
+				System.out.print("5.ì „ì²´ ì¶œë ¥:");
+				System.out.print("6.í•©ê³„ìˆœ ì „ì²´ì¶œë ¥:");
+				System.out.print("7.ì¢…ë£Œ:");
 				
-				System.out.print("¸Ş´º¼±ÅÃ:");
+				System.out.print("ë©”ë‰´ì„ íƒ:");
 				ch = (char)System.in.read();
 				System.in.skip(2);
 				

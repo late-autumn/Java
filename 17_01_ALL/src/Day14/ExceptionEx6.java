@@ -15,7 +15,7 @@ public static void main(String[] args) {
 		test();
 	} catch (Exception e) {
 		// TODO: handle exception
-		System.out.println("¿¹¿Ü¹ß»ı");
+		System.out.println("ì˜ˆì™¸ë°œìƒ");
 	}
 	
 }

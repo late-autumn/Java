@@ -13,7 +13,7 @@ public class RandomCoffee {
 	void menu(){
 		
 		Stock st = new Stock();
-		Random ran = new Random(); //·£´ı °´Ã¼ »ı¼º
+		Random ran = new Random(); //ëœë¤ ê°ì²´ ìƒì„±
 		
 		
 		int random = ran.nextInt(5);
@@ -23,7 +23,7 @@ public class RandomCoffee {
 		if(Stock.a == true)
 		{
 			Attribute.deposit -= Attribute.price[5];
-			System.out.printf("ÁÖ¹®ÇÏ½Å ·£´ı Ä¿ÇÇ %s°¡ ³ª¾Ò½À´Ï´Ù.\n",Attribute.coffee[random]);
+			System.out.printf("ì£¼ë¬¸í•˜ì‹  ëœë¤ ì»¤í”¼ %sê°€ ë‚˜ì•˜ìŠµë‹ˆë‹¤.\n",Attribute.coffee[random]);
 			System.out.println();
 			Attribute.frequency[5]++;			
 		}

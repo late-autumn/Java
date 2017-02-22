@@ -30,10 +30,10 @@ public class StringTokenEx1 {
 	
 public static void main(String[] args) {
 	
-	StringTokenEx1 str1 = new StringTokenEx1("¿ì¸®³ª¶ó ´ëÇÑ¹Î±¹ ¸¸¼¼,¾Æ¾Æ¾Æ"); //±âº»Àº °ø¹é¿¡¼­ ²÷¾îÁØ´Ù.
+	StringTokenEx1 str1 = new StringTokenEx1("ìš°ë¦¬ë‚˜ë¼ ëŒ€í•œë¯¼êµ­ ë§Œì„¸,ì•„ì•„ì•„"); //ê¸°ë³¸ì€ ê³µë°±ì—ì„œ ëŠì–´ì¤€ë‹¤.
 	str1.print();
 	
-	StringTokenEx1 str2 = new StringTokenEx1("2017/01/11","/"); //µÚ¿¡ ÀÖ´Â ¾ÆÀÌ°¡ ²÷´Â °Í.
+	StringTokenEx1 str2 = new StringTokenEx1("2017/01/11","/"); //ë’¤ì— ìˆëŠ” ì•„ì´ê°€ ëŠëŠ” ê²ƒ.
 	str2.print();
 	
 }

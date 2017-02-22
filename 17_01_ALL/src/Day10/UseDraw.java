@@ -3,32 +3,32 @@ package Day10;
 abstract class Diagram{
 	
 	abstract void draw();
-	//Ãß»ó ¸Ş¼Òµå ¹İµå½Ã ÇÏ³ª´Â Á¸ÀçÇØ¾ßÇÑ´Ù.
+	//ì¶”ìƒ ë©”ì†Œë“œ ë°˜ë“œì‹œ í•˜ë‚˜ëŠ” ì¡´ì¬í•´ì•¼í•œë‹¤.
 	/*
-	 * private·Î ¼±¾ğ ÇÒ ¼ö ¾ø´Ù. => ÀÚ½ÄÀÌ ¿À¹ö¶óÀÌµù ÇØ¾ßÇÏ´Âµ¥ ¸øÇÏ±â ¶§¹®ÀÌ´Ù.
-	 * staticÀ¸·Î ¼±¾ğ ÇÒ ¼ö ¾ø´Ù => °´Ã¼ ¾øÀÌµµ È£ÃâÀÌ µÇ´Â ¸Ş¼­µå ÀÌ¹Ç·Î ¹İµå½Ã ¸öÃ¼°¡ Á¤ÀÇ µÇ¾î¾ß Å¬·¡½º, ¸Ş¼Òµå()Çü½ÄÀ¸·Î È£ÃâµÊ
+	 * privateë¡œ ì„ ì–¸ í•  ìˆ˜ ì—†ë‹¤. => ìì‹ì´ ì˜¤ë²„ë¼ì´ë”© í•´ì•¼í•˜ëŠ”ë° ëª»í•˜ê¸° ë•Œë¬¸ì´ë‹¤.
+	 * staticìœ¼ë¡œ ì„ ì–¸ í•  ìˆ˜ ì—†ë‹¤ => ê°ì²´ ì—†ì´ë„ í˜¸ì¶œì´ ë˜ëŠ” ë©”ì„œë“œ ì´ë¯€ë¡œ ë°˜ë“œì‹œ ëª¸ì²´ê°€ ì •ì˜ ë˜ì–´ì•¼ í´ë˜ìŠ¤, ë©”ì†Œë“œ()í˜•ì‹ìœ¼ë¡œ í˜¸ì¶œë¨
 	 */
 }
-class Triangle extends Diagram{ 	//¿À¹ö¶óÀÌµùÀ» ÇØÁà¾ßÇÑ´Ù!
+class Triangle extends Diagram{ 	//ì˜¤ë²„ë¼ì´ë”©ì„ í•´ì¤˜ì•¼í•œë‹¤!
 	
 	@Override
 	void draw() {
 		// TODO Auto-generated method stub
-		System.out.println("»ï°¢ÇüÀ» ±×¸°´Ù");
+		System.out.println("ì‚¼ê°í˜•ì„ ê·¸ë¦°ë‹¤");
 	}
 }
 class Rectangle extends Diagram{
 	@Override
 	void draw() {
 		// TODO Auto-generated method stub
-	System.out.println("»ç°¢ÇüÀ» ±×¸°´Ù.");	
+	System.out.println("ì‚¬ê°í˜•ì„ ê·¸ë¦°ë‹¤.");	
 	}
 }
 class Circle extends Diagram{
 	@Override
 	void draw() {
 		// TODO Auto-generated method stub
-	System.out.println("¿øÀ» ±×¸°´Ù.");	
+	System.out.println("ì›ì„ ê·¸ë¦°ë‹¤.");	
 	}
 	
 }

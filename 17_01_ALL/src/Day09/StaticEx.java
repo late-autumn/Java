@@ -11,12 +11,12 @@ class Static
 public class StaticEx {
 public static void main(String[] args) {
 	System.out.println(Static.y);
-	//x´Â °´Ã¼¸¦ »ı¼ºÇØ Áà¾ß Á¢±ÙÀÌ °¡´ÉÇÏ´Ù.
+	//xëŠ” ê°ì²´ë¥¼ ìƒì„±í•´ ì¤˜ì•¼ ì ‘ê·¼ì´ ê°€ëŠ¥í•˜ë‹¤.
 	Static st = new Static();
 	st.x = 10; 
-	//Static.x = 10; ÀÌ°Ç static¸¸ °¡´É
+	//Static.x = 10; ì´ê±´ staticë§Œ ê°€ëŠ¥
 	Static.y = 20;
-	//Static.z = 0; º¯°æ ºÒ°¡´É 
+	//Static.z = 0; ë³€ê²½ ë¶ˆê°€ëŠ¥ 
 	System.out.println(Static.y);
 	System.out.println(Static.z);
 	

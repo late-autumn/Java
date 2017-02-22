@@ -5,21 +5,21 @@ class Date{
 	private String month;
 	private int day;
 	
-	public Date() {//±âº» »ı¼ºÀÚ
+	public Date() {//ê¸°ë³¸ ìƒì„±ì
 		// TODO Auto-generated constructor stub
-		month = "1¿ù";
+		month = "1ì›”";
 		day = 1;
 		year = 2017;
 	}
 	
 	public Date(int year)
 	{
-		setDate(year, "1¿ù", 1);
+		setDate(year, "1ì›”", 1);
 	}
 	
 	public Date(int year, String month, int day)
 	{
-		month = "1¿ù";		//this °ªÀ» »©¸é ¾ÈµÈ´Ù.  
+		month = "1ì›”";		//this ê°’ì„ ë¹¼ë©´ ì•ˆëœë‹¤.  
 		this.day = 1;
 		this.year = 2017;
 	}
@@ -43,7 +43,7 @@ class Date{
 public class DateEx {
 public static void main(String[] args) {
 	Date d1 = new Date();
-	Date d2 = new Date(2017,"1¿ù",1);
+	Date d2 = new Date(2017,"1ì›”",1);
 	Date d3 = new Date(2017);
 	System.out.println(d1);
 	System.out.println(d2);

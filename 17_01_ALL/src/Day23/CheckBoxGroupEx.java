@@ -3,14 +3,14 @@ import java.awt.*;
 public class CheckBoxGroupEx extends Frame{
 
 	GridLayout gl = new GridLayout(4, 1);
-	Label la = new Label("´ç½ÅÀÇ ¼ºº°Àº?");
+	Label la = new Label("ë‹¹ì‹ ì˜ ì„±ë³„ì€?");
 	CheckboxGroup cg = new CheckboxGroup();
-	Checkbox man = new Checkbox("³²",cg,true);	//½ÇÇàµÇÀÚ¸¶ÀÚ vÇ¥·Î Ã¼Å© µÇ·Á¸é true 
-	Checkbox woman = new Checkbox("¿©",cg,false);
-	Button bt = new Button("È®ÀÎ");
+	Checkbox man = new Checkbox("ë‚¨",cg,true);	//ì‹¤í–‰ë˜ìë§ˆì ví‘œë¡œ ì²´í¬ ë˜ë ¤ë©´ true 
+	Checkbox woman = new Checkbox("ì—¬",cg,false);
+	Button bt = new Button("í™•ì¸");
 	
 	public CheckBoxGroupEx() {
-		super("¶óµğ¿À ¹öÆ°");
+		super("ë¼ë””ì˜¤ ë²„íŠ¼");
 		
 		setLayout(gl);
 		add(la);
@@ -20,8 +20,8 @@ public class CheckBoxGroupEx extends Frame{
 		pack();
 		setVisible(true);
 
-		 man.setFont(new Font("±¼¸²Ã¼",Font.BOLD,40));
-		 woman.setFont(new Font("±¼¸²Ã¼",Font.BOLD,40));
+		 man.setFont(new Font("êµ´ë¦¼ì²´",Font.BOLD,40));
+		 woman.setFont(new Font("êµ´ë¦¼ì²´",Font.BOLD,40));
 		 WinEvent event = new WinEvent();
 		 addWindowListener(event);
 		 

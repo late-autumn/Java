@@ -2,16 +2,16 @@ package Day09;
 
 public class MethodEx2 {
 	
-	//Å¬·¡½º ¸â¹ö º¯¼ö = Àü¿ª º¯¼ö
+	//í´ë˜ìŠ¤ ë©¤ë²„ ë³€ìˆ˜ = ì „ì—­ ë³€ìˆ˜
 	int var1, var2;  		
 	
-	public MethodEx2() { 		//»ı¼ºÀÚ »ı¼º. ctrl + space
+	public MethodEx2() { 		//ìƒì„±ì ìƒì„±. ctrl + space
 		// TODO Auto-generated constructor stub
 		var1 = 10;
 		var2 = 20;
 	}
 	
-	public int sum(int a, int b)//¸Ş¼ÒµåÀÇ ¸â¹öº¯¼ö = Áö¿ªº¯¼ö 
+	public int sum(int a, int b)//ë©”ì†Œë“œì˜ ë©¤ë²„ë³€ìˆ˜ = ì§€ì—­ë³€ìˆ˜ 
 	{
 		return a+b;				
 	}

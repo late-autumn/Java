@@ -10,7 +10,7 @@ public class overloadingEx2 {
 	{
 		String s = String.valueOf(n);
 		getLength(s);
-		//System.out.println("±æÀÌ´Â:"+s);
+		//System.out.println("ê¸¸ì´ëŠ”:"+s);
 	}
 	void getLength(float n)
 	{
@@ -19,7 +19,7 @@ public class overloadingEx2 {
 	}
 	private int getLength(String str)
 	{
-		System.out.println("ÀÔ·ÂÇÑ °ªÀÇ ±æÀÌ:"+str.length());
+		System.out.println("ì…ë ¥í•œ ê°’ì˜ ê¸¸ì´:"+str.length());
 		return 0;
 	}
 	public static void main(String[] args) {

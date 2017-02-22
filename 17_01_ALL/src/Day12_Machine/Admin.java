@@ -8,37 +8,37 @@ public class Admin {
 
 	public void admin(){
 		
-		//°ü¸®ÀÚ¸ğµå¸¦ Á¾·á ½ÃÅ³ °ª
+		//ê´€ë¦¬ìëª¨ë“œë¥¼ ì¢…ë£Œ ì‹œí‚¬ ê°’
 		boolean flag = true;
 		
-		//¸Ş´º ¼±ÅÃÇÒ ¼ö ÀÖ´Â º¯¼ö
+		//ë©”ë‰´ ì„ íƒí•  ìˆ˜ ìˆëŠ” ë³€ìˆ˜
 		int in;
 		
-		//°´Ã¼ »ı¼º
+		//ê°ì²´ ìƒì„±
 
 		
-		do //°ü¸®ÀÚ¸ğµå ¹İº¹ ¼öÇàÀ» À§ÇÑ ¹İº¹¹®
+		do //ê´€ë¦¬ìëª¨ë“œ ë°˜ë³µ ìˆ˜í–‰ì„ ìœ„í•œ ë°˜ë³µë¬¸
 		{
 			
-			//ÇöÀç Àç°í·®, ÃÑ±İ¾× ¹× ¸Ş´º¾È³»
+			//í˜„ì¬ ì¬ê³ ëŸ‰, ì´ê¸ˆì•¡ ë° ë©”ë‰´ì•ˆë‚´
 			System.out.println();
 			System.out.println();
 			
-			System.out.println("ÇöÀç Àç°í·®");
-			System.out.println("    ¹°    ¿øµÎ    ¿ìÀ¯    ¼³ÅÁ    ÃÊÄÚ    ÄÅ");
+			System.out.println("í˜„ì¬ ì¬ê³ ëŸ‰");
+			System.out.println("    ë¬¼    ì›ë‘    ìš°ìœ     ì„¤íƒ•    ì´ˆì½”    ì»µ");
 			for(int n : Attribute.amount)
 				System.out.printf("%8d",n);
 			
 			System.out.println();
 			
-			System.out.println("±İ°í ±İ¾×:"+Attribute.money());
+			System.out.println("ê¸ˆê³  ê¸ˆì•¡:"+Attribute.money());
 			System.out.println();
 			System.out.println();
-			System.out.println("µ· È¸¼ö(1), ¹İÈ¯±İÀÔ±İ(2), Àç·áÃ¤¿ì±â(3), ÆÇ¸Å·®&¼øÀ§(4), Á¾·á(5)");
-			System.out.print("¸Ş´º¼±ÅÃ[´Ù¸¥ ¼ıÀÚ ÀÔ·Â½Ã °ü¸®ÀÚ ¸ğµå Á¾·á]:");
+			System.out.println("ëˆ íšŒìˆ˜(1), ë°˜í™˜ê¸ˆì…ê¸ˆ(2), ì¬ë£Œì±„ìš°ê¸°(3), íŒë§¤ëŸ‰&ìˆœìœ„(4), ì¢…ë£Œ(5)");
+			System.out.print("ë©”ë‰´ì„ íƒ[ë‹¤ë¥¸ ìˆ«ì ì…ë ¥ì‹œ ê´€ë¦¬ì ëª¨ë“œ ì¢…ë£Œ]:");
 			in=sc.nextInt();
 			
-			//¸Ş´º¼±ÅÃÀ» À§ÇÑ switch case¹® »ç¿ë
+			//ë©”ë‰´ì„ íƒì„ ìœ„í•œ switch caseë¬¸ ì‚¬ìš©
 			switch(in)
 			{
 			
@@ -53,13 +53,13 @@ public class Admin {
 	}//end admin()
 	
 	
-	//Àç·á Ãß°¡¸¦ À§ÇÑ ¸Ş¼­µå
+	//ì¬ë£Œ ì¶”ê°€ë¥¼ ìœ„í•œ ë©”ì„œë“œ
 	
 	public void inamount(){
 		
 
-		//Àç·áÃß°¡ ¾È³» ¹× °ªÀÔ·Â
-		System.out.println("Ãß°¡ÇÒ Àç·á¸¦ ¹°, ¿øµÎ, ¿ìÀ¯, ¼³ÅÁ, ÃÊÄÚ, Á¾ÀÌÄÅ ¼ö·® ¼ø¼­·Î ÀÔ·Â[°ø¹é±¸ºĞ]");
+		//ì¬ë£Œì¶”ê°€ ì•ˆë‚´ ë° ê°’ì…ë ¥
+		System.out.println("ì¶”ê°€í•  ì¬ë£Œë¥¼ ë¬¼, ì›ë‘, ìš°ìœ , ì„¤íƒ•, ì´ˆì½”, ì¢…ì´ì»µ ìˆ˜ëŸ‰ ìˆœì„œë¡œ ì…ë ¥[ê³µë°±êµ¬ë¶„]");
 		
 		
 		for(int i=0; i<Attribute.amount.length; i++){
@@ -67,68 +67,68 @@ public class Admin {
 			Attribute.amount[i]+=sc.nextInt();
 			
 		}
-		//Ãß°¡ ÀÌÈÄ Àç·á ÃÑ °³¼ö
+		//ì¶”ê°€ ì´í›„ ì¬ë£Œ ì´ ê°œìˆ˜
 		
 		for(int i=0; i<Attribute.amount.length; i++){
 			
-			System.out.println(Attribute.material[i]+":"+Attribute.amount[i]+"°³");
+			System.out.println(Attribute.material[i]+":"+Attribute.amount[i]+"ê°œ");
 			
 		}
 		
-		System.out.println("À§¿Í °°ÀÌ Àç·á°¡ Ãß°¡ ¿Í·á µÇ¾ú½À´Ï´Ù.");
+		System.out.println("ìœ„ì™€ ê°™ì´ ì¬ë£Œê°€ ì¶”ê°€ ì™€ë£Œ ë˜ì—ˆìŠµë‹ˆë‹¤.");
 		System.out.println();
-		System.out.println("°ü¸®ÀÚ ¸Ş´º·Î ÀÌµ¿ÇÏ·Á¸é ¾Æ¹«Å°³ª ´©¸£¼¼¿ä!!!");
+		System.out.println("ê´€ë¦¬ì ë©”ë‰´ë¡œ ì´ë™í•˜ë ¤ë©´ ì•„ë¬´í‚¤ë‚˜ ëˆ„ë¥´ì„¸ìš”!!!");
 		sc.next();
 		
 		
 	}//end inamount
 	
 	
-	//ÀÔ±İ
+	//ì…ê¸ˆ
 	void inmoney(){
 		
-		//moneyname Å¬·¡½º º¯¼ö Ãâ·Â ¹× ¾È³» ¹®±¸ Ãâ·Â
+		//moneyname í´ë˜ìŠ¤ ë³€ìˆ˜ ì¶œë ¥ ë° ì•ˆë‚´ ë¬¸êµ¬ ì¶œë ¥
 		for(String s : Attribute.moneyname){
 			System.out.printf("%s",s);
 		}
-		System.out.print(" ¼ø¼­´ë·Î ¹İÈ¯±İ ÀÔ·Â[°ø¹é ±¸ºĞ]: ");
+		System.out.print(" ìˆœì„œëŒ€ë¡œ ë°˜í™˜ê¸ˆ ì…ë ¥[ê³µë°± êµ¬ë¶„]: ");
 		
-		//°¢ ±İ¾×º°·Î °ø¹é±¸ºĞÇÏ¿© ÀÔ·Â
+		//ê° ê¸ˆì•¡ë³„ë¡œ ê³µë°±êµ¬ë¶„í•˜ì—¬ ì…ë ¥
 		for(int i=0; i<Attribute.money[0].length; i++)
 		{
 			Attribute.money[1][i] += sc.nextInt();
 		}	
 			System.out.println();
-			System.out.println("¾Æ·¡¿Í °°ÀÌ ¹İÈ¯±İÀ» ÀÔ·ÂÇÏ¿´½À´Ï´Ù.");
+			System.out.println("ì•„ë˜ì™€ ê°™ì´ ë°˜í™˜ê¸ˆì„ ì…ë ¥í•˜ì˜€ìŠµë‹ˆë‹¤.");
 			System.out.println();
 			
-		//ÇöÀç °¢ ±İ¾×º°·Î °³¼ö
+		//í˜„ì¬ ê° ê¸ˆì•¡ë³„ë¡œ ê°œìˆ˜
 		for(int i=0; i<Attribute.money[0].length; i++)
 		{
 				
-				System.out.printf("%5s:%d2°³\n", Attribute.moneyname[i],Attribute.money[1][i]);
+				System.out.printf("%5s:%d2ê°œ\n", Attribute.moneyname[i],Attribute.money[1][i]);
 				
 		}
 			
-		System.out.println("ÃÑ¾×:"+Attribute.money());
+		System.out.println("ì´ì•¡:"+Attribute.money());
 		System.out.println();
-		System.out.println("°ü¸®ÀÚ ¸Ş´º·Î ÀÌµ¿ÇÏ·Á¸é ¾Æ¹«Å°³ª ´©¸£¼¼¿ä!!!");
+		System.out.println("ê´€ë¦¬ì ë©”ë‰´ë¡œ ì´ë™í•˜ë ¤ë©´ ì•„ë¬´í‚¤ë‚˜ ëˆ„ë¥´ì„¸ìš”!!!");
 		sc.next();
 		
 		
 	}//end inmoney()
 	
 	
-	//Ãâ±İ
+	//ì¶œê¸ˆ
 	public void outmoney(){
 
 		int mon = Attribute.money();
 		
-		//ÇöÀç °¢ ±İ¾×º°·Î °³¼ö Ãâ·Â ¹× °¢ µ¿Àü °³¼ö 0´ëÀÔ
+		//í˜„ì¬ ê° ê¸ˆì•¡ë³„ë¡œ ê°œìˆ˜ ì¶œë ¥ ë° ê° ë™ì „ ê°œìˆ˜ 0ëŒ€ì…
 		for(int i=0; i<Attribute.money[0].length; i++)
 		{
 			
-			System.out.print(Attribute.moneyname[i]+":"+Attribute.money[1][i]+"°³");
+			System.out.print(Attribute.moneyname[i]+":"+Attribute.money[1][i]+"ê°œ");
 			
 			if(i != Attribute.money[1].length-1)
 				System.out.print(", ");
@@ -139,27 +139,27 @@ public class Admin {
 		System.out.println();
 		Attribute.deposit = 0;
 	
-		//ÇöÀç ÃÑ ±İ¾×À» Ãâ·ÂÇÏ¿© È¯¼ö±İ Ãâ·Â
-		System.out.println("È¯¼ö±İ:"+mon+"ÀÔ´Ï´Ù.");
+		//í˜„ì¬ ì´ ê¸ˆì•¡ì„ ì¶œë ¥í•˜ì—¬ í™˜ìˆ˜ê¸ˆ ì¶œë ¥
+		System.out.println("í™˜ìˆ˜ê¸ˆ:"+mon+"ì…ë‹ˆë‹¤.");
 		System.out.println();
-		System.out.println("°ü¸®ÀÚ ¸Ş´º·Î ÀÌµ¿ÇÏ·Á¸é ¾Æ¹«Å°³ª ´©¸£¼¼¿ä!!!");
+		System.out.println("ê´€ë¦¬ì ë©”ë‰´ë¡œ ì´ë™í•˜ë ¤ë©´ ì•„ë¬´í‚¤ë‚˜ ëˆ„ë¥´ì„¸ìš”!!!");
 		sc.next();
 		
 	}
 	
 	
-	//ÆÇ¸Å·®°ú ¼øÀ§¸¦ ±¸ÇÏ´Â ¸Ş¼­µå
+	//íŒë§¤ëŸ‰ê³¼ ìˆœìœ„ë¥¼ êµ¬í•˜ëŠ” ë©”ì„œë“œ
 	void frequency(){
 		
 		int temp;
 		
-		//¼øÀ§¸¦ ³ªÅ¸³»´Â ¹è¿­
+		//ìˆœìœ„ë¥¼ ë‚˜íƒ€ë‚´ëŠ” ë°°ì—´
 		int[] num = {1,1,1,1,1,1,1};
 		
-		//°¢ ¸Ş´ºµéÀ» ¼øÀ§º°·Î Ãâ·ÂÇÏ´Â ¹è¿­
+		//ê° ë©”ë‰´ë“¤ì„ ìˆœìœ„ë³„ë¡œ ì¶œë ¥í•˜ëŠ” ë°°ì—´
 		int[] sort={0,1,2,3,4,5,6};
 		
-		//°¢ ¸Ş´ºÀÇ ÆÇ¸Å·®À» ºñ±³ÇÏ¿© ÀÚ½Åº¸´Ù ÆÇ¸Å·®ÀÌ ¸¹Àº ¸Ş´º°¡ ÀÖÀ¸¸é 1¾¿ ¼øÀ§¸¦ ¶³¾î¶ß¸²
+		//ê° ë©”ë‰´ì˜ íŒë§¤ëŸ‰ì„ ë¹„êµí•˜ì—¬ ìì‹ ë³´ë‹¤ íŒë§¤ëŸ‰ì´ ë§ì€ ë©”ë‰´ê°€ ìˆìœ¼ë©´ 1ì”© ìˆœìœ„ë¥¼ ë–¨ì–´ëœ¨ë¦¼
 		for(int i=0; i<Attribute.frequency.length-1; i++)
 		{
 			
@@ -174,7 +174,7 @@ public class Admin {
 			
 		}
 		
-		//¼øÀ§º¯¼ö ±âÁØÀ¸·Î numº¯¼ö¿Í sortº¯¼ö¸¦ ¿À¸§Â÷¼øÀ¸·Î Á¤·Ä
+		//ìˆœìœ„ë³€ìˆ˜ ê¸°ì¤€ìœ¼ë¡œ numë³€ìˆ˜ì™€ sortë³€ìˆ˜ë¥¼ ì˜¤ë¦„ì°¨ìˆœìœ¼ë¡œ ì •ë ¬
 		
 		for(int i=0; i<num.length-1; i++){
 			
@@ -197,9 +197,9 @@ public class Admin {
 			
 		}
 		
-		//°¢ ¸Ş´º¸¦ Ãâ·Â ¼øÀ§´ë·Î (iÀÇ ¼ø¼­°¡ ¾Æ´Ñ sort[i] ¼ø¼­´ë·Î Ãâ·Â)
-		System.out.println("¸Ş´ºº° ¼øÀ§");
-		System.out.println("    ¸Ş´º     ÆÇ¸Å·®     ¼øÀ§");
+		//ê° ë©”ë‰´ë¥¼ ì¶œë ¥ ìˆœìœ„ëŒ€ë¡œ (iì˜ ìˆœì„œê°€ ì•„ë‹Œ sort[i] ìˆœì„œëŒ€ë¡œ ì¶œë ¥)
+		System.out.println("ë©”ë‰´ë³„ ìˆœìœ„");
+		System.out.println("    ë©”ë‰´     íŒë§¤ëŸ‰     ìˆœìœ„");
 		
 		for(int i=0; i<Attribute.frequency.length;i++)
 		{
@@ -207,7 +207,7 @@ public class Admin {
 			if(sort[i]!=0 && sort[i] != 4)
 				System.out.println("   ");
 			System.out.printf("");
-			System.out.printf("%5s%8d%6dÀ§\n",Attribute.coffee[sort[i]],Attribute.frequency[sort[i]],num[i]);
+			System.out.printf("%5s%8d%6dìœ„\n",Attribute.coffee[sort[i]],Attribute.frequency[sort[i]],num[i]);
 			
 		}
 		
@@ -220,11 +220,11 @@ public class Admin {
 	
 	
 	
-	//±İ¾× °ü·Ã ¸Ş¼­µå inmoney outmoney
+	//ê¸ˆì•¡ ê´€ë ¨ ë©”ì„œë“œ inmoney outmoney
 	void exit(){
 		
 		
-		System.out.println("(((((   ÆÇ¸Å³¡   )))))");
+		System.out.println("(((((   íŒë§¤ë   )))))");
 		System.exit(0);
 		
 		

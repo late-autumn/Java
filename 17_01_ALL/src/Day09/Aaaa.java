@@ -1,6 +1,6 @@
 package Day09;
 
-//public final class Aaaa extends Bbbbb { // Bbbbb¿¡ finalÀ» Áö¿öÁà¾ß »ó¼Ó °¡´ÉÇÏ´Ù.
+//public final class Aaaa extends Bbbbb { // Bbbbbì— finalì„ ì§€ì›Œì¤˜ì•¼ ìƒì† ê°€ëŠ¥í•˜ë‹¤.
 
 	//static final int x = 100;
 	

@@ -1,11 +1,11 @@
 package Day21;
 
-//������ Ŭ���� ����
+//스레드 클래스 선언
 
 class ThreadEx extends Thread{
-	//������ Ŭ������ ��ӹ޾Ƽ� ����
-	//�߻� Ŭ������ ���ǵǾ� �ִ� run �޼ҵ带 �ݵ�� ����, �����尡 ���۵ɶ� 
-	//ȣ��Ǵ� �޼ҵ�
+	//쓰레드 클래스를 상속받아서 구현
+	//추상 클래스로 정의되어 있는 run 메소드를 반드시 구현, 쓰레드가 시작될때 
+	//호출되는 메소드
 
 	
 	@Override
@@ -14,10 +14,10 @@ class ThreadEx extends Thread{
 		try{
 		for(int i=0; i<20;i++){
 			Thread.sleep(10);
-			System.out.println(i+"��:"+i+"*"+i+"="+(i*i));
+			System.out.println(i+"번:"+i+"*"+i+"="+(i*i));
 		}
 		}catch(InterruptedException e){
-			//����ġ ���� ��Ȳ�� ���� ����ó��
+			//예기치 못한 상황에 대한 예외처리
 			e.printStackTrace();
 		}
 	}

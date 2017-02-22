@@ -9,11 +9,11 @@ public class PrintStreamEx {
 		PrintStream ps = null;
 		
 		try{
-			fos = new FileOutputStream("c:/��ѱ�/printStream.txt");
+			fos = new FileOutputStream("c:/비둘기/printStream.txt");
 			bos = new BufferedOutputStream(fos);
 			ps = new PrintStream(bos,true);
 			
-			ps.println("ȫ�浿");
+			ps.println("홍길동");
 			ps.println(1234);
 			ps.println(true);
 			ps.println('A');

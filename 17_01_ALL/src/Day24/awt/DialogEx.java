@@ -12,25 +12,25 @@ import java.awt.TextField;
 
 public class DialogEx extends Frame{
 
-	private Dialog d = new Dialog(this,"Á¶È¸¼­ºñ½º",false);
+	private Dialog d = new Dialog(this,"ì¡°íšŒì„œë¹„ìŠ¤",false);
 	
-	private Label dlb = new Label("ÀÌ¸§°ú ÁÖ¹Î¹øÈ£·Î ºñ¹Ğ¹øÈ£ Ã£±â");
-	private Label dlb1 = new Label("ÀÌ¸§:",Label.RIGHT);
-	private Label dlb2 = new Label("ÁÖ¹Î¹øÈ£:",Label.RIGHT);
+	private Label dlb = new Label("ì´ë¦„ê³¼ ì£¼ë¯¼ë²ˆí˜¸ë¡œ ë¹„ë°€ë²ˆí˜¸ ì°¾ê¸°");
+	private Label dlb1 = new Label("ì´ë¦„:",Label.RIGHT);
+	private Label dlb2 = new Label("ì£¼ë¯¼ë²ˆí˜¸:",Label.RIGHT);
 	private Label dlb3 = new Label("-",Label.CENTER);
 	
-	private TextField dtf = new TextField(20);		//ÀÌ¸§
-	private TextField dtf1 = new TextField(6);		//ÁÖ¹Î¹øÈ£ ¾ÕÀÚ¸®
-	private TextField dtf2 = new TextField(7);		//ÁÖ¹Î¹øÈ£ µŞÀÚ¸®
+	private TextField dtf = new TextField(20);		//ì´ë¦„
+	private TextField dtf1 = new TextField(6);		//ì£¼ë¯¼ë²ˆí˜¸ ì•ìë¦¬
+	private TextField dtf2 = new TextField(7);		//ì£¼ë¯¼ë²ˆí˜¸ ë’·ìë¦¬
 	
-	private Button but = new Button("Ã£±â");
-	private Button but1 = new Button("Ãë¼Ò");
+	private Button but = new Button("ì°¾ê¸°");
+	private Button but1 = new Button("ì·¨ì†Œ");
 	
 	
 	
 	public DialogEx() {
 		// TODO Auto-generated constructor stub
-			super("Dialog ´ëÈ­»óÀÚ");
+			super("Dialog ëŒ€í™”ìƒì");
 			
 			setDialog();
 			setSize(300,200);
@@ -45,25 +45,25 @@ public class DialogEx extends Frame{
 	
 	private void setDialog(){
 		
-		d.setLayout(new BorderLayout()); 		//´ëÈ­ »óÀÚÀÇ ·¹ÀÌ¾Æ¿ô ¼³Á¤ 
+		d.setLayout(new BorderLayout()); 		//ëŒ€í™” ìƒìì˜ ë ˆì´ì•„ì›ƒ ì„¤ì • 
 		d.add("North",dlb);
 		
-		//ÆĞ³Î ¼³Á¤
+		//íŒ¨ë„ ì„¤ì •
 		
-		Panel p1 = new Panel(new BorderLayout());		//Á¦¸ñ°ú ¹öÆ°¿µ¿ªÀ» Á¦¿ÜÇÑ ¸ğµç ¿µ¿ª
-		Panel p2 = new Panel(new GridLayout(2, 1));		//ÀÌ¸§, ÁÖ¹Î¹øÈ£ ¶óº§À» Ç¥½ÃÇÒ ¿µ¿ª
+		Panel p1 = new Panel(new BorderLayout());		//ì œëª©ê³¼ ë²„íŠ¼ì˜ì—­ì„ ì œì™¸í•œ ëª¨ë“  ì˜ì—­
+		Panel p2 = new Panel(new GridLayout(2, 1));		//ì´ë¦„, ì£¼ë¯¼ë²ˆí˜¸ ë¼ë²¨ì„ í‘œì‹œí•  ì˜ì—­
 		
-		p2.add(dlb1);									//ÀÌ¸§ ¶óº§À» Ç¥½Ã
-		p2.add(dlb2);									//ÁÖ¹Î¹øÈ£ ¶óº§ Ç¥½Ã
+		p2.add(dlb1);									//ì´ë¦„ ë¼ë²¨ì„ í‘œì‹œ
+		p2.add(dlb2);									//ì£¼ë¯¼ë²ˆí˜¸ ë¼ë²¨ í‘œì‹œ
 		
-		p1.add("West",p2);								//ÀüÃ¼ ¿µ¿ª¿¡ ÀÌ¸§, ÁÖ¹Î¹øÈ£ ¶óº§ Ç¥½Ã
+		p1.add("West",p2);								//ì „ì²´ ì˜ì—­ì— ì´ë¦„, ì£¼ë¯¼ë²ˆí˜¸ ë¼ë²¨ í‘œì‹œ
 
-		//ÅØ½ºÆ® ÀÔ·Â ÆĞ³Î ¼³Á¤
+		//í…ìŠ¤íŠ¸ ì…ë ¥ íŒ¨ë„ ì„¤ì •
 		Panel p3 = new Panel(new GridLayout(2, 1));
-		Panel tfPanel = new Panel(new FlowLayout(FlowLayout.LEFT));	//ÀÌ¸§ ÀÔ·ÂÇÊµå ¿µ¿ª(¶óº§)
+		Panel tfPanel = new Panel(new FlowLayout(FlowLayout.LEFT));	//ì´ë¦„ ì…ë ¥í•„ë“œ ì˜ì—­(ë¼ë²¨)
 		
-		tfPanel.add(dtf);								//ÀÌ¸§ ÀÔ·Â ÇÊµå
-		p3.add(tfPanel);								//p3 = ¸ğµçÀÔ·ÂÇÊµå¿µ¿ª(ÆĞ³Î),ÀÌ¸§À» ÀÔ·ÂºÎºĞÀ» ³Ö¾îÁØ´Ù.
+		tfPanel.add(dtf);								//ì´ë¦„ ì…ë ¥ í•„ë“œ
+		p3.add(tfPanel);								//p3 = ëª¨ë“ ì…ë ¥í•„ë“œì˜ì—­(íŒ¨ë„),ì´ë¦„ì„ ì…ë ¥ë¶€ë¶„ì„ ë„£ì–´ì¤€ë‹¤.
 		
 		Panel p4 = new Panel(new FlowLayout(FlowLayout.LEFT));
 		p4.add(dtf1);
@@ -74,7 +74,7 @@ public class DialogEx extends Frame{
 		p1.add("Center", p3);
 		d.add("Center",p1);
 		
-		//¹öÆ°Ãß°¡ 
+		//ë²„íŠ¼ì¶”ê°€ 
 		Panel p = new Panel(new FlowLayout());
 		p.add(but);
 		p.add(but1);

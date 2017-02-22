@@ -5,7 +5,7 @@ public class Point {
 	private int x;
 	private int y;
 	
-	//»ı¼ºÀÚ
+	//ìƒì„±ì
 	public Point(int a, int b) 
 	{
 		this.x = a;

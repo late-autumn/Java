@@ -5,17 +5,17 @@ public class OverloadingEx1 {
 		public void intLength(int a)
 		{
 			String s = String.valueOf(a);
-			System.out.println("ÀÔ·ÂÇÑ °ªÀÇ ±æÀÌ "+s.length());
+			System.out.println("ì…ë ¥í•œ ê°’ì˜ ê¸¸ì´ "+s.length());
 		}
 		public void intLength(float f)
 		{
 			String s = String.valueOf(f);
-			System.out.println("ÀÔ·ÂÇÑ °ªÀÇ ±æÀÌ "+s.length());
+			System.out.println("ì…ë ¥í•œ ê°’ì˜ ê¸¸ì´ "+s.length());
 		}
 		public void intLength(String str)
 		{
 			String s = String.valueOf(str);
-			System.out.println("ÀÔ·ÂÇÑ °ªÀÇ ±æÀÌ "+s.length());	
+			System.out.println("ì…ë ¥í•œ ê°’ì˜ ê¸¸ì´ "+s.length());	
 		}
 		public static void main(String[] args) {
 			

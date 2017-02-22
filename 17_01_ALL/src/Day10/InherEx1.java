@@ -2,7 +2,7 @@ package Day10;
 
 public class InherEx1 extends CellPhone{
 
-	int Memorysize; //ÀúÀå¿ë·®
+	int Memorysize; //ì €ìž¥ìš©ëŸ‰
 	
 	public InherEx1(String model, String num, int chord, int memory) {
 		this.Model = model;

@@ -1,6 +1,6 @@
 package Day16;
 
-//¸Ş¼Òµå È£Ãâ
+//ë©”ì†Œë“œ í˜¸ì¶œ
 public class MethodEx3 {
 	
 	public static int a(int b){
@@ -9,7 +9,7 @@ public class MethodEx3 {
 	
 	public static void showHi(){
 		
-		System.out.println("¾È³çÇÏ¼¼¿ä ¤¾¤¾");
+		System.out.println("ì•ˆë…•í•˜ì„¸ìš” ã…ã…");
 	}
 	
 	
@@ -17,7 +17,7 @@ public class MethodEx3 {
 		
 		MethodEx3 ex3 = new MethodEx3();
 	
-		int c = a(10); // ¿À·ù³ª´Â ÀÌÀ¯ = µ¹·Á¹ŞÀ»¤¸ ¤¿·áÇüÀÌ ¾ø±â¶§¹®
+		int c = a(10); // ì˜¤ë¥˜ë‚˜ëŠ” ì´ìœ  = ëŒë ¤ë°›ì„ã…ˆ ã…ë£Œí˜•ì´ ì—†ê¸°ë•Œë¬¸
 		ex3.showHi();
 	}
 }

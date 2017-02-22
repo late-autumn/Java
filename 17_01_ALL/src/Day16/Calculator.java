@@ -13,7 +13,7 @@ public class Calculator {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
 		try {
-			System.out.println("ÀÔ·Â ÇÏ½Ç Á¤¼ö¸¦ ÀÔ·ÂÇÏ¼¼¿ä:");
+			System.out.println("ìž…ë ¥ í•˜ì‹¤ ì •ìˆ˜ë¥¼ ìž…ë ¥í•˜ì„¸ìš”:");
 			input_num = Integer.parseInt(br.readLine());
 			if (input_num < 1 || input_num > 1000) {
 				menu();
@@ -29,7 +29,7 @@ public class Calculator {
 		for (int i = 1; i <= input_num; i++) {
 			sum += i;
 		}
-		System.out.println("ÀÔ·ÂÇÏ½Å ¼ö´Â :" + input_num + "ÀÌ¸ç, ÃÑ ÇÕÀº:" + sum + "ÀÔ´Ï´Ù.");
+		System.out.println("ìž…ë ¥í•˜ì‹  ìˆ˜ëŠ” :" + input_num + "ì´ë©°, ì´ í•©ì€:" + sum + "ìž…ë‹ˆë‹¤.");
 	}
 
 }

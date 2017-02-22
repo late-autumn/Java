@@ -11,9 +11,9 @@ import java.awt.*;
 
 public class ItemEventEx extends Frame implements ItemListener, ActionListener {
 
-	private Label lb = new Label("Ç÷¾×Çü:", Label.RIGHT);
-	private Label lb1 = new Label("»ı³â¿ùÀÏ:", Label.RIGHT);
-	private Label lb2 = new Label("Áö¿ª:", Label.RIGHT);
+	private Label lb = new Label("í˜ˆì•¡í˜•:", Label.RIGHT);
+	private Label lb1 = new Label("ìƒë…„ì›”ì¼:", Label.RIGHT);
+	private Label lb2 = new Label("ì§€ì—­:", Label.RIGHT);
 
 	// textField
 
@@ -29,10 +29,10 @@ public class ItemEventEx extends Frame implements ItemListener, ActionListener {
 
 	private List list = new List(3, false);
 
-	private Button end_button = new Button("³¡³»±â");
+	private Button end_button = new Button("ëë‚´ê¸°");
 
 	public ItemEventEx() {
-		super("Ç×¸ñ ÀÌº¥Æ®");
+		super("í•­ëª© ì´ë²¤íŠ¸");
 		setForm();
 		blood_Type.setEditable(false);
 		area.setEditable(false);
@@ -75,19 +75,19 @@ public class ItemEventEx extends Frame implements ItemListener, ActionListener {
 		p3_choice.add(month);
 		p3_choice.add(day);
 
-		blood_choice.add("AÇü");
-		blood_choice.add("BÇü");
-		blood_choice.add("OÇü");
-		blood_choice.add("ABÇü");
+		blood_choice.add("Aí˜•");
+		blood_choice.add("Bí˜•");
+		blood_choice.add("Oí˜•");
+		blood_choice.add("ABí˜•");
 
 		for(int i=1980;i<=2017;i++){
-			year.add(i+"³â");
+			year.add(i+"ë…„");
 		}
 		for(int i=1;i<=12;i++){
-			month.add(i+"¿ù");
+			month.add(i+"ì›”");
 		}
 		for(int i=1;i<=31;i++){
-			day.add(i+"ÀÏ");
+			day.add(i+"ì¼");
 		}
 		add(p);		
 		p.add("East", p3_choice);
@@ -96,14 +96,14 @@ public class ItemEventEx extends Frame implements ItemListener, ActionListener {
 		p4.add("Center",list);
 		p4.add("East", end_button);
 		
-		list.add("¼­¿ï");
-		list.add("°æ±â");
-		list.add("´ëÀü");
-		list.add("°­¿øµµ");
-		list.add("ÃæÃ»µµ");
-		list.add("Àü¶óµµ");
-		list.add("Àü¶óµµ");
-		list.add("Á¦ÁÖµµ");
+		list.add("ì„œìš¸");
+		list.add("ê²½ê¸°");
+		list.add("ëŒ€ì „");
+		list.add("ê°•ì›ë„");
+		list.add("ì¶©ì²­ë„");
+		list.add("ì „ë¼ë„");
+		list.add("ì „ë¼ë„");
+		list.add("ì œì£¼ë„");
 		
 		add(p4);
 
@@ -112,7 +112,7 @@ public class ItemEventEx extends Frame implements ItemListener, ActionListener {
 	@Override
 	public void itemStateChanged(ItemEvent e) {
 		// TODO Auto-generated method stub
-		// ¾ÆÀÌÅÛ¿¡ ´ëÇÑmethod
+		// ì•„ì´í…œì— ëŒ€í•œmethod
 		if(e.getSource()==blood_choice){
 			
 			String imsi  = blood_choice.getSelectedItem();
@@ -128,14 +128,14 @@ public class ItemEventEx extends Frame implements ItemListener, ActionListener {
 		}else if(e.getSource()==list){
 			
 			String imsi = list.getSelectedItem();
-			area.setText(imsi+"Áö¿ª");
+			area.setText(imsi+"ì§€ì—­");
 		}
 	}
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		// TODO Auto-generated method stub
-		// ¾×¼Ç¿¡ ´ëÇÑ method
+		// ì•¡ì…˜ì— ëŒ€í•œ method
 		if(e.getSource()==list){
 			
 			int i= list.getSelectedIndex();

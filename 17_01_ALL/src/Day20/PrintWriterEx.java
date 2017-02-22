@@ -9,12 +9,12 @@ public class PrintWriterEx {
 		BufferedOutputStream bos = null;
 		
 		try{
-			fos = new FileOutputStream("c:/ºñµÑ±â/printWriter.txt");
+			fos = new FileOutputStream("c:/ë¹„ë‘˜ê¸°/printWriter.txt");
 			bos = new BufferedOutputStream(fos);
 			pw = new PrintWriter(bos,true);
 			
-			pw.println("ÇÏÀÌÇÏÀÌ");
-			pw.println("¹è°íÇÁ´Ù");
+			pw.println("í•˜ì´í•˜ì´");
+			pw.println("ë°°ê³ í”„ë‹¤");
 			pw.println(100.0);
 			pw.println(true);
 			

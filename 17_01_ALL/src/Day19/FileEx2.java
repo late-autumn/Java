@@ -9,11 +9,11 @@ public static void main(String[] args) {
 	
 	if(dire.exists()){
 		if(dire.isDirectory()){
-			//ÇöÀç Æú´õ³»ÀÇ ¸ğµç ÆÄÀÏ Æú´õ ÀÌ¸§ ¾ò±â
+			//í˜„ì¬ í´ë”ë‚´ì˜ ëª¨ë“  íŒŒì¼ í´ë” ì´ë¦„ ì–»ê¸°
 			String[] file_name = dire.list();
 			
 			for(String ss: file_name){
-				System.out.println("ÆÄÀÏ ÀÌ¸§:"+ss);
+				System.out.println("íŒŒì¼ ì´ë¦„:"+ss);
 			}
 		}
 	}

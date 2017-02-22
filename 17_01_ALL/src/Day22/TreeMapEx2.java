@@ -72,13 +72,13 @@ public class TreeMapEx2 {
 	
 		TreeMap<String,SungRec> map = new TreeMap<>();
 		
-		map.put("3333", new SungRec("È«±æµ¿",10,20,30));
-		map.put("1111", new SungRec("±èÀ¯½Å",20,30,40));
-		map.put("5555", new SungRec("°­°¨Âù",50,80,30));
-		map.put("2222", new SungRec("ÀÓ²©Á¤",50,60,30));
-		map.put("4444", new SungRec("ÀÌ¼ø½Å",30,90,30));
+		map.put("3333", new SungRec("í™ê¸¸ë™",10,20,30));
+		map.put("1111", new SungRec("ê¹€ìœ ì‹ ",20,30,40));
+		map.put("5555", new SungRec("ê°•ê°ì°¬",50,80,30));
+		map.put("2222", new SungRec("ì„êº½ì •",50,60,30));
+		map.put("4444", new SungRec("ì´ìˆœì‹ ",30,90,30));
 		
-		//Å° ¼ø¼­·Î Á¤·Ä
+		//í‚¤ ìˆœì„œë¡œ ì •ë ¬
 		
 		String key;
 		Set set = map.keySet();

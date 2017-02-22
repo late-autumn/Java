@@ -4,12 +4,12 @@ import java.io.IOException;
 
 public interface Map_Sung_Iterface {
 
-	public int insert() throws IOException;				//Ãß°¡
-	public int update() throws IOException;				//¼öÁ¤
-	public void search() throws IOException;				//°Ë»ö
-	public int delete() throws IOException;				//»èÁ¦
+	public int insert() throws IOException;				//ì¶”ê°€
+	public int update() throws IOException;				//ìˆ˜ì •
+	public void search() throws IOException;				//ê²€ìƒ‰
+	public int delete() throws IOException;				//ì‚­ì œ
 	
-	public void writeAll();								//ÀüÃ¼ Ãâ·Â(ÇÐ¹ø¼ø)
-	public void writeSort();							//ÀüÃ¼ Ãâ·Â(Á¤·Ä)
+	public void writeAll();								//ì „ì²´ ì¶œë ¥(í•™ë²ˆìˆœ)
+	public void writeSort();							//ì „ì²´ ì¶œë ¥(ì •ë ¬)
 	
 }

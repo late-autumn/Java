@@ -6,10 +6,10 @@ import javax.swing.*;
 
 public class SwingExam_Information extends JFrame implements ActionListener{
 
-   JRadioButton man, woman; //¶óµğ¿À¹öÆ°
-   JButton btn1; //¹öÆ°
-   TextField txtID, txtPwd1, txtPwd2; //ÅØ½ºÆ®ÇÊµå
-   Dialog DisplyDlg; //È®ÀÎ¹öÆ°À» ´­·¶À» ¶§ °á°ú¸¦ Ãâ·ÂÇÒ ´ëÈ­»óÀÚ
+   JRadioButton man, woman; //ë¼ë””ì˜¤ë²„íŠ¼
+   JButton btn1; //ë²„íŠ¼
+   TextField txtID, txtPwd1, txtPwd2; //í…ìŠ¤íŠ¸í•„ë“œ
+   Dialog DisplyDlg; //í™•ì¸ë²„íŠ¼ì„ ëˆŒë €ì„ ë•Œ ê²°ê³¼ë¥¼ ì¶œë ¥í•  ëŒ€í™”ìƒì
    
    public SwingExam_Information(String t) {
       // TODO Auto-generated constructor stub
@@ -23,7 +23,7 @@ public class SwingExam_Information extends JFrame implements ActionListener{
       getContentPane().setLayout(new FlowLayout());
       
       setForm();
-      //¸®½º³ÊÃß°¡
+      //ë¦¬ìŠ¤ë„ˆì¶”ê°€
       btn1.addActionListener(this);
       setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
       setSize(350, 300);
@@ -33,37 +33,37 @@ public class SwingExam_Information extends JFrame implements ActionListener{
    
    public void setForm(){
       
-      Label lbl1 = new Label("¾ÆÀÌµğ ÀÔ·Â:");
-      Label lbl2 = new Label("ºñ¹Ğ¹øÈ£ ÀÔ·Â:");
-      Label lbl3 = new Label("ºñ¹Ğ¹øÈ£ ÀçÀÔ·Â:");
+      Label lbl1 = new Label("ì•„ì´ë”” ì…ë ¥:");
+      Label lbl2 = new Label("ë¹„ë°€ë²ˆí˜¸ ì…ë ¥:");
+      Label lbl3 = new Label("ë¹„ë°€ë²ˆí˜¸ ì¬ì…ë ¥:");
       
       txtID = new TextField(20);
       txtPwd1 = new TextField(20); 
       txtPwd2 = new TextField(20);
       
-      //ºñ¹Ğ¹øÈ£¸¦ * Ç¥½ÃÇÏ±â À§ÇØ setEchoChar()¸Ş¼­µå ÀÌ¿ë
+      //ë¹„ë°€ë²ˆí˜¸ë¥¼ * í‘œì‹œí•˜ê¸° ìœ„í•´ setEchoChar()ë©”ì„œë“œ ì´ìš©
       txtPwd1.setEchoChar('*');
       txtPwd2.setEchoChar('*');
       
-      //·¹ÀÌ¾Æ¿ô¿¡ Ãß°¡
+      //ë ˆì´ì•„ì›ƒì— ì¶”ê°€
       add(lbl1);add(txtID);
       add(lbl2);add(txtPwd1);
       add(lbl3);add(txtPwd2);
       
-      //¶óµğ¿À¹öÆ°À» ±×·ìÀ¸·Î ¸¸µë
+      //ë¼ë””ì˜¤ë²„íŠ¼ì„ ê·¸ë£¹ìœ¼ë¡œ ë§Œë“¬
       ButtonGroup group = new ButtonGroup();
-      man = new JRadioButton("³²ÀÚ", false);
-      woman = new JRadioButton("¿©ÀÚ", false);
+      man = new JRadioButton("ë‚¨ì", false);
+      woman = new JRadioButton("ì—¬ì", false);
 
-      //¶óµğ¿À¹öÆ°À» ¹öÆ°±×·ì¿¡ Ãß°¡
+      //ë¼ë””ì˜¤ë²„íŠ¼ì„ ë²„íŠ¼ê·¸ë£¹ì— ì¶”ê°€
       group.add(man);
       group.add(woman);
 
-      //ÄÄÆ÷³ÍÆ®¿¡ ¹öÆ°±×·ì Ãß°¡
+      //ì»´í¬ë„ŒíŠ¸ì— ë²„íŠ¼ê·¸ë£¹ ì¶”ê°€
       getContentPane().add(man);
       getContentPane().add(woman);
 
-      btn1 = new JButton("È®ÀÎ");
+      btn1 = new JButton("í™•ì¸");
       add(btn1);
       
    }
@@ -73,7 +73,7 @@ public class SwingExam_Information extends JFrame implements ActionListener{
       // TODO Auto-generated method stub
       
       JFrame f = new JFrame();
-      DisplyDlg = new Dialog(f,"Á¤º¸È®ÀÎ");
+      DisplyDlg = new Dialog(f,"ì •ë³´í™•ì¸");
       
       JLabel ID = new JLabel(txtID.getText());
       JLabel Pwd = new JLabel(txtPwd1.getText());
@@ -82,13 +82,13 @@ public class SwingExam_Information extends JFrame implements ActionListener{
       DisplyDlg.add(ID);
       DisplyDlg.add(Pwd);
       
-      //¶óµğ¿À¹öÆ°ÀÌ¶ó µÑ Áß ÇÏ³ª¸¸ °¡Á®¿È
+      //ë¼ë””ì˜¤ë²„íŠ¼ì´ë¼ ë‘˜ ì¤‘ í•˜ë‚˜ë§Œ ê°€ì ¸ì˜´
       if(man.isSelected())
          DisplyDlg.add(new JLabel("Man"));
       else
          DisplyDlg.add(new JLabel("Woman"));
       
-      //´ÙÀÌ¾ó·Î±× Å©±â¿Í º¸¿©ÁÙÁö ¿©ºÎ
+      //ë‹¤ì´ì–¼ë¡œê·¸ í¬ê¸°ì™€ ë³´ì—¬ì¤„ì§€ ì—¬ë¶€
       DisplyDlg.setSize(200,100);
       DisplyDlg.setVisible(true);
       
@@ -98,7 +98,7 @@ public class SwingExam_Information extends JFrame implements ActionListener{
    public static void main(String[] args) {
       // TODO Auto-generated method stub
       
-      new SwingExam_Information("°³ÀÎÁ¤º¸");
+      new SwingExam_Information("ê°œì¸ì •ë³´");
       
    }
 

@@ -3,22 +3,22 @@ package Day14;
 public class StringEx1 {
 public static void main(String[] args) {
 	
-	//¾Ï½ÃÀû »ı¼º
+	//ì•”ì‹œì  ìƒì„±
 	String s1 = "Twnkle";
 	String s2 = "Twnkle";
 	System.out.println(s1.toString());
 	System.out.println(s2.toString());
 	if(s1==s2)
-		System.out.println("S1°ú S2 °°´Ù.");
+		System.out.println("S1ê³¼ S2 ê°™ë‹¤.");
 	else
-		System.out.println("S1°ú S2´Â °°Áö ¾Ê´Ù.");
-	//¸í½ÃÀû »ı¼º
+		System.out.println("S1ê³¼ S2ëŠ” ê°™ì§€ ì•Šë‹¤.");
+	//ëª…ì‹œì  ìƒì„±
 	String s3 = new String("Little");
 	String s4 = new String("Little");
 	if(s3==s4)
-		System.out.println("S3°ú S4 °°´Ù.");
+		System.out.println("S3ê³¼ S4 ê°™ë‹¤.");
 	else
-		System.out.println("S3°ú S4´Â °°Áö ¾Ê´Ù.");
+		System.out.println("S3ê³¼ S4ëŠ” ê°™ì§€ ì•Šë‹¤.");
 	
 	System.out.println(s3.equals(s4));
 	

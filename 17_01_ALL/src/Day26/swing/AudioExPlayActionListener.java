@@ -26,7 +26,7 @@ public class AudioExPlayActionListener implements ActionListener {
 			
 		} catch (MalformedURLException mue) {
 			// TODO: handle exception
-			JOptionPane.showMessageDialog(text, "Àß¸øµÈ ÆÄÀÏ¸íÀÔ´Ï´Ù.","¿¡·¯¸Ş¼¼Áö",JOptionPane.ERROR_MESSAGE);
+			JOptionPane.showMessageDialog(text, "ì˜ëª»ëœ íŒŒì¼ëª…ì…ë‹ˆë‹¤.","ì—ëŸ¬ë©”ì„¸ì§€",JOptionPane.ERROR_MESSAGE);
 		}
 		
 	}

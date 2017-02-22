@@ -10,11 +10,11 @@ import Day24.awt.WinEvent;
 
 public class ActionEventEx1 extends Frame implements ActionListener {
 
-	private Button bt = new Button("È®ÀÎ");
-	private Button bt2 = new Button("Á¾·á");
+	private Button bt = new Button("í™•ì¸");
+	private Button bt2 = new Button("ì¢…ë£Œ");
 	public ActionEventEx1() {
 		// TODO Auto-generated constructor stub
-		super("¹öÆ° ÀÌº¥Æ®");
+		super("ë²„íŠ¼ ì´ë²¤íŠ¸");
 		
 		setLayout(new FlowLayout());
 		add(bt);
@@ -33,9 +33,9 @@ public class ActionEventEx1 extends Frame implements ActionListener {
 	public void actionPerformed(ActionEvent arg0) {
 		// TODO Auto-generated method stub
 		if(arg0.getSource()==bt){
-		System.out.println("³Í ´©±¸³Ä ");
+		System.out.println("ë„Œ ëˆ„êµ¬ëƒ ");
 		}else if(arg0.getSource()==bt2){
-		System.out.println("Á¾·á?");
+		System.out.println("ì¢…ë£Œ?");
 		System.exit(0);
 		}
 	}

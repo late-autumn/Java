@@ -2,13 +2,13 @@ package Day12_Machine;
 
 import java.util.*;
 
-//Àç°í °ü¸®¸¦ ÇØÁÖ´Â Å¬·¡½º
+//ì¬ê³  ê´€ë¦¬ë¥¼ í•´ì£¼ëŠ” í´ë˜ìŠ¤
 public class Stock {
 	
 	Scanner sc=new Scanner(System.in);
 	static boolean a;
 	
-	//Àç·á´ç ÃÖ´ë 2°³¾¿ ÀÌ¿ëÇÒ ¼ö ÀÖ´Â ÃëÇâ Ä¿ÇÇÀÇ Àç°í¸¦ È®ÀÎÇÏ´Â ¸Ş¼­µå
+	//ì¬ë£Œë‹¹ ìµœëŒ€ 2ê°œì”© ì´ìš©í•  ìˆ˜ ìˆëŠ” ì·¨í–¥ ì»¤í”¼ì˜ ì¬ê³ ë¥¼ í™•ì¸í•˜ëŠ” ë©”ì„œë“œ
 	
 	boolean stockTest(){
 		
@@ -26,8 +26,8 @@ public class Stock {
 	}
 	
 	
-	// Àç·á°¡ Á¤ÇØÁ® ÀÖ´Â ¿À¸®Áö³¯ ·£´ıÄ¿ÇÇÀÇ Àç°í¸¦ È®ÀÎÇÏ´Â ¸Ş¼­µå
-	// ¸Å°³º¯¼ö inÀº Ä¿ÇÇÀÇ ¹øÈ£
+	// ì¬ë£Œê°€ ì •í•´ì ¸ ìˆëŠ” ì˜¤ë¦¬ì§€ë‚  ëœë¤ì»¤í”¼ì˜ ì¬ê³ ë¥¼ í™•ì¸í•˜ëŠ” ë©”ì„œë“œ
+	// ë§¤ê°œë³€ìˆ˜ inì€ ì»¤í”¼ì˜ ë²ˆí˜¸
 	
 	boolean stockTest(int in){
 		
@@ -46,13 +46,13 @@ public class Stock {
 		
 		}
 		
-	//dropÀ» ÇÒ¶§ stockTest ¸Ş¼­µå¸¦ ÅëÇØ Àç°í¸¦ È®ÀÎÇÏ°í
-	//Àç°í°¡ ÀÖÀ»¶§¿Í ¾øÀ»¶§ÀÇ ¸®ÅÏÀ» ´Ù¸£°ÔÇÔ
+	//dropì„ í• ë•Œ stockTest ë©”ì„œë“œë¥¼ í†µí•´ ì¬ê³ ë¥¼ í™•ì¸í•˜ê³ 
+	//ì¬ê³ ê°€ ìˆì„ë•Œì™€ ì—†ì„ë•Œì˜ ë¦¬í„´ì„ ë‹¤ë¥´ê²Œí•¨
 		
 	String drop(int in){
 		
 		 if(stockTest(in)==false)
-			 return "ÁË¼ÛÇÕ´Ï´Ù. Àç·á°¡ ¾ø½À´Ï´Ù. °ü¸®ÀÚ¿¡°Ô ¹®ÀÇ ¹Ù¶÷!!!";
+			 return "ì£„ì†¡í•©ë‹ˆë‹¤. ì¬ë£Œê°€ ì—†ìŠµë‹ˆë‹¤. ê´€ë¦¬ìì—ê²Œ ë¬¸ì˜ ë°”ëŒ!!!";
 		 
 		 else
 		 {
@@ -62,7 +62,7 @@ public class Stock {
 			 
 		 }
 		 
-		 return Attribute.coffee[in]+"Ä¿ÇÇ°¡ ³ª¿Ô¾î¿ä ¸ÀÀÖ°Ô µå¼¼¿ä^^";
+		 return Attribute.coffee[in]+"ì»¤í”¼ê°€ ë‚˜ì™”ì–´ìš” ë§›ìˆê²Œ ë“œì„¸ìš”^^";
 		
 	}
 	
@@ -70,7 +70,7 @@ public class Stock {
 	void choice(){
 		
 		int[] sel = {0,0,0,0,0,1};
-		System.out.println("°¢ Àç·á´Â 2°³±îÁö °¡´ÉÇÕ´Ï´Ù.");
+		System.out.println("ê° ì¬ë£ŒëŠ” 2ê°œê¹Œì§€ ê°€ëŠ¥í•©ë‹ˆë‹¤.");
 		
 		for(int i=0; i<Attribute.amount.length-1; i++)
 		{
@@ -81,8 +81,8 @@ public class Stock {
 			if(sel[i]>2)
 			{
 				
-				System.out.println(Attribute.material[i]+"Àç·á°¡ 2°³ ³Ñ½À´Ï´Ù.");
-				System.out.println("´Ù½Ã ¼±ÅÃÇÏ¼¼¿ä !!");
+				System.out.println(Attribute.material[i]+"ì¬ë£Œê°€ 2ê°œ ë„˜ìŠµë‹ˆë‹¤.");
+				System.out.println("ë‹¤ì‹œ ì„ íƒí•˜ì„¸ìš” !!");
 				System.out.println();
 				
 				i--;

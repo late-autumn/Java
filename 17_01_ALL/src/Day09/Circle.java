@@ -4,7 +4,7 @@ public class Circle {
 	
 	int radius;
 	private Point point;
-	//point ÂüÁ¶º¯¼ö°¡ ÇÊµå(¸â¹öº¯¼ö)·Î ¼±¾ğµÊ
+	//point ì°¸ì¡°ë³€ìˆ˜ê°€ í•„ë“œ(ë©¤ë²„ë³€ìˆ˜)ë¡œ ì„ ì–¸ë¨
 	
 	
 	public Circle() {

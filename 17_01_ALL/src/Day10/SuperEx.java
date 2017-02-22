@@ -5,7 +5,7 @@ class Super {
 	int a = 5;
 	public Super(int x) {
 		// TODO Auto-generated constructor stub
-		System.out.println("±âº» »ı¼ºÀÚ »ı¼º"+x);
+		System.out.println("ê¸°ë³¸ ìƒì„±ì ìƒì„±"+x);
 	}
 	
 }
@@ -15,10 +15,10 @@ class Sub extends Super{
 	public Sub() {
 		// TODO Auto-generated constructor stub
 		super(5);
-		System.out.println("ÇÏÀ§ »ı¼ºÀÚ »ı¼º");
+		System.out.println("í•˜ìœ„ ìƒì„±ì ìƒì„±");
 	}
 	public void test()
-	{										//Ãâ·Â½Ã °ªÀÌ ´Ù¸¥°ÍÀ» Â÷ÀÌÁ¡À» ±¸ºĞÇØµÎÀÚ.
+	{										//ì¶œë ¥ì‹œ ê°’ì´ ë‹¤ë¥¸ê²ƒì„ ì°¨ì´ì ì„ êµ¬ë¶„í•´ë‘ì.
 		System.out.println(this.a);  	//10   
 		System.out.println(super.a);	// 5 
 	}

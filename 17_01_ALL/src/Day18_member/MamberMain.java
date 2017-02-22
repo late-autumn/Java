@@ -11,10 +11,10 @@ public class MamberMain {
 		
 		Member ob = new MemberImpl();
 		
-		System.out.println(">>>>>>È¸¿ø°ü¸®<<<<<<<");
+		System.out.println(">>>>>>íšŒì›ê´€ë¦¬<<<<<<<");
 		
 		while(true){
-			System.out.println("1.µî·Ï 2.¼öÁ¤ 3.»èÁ¦ 4.°Ë»ö 5.¸®½ºÆ® 6.Á¾·á:");
+			System.out.println("1.ë“±ë¡ 2.ìˆ˜ì • 3.ì‚­ì œ 4.ê²€ìƒ‰ 5.ë¦¬ìŠ¤íŠ¸ 6.ì¢…ë£Œ:");
 			ch = (char)System.in.read();
 			System.in.skip(2);
 			

@@ -6,23 +6,23 @@ public class ExceptionEx5 {
 	public ExceptionEx5(){
 		
 		ss = new int[3];
-		//¸â¹öÇÊµå ÃÊ±âÈ­ 
+		//ë©¤ë²„í•„ë“œ ì´ˆê¸°í™” 
 		
 	}
 	public void program()
 	{
 		for(int i=0; i<=ss.length;i++)
 		{		//ss[0] ss[1] ss[2]
-			System.out.println("for¹®ÀÇ½ÃÀÛ"+i+"¹øÂ°");
+			System.out.println("forë¬¸ì˜ì‹œìž‘"+i+"ë²ˆì§¸");
 			try {
 				System.out.println(ss[i]);
 			} catch (Exception e) {
-				System.out.println("¿¹¿ÜÃ³¸®¹ß»ý"+e);
+				System.out.println("ì˜ˆì™¸ì²˜ë¦¬ë°œìƒ"+e);
 				return;
 			}finally{
-				System.out.println("¹«Á¶°Ç ¼öÇàÇÏ´Â°÷");
+				System.out.println("ë¬´ì¡°ê±´ ìˆ˜í–‰í•˜ëŠ”ê³³");
 			}
-			System.out.println("for¹®ÀÇ ³¡"+i+"¹øÂ°");
+			System.out.println("forë¬¸ì˜ ë"+i+"ë²ˆì§¸");
 		}
 
 	}
@@ -31,6 +31,6 @@ public class ExceptionEx5 {
 	public static void main(String[] args)throws Exception {
 		ExceptionEx5 ex = new ExceptionEx5();
 		ex. program();
-		System.out.println("³¡");
+		System.out.println("ë");
 }
 }

@@ -7,7 +7,7 @@ public static void main(String[] args) {
 	int input;
 	Scanner sc = new Scanner(System.in);
 	do{
-	System.out.println("¼ıÀÚ ÀÔ·ÂÇÏ½Ã¿À:");
+	System.out.println("ìˆ«ì ì…ë ¥í•˜ì‹œì˜¤:");
 	input = sc.nextInt();
 	
 	int tmp = input/2+1;

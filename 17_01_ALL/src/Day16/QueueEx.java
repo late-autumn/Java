@@ -5,17 +5,17 @@ import java.util.*;
 public class QueueEx {
 public static void main(String[] args) {
 	
-	String[] item = {"È«±æµ¿","°­°¨Âù","±èÀ¯½Å","ÀÌ¼ø½Å"};
+	String[] item = {"í™ê¸¸ë™","ê°•ê°ì°¬","ê¹€ìœ ì‹ ","ì´ìˆœì‹ "};
 	LinkedList<String> q = new LinkedList<String>();
 	
 	for(String n : item)
-		q.offer(n); //¿ä¼Ò Ãß°¡
-	System.out.println("qÀÇ Å©±â :"+q.size());
+		q.offer(n); //ìš”ì†Œ ì¶”ê°€
+	System.out.println("qì˜ í¬ê¸° :"+q.size());
 	
 	String data = " ";
 	while((data=q.poll())!=null){
 		
-		System.out.println(data+"»èÁ¦");
+		System.out.println(data+"ì‚­ì œ");
 	}
 	
 } 

@@ -4,22 +4,22 @@ import static java.lang.System.out;
 public class CalendarEx {
 	public static void main(String[] args) {
 		
-		StringBuffer sb = new StringBuffer("³âÁß");
+		StringBuffer sb = new StringBuffer("ë…„ì¤‘");
 		
 		Calendar now = Calendar.getInstance();
 		
 		int week_yy = now.get(now.WEEK_OF_YEAR);
 		int yy = now.get(now.YEAR);
-		int mm = now.get(now.MONTH)+1; //1¿ùÀÌ 0À» ±â¾ïÇÏ±â¶§¹®¿¡ 1À» ´õÇÔ
+		int mm = now.get(now.MONTH)+1; //1ì›”ì´ 0ì„ ê¸°ì–µí•˜ê¸°ë•Œë¬¸ì— 1ì„ ë”í•¨
 		int dd = now.get(now.DAY_OF_MONTH);
 		
 		sb.append(week_yy);
-		sb.append("ÁÖÂ°ÀÎ");
+		sb.append("ì£¼ì§¸ì¸");
 		
 		sb.append(yy);
-		sb.append("³â");
+		sb.append("ë…„");
 		sb.append(mm);
-		sb.append("¿ù");
+		sb.append("ì›”");
 		out.println(sb.toString());
 		
 	}

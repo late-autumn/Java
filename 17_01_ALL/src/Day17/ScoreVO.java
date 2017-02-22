@@ -2,7 +2,7 @@ package Day17;
 
 public class ScoreVO {
 
-	//ÀÌ¸§, ÇĞ¹ø, »ı³â¿ùÀÏ, ±¹¾î, ¿µ¾î, ¼öÇĞ, ÇÕ°è
+	//ì´ë¦„, í•™ë²ˆ, ìƒë…„ì›”ì¼, êµ­ì–´, ì˜ì–´, ìˆ˜í•™, í•©ê³„
 	
 	private String hak,name, birth;
 	private int kor, eng, mat, tot;

@@ -7,8 +7,8 @@ public class FrameEx2 extends Frame{
 
 	public FrameEx2() {
 		// TODO Auto-generated constructor stub
-		super("ÇÁ·¹ÀÓ");			//Á¦¸ñ
-		setSize(300,200);			//ÇÁ·¹ÀÓ Å©±â ¼³Á¤
+		super("í”„ë ˆì„");			//ì œëª©
+		setSize(300,200);			//í”„ë ˆì„ í¬ê¸° ì„¤ì •
 		WinEvent event = new WinEvent();
 		addWindowListener(event);
 

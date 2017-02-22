@@ -4,36 +4,36 @@ import java.util.Scanner;
 
 import org.w3c.dom.Attr;
 
-//°¢°¢ÀÇ Ä¿ÇÇ ÆÇ¸Å ¹× °ü¸®ÀÚ ¸ğµåÀÇ ÀÔ,Ãâ±İ ´ã´çÅ¬·¡½º 
+//ê°ê°ì˜ ì»¤í”¼ íŒë§¤ ë° ê´€ë¦¬ì ëª¨ë“œì˜ ì…,ì¶œê¸ˆ ë‹´ë‹¹í´ë˜ìŠ¤ 
 public class Money {
 
 	Scanner sc = new Scanner(System.in);
-	//°¢°¢ÀÇ Å¬·¡½º Ä¿ÇÇÈ£Ãâ
+	//ê°ê°ì˜ í´ë˜ìŠ¤ ì»¤í”¼í˜¸ì¶œ
 	RandomCoffee cof1 = new RandomCoffee(); 	 
 	OriginalCoffee cof2 = new OriginalCoffee();
 	TesteCoffee cof3 = new TesteCoffee();
 	
-	//ÀÔ±İ°ú Ãâ±İÀ» Ã³¸®ÇÏ´Â ¸Ş¼Òµå Á¤ÀÇ
+	//ì…ê¸ˆê³¼ ì¶œê¸ˆì„ ì²˜ë¦¬í•˜ëŠ” ë©”ì†Œë“œ ì •ì˜
 	public void inmoney(){
 		
 		Admin ad = new Admin();
 		
-		System.out.print("±İ¾×À» ³Ö¾î ÁÖ¼¼¿ä(°ø¹é±¸ºĞ):");
-		System.out.println("ÇöÀç ÀÜ¾×: "+Attribute.deposit);
+		System.out.print("ê¸ˆì•¡ì„ ë„£ì–´ ì£¼ì„¸ìš”(ê³µë°±êµ¬ë¶„):");
+		System.out.println("í˜„ì¬ ì”ì•¡: "+Attribute.deposit);
 		
-		//ÃÖ¼Ò±İ¾× È®ÀÎÇÏ¿© ¼±ÅÃ ºÎºĞ Áö¿ø
+		//ìµœì†Œê¸ˆì•¡ í™•ì¸í•˜ì—¬ ì„ íƒ ë¶€ë¶„ ì§€ì›
 		if(Attribute.deposit<1000)
 		{
-			System.out.print("100¿ø[1] 500¿ø[2] 1000¿ø[3] 5000¿ø[4] ¹İÈ¯[5]:");
+			System.out.print("100ì›[1] 500ì›[2] 1000ì›[3] 5000ì›[4] ë°˜í™˜[5]:");
 		}
 		else{
-			System.out.print("100¿ø[1] 500¿ø[2] 1000¿ø[3] 5000¿ø[4] ¹İÈ¯ [5] ¡Ú ¼±ÅÃ[6]:");
+			System.out.print("100ì›[1] 500ì›[2] 1000ì›[3] 5000ì›[4] ë°˜í™˜ [5] â˜… ì„ íƒ[6]:");
 		}
 		int input = sc.nextInt();
 		if(input ==1)
 		{
-		Attribute.deposit += 100;	//ÇöÀç ±İ¾×Áõ°¡
-		Attribute.money[1][0]++;	//¸Ó½Å¿¡ µ¿Àü °³¼ö Áõ°¡
+		Attribute.deposit += 100;	//í˜„ì¬ ê¸ˆì•¡ì¦ê°€
+		Attribute.money[1][0]++;	//ë¨¸ì‹ ì— ë™ì „ ê°œìˆ˜ ì¦ê°€
 		}
 		else if(input ==2)
 		{
@@ -56,24 +56,24 @@ public class Money {
 		}
 		else if(input ==6)
 		{
-			//±İ¾×ÀÌ ºÎÁ·ÇÒ °æ¿ì ´Ù½Ã ÀÔ·Â ¹Ş±â
+			//ê¸ˆì•¡ì´ ë¶€ì¡±í•  ê²½ìš° ë‹¤ì‹œ ì…ë ¥ ë°›ê¸°
 			if(Attribute.deposit<1000)
 			{
-				System.out.print("±İ¾×ÀÌ ºÎÁ·ÇÕ´Ï´Ù.");
+				System.out.print("ê¸ˆì•¡ì´ ë¶€ì¡±í•©ë‹ˆë‹¤.");
 			}
 			else
 			{
-				System.out.print("¸Ş´º¸¦ ¼±ÅÃÇÏ¼¼¿ä:");
+				System.out.print("ë©”ë‰´ë¥¼ ì„ íƒí•˜ì„¸ìš”:");
 				input = sc.nextInt();
 				if(input>=1 && input <=5)
 					cof2.menu(input);
-				else if(input == 6 && Attribute.deposit>=2500)//·£´ı Ä¿ÇÇ
+				else if(input == 6 && Attribute.deposit>=2500)//ëœë¤ ì»¤í”¼
 					cof1.menu();
-				else if(input == 7 && Attribute.deposit>=3000)//ÃëÇâ Ä¿ÇÇ
+				else if(input == 7 && Attribute.deposit>=3000)//ì·¨í–¥ ì»¤í”¼
 					cof3.menu();
 			}
 		}
-		else if(input ==1234)//°ü¸®ÀÚ È®ÀÎ
+		else if(input ==1234)//ê´€ë¦¬ì í™•ì¸
 		{
 			ad.admin();
 		}
@@ -99,15 +99,15 @@ public class Money {
 				if(i==0)
 				{
 					Attribute.deposit =0;
-					System.out.println("¹Ì Ã³¸®µÈ ±İ¾× : "+won);
-					System.out.println("°ü¸®ÀÚ¿¡°Ô ¹®ÀÇ ¹Ù¶ø´Ï´Ù.");
+					System.out.println("ë¯¸ ì²˜ë¦¬ëœ ê¸ˆì•¡ : "+won);
+					System.out.println("ê´€ë¦¬ìì—ê²Œ ë¬¸ì˜ ë°”ëë‹ˆë‹¤.");
 					System.out.println("010-123-1234");
-					System.out.println("ÀÜµ· Ã³¸®°¡ ¿Ï·á µÇ¾úÀ¸¸é ¾Æ¹«Å°³ª ´©¸£¼¼¿ä");
+					System.out.println("ì”ëˆ ì²˜ë¦¬ê°€ ì™„ë£Œ ë˜ì—ˆìœ¼ë©´ ì•„ë¬´í‚¤ë‚˜ ëˆ„ë¥´ì„¸ìš”");
 					flag = true;
 					sc.next();
 				}
 			}
-		}//for¹®Á¾·á 
+		}//forë¬¸ì¢…ë£Œ 
 		
 		if(flag)
 		{
@@ -116,7 +116,7 @@ public class Money {
 			{
 				Attribute.money[1][i]-= num[i];
 			}
-			System.out.println("ÀÜµ· ¹İÈ¯ÀÌ ¿Ï·á µÇ¾ú½À´Ï´Ù.[¹İÈ¯±İ¾×:"+won+"¿ø");
+			System.out.println("ì”ëˆ ë°˜í™˜ì´ ì™„ë£Œ ë˜ì—ˆìŠµë‹ˆë‹¤.[ë°˜í™˜ê¸ˆì•¡:"+won+"ì›");
 		}
 	}//end outmoney()
 	

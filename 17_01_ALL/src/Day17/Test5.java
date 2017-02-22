@@ -10,13 +10,13 @@ public static void main(String[] args) {
 	Scanner sc = new Scanner(System.in);
 	int input_num=0;
 	int min =0, max=0;
-	System.out.println("ÀÔ·Â¹Ş°í ½ÍÀº Á¤¼öÀÇ °¹¼ö¸¦ Àû¾îÁÖ¼¼¿ä:");
+	System.out.println("ì…ë ¥ë°›ê³  ì‹¶ì€ ì •ìˆ˜ì˜ ê°¯ìˆ˜ë¥¼ ì ì–´ì£¼ì„¸ìš”:");
 	input_num = sc.nextInt();
 	int[] array = new int [input_num];
 	
 	for(int i=0; i<array.length;i++){
-		array[i] = (int) (Math.random()*100);	//³­¼öÀÇ ¹üÀ§¸¦ 100±îÁö ÇÑ´Ù.
-			System.out.println("ÀÔ·Â °ª : "+array[i]);
+		array[i] = (int) (Math.random()*100);	//ë‚œìˆ˜ì˜ ë²”ìœ„ë¥¼ 100ê¹Œì§€ í•œë‹¤.
+			System.out.println("ì…ë ¥ ê°’ : "+array[i]);
 	}
 
 	for(int i=0; i<array.length-1;i++){
@@ -26,7 +26,7 @@ public static void main(String[] args) {
 		else
 			min = array[i];
 	}
-	System.out.println("ÃÖ¼Ò °ª :"+min +"ÃÖ´ë°ª:"+max);
+	System.out.println("ìµœì†Œ ê°’ :"+min +"ìµœëŒ€ê°’:"+max);
 
 
 	

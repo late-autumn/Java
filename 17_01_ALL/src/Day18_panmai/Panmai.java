@@ -2,14 +2,14 @@ package Day18_panmai;
 
 public interface Panmai {
 
-	public void insertProduct();			//Á¦Ç°µî·Ï
-	public void insertQuantity();			//Àç°íµî·Ï
-	public void searchProduct();			//Á¦Ç°°Ë»ö
-	public void listProduct();				//»óÇ°¸ñ·Ï
+	public void insertProduct();			//ì œí’ˆë“±ë¡
+	public void insertQuantity();			//ì¬ê³ ë“±ë¡
+	public void searchProduct();			//ì œí’ˆê²€ìƒ‰
+	public void listProduct();				//ìƒí’ˆëª©ë¡
 	
-	public void insertSale();				//ÆÇ¸Å°¡°İµî·Ï
-	public void searchSale();				//ÆÇ¸Å°¡°İ°Ë»ö
-	public void listSale();					//ÆÇ¸ÅÇöÈ²¸®½ºÆ®
+	public void insertSale();				//íŒë§¤ê°€ê²©ë“±ë¡
+	public void searchSale();				//íŒë§¤ê°€ê²©ê²€ìƒ‰
+	public void listSale();					//íŒë§¤í˜„í™©ë¦¬ìŠ¤íŠ¸
 	
 	
 }

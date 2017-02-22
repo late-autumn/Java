@@ -6,12 +6,12 @@ import java.util.*;
 public class StackEx2 {
 	
 	private static final String colors[] ={
-			"»¡°­","ºĞÈ«","ÁÖÈ²","ÆÄ¶û","¿¬µÎ","³²»ö"
+			"ë¹¨ê°•","ë¶„í™","ì£¼í™©","íŒŒë‘","ì—°ë‘","ë‚¨ìƒ‰"
 	};
 	public StackEx2() {
 		// TODO Auto-generated constructor stub
 		Stack<String>stack = new Stack<>();
-		//Á¦³×¸¯¹æ½Ä
+		//ì œë„¤ë¦­ë°©ì‹
 		
 		for(String n : colors)
 			stack.push(n);
@@ -19,7 +19,7 @@ public class StackEx2 {
 		
 	}
 
-	public void popStack(Stack<String>st){ //Ãâ·Â
+	public void popStack(Stack<String>st){ //ì¶œë ¥
 		while(!st.isEmpty())
 			System.out.println(st.pop());
 	}

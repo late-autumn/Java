@@ -11,7 +11,7 @@ public static void main(String[] args) {
 	byte console[] = new byte[100];
 	
 	try{
-		System.out.print("ÆÄÀÏ¸í:");
+		System.out.print("íŒŒì¼ëª…:");
 		System.in.read(console);
 		String file = new String(console).trim();
 		

@@ -11,32 +11,32 @@ public class ScoreImpl implements Score {
 	@Override
 	public void insert() {
 		// TODO Auto-generated method stub
-		System.out.println("ÀÚ·á Ãß°¡");
+		System.out.println("ìë£Œ ì¶”ê°€");
 		System.out.println("---------");
 		String hak;
-		System.out.print("ÇĞ¹ø:");
+		System.out.print("í•™ë²ˆ:");
 		hak =sc.next();
 		ScoreVO temp = readScore(hak);
 		if(temp !=null){
-			System.out.println("ÀÌ¹Ì µî·ÏµÈ ÇĞ¹ø ÀÔ´Ï´Ù.");
+			System.out.println("ì´ë¯¸ ë“±ë¡ëœ í•™ë²ˆ ì…ë‹ˆë‹¤.");
 			return;
 		}
 		ScoreVO vo = new ScoreVO();
 		
 		vo.setHak(hak);
-		System.out.print("ÀÌ¸§:");
-		vo.setName(sc.next());		//¹Ù·Î ÀÔ·Â ÀÌ¸§¹Ş±â 
-		System.out.print("»ı³â¿ùÀÏ:");
+		System.out.print("ì´ë¦„:");
+		vo.setName(sc.next());		//ë°”ë¡œ ì…ë ¥ ì´ë¦„ë°›ê¸° 
+		System.out.print("ìƒë…„ì›”ì¼:");
 		vo.setBirth(sc.next());
-		System.out.print("±¹¾î:");
+		System.out.print("êµ­ì–´:");
 		vo.setKor(sc.nextInt());
-		System.out.print("¿µ¾î:");
+		System.out.print("ì˜ì–´:");
 		vo.setEng(sc.nextInt());
-		System.out.print("¼öÇĞ:");
+		System.out.print("ìˆ˜í•™:");
 		vo.setMat(sc.nextInt());
 		
 		list.add(vo);
-		System.out.println("Ãß°¡ ¿Ï·á");
+		System.out.println("ì¶”ê°€ ì™„ë£Œ");
 		System.out.println("---------");
 		
 	}
@@ -45,30 +45,30 @@ public class ScoreImpl implements Score {
 	public void update() {
 		// TODO Auto-generated method stub
 
-		System.out.println("ÀÚ·á¼öÁ¤");
+		System.out.println("ìë£Œìˆ˜ì •");
 		System.out.println("---------");
 		String hak;
-		System.out.println("¼öÁ¤ÇÒ ÇĞ¹ø");
+		System.out.println("ìˆ˜ì •í•  í•™ë²ˆ");
 		hak = sc.next();
 		
 		ScoreVO vo = readScore(hak);
 		if(vo==null){
-			System.out.println("µî·ÏµÇÁö ¾ÊÀº ÇĞ¹øÀÔ´Ï´Ù.");
+			System.out.println("ë“±ë¡ë˜ì§€ ì•Šì€ í•™ë²ˆì…ë‹ˆë‹¤.");
 			return;
 		}
 		vo.setHak(hak);
-		System.out.print("ÀÌ¸§:");
+		System.out.print("ì´ë¦„:");
 		vo.setName(sc.next());		
-		System.out.print("»ı³â¿ùÀÏ:");
+		System.out.print("ìƒë…„ì›”ì¼:");
 		vo.setBirth(sc.next());
-		System.out.print("±¹¾î:");
+		System.out.print("êµ­ì–´:");
 		vo.setKor(sc.nextInt());
-		System.out.print("¿µ¾î:");
+		System.out.print("ì˜ì–´:");
 		vo.setEng(sc.nextInt());
-		System.out.print("¼öÇĞ:");
+		System.out.print("ìˆ˜í•™:");
 		vo.setMat(sc.nextInt());
 		
-		System.out.println("¼öÁ¤¿Ï·á");
+		System.out.println("ìˆ˜ì •ì™„ë£Œ");
 		System.out.println();
 		
 	}
@@ -76,15 +76,15 @@ public class ScoreImpl implements Score {
 	@Override
 	public void delete() {
 		// TODO Auto-generated method stub
-		System.out.println("ÀÚ·á»èÁ¦");
+		System.out.println("ìë£Œì‚­ì œ");
 		System.out.println("---------");
 		String hak;
-		System.out.print("»èÁ¦ÇÒ ÇĞ¹ø :");
+		System.out.print("ì‚­ì œí•  í•™ë²ˆ :");
 		hak = sc.next();
 		
 		ScoreVO vo = readScore(hak);
 		if(vo ==null){
-			System.out.println("µî·ÏµÈÇĞ¹øÀÌ ¾ø½À´Ï´Ù.");
+			System.out.println("ë“±ë¡ëœí•™ë²ˆì´ ì—†ìŠµë‹ˆë‹¤.");
 		return;
 		}
 		list.remove(vo);
@@ -96,9 +96,9 @@ public class ScoreImpl implements Score {
 	@Override
 	public void listAll() {
 		// TODO Auto-generated method stub
-		System.out.println("ÀüÃ¼ ÀÚ·áÃâ·Â");
+		System.out.println("ì „ì²´ ìë£Œì¶œë ¥");
 		System.out.println("---------");
-		//¸®½ºÆ® ¾È¿¡ ÀÖ´Â µ¥ÀÌÅÍ¸¦ ¹İº¹ÀÚ¸¦ ÅëÇØ¼­ °è¼Ó °¡Áö°í ¿Ã ¼ö ÀÖ´Â °´Ã¼»ı¼º
+		//ë¦¬ìŠ¤íŠ¸ ì•ˆì— ìˆëŠ” ë°ì´í„°ë¥¼ ë°˜ë³µìë¥¼ í†µí•´ì„œ ê³„ì† ê°€ì§€ê³  ì˜¬ ìˆ˜ ìˆëŠ” ê°ì²´ìƒì„±
 		Iterator<ScoreVO> it = list.iterator();
 	
 		while(it.hasNext()){
@@ -114,15 +114,15 @@ public class ScoreImpl implements Score {
 	@Override
 	public void searchHak() {
 		// TODO Auto-generated method stub
-		System.out.println("ÇĞ¹ø °Ë»ö:");
+		System.out.println("í•™ë²ˆ ê²€ìƒ‰:");
 		System.out.println("---------");
 		String hak;
-		System.out.print("°Ë»öÇÒ ÇĞ¹ø ÀÔ·Â:");
+		System.out.print("ê²€ìƒ‰í•  í•™ë²ˆ ì…ë ¥:");
 		hak =sc.next();
 		
 		ScoreVO vo = readScore(hak);
 		if(vo==null){
-			System.out.println("ÇĞ¹øÀÌ Á¸ÀçÇÏÁö ¾Ê½À´Ï´Ù");
+			System.out.println("í•™ë²ˆì´ ì¡´ì¬í•˜ì§€ ì•ŠìŠµë‹ˆë‹¤");
 			return;
 		}
 		System.out.println(vo);
@@ -132,12 +132,12 @@ public class ScoreImpl implements Score {
 	public void searchName() {
 		// TODO Auto-generated method stub
 
-		System.out.print("ÀÌ¸§°Ë»ö");
+		System.out.print("ì´ë¦„ê²€ìƒ‰");
 		System.out.println("---------");
 	
 		String name;
 		
-		System.out.print("°Ë»öÇÒ ÀÌ¸§:");
+		System.out.print("ê²€ìƒ‰í•  ì´ë¦„:");
 		name = sc.next();
 		
 		for(ScoreVO vo : list){

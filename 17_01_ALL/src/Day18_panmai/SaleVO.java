@@ -3,12 +3,12 @@ package Day18_panmai;
 public class SaleVO {
 
 	
-	//ÆÇ¸ÅÁ¤º¸
+	//íŒë§¤ì •ë³´
 	
-	private String code;				//ÄÚµå
-	private String sname;				//°í°´¸í
-	private String created;				//ÆÇ¸ÅÀÏ
-	private int quantity;				//ÆÇ¸Å¼ö·®
+	private String code;				//ì½”ë“œ
+	private String sname;				//ê³ ê°ëª…
+	private String created;				//íŒë§¤ì¼
+	private int quantity;				//íŒë§¤ìˆ˜ëŸ‰
 
 	public String getCode() {
 		return code;

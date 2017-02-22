@@ -23,19 +23,19 @@ public class FocusEventEx extends Frame implements FocusListener {
 	public void setForm(){
 		
 		setLayout(new BorderLayout());
-		//¶óº§ Ãß°¡ 
+		//ë¼ë²¨ ì¶”ê°€ 
 		Panel p = new Panel(new GridLayout(3, 1));
-		p.add(new Label("ÀÌ¸§ :"));
-		p.add(new Label("ÀüÈ­¹øÈ£ :"));
-		p.add(new Label("ÁÖ¼Ò :"));
+		p.add(new Label("ì´ë¦„ :"));
+		p.add(new Label("ì „í™”ë²ˆí˜¸ :"));
+		p.add(new Label("ì£¼ì†Œ :"));
 		p.setBackground(Color.CYAN);
 		add("West",p);
 		
 		
-		//ÅØ½ºÆ® ÇÊµå Ãß°¡ 
+		//í…ìŠ¤íŠ¸ í•„ë“œ ì¶”ê°€ 
 		Panel p2 = new Panel(new GridLayout(3, 1));
 		for(int i=0; i<tf.length;i++){
-			tf[i] = new TextField();		//text ÃÊ±âÈ­ 
+			tf[i] = new TextField();		//text ì´ˆê¸°í™” 
 			p2.add(tf[i]);
 			tf[i].addFocusListener(this);
 		}
@@ -50,11 +50,11 @@ public class FocusEventEx extends Frame implements FocusListener {
 		// TODO Auto-generated method stub
 		if(e.getSource()==tf[1]){
 			
-			if(tf[0].getText().trim().length() == 0){	//tf[0]ÀÇ ÅØ½ºÆ®ÀÇ °ø¹éÀ» Á¦°ÅÇÑ ±æÀÌ
+			if(tf[0].getText().trim().length() == 0){	//tf[0]ì˜ í…ìŠ¤íŠ¸ì˜ ê³µë°±ì„ ì œê±°í•œ ê¸¸ì´
 				tf[0].setText("");
 				
 				try {
-					Thread.sleep(3000);					//±ÛÀÚ ¾µ¶§ ±ôºı°Å¸²À» ³Ñ°ÜÁÖ±â À§ÇØ 
+					Thread.sleep(3000);					//ê¸€ì ì“¸ë•Œ ê¹œë¹¡ê±°ë¦¼ì„ ë„˜ê²¨ì£¼ê¸° ìœ„í•´ 
 				} catch (InterruptedException ee) {
 					ee.printStackTrace();
 				}
@@ -65,11 +65,11 @@ public class FocusEventEx extends Frame implements FocusListener {
 		}
 		if(e.getSource()==tf[2]){
 			
-			if(tf[1].getText().trim().length() == 0){	//tf[0]ÀÇ ÅØ½ºÆ®ÀÇ °ø¹éÀ» Á¦°ÅÇÑ ±æÀÌ
+			if(tf[1].getText().trim().length() == 0){	//tf[0]ì˜ í…ìŠ¤íŠ¸ì˜ ê³µë°±ì„ ì œê±°í•œ ê¸¸ì´
 				tf[1].setText("");
 				
 				try {
-					Thread.sleep(3000);					//±ÛÀÚ ¾µ¶§ ±ôºı°Å¸²À» ³Ñ°ÜÁÖ±â À§ÇØ 
+					Thread.sleep(3000);					//ê¸€ì ì“¸ë•Œ ê¹œë¹¡ê±°ë¦¼ì„ ë„˜ê²¨ì£¼ê¸° ìœ„í•´ 
 				} catch (InterruptedException ee) {
 					ee.printStackTrace();
 				}

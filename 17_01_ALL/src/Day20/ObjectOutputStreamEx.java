@@ -11,20 +11,20 @@ public class ObjectOutputStreamEx {
 		ObjectOutputStream oos = null;
 		try{
 			
-			//¸Ş¸ğ¸®¿¡ »ı¼ºµÈ °´Ã¼¸¦ Á÷·ÄÈ­ ÇØ¼­ ½ºÆ®¸²À» ÅëÇØ
-			//±â·ÏÇÒ ¼ö ÀÖ´Â ObjectOutputStream °´Ã¼ »ı¼º
+			//ë©”ëª¨ë¦¬ì— ìƒì„±ëœ ê°ì²´ë¥¼ ì§ë ¬í™” í•´ì„œ ìŠ¤íŠ¸ë¦¼ì„ í†µí•´
+			//ê¸°ë¡í•  ìˆ˜ ìˆëŠ” ObjectOutputStream ê°ì²´ ìƒì„±
 			
-			oos = new ObjectOutputStream(new FileOutputStream("c:/ºñµÑ±â/obj.sav"));
+			oos = new ObjectOutputStream(new FileOutputStream("c:/ë¹„ë‘˜ê¸°/obj.sav"));
 			
-			//ObjcetOutputStreamÀ» ÅëÇØ¼­ Á÷·ÄÈ­µÈ ÆÄÀÏ·Î ÀúÀåµÉ Data °´Ã¼ »ı¼º
-			//DataÅ¬·¡½º´Â ¹İµå½Ã Serializable·Î ±¸ÇöµÇ¾î ÀÖ¾î¾ßÇÔ
+			//ObjcetOutputStreamì„ í†µí•´ì„œ ì§ë ¬í™”ëœ íŒŒì¼ë¡œ ì €ì¥ë  Data ê°ì²´ ìƒì„±
+			//Dataí´ë˜ìŠ¤ëŠ” ë°˜ë“œì‹œ Serializableë¡œ êµ¬í˜„ë˜ì–´ ìˆì–´ì•¼í•¨
 			Data data = new Data();
 			data.setNo(33);
-			data.setName("È«±æµ¿");
+			data.setName("í™ê¸¸ë™");
 			data.setEmail("hong@naver.com");
 			
-			//ObjectOutputStreamÀ» °´Ã¼¸¦ Á÷·ÄÈ­ ÇØ¼­ ½ºÆ®¸²À» ÅëÇØ
-			//ÀúÀå ÇÒ ¼ö ÀÖ´Â writeObject¸Ş¼Òµå¸¦ È°¿ëÇÑ´Ù.
+			//ObjectOutputStreamì„ ê°ì²´ë¥¼ ì§ë ¬í™” í•´ì„œ ìŠ¤íŠ¸ë¦¼ì„ í†µí•´
+			//ì €ì¥ í•  ìˆ˜ ìˆëŠ” writeObjectë©”ì†Œë“œë¥¼ í™œìš©í•œë‹¤.
 			
 			oos.writeObject(data);
 			

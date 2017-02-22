@@ -8,11 +8,11 @@ import Day24.awt.WinEvent;
 import java.awt.*;
 public class MouseEventEx extends Frame implements MouseListener {
 
-	private Button bt = new Button("È®ÀÎ");
-	private Button bt1 = new Button("Ãë¼Ò");
+	private Button bt = new Button("í™•ì¸");
+	private Button bt1 = new Button("ì·¨ì†Œ");
 	
 	public MouseEventEx(){
-		super("¸¶¿ì½º ÀÌº¥Æ®");
+		super("ë§ˆìš°ìŠ¤ ì´ë²¤íŠ¸");
 		setLayout(new FlowLayout());
 		add(bt);
 		add(bt1);
@@ -34,15 +34,15 @@ public class MouseEventEx extends Frame implements MouseListener {
 	public void mouseClicked(MouseEvent arg0) {
 		// TODO Auto-generated method stub
 		if(arg0.getSource()==bt){
-			System.out.println("¸¶¿ì½º ¹öÆ° ´©¸£´Ù");
+			System.out.println("ë§ˆìš°ìŠ¤ ë²„íŠ¼ ëˆ„ë¥´ë‹¤");
 		}
 	}
 
 	@Override
 	public void mouseEntered(MouseEvent arg0) {
-		//¹öÆ°À§·Î ¿Ã¶ó°¬´Ù°¡ ³ª¿À´Â ¼ø°£
+		//ë²„íŠ¼ìœ„ë¡œ ì˜¬ë¼ê°”ë‹¤ê°€ ë‚˜ì˜¤ëŠ” ìˆœê°„
 		if(arg0.getSource()==bt1)
-			System.out.println("Ãë¼Ò¹öÆ°ÀÌ´Ù.");
+			System.out.println("ì·¨ì†Œë²„íŠ¼ì´ë‹¤.");
 	}
 
 	@Override
@@ -55,7 +55,7 @@ public class MouseEventEx extends Frame implements MouseListener {
 	public void mousePressed(MouseEvent arg0) {
 		// TODO Auto-generated method stub
 		if(arg0.getSource()==bt1){
-			System.out.println("Ãë¼Ò´­·¶´Ù.");
+			System.out.println("ì·¨ì†ŒëˆŒë €ë‹¤.");
 		}
 	}
 
@@ -63,7 +63,7 @@ public class MouseEventEx extends Frame implements MouseListener {
 	public void mouseReleased(MouseEvent arg0) {
 		// TODO Auto-generated method stub
 		if(arg0.getSource()==bt1){
-			System.out.println("Ãë¼Ò´­·¶´Ù ³õ¾Ò´Ù.");
+			System.out.println("ì·¨ì†ŒëˆŒë €ë‹¤ ë†“ì•˜ë‹¤.");
 		}
 	}
 	
