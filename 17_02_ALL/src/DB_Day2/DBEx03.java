@@ -1,6 +1,6 @@
 package DB_Day2;
 
-//delete »èÁ¦ 
+//delete ì‚­ì œ 
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -13,7 +13,7 @@ public class DBEx03 {
 		
 		StringBuffer sql = new StringBuffer();
 		sql.append("delete department ");
-		sql.append("where dname='ÄÄÇ»ÅÍ°øÇĞ' ");
+		sql.append("where dname='ì»´í“¨í„°ê³µí•™' ");
 		
 		
 		Connection con = null;
@@ -26,13 +26,13 @@ public class DBEx03 {
 			Class.forName("oracle.jdbc.driver.OracleDriver");
 			con = DriverManager.getConnection(url,id,pw);
 			stmt = con.createStatement();
-			//delete()¹® 
+			//delete()ë¬¸ 
 			int result = stmt.executeUpdate(sql.toString());
-			System.out.println(result+"°³ ÇàÀÌ »èÁ¦ µÇ¾ú½À´Ï´Ù.");
+			System.out.println(result+"ê°œ í–‰ì´ ì‚­ì œ ë˜ì—ˆìŠµë‹ˆë‹¤.");
 		
 		} catch (ClassNotFoundException ce) {
 			// TODO: handle exception
-			System.out.println("µå¶óÀÌºê¸¦ Ã£À» ¼ö ¾ø½À´Ï´Ù. ");
+			System.out.println("ë“œë¼ì´ë¸Œë¥¼ ì°¾ì„ ìˆ˜ ì—†ìŠµë‹ˆë‹¤. ");
 		}catch(SQLException se){
 			se.printStackTrace();
 	    }finally{

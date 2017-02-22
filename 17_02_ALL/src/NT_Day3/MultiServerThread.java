@@ -4,23 +4,23 @@ import java.net.*;
 import java.io.*;
 import java.util.*;
 
-/* MultiServerThread : °¢°¢ÀÇ Å¬¶óÀÌ¾ğÆ®¿Í ¿¬°áµÈ Socket°´Ã¼¸¦ °¡Áö°í ÀÖÀ¸¸ç
- * Å¬¶óÀÌ¾ğÆ®¿Í Á¢¼ÓÀ» À¯ÁöÇÏ°í Åë½ÅÀ» ´ã´çÇÔ
- * Æ¯Á¤ Å¬¶óÀÌ¾ğÆ®°¡ Àü¼ÛÇÑ ¸Ş¼¼Áö¸¦ ¼ö½ÅÇØ¼­ ¸ğµç Å¬¶óÀÌ¾ğÆ®¿¡°Ô Àü¼ÛÇÏ´Â 
- * broadcastionÀÌ ±¸ÇöµÇ¾î¾ß ÇÑ´Ù.
+/* MultiServerThread : ê°ê°ì˜ í´ë¼ì´ì–¸íŠ¸ì™€ ì—°ê²°ëœ Socketê°ì²´ë¥¼ ê°€ì§€ê³  ìˆìœ¼ë©°
+ * í´ë¼ì´ì–¸íŠ¸ì™€ ì ‘ì†ì„ ìœ ì§€í•˜ê³  í†µì‹ ì„ ë‹´ë‹¹í•¨
+ * íŠ¹ì • í´ë¼ì´ì–¸íŠ¸ê°€ ì „ì†¡í•œ ë©”ì„¸ì§€ë¥¼ ìˆ˜ì‹ í•´ì„œ ëª¨ë“  í´ë¼ì´ì–¸íŠ¸ì—ê²Œ ì „ì†¡í•˜ëŠ” 
+ * broadcastionì´ êµ¬í˜„ë˜ì–´ì•¼ í•œë‹¤.
  */
 
 public class MultiServerThread extends Thread {
 
-	   private Socket socket; //MultiServer°¡ Àü´ŞÇØÁÖ´Â SocketÀ» ´ã¾ÆµÑ ¸â¹öº¯¼ö
-	   private BufferedReader in; //client°¡ Àü´ŞÇÑ ¸Ş½ÃÁö¸¦ ÀĞ¾îµéÀÏ ½ºÆ®¸²
-	   private PrintWriter out; //client·Î ¸Ş½ÃÁö¸¦ Àü¼ÛÇÒ ½ºÆ®¸²
+	   private Socket socket; //MultiServerê°€ ì „ë‹¬í•´ì£¼ëŠ” Socketì„ ë‹´ì•„ë‘˜ ë©¤ë²„ë³€ìˆ˜
+	   private BufferedReader in; //clientê°€ ì „ë‹¬í•œ ë©”ì‹œì§€ë¥¼ ì½ì–´ë“¤ì¼ ìŠ¤íŠ¸ë¦¼
+	   private PrintWriter out; //clientë¡œ ë©”ì‹œì§€ë¥¼ ì „ì†¡í•  ìŠ¤íŠ¸ë¦¼
 
-	   //¸ğµç MultiServerThread °´Ã¼¸¦ ÀúÀåÇÏ°í ÀÖ´Â ArrayList
+	   //ëª¨ë“  MultiServerThread ê°ì²´ë¥¼ ì €ì¥í•˜ê³  ìˆëŠ” ArrayList
 	   private ArrayList<MultiServerThread> clientList;
 
-	   //MultiServerThread´Â °´Ã¼°¡ »ı¼ºµÇ´Â ½ÃÁ¡¿¡ MultiServer·ÎºÎÅÍ clientList¿Í client¸¦ Åë½Å ÇÒ ¼ö ÀÖ´Â
-	   //SocketÀ» Àü´Ş ¹ŞÀ½
+	   //MultiServerThreadëŠ” ê°ì²´ê°€ ìƒì„±ë˜ëŠ” ì‹œì ì— MultiServerë¡œë¶€í„° clientListì™€ clientë¥¼ í†µì‹  í•  ìˆ˜ ìˆëŠ”
+	   //Socketì„ ì „ë‹¬ ë°›ìŒ
 	   public MultiServerThread(ArrayList<MultiServerThread> clientList, Socket socket) {
 	      // TODO Auto-generated constructor stub
 	      
@@ -28,26 +28,26 @@ public class MultiServerThread extends Thread {
 	      this.clientList = clientList;      
 	   }
 	   
-	   //½º·¹µå¸¦ ÀÌ¿ëÇØ¼­ ½ÇÇà½ÃÅ°°íÀÚÇÏ´Â ³»¿ëÀ» ±¸Çö
-	   //µ¿±âÈ­·Î ±¸ÇöµÇ¾î¾ßÇÔ
+	   //ìŠ¤ë ˆë“œë¥¼ ì´ìš©í•´ì„œ ì‹¤í–‰ì‹œí‚¤ê³ ìí•˜ëŠ” ë‚´ìš©ì„ êµ¬í˜„
+	   //ë™ê¸°í™”ë¡œ êµ¬í˜„ë˜ì–´ì•¼í•¨
 	   @Override
 	   public synchronized void run() {
 	      // TODO Auto-generated method stub
 	      
 	      try {
 	         
-	         //½ºÆ®¸²¿¬°á
+	         //ìŠ¤íŠ¸ë¦¼ì—°ê²°
 	         in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
 	         out = new PrintWriter(socket.getOutputStream());
 	         
-	         //Å¬¶óÀÌ¾ğÆ®¿Í ¸Ş½ÃÁö ¼Û¼ö½ÅÀ» ¹İº¹
+	         //í´ë¼ì´ì–¸íŠ¸ì™€ ë©”ì‹œì§€ ì†¡ìˆ˜ì‹ ì„ ë°˜ë³µ
 	         while(true){
 	            
-	            //Å¬¶óÀÌ¾ğÆ®°¡ ¼Û½ÅÇÑ ¸Ş½ÃÁö ÀĞ±â
+	            //í´ë¼ì´ì–¸íŠ¸ê°€ ì†¡ì‹ í•œ ë©”ì‹œì§€ ì½ê¸°
 	            String msg = in.readLine();
 	            System.out.println(msg);
 	            
-	            //¸ğµç Å¬¶óÀÌ¾ğÆ®¿¡°Ô ¸Ş½ÃÁö Àü´Ş(broadcasting)
+	            //ëª¨ë“  í´ë¼ì´ì–¸íŠ¸ì—ê²Œ ë©”ì‹œì§€ ì „ë‹¬(broadcasting)
 	            broadcasting(msg);
 	            
 	         }
@@ -56,16 +56,16 @@ public class MultiServerThread extends Thread {
 	      } catch (IOException e) {
 	         // TODO: handle exception
 	         
-	         //Å¬¶óÀÌ¾ğÆ®¿Í ¿¬°áÀÌ ²÷¾îÁø °æ¿ì ÇØ´ç MultiServerThread °´Ã¼¸¦ ¸ñ·Ï¿¡¼­ »èÁ¦
-	         //¼¼»ç¶÷ÀÌ Á¢¼ÓÇß´Âµ¥ ÇÑ»ç¶÷ÀÌ Á¢¼ÓÀ» ²÷¾î¹ö¸° °æ¿ì IOException°¡ ¹ß»ıÇÔ
-	         //ÀÌ°æ¿ì ÀÚ±â ÀÚ½ÅÀ» ¾ø¾ÖÁà¾ßÇÔ
+	         //í´ë¼ì´ì–¸íŠ¸ì™€ ì—°ê²°ì´ ëŠì–´ì§„ ê²½ìš° í•´ë‹¹ MultiServerThread ê°ì²´ë¥¼ ëª©ë¡ì—ì„œ ì‚­ì œ
+	         //ì„¸ì‚¬ëŒì´ ì ‘ì†í–ˆëŠ”ë° í•œì‚¬ëŒì´ ì ‘ì†ì„ ëŠì–´ë²„ë¦° ê²½ìš° IOExceptionê°€ ë°œìƒí•¨
+	         //ì´ê²½ìš° ìê¸° ìì‹ ì„ ì—†ì• ì¤˜ì•¼í•¨
 	         clientList.remove(this);
 
-	         //Å¬¶óÀÌ¾ğÆ®¿ÍÀÇ ¿¬°áÀÌ ²÷¾îÁ®µµ ¼ÒÄÏÀº ±× ipAddressÀÇ ÁÖ¼Ò¸¦ °¡Áö°í ÀÖÀ½
+	         //í´ë¼ì´ì–¸íŠ¸ì™€ì˜ ì—°ê²°ì´ ëŠì–´ì ¸ë„ ì†Œì¼“ì€ ê·¸ ipAddressì˜ ì£¼ì†Œë¥¼ ê°€ì§€ê³  ìˆìŒ
 	         String ipAddress = socket.getInetAddress().getHostAddress();
 	         
 	         try{
-	            broadcasting(ipAddress+"¿Í ¿¬°áÀÌ ²÷¾îÁ³½À´Ï´Ù.");
+	            broadcasting(ipAddress+"ì™€ ì—°ê²°ì´ ëŠì–´ì¡ŒìŠµë‹ˆë‹¤.");
 	         }catch(IOException io){
 	            io.printStackTrace();
 	         }
@@ -74,26 +74,26 @@ public class MultiServerThread extends Thread {
 	      
 	   }//end run()
 	      
-	   //¸ğµç Å¬¶óÀÌ¾ğÆ®¿¡°Ô ¸Ş½ÃÁö Àü´Ş
+	   //ëª¨ë“  í´ë¼ì´ì–¸íŠ¸ì—ê²Œ ë©”ì‹œì§€ ì „ë‹¬
 	   public void broadcasting(String msg) throws IOException{
 	         
-	      //clientList¿¡ ÀúÀåµÈ MultiServerThreadÀÇ °³¼ö¸¸Å­ ¹İº¹ÇÏ¸é¼­
-	      //°¢°¢ÀÇ MultiServerThreadÀÇ sendMsg ¸Ş¼­µå¸¦ È£ÃâÇØ¼­ ¿¬°áµÈ Å¬¶óÀÌ¾ğÆ®¿¡°Ô ¸Ş½ÃÁö Àü´Ş
+	      //clientListì— ì €ì¥ëœ MultiServerThreadì˜ ê°œìˆ˜ë§Œí¼ ë°˜ë³µí•˜ë©´ì„œ
+	      //ê°ê°ì˜ MultiServerThreadì˜ sendMsg ë©”ì„œë“œë¥¼ í˜¸ì¶œí•´ì„œ ì—°ê²°ëœ í´ë¼ì´ì–¸íŠ¸ì—ê²Œ ë©”ì‹œì§€ ì „ë‹¬
 	      for(MultiServerThread t : clientList){
 	         
-	         //°³º° MultiServerThreadÀÇ sendMsg ¸Ş¼­µå¸¦ È£ÃâÇØ¼­
-	         //¸Ş½ÃÁö¸¦ °¢°¢ÀÇ Å¬¶óÀÌ¾ğÆ®¿¡°Ô Àü´Ş
+	         //ê°œë³„ MultiServerThreadì˜ sendMsg ë©”ì„œë“œë¥¼ í˜¸ì¶œí•´ì„œ
+	         //ë©”ì‹œì§€ë¥¼ ê°ê°ì˜ í´ë¼ì´ì–¸íŠ¸ì—ê²Œ ì „ë‹¬
 	         t.sendMsg(msg);
 	         
 	      }
 	      
 	   }
 	   
-	   //Àü´Ş¹ŞÀº ¸Ş½ÃÁö¸¦ SocketÀÇ OutputStream°ú ¿¬°áµÈ PrintWriter¸¦ ÀÌ¿ëÇØ¼­ Å¬¶óÀÌ¾ğÆ®·Î Àü´ŞÇÏ´Â ¸Ş¼­µå
+	   //ì „ë‹¬ë°›ì€ ë©”ì‹œì§€ë¥¼ Socketì˜ OutputStreamê³¼ ì—°ê²°ëœ PrintWriterë¥¼ ì´ìš©í•´ì„œ í´ë¼ì´ì–¸íŠ¸ë¡œ ì „ë‹¬í•˜ëŠ” ë©”ì„œë“œ
 	   public void sendMsg(String msg) throws IOException{
 	      
 	      out.println(msg);
-	      out.flush(); //¸Ş½ÃÁö Àü´ŞÈÄ ½ºÆ®¸² ºñ¿ò
+	      out.flush(); //ë©”ì‹œì§€ ì „ë‹¬í›„ ìŠ¤íŠ¸ë¦¼ ë¹„ì›€
 	      
 	   }
 

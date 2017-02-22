@@ -23,12 +23,12 @@ public class DBEx07 {
 			
 			pstmt = con.prepareStatement(sql.toString());
 			
-			// ? ¿¡ ´ëÃ¼ÇÒ  ½ÇÁ¦°ªÀ» ÁöÁ¤ÇÔ 
+			// ? ì— ëŒ€ì²´í•   ì‹¤ì œê°’ì„ ì§€ì •í•¨ 
 			pstmt.setInt(1, 204);
-			//Äõ¸® ½ÇÇà½ÃÄÑ¼­ °á°ú °ª ¾ò±â
+			//ì¿¼ë¦¬ ì‹¤í–‰ì‹œì¼œì„œ ê²°ê³¼ ê°’ ì–»ê¸°
 			rs = pstmt.executeQuery();
 			
-			//°á°ú°ª ÃßÃâ ÇÏ±â
+			//ê²°ê³¼ê°’ ì¶”ì¶œ í•˜ê¸°
 			
 			while(rs.next()){
 				System.out.print(rs.getString("name" )+"\t");

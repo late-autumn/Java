@@ -14,14 +14,14 @@ import javax.swing.border.EtchedBorder;
 
 
 /*
- * Findpane : »ç¿ø Á¤º¸ Á¶È¸ ÅÇ °´Ã¼´Â °Ë»öÀ» À§ÇÑ »ç¿ø Á¤º¸¸¦ ÀÔ·Â ¹Ş±â À§ÇÑ ÅØ½ºÆ®
- * 			  ÇÊµå¿Í »ç¿øÁ¶È¸ ¹öÆ°, ´Ù½Ã¾²±â ¹öÆ°À¸·Î ±¸¼ºµÈ´Ù. 
+ * Findpane : ì‚¬ì› ì •ë³´ ì¡°íšŒ íƒ­ ê°ì²´ëŠ” ê²€ìƒ‰ì„ ìœ„í•œ ì‚¬ì› ì •ë³´ë¥¼ ì…ë ¥ ë°›ê¸° ìœ„í•œ í…ìŠ¤íŠ¸
+ * 			  í•„ë“œì™€ ì‚¬ì›ì¡°íšŒ ë²„íŠ¼, ë‹¤ì‹œì“°ê¸° ë²„íŠ¼ìœ¼ë¡œ êµ¬ì„±ëœë‹¤. 
  * 
  * actionPerformed() 
- * 			- »ç¿ø Á¶È¸¹öÆ°À» ´©¸£¸é ÅØ½ºÆ® ÇÊµåÀÇ ³»¿ë°ú ÀÏÄ¡ÇÏ´Â µ¥ÀÌÅÍ¸¦ µ¥ÀÌÅÍº£ÀÌ½º·Î ºÎÅÍ ¾ò¾î¿È
+ * 			- ì‚¬ì› ì¡°íšŒë²„íŠ¼ì„ ëˆ„ë¥´ë©´ í…ìŠ¤íŠ¸ í•„ë“œì˜ ë‚´ìš©ê³¼ ì¼ì¹˜í•˜ëŠ” ë°ì´í„°ë¥¼ ë°ì´í„°ë² ì´ìŠ¤ë¡œ ë¶€í„° ì–»ì–´ì˜´
  * 
- * 			µ¥ÀÌÅÍº£ÀÌ½º¸¦ Á¶È¸ÇÑ ÈÄ ±× °á°ú¸¦ Ãâ·Â
- * 			´Ù½Ã¾²±â ¹öÆ°À» ´©¸£¸é ÅØ½ºÆ® ÇÊµåÀÇ ³»¿ëÀ» ÃÊ±âÈ­ÇÔ 
+ * 			ë°ì´í„°ë² ì´ìŠ¤ë¥¼ ì¡°íšŒí•œ í›„ ê·¸ ê²°ê³¼ë¥¼ ì¶œë ¥
+ * 			ë‹¤ì‹œì“°ê¸° ë²„íŠ¼ì„ ëˆ„ë¥´ë©´ í…ìŠ¤íŠ¸ í•„ë“œì˜ ë‚´ìš©ì„ ì´ˆê¸°í™”í•¨ 
  */
 
 
@@ -32,17 +32,17 @@ public class FindPane extends JPanel implements ActionListener {
 	private JPanel jp[] = new JPanel[6];
 	private JLabel jl[] = new JLabel[5];
 	private JTextField tf[] = new JTextField[5];
-	private JButton okb;		//Á¶È¸
-	private JButton rsb;		//´Ù½Ã¾²±â
+	private JButton okb;		//ì¡°íšŒ
+	private JButton rsb;		//ë‹¤ì‹œì“°ê¸°
 	
-	String[] caption = {"¹øÈ£:","ÀÌ¸§:","Á÷Ã¥:","ºÎ¼­:","¸ŞÀÏ:"};
+	String[] caption = {"ë²ˆí˜¸:","ì´ë¦„:","ì§ì±…:","ë¶€ì„œ:","ë©”ì¼:"};
 	
 	
-	//»ı¼ºÀÚ 
+	//ìƒì„±ì 
 	public FindPane() {
 		// TODO Auto-generated constructor stub
 		setLayout(new GridLayout(7, 1));
-		EtchedBorder eb = new EtchedBorder();		//°æ°è¼±
+		EtchedBorder eb = new EtchedBorder();		//ê²½ê³„ì„ 
 		setBorder(eb);
 		
 		int size = caption.length;
@@ -58,19 +58,19 @@ public class FindPane extends JPanel implements ActionListener {
 			jp[i].add(tf[i]);
 			add(jp[i]);
 			
-			//ÅØ½ºÆ® ÇÊµå¸¦ ÀÔ·Â ºÒ°¡´ÉÇÑ »óÅÂ·Î ¸¸µç´Ù.			
+			//í…ìŠ¤íŠ¸ í•„ë“œë¥¼ ì…ë ¥ ë¶ˆê°€ëŠ¥í•œ ìƒíƒœë¡œ ë§Œë“ ë‹¤.			
 			tf[i].setEditable(false);
 
-			//»ç¹ø°ú ÀÌ¸§À¸·Î °Ë»öÇØ¾ß ÀÔ·Â °¡´ÉÇÑ »óÅÂ·Î ¸¸µë 
+			//ì‚¬ë²ˆê³¼ ì´ë¦„ìœ¼ë¡œ ê²€ìƒ‰í•´ì•¼ ì…ë ¥ ê°€ëŠ¥í•œ ìƒíƒœë¡œ ë§Œë“¬ 
 			if(i==0 || i ==1)
 				tf[i].setEditable(true);
 			
 		}
 		
 		jp[size] = new JPanel();
-		okb = new JButton("»ç¿øÁ¤º¸Á¶È¸");
+		okb = new JButton("ì‚¬ì›ì •ë³´ì¡°íšŒ");
 		okb.addActionListener(this);
-		rsb = new JButton("´Ù½Ã ¾²±â");
+		rsb = new JButton("ë‹¤ì‹œ ì“°ê¸°");
 		rsb.addActionListener(this);
 		
 		jp[size].add(okb);
@@ -85,28 +85,28 @@ public class FindPane extends JPanel implements ActionListener {
 		// TODO Auto-generated method stub
 		
 		
-		//ÀÌº¥Æ®°¡ ¹ß»ıÇÑ ¹öÆ°ÀÇ Ä¸¼Ç °ªÀ» ¾ò¾î¿È 
+		//ì´ë²¤íŠ¸ê°€ ë°œìƒí•œ ë²„íŠ¼ì˜ ìº¡ì…˜ ê°’ì„ ì–»ì–´ì˜´ 
 		String ae_type = ae.getActionCommand();
 		
-		EmployeeVO evo = null;					//°Ë»öÇÑ »ç¿øÁ¤º¸¸¦ ÀúÀåÇÑ VO °´Ã¼ »ı¼º
-		EmployeeDAO edvo = null;				//µ¥ÀÌÅÍº£ÀÌ½º Ã³¸®¸¦ À§ÇÑ DAO °´Ã¼ »ı¼º
+		EmployeeVO evo = null;					//ê²€ìƒ‰í•œ ì‚¬ì›ì •ë³´ë¥¼ ì €ì¥í•œ VO ê°ì²´ ìƒì„±
+		EmployeeDAO edvo = null;				//ë°ì´í„°ë² ì´ìŠ¤ ì²˜ë¦¬ë¥¼ ìœ„í•œ DAO ê°ì²´ ìƒì„±
 		
-		if(ae_type.equals(okb.getText())){		//Á¶È¸ ¹öÆ°ÀÌ Å¬¸¯µÇ¾úÀ» °æ¿ì 
+		if(ae_type.equals(okb.getText())){		//ì¡°íšŒ ë²„íŠ¼ì´ í´ë¦­ë˜ì—ˆì„ ê²½ìš° 
 			
 			try{
 				edvo = new EmployeeDAO();
 				String sno = tf[0].getText().trim();
 				String sname = tf[1].getText().trim();
 				
-				if(!sno.equals("")&&!sname.equals("")){	//»ç¹ø°ú ÀÌ¸§ ÀÔ·Â
+				if(!sno.equals("")&&!sname.equals("")){	//ì‚¬ë²ˆê³¼ ì´ë¦„ ì…ë ¥
 					int no = Integer.parseInt(sno);
 					evo = edvo.getEmployeeCheck(no, sname);
 				}
-				else if(!sno.equals("")&&sname.equals("")){ //»ç¹ø¸¸ ÀÔ·Â 
+				else if(!sno.equals("")&&sname.equals("")){ //ì‚¬ë²ˆë§Œ ì…ë ¥ 
 					int no = Integer.parseInt(sno);
 					evo = edvo.getEmployeeNo(no);
 				}
-				else if(sno.equals("")&&!sname.equals("")){ //ÀÌ¸§¸¸ ÀÔ·Â 
+				else if(sno.equals("")&&!sname.equals("")){ //ì´ë¦„ë§Œ ì…ë ¥ 
 					evo = edvo.getEmployeeName(sname);
 				}
 				
@@ -114,7 +114,7 @@ public class FindPane extends JPanel implements ActionListener {
 				System.out.println("e:["+e+"]");
 			}
 			
-			if(evo!=null){								//ÇØ´ç »ç¿øÀÌ Á¸ÀçÇÏÁö ¾Ê´Â´Ù¸é ÅØ½ºÆ® ÇÊµå ÃÊ±âÈ­ 
+			if(evo!=null){								//í•´ë‹¹ ì‚¬ì›ì´ ì¡´ì¬í•˜ì§€ ì•ŠëŠ”ë‹¤ë©´ í…ìŠ¤íŠ¸ í•„ë“œ ì´ˆê¸°í™” 
 				tf[0].setText(evo.getNo()+"");
 				tf[1].setText(evo.getName()+"");
 				tf[2].setText(evo.getJobGrade()+"");
@@ -122,12 +122,12 @@ public class FindPane extends JPanel implements ActionListener {
 				tf[4].setText(evo.getEmail()+"");
 			}
 			else{
-				JOptionPane.showInternalConfirmDialog(this, "°Ë»ö ½ÇÆĞ");
+				JOptionPane.showInternalConfirmDialog(this, "ê²€ìƒ‰ ì‹¤íŒ¨");
 			}
 			
 		}
-		else if(ae_type.equals(rsb.getText())){	//´Ù½Ã¾²±â ¹öÆ°ÀÌ Å¬¸¯ µÇ¾úÀ» °æ¿ì
-			//ÅØ½ºÆ® ÇÊµå ÃÊ±âÈ­ ÇÑ´Ù.
+		else if(ae_type.equals(rsb.getText())){	//ë‹¤ì‹œì“°ê¸° ë²„íŠ¼ì´ í´ë¦­ ë˜ì—ˆì„ ê²½ìš°
+			//í…ìŠ¤íŠ¸ í•„ë“œ ì´ˆê¸°í™” í•œë‹¤.
 			int size = caption.length;
 			for(int i=0; i<size;i++){
 				tf[i].setText("");

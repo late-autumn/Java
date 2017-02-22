@@ -1,9 +1,9 @@
 package DB_Day3;
 
-// VO Å¬·¡½º 
+// VO í´ë˜ìŠ¤ 
 
 public class EmployeeVO {
-	//ÇÊµå
+	//í•„ë“œ
 
 	private int no;
 	private String name;

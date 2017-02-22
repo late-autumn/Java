@@ -15,9 +15,9 @@ public class MainFrame extends JFrame{
 	
 	public MainFrame() {
 		/*
-		 * ÇÁ·¹ÀÓ¿¡ »ç¿øÁ¤º¸ ÀÔ·Â ÅÇ°ú »ç¿øÁ¤º¸ Á¶È¸ ÅÇ °´Ã¼¸¦ »ı¼ºÇÏ°í ÇÁ·¹ÀÓ¿¡ Ãß°¡ÇÔ
-		 * ÅÇÀ» ±¸ÇöÇÏ±â À§ÇØ jTabbedPane °´Ã¼¸¦ »ı¼ºÇÏ°í, JTabbedPane°´Ã¼ÀÎ 
-		 * tp¿¡ »ç¿øÁ¤º¸ ÀÔ·ÂÆĞ³Î°ú »ç¿øÁ¤º¸ Á¶È¸ ÆĞ³ÎÀ» Ãß°¡ÇÑ ÈÄ ÇÁ·¹ÀÓ¿¡ tp¸¦ Ãß°¡ÇÔ
+		 * í”„ë ˆì„ì— ì‚¬ì›ì •ë³´ ì…ë ¥ íƒ­ê³¼ ì‚¬ì›ì •ë³´ ì¡°íšŒ íƒ­ ê°ì²´ë¥¼ ìƒì„±í•˜ê³  í”„ë ˆì„ì— ì¶”ê°€í•¨
+		 * íƒ­ì„ êµ¬í˜„í•˜ê¸° ìœ„í•´ jTabbedPane ê°ì²´ë¥¼ ìƒì„±í•˜ê³ , JTabbedPaneê°ì²´ì¸ 
+		 * tpì— ì‚¬ì›ì •ë³´ ì…ë ¥íŒ¨ë„ê³¼ ì‚¬ì›ì •ë³´ ì¡°íšŒ íŒ¨ë„ì„ ì¶”ê°€í•œ í›„ í”„ë ˆì„ì— tpë¥¼ ì¶”ê°€í•¨
 		 * 
 		 */
 		
@@ -26,12 +26,12 @@ public class MainFrame extends JFrame{
 		fp = new FindPane();
 		tpa = new TotalPane();
 		
-		tp.addTab("»ç¿øÁ¤º¸ÀÔ·Â",ap);
-		tp.addTab("»ç¿øÁ¤º¸Á¶È¸",fp);
-		tp.addTab("»ç¿øÁ¤º¸ÀüÃ¼º¸±â",tpa);
+		tp.addTab("ì‚¬ì›ì •ë³´ì…ë ¥",ap);
+		tp.addTab("ì‚¬ì›ì •ë³´ì¡°íšŒ",fp);
+		tp.addTab("ì‚¬ì›ì •ë³´ì „ì²´ë³´ê¸°",tpa);
 		
 		getContentPane().add(tp);
-		setTitle("»ç¿ø°ü¸®");
+		setTitle("ì‚¬ì›ê´€ë¦¬");
 		
 		pack();
 		setVisible(true);

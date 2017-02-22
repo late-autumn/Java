@@ -20,10 +20,10 @@ public class DBEx06 {
 			pstmt = con.prepareStatement(sql.toString());
 			
 			pstmt.setInt(1, 500);
-			pstmt.setString(2, "È«±æµ¿");
+			pstmt.setString(2, "í™ê¸¸ë™");
 			
 			int i = pstmt.executeUpdate();
-			System.out.println(i+"°³ÀÇ ÇàÀÌ Ãß°¡µÇ¾ú½À´Ï´Ù.");
+			System.out.println(i+"ê°œì˜ í–‰ì´ ì¶”ê°€ë˜ì—ˆìŠµë‹ˆë‹¤.");
 			
 			
 		} catch (SQLException e) {

@@ -5,11 +5,11 @@ public class DBEx09 {
 
 	public static void main(String[] args)throws Exception {
 		
-		//Å°º¸µå¿Í ¿¬°áµÈ ½ºÆ®¸² ¾ò±â 
+		//í‚¤ë³´ë“œì™€ ì—°ê²°ëœ ìŠ¤íŠ¸ë¦¼ ì–»ê¸° 
 		
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		
-		System.out.print("sql ÀÔ·Â:");
+		System.out.print("sql ì…ë ¥:");
 		String sql = br.readLine();
 		
 		Connection con = ConnUtil.getConnection();
@@ -18,18 +18,18 @@ public class DBEx09 {
 		
 		ResultSet rs = pstmt.executeQuery();
 				
-		//Äõ¸® ¼öÇà°á°úÁıÇÕÀÇ ºÎ°¡Á¤º¸¸¦ °¡Áö°í ÀÖ´Â ResultSetMetaData ¾ò±â
+		//ì¿¼ë¦¬ ìˆ˜í–‰ê²°ê³¼ì§‘í•©ì˜ ë¶€ê°€ì •ë³´ë¥¼ ê°€ì§€ê³  ìˆëŠ” ResultSetMetaData ì–»ê¸°
 		ResultSetMetaData rsmd = rs.getMetaData();
 		
-		System.out.println("ÄÃ·³ÀÇ °³¼ö:"+rsmd.getColumnCount());
+		System.out.println("ì»¬ëŸ¼ì˜ ê°œìˆ˜:"+rsmd.getColumnCount());
 		
-		/*//ÄÃ·³ÀÌ¸§
+		/*//ì»¬ëŸ¼ì´ë¦„
 		for(int i=1; i<=rsmd.getColumnCount();i++){
 			System.out.print(rsmd.getColumnName(i)+"\t");
 		}
 		System.out.println();
 		
-		//ÄÃ·³Å¸ÀÔ
+		//ì»¬ëŸ¼íƒ€ì…
 		for(int i=1; i<=rsmd.getColumnCount();i++){
 			System.out.print(rsmd.getColumnName(i)+"\t");
 		}

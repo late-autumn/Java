@@ -3,11 +3,11 @@ package NT_Day4;
 public class Protocol {
 
 	
-	public static final int ROOM_IN = 100; //´ëÈ­¹æÀÔÀå
-	public static final int MESSAGE = 200; //ÀÏ¹İ´ëÈ­
-	public static final int WHISPER = 300; //±Ó¼Ó¸»(ºñ¹Ğ´ëÈ­)
-	public static final int CHANGE = 400; //´ëÈ­¸í º¯°æ
-	public static final int ROOM_OUT = 500; //´ëÈ­¹æ ³ª°¡±â
+	public static final int ROOM_IN = 100; //ëŒ€í™”ë°©ì…ì¥
+	public static final int MESSAGE = 200; //ì¼ë°˜ëŒ€í™”
+	public static final int WHISPER = 300; //ê·“ì†ë§(ë¹„ë°€ëŒ€í™”)
+	public static final int CHANGE = 400; //ëŒ€í™”ëª… ë³€ê²½
+	public static final int ROOM_OUT = 500; //ëŒ€í™”ë°© ë‚˜ê°€ê¸°
 
 	
 }

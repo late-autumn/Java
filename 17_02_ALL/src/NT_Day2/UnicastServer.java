@@ -13,11 +13,11 @@ public class UnicastServer {
 		ServerSocket server = null;
 		
 		try{
-			//¼­¹ö ¼ÒÄÏ »ı¼º 
+			//ì„œë²„ ì†Œì¼“ ìƒì„± 
 			server = new ServerSocket(5000);
 			
 		}catch(IOException io){
-			System.out.println("ÇØ´ç Æ÷Æ®°¡ ¾ø½À´Ï´Ù.");
+			System.out.println("í•´ë‹¹ í¬íŠ¸ê°€ ì—†ìŠµë‹ˆë‹¤.");
 			System.exit(0);
 		}
 		
@@ -25,12 +25,12 @@ public class UnicastServer {
 			
 			while(true){
 				System.out.println("Server Ready...");
-				//Å¬¶óÀÌ¾ğÆ®ÀÇ ¿¬°á¿äÃ»ÀÌ Á¢¼öµÇ¸é
-				//ÇØ´ç Å¬¶óÀÌ¾ğÆ®¿Í Åë½ÅÇÒ SocketÀ» »ı¼ºÇÔ.
+				//í´ë¼ì´ì–¸íŠ¸ì˜ ì—°ê²°ìš”ì²­ì´ ì ‘ìˆ˜ë˜ë©´
+				//í•´ë‹¹ í´ë¼ì´ì–¸íŠ¸ì™€ í†µì‹ í•  Socketì„ ìƒì„±í•¨.
 				Socket socket = server.accept();
 				
-				//Å¬¶óÀÌ¾ğÆ®¿Í ¸Ş¼¼Áö¸¦ ¼Û¼ö½ÅÇÒ UnicastSeverThread »ı¼º
-				//UnicastServerThread »ı¼º½Ã SocketÀ» Àü´ŞÇÔ 
+				//í´ë¼ì´ì–¸íŠ¸ì™€ ë©”ì„¸ì§€ë¥¼ ì†¡ìˆ˜ì‹ í•  UnicastSeverThread ìƒì„±
+				//UnicastServerThread ìƒì„±ì‹œ Socketì„ ì „ë‹¬í•¨ 
 				
 				UnicastServerThread thread = new UnicastServerThread(socket);
 				

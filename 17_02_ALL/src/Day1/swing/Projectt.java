@@ -49,7 +49,7 @@ public class Projectt extends JFrame implements ActionListener, ItemListener {
 
 	JMenu m1, m2, m3;
 
-	// 1. ¼öÀÔ 2. ÁöÃâ 3. ÇÕ°è
+	// 1. ìˆ˜ì… 2. ì§€ì¶œ 3. í•©ê³„
 	static int abc1 = 0, abc2 = 0, abc3 = 0;
 
 	JFileChooser filesv = new JFileChooser();
@@ -63,36 +63,36 @@ public class Projectt extends JFrame implements ActionListener, ItemListener {
 
 	JMenuItem save, list, open, info;
 
-	String a = "¿ù±Ş";
-	String b = "½Äºñ";
+	String a = "ì›”ê¸‰";
+	String b = "ì‹ë¹„";
 
-	// ¼öÀÔ
+	// ìˆ˜ì…
 	String c = "";
 	String d = "";
 
-	// ÁöÃâ
+	// ì§€ì¶œ
 	String f = "";
 	String g = "";
 
 	public Projectt() {
 		// TODO Auto-generated constructor stub
-		super("°¡°èºÎ");
+		super("ê°€ê³„ë¶€");
 
-		// ¸Ş´ºÀÇ »ó´Ü ¹Ù ¸¸µé±â
+		// ë©”ë‰´ì˜ ìƒë‹¨ ë°” ë§Œë“¤ê¸°
 		mb = new JMenuBar();
 
-		m1 = new JMenu("±â´É(F)");
-		save = new JMenuItem("ÀúÀåÇÏ±â(S)");
-		list = new JMenuItem("ºÒ·¯¿À±â(L)");
+		m1 = new JMenu("ê¸°ëŠ¥(F)");
+		save = new JMenuItem("ì €ì¥í•˜ê¸°(S)");
+		list = new JMenuItem("ë¶ˆëŸ¬ì˜¤ê¸°(L)");
 		m1.add(save);
 		m1.add(list);
 
-		m2 = new JMenu("°è»ê±â(G)");
-		open = new JMenuItem("½ÇÇàÇÏ±â(O)");
+		m2 = new JMenu("ê³„ì‚°ê¸°(G)");
+		open = new JMenuItem("ì‹¤í–‰í•˜ê¸°(O)");
 		m2.add(open);
 
-		m3 = new JMenu("µµ¿ò¸»(H)");
-		info = new JMenuItem("Á¤º¸(i)");
+		m3 = new JMenu("ë„ì›€ë§(H)");
+		info = new JMenuItem("ì •ë³´(i)");
 		m3.add(info);
 
 		mb.add(m1);
@@ -106,8 +106,8 @@ public class Projectt extends JFrame implements ActionListener, ItemListener {
 		p4 = new JPanel();
 		p3.setLayout(new BorderLayout());
 
-		l1 = new JLabel("±İ¾×");
-		l2 = new JLabel("±İ¾×");
+		l1 = new JLabel("ê¸ˆì•¡");
+		l2 = new JLabel("ê¸ˆì•¡");
 
 		t1 = new JTextField(10);
 		t2 = new JTextField(10);
@@ -118,8 +118,8 @@ public class Projectt extends JFrame implements ActionListener, ItemListener {
 		t3 = new JTextField(20);
 		t4 = new JTextField(20);
 
-		l5 = new JLabel("¼ö ÀÔ");
-		l6 = new JLabel("Áö Ãâ");
+		l5 = new JLabel("ìˆ˜ ì…");
+		l6 = new JLabel("ì§€ ì¶œ");
 
 		b1 = new JButton("INCOME");
 		b2 = new JButton("EXPENSE");
@@ -129,11 +129,11 @@ public class Projectt extends JFrame implements ActionListener, ItemListener {
 		p6 = new JPanel(new GridLayout(1, 2));
 		p7 = new JPanel(new BorderLayout());
 
-		l8 = new JLabel(" ÇöÀç ÀÜ¾×:");
-		l9 = new JLabel("  0¿ø");
+		l8 = new JLabel(" í˜„ì¬ ì”ì•¡:");
+		l9 = new JLabel("  0ì›");
 
-		// ÀÌ¹ÌÁö »çÀÌÁî Á¶Á¤ ÇÏ´Â ¸Ş¼Òµå
-		pp = new ImageIcon(new ImageIcon("C:/ºñµÑ±â/on.jpg").getImage().getScaledInstance(320, 240, Image.SCALE_DEFAULT));
+		// ì´ë¯¸ì§€ ì‚¬ì´ì¦ˆ ì¡°ì • í•˜ëŠ” ë©”ì†Œë“œ
+		pp = new ImageIcon(new ImageIcon("C:/ë¹„ë‘˜ê¸°/on.jpg").getImage().getScaledInstance(320, 240, Image.SCALE_DEFAULT));
 		l7 = new JLabel(pp);
 
 		p8 = new JPanel(new BorderLayout());
@@ -142,25 +142,25 @@ public class Projectt extends JFrame implements ActionListener, ItemListener {
 		sp3 = new JScrollPane(ta3);
 		p8.add(sp3, new BorderLayout().CENTER);
 
-		c1 = new JComboBox(); // ¼öÀÔ
-		c1.addItem("¿ù±Ş");
-		c1.addItem("¿ëµ·");
-		c1.addItem("±âÅ¸¼öÀÔ");
+		c1 = new JComboBox(); // ìˆ˜ì…
+		c1.addItem("ì›”ê¸‰");
+		c1.addItem("ìš©ëˆ");
+		c1.addItem("ê¸°íƒ€ìˆ˜ì…");
 
-		c2 = new JComboBox(); // ÁöÃâ
-		c2.addItem("½Äºñ");
-		c2.addItem("±³Åëºñ");
-		c2.addItem("ÀúÃà");
-		c2.addItem("ÁÖ°Åºñ");
-		c2.addItem("ÀÇ·áºñ");
-		c2.addItem("°æÁ¶»çºñ");
-		c2.addItem("°ø°ø¿ä±İ");
-		c2.addItem("µ¥ÀÌÆ®ºñ¿ë");
-		c2.addItem("¹®È­»ıÈ°");
-		c2.addItem("±âÅ¸ÁöÃâ");
-		c2.addItem("»ıÈ°¿ëÇ°");
-		c2.addItem("½Äºñ");
-		c2.addItem("±âÅ¸ºÎ´ëºñ¿ë");
+		c2 = new JComboBox(); // ì§€ì¶œ
+		c2.addItem("ì‹ë¹„");
+		c2.addItem("êµí†µë¹„");
+		c2.addItem("ì €ì¶•");
+		c2.addItem("ì£¼ê±°ë¹„");
+		c2.addItem("ì˜ë£Œë¹„");
+		c2.addItem("ê²½ì¡°ì‚¬ë¹„");
+		c2.addItem("ê³µê³µìš”ê¸ˆ");
+		c2.addItem("ë°ì´íŠ¸ë¹„ìš©");
+		c2.addItem("ë¬¸í™”ìƒí™œ");
+		c2.addItem("ê¸°íƒ€ì§€ì¶œ");
+		c2.addItem("ìƒí™œìš©í’ˆ");
+		c2.addItem("ì‹ë¹„");
+		c2.addItem("ê¸°íƒ€ë¶€ëŒ€ë¹„ìš©");
 
 		p1.add(l5);
 		p1.add(c1);
@@ -233,49 +233,49 @@ public class Projectt extends JFrame implements ActionListener, ItemListener {
 
 		Object o = e.getSource();
 
-		// ¼öÀÔ ³»¿ë Ãâ·Â
+		// ìˆ˜ì… ë‚´ìš© ì¶œë ¥
 
 		if (o == b1) {
 
-			// ¹®ÀÚ¸¦ ¼ıÀÚ·Î ¹Ù²ã¼­ ÀúÀåÇØÁØ´Ù.
-			c = t1.getText(); // ÀÔ±İ¿¡ ´ëÇÑ ÅØ½ºÆ®
-			d = t3.getText(); // ¸Ş¸ğ¿¡ ´ëÇÑ ÅØ½ºÆ®
+			// ë¬¸ìë¥¼ ìˆ«ìë¡œ ë°”ê¿”ì„œ ì €ì¥í•´ì¤€ë‹¤.
+			c = t1.getText(); // ì…ê¸ˆì— ëŒ€í•œ í…ìŠ¤íŠ¸
+			d = t3.getText(); // ë©”ëª¨ì— ëŒ€í•œ í…ìŠ¤íŠ¸
 
 			abc1 = abc1 + Integer.parseInt(c);
-			ta1.setText(ta1.getText() + "\n" + a + " " + c + "¿ø" + d + "\n");
+			ta1.setText(ta1.getText() + "\n" + a + " " + c + "ì›" + d + "\n");
 			abc3 = abc1 - abc2;
 
-			l9.setText(Integer.toString(abc3) + "¿ø");
+			l9.setText(Integer.toString(abc3) + "ì›");
 		}
 		
-        if( o == open){//°è»ê±â
+        if( o == open){//ê³„ì‚°ê¸°
 			Calculater cc = new Calculater();
 		}
-		//ÀúÀåÇÏ±â
-		if(o==save){//ÀúÀåÇÏ±â 
+		//ì €ì¥í•˜ê¸°
+		if(o==save){//ì €ì¥í•˜ê¸° 
 		  file_save();
 		  } 
-		if(o==list){ //¸ñ·Ï
+		if(o==list){ //ëª©ë¡
 		  file_open();
 		  }
-		if(o==info){ //Á¤º¸
+		if(o==info){ //ì •ë³´
 		  file_help();
 		  }
 		  
 		 
 
-		// ÁöÃâ ³»¿ë Ãâ·Â
+		// ì§€ì¶œ ë‚´ìš© ì¶œë ¥
 
 		if (o == b2) {
 			f = t2.getText();
 			g = t4.getText();
 
 			abc2 = abc2 + Integer.parseInt(f);
-			ta2.setText(ta2.getText() + "\n" + b + " " + f + "¿ø" + g + "\n");
+			ta2.setText(ta2.getText() + "\n" + b + " " + f + "ì›" + g + "\n");
 
 			abc3 = abc1 - abc2;
 
-			l9.setText(Integer.toString(abc3) + "¿ø");
+			l9.setText(Integer.toString(abc3) + "ì›");
 		}
 
 
@@ -289,12 +289,12 @@ public class Projectt extends JFrame implements ActionListener, ItemListener {
 
 		Object o = e.getItem();
 
-		// ¼öÀÔ
+		// ìˆ˜ì…
 		if (o == c1.getSelectedItem()) {
 			if (e.getStateChange() == ItemEvent.SELECTED) {
 				a = (String) c1.getSelectedItem();
 			}
-		} // ÁöÃâ
+		} // ì§€ì¶œ
 		if (o == c2.getSelectedItem()) {
 			if (e.getStateChange() == ItemEvent.SELECTED) {
 				b = (String) c2.getSelectedItem();
@@ -303,7 +303,7 @@ public class Projectt extends JFrame implements ActionListener, ItemListener {
 
 	}
 
-	// ÆÄÀÏ ÀúÀåÇÏ±â
+	// íŒŒì¼ ì €ì¥í•˜ê¸°
 	public void file_save() {
 
 		if (filesv.showSaveDialog(this) == JFileChooser.APPROVE_OPTION) {
@@ -319,16 +319,16 @@ public class Projectt extends JFrame implements ActionListener, ItemListener {
 		}
 	}
 
-	// ³»¿ªÀúÀåÇÏ±â
+	// ë‚´ì—­ì €ì¥í•˜ê¸°
 	public void contents_save(File file)throws IOException{
 		
 		BufferedWriter wBuffer = new BufferedWriter(new FileWriter(file));
-		wBuffer.write("¼öÀÔ \n\n"+ta1.getText()+"\n\n\n Áö Ãâ \n\n"+ta2.getText()+
-				"\n\n\n  Çö Àç ÀÜ ¾× \n\n:"+Integer.toString(abc3)+"¿ø");
+		wBuffer.write("ìˆ˜ì… \n\n"+ta1.getText()+"\n\n\n ì§€ ì¶œ \n\n"+ta2.getText()+
+				"\n\n\n  í˜„ ì¬ ì” ì•¡ \n\n:"+Integer.toString(abc3)+"ì›");
 		wBuffer.close();
 	}
 
-	// ÆÄÀÏ ºÒ·¯¿À±â
+	// íŒŒì¼ ë¶ˆëŸ¬ì˜¤ê¸°
 	public void file_open() {
 
 		if(filesv.showOpenDialog(this)==JFileChooser.APPROVE_OPTION){
@@ -343,7 +343,7 @@ public class Projectt extends JFrame implements ActionListener, ItemListener {
 		}
 	}
 
-	// ³»¿ªºÒ·¯¿À±â
+	// ë‚´ì—­ë¶ˆëŸ¬ì˜¤ê¸°
 	public void contents_open(File file)throws IOException {
 
 
@@ -352,7 +352,7 @@ public class Projectt extends JFrame implements ActionListener, ItemListener {
 		BufferedReader buff = new BufferedReader(new FileReader(file));
 		StringBuffer read = new StringBuffer();
 
-		while((readn=buff.read(buf))!=-1){	//-1Àº ³¡±îÁö ÀĞ°Ú´Ù´ÂÀÇ¹Ì 
+		while((readn=buff.read(buf))!=-1){	//-1ì€ ëê¹Œì§€ ì½ê² ë‹¤ëŠ”ì˜ë¯¸ 
 			read.append(buf,0,readn);
 		}
 		buff.close();
@@ -361,11 +361,11 @@ public class Projectt extends JFrame implements ActionListener, ItemListener {
 		
 	}
 
-	// µµ¿ò¸»
+	// ë„ì›€ë§
 	public void file_help() {
 		
 		JOptionPane.showMessageDialog(Projectt.this,"(c)Copyright bj park and others 2017.02.01"
-				+"All rights reserved","¿¡ÀÌÄÜ °¡°èºÎ",
+				+"All rights reserved","ì—ì´ì½˜ ê°€ê³„ë¶€",
 				JOptionPane.INFORMATION_MESSAGE);
 	}
 
@@ -386,7 +386,7 @@ class pay extends JFrame{
 		
 		getContentPane().setLayout(new BorderLayout());
 		getContentPane().add(sp11, new BorderLayout().CENTER);
-		setTitle("³»¿ª");
+		setTitle("ë‚´ì—­");
 		
 		setLocation(400,100);
 		setVisible(true);

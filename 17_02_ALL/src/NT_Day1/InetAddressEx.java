@@ -4,19 +4,19 @@ public class InetAddressEx {
 
 	public static void main(String[] args) {
 		
-		//InetAddress´Â IP¿Í Host Á¤º¸¸¦ °¡Áö´Â °´Ã¼
-		//InetAddress°´Ã¼´Â »ı¼ºÀÚ°¡ ¾Æ´Ñ static ¸Ş¼Òµå¸¦ ÀÌ¿ëÇØ¼­ »ı¼ºÇÔ
+		//InetAddressëŠ” IPì™€ Host ì •ë³´ë¥¼ ê°€ì§€ëŠ” ê°ì²´
+		//InetAddressê°ì²´ëŠ” ìƒì„±ìê°€ ì•„ë‹Œ static ë©”ì†Œë“œë¥¼ ì´ìš©í•´ì„œ ìƒì„±í•¨
 		
 		try{
-			//IPÁ¤º¸¸¦ °¡Áø inetAddress°´Ã¼ ¾ò±â 			
+			//IPì •ë³´ë¥¼ ê°€ì§„ inetAddressê°ì²´ ì–»ê¸° 			
 			InetAddress ipInfo1 = InetAddress.getByName("www.daum.net");
 			
-			//IPÁÖ¼Ò ¾ò±â 
+			//IPì£¼ì†Œ ì–»ê¸° 
 			String ip = ipInfo1.getHostAddress();
-			System.out.println("IPÁÖ¼Ò :"+ip);
+			System.out.println("IPì£¼ì†Œ :"+ip);
 			
 			
-			//hostÀÌ¸§¿¡ ÇØ´çÇÏ´Â IPÁ¤º¸¸¦ °¡Áø ¸ğµç inetAddress°´Ã¼ ¾ò±â
+			//hostì´ë¦„ì— í•´ë‹¹í•˜ëŠ” IPì •ë³´ë¥¼ ê°€ì§„ ëª¨ë“  inetAddressê°ì²´ ì–»ê¸°
 			InetAddress[] ipArray = InetAddress.getAllByName("www.daum.net");
 			
 			for(InetAddress tempip : ipArray){

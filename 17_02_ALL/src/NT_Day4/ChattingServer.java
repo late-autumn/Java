@@ -6,29 +6,29 @@ import javax.swing.*;
 
 public class ChattingServer extends JFrame{
 
-	//¼±¾ğºÎ
-	//Å¬¶óÀÌ¾ğÆ® ¼ÒÄÏÀÇ Á¢¼ÓÀ» ¹Ş¾ÆÁÖ´Â ¼­¹ö¼ÒÄÏ ¼±¾ğ
+	//ì„ ì–¸ë¶€
+	//í´ë¼ì´ì–¸íŠ¸ ì†Œì¼“ì˜ ì ‘ì†ì„ ë°›ì•„ì£¼ëŠ” ì„œë²„ì†Œì¼“ ì„ ì–¸
 	ServerSocket server = null;
 	
-	//½ÇÁ¦ ¸Ş½ÃÁö¸¦ ÁÖ°í ¹ŞÀ» ¶§ »ç¿ëÇÏ´Â ¼ÒÄÏ
+	//ì‹¤ì œ ë©”ì‹œì§€ë¥¼ ì£¼ê³  ë°›ì„ ë•Œ ì‚¬ìš©í•˜ëŠ” ì†Œì¼“
 	Socket client = null;
 	
-	//¼­¹ö¼ÒÄÏ¿¡ Á¢¼ÓÀ» ÇØ¿À´Â Å¬¶óÀÌ¾ğÆ® Áï »ç¿ëÀÚµé¿¡ ´ëÇÑ Á¤º¸¸¦ ´ã¾Æ µÑ ÀÚ·á±¸Á¶ ¼±¾ğ
+	//ì„œë²„ì†Œì¼“ì— ì ‘ì†ì„ í•´ì˜¤ëŠ” í´ë¼ì´ì–¸íŠ¸ ì¦‰ ì‚¬ìš©ìë“¤ì— ëŒ€í•œ ì •ë³´ë¥¼ ë‹´ì•„ ë‘˜ ìë£Œêµ¬ì¡° ì„ ì–¸
 	List<ChattingServerThread> chatList = null;
 	ChattingServerThread csThread = null;
 	
 	JTextArea jta_log = new JTextArea();
 	JScrollPane jsp_log = new JScrollPane(jta_log, JScrollPane.VERTICAL_SCROLLBAR_ALWAYS, JScrollPane.HORIZONTAL_SCROLLBAR_NEVER);
 	
-	//»ı¼ºÀÚ
+	//ìƒì„±ì
 	public ChattingServer() {
 		// TODO Auto-generated constructor stub
 	}
 	
-	//¼­¹ö ÃÊ±â ¼¼ÆÃÇÏ±â
+	//ì„œë²„ ì´ˆê¸° ì„¸íŒ…í•˜ê¸°
 	public void init(){
 		
-		//¼­¹ö¿¡ Á¢¼ÓÇÑ Å¬¶óÀÌ¾ğÆ²¸¦ °ü¸®ÇÒ ½º·¹µå¸¦ ´ãÀ» º¤ÅÍ »ı¼º
+		//ì„œë²„ì— ì ‘ì†í•œ í´ë¼ì´ì–¸í‹€ë¥¼ ê´€ë¦¬í•  ìŠ¤ë ˆë“œë¥¼ ë‹´ì„ ë²¡í„° ìƒì„±
 		chatList = new Vector<ChattingServerThread>();
 		
 		boolean isStop = false;
@@ -39,10 +39,10 @@ public class ChattingServer extends JFrame{
 			
 			while(!isStop){
 				
-				//¼­¹ö¼ÒÄÏÀ» ÅëÇØ Á¢¼ÓÇÑ »ç¿ëÀÚ ¼ÒÄÏ Á¤º¸¸¦ ¹Ş¾Æ¼­ ¼ÒÄÏ¿¡ ´ã±â
+				//ì„œë²„ì†Œì¼“ì„ í†µí•´ ì ‘ì†í•œ ì‚¬ìš©ì ì†Œì¼“ ì •ë³´ë¥¼ ë°›ì•„ì„œ ì†Œì¼“ì— ë‹´ê¸°
 				client = server.accept();
 				
-				//½º·¹µå½ÃÀÛ
+				//ìŠ¤ë ˆë“œì‹œì‘
 				csThread = new ChattingServerThread(this);
 				csThread.start();
 				
@@ -55,12 +55,12 @@ public class ChattingServer extends JFrame{
 		
 	}//end init()
 	
-	//È­¸éÃ³¸®
+	//í™”ë©´ì²˜ë¦¬
 	public void initDisplay(){
 		
 		jta_log.setEditable(false);
 		this.add("Center",jsp_log);
-		this.setTitle("·Î±×Ãâ·ÂÃ¢");
+		this.setTitle("ë¡œê·¸ì¶œë ¥ì°½");
 		this.setSize(500,500);
 		this.setVisible(true);
 		

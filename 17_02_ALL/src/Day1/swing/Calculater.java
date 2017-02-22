@@ -33,7 +33,7 @@ public class Calculater extends JFrame implements ActionListener{
 	
 	public Calculater() {
 		// TODO Auto-generated constructor stub
-		super("°è»ê±â");
+		super("ê³„ì‚°ê¸°");
 		
 				
 		init();
@@ -49,7 +49,7 @@ public class Calculater extends JFrame implements ActionListener{
 	public void init()
 	{
 		
-		setFont(new Font("µ¸¿òÃ¼", Font.BOLD, 15));
+		setFont(new Font("ë‹ì›€ì²´", Font.BOLD, 15));
 		
 		lb1.setBackground(Color.white);
 		lb2.setBackground(Color.white);
@@ -67,7 +67,7 @@ public class Calculater extends JFrame implements ActionListener{
 			giho[i] = new JButton(num2[i]);
 		}
 		
-		// ¼ıÀÚ, ±âÈ£ ¹öÆ° ¹èÄ¡
+		// ìˆ«ì, ê¸°í˜¸ ë²„íŠ¼ ë°°ì¹˜
 
 		for(int i = 7; i<bt.length;i++)
 		{
@@ -109,7 +109,7 @@ public class Calculater extends JFrame implements ActionListener{
 		p3.add(p2);
 		add("Center", p3);
 		
-		//ÀÌº¥Æ® Ã³¸®
+		//ì´ë²¤íŠ¸ ì²˜ë¦¬
 		
 		for(int i = 0; i<bt.length; i++)
 		{
@@ -131,7 +131,7 @@ public class Calculater extends JFrame implements ActionListener{
 	public void actionPerformed(ActionEvent e) {
 		// TODO Auto-generated method stub
 		
-		// ¼ıÀÚ¸¦ ´©¸£¸é ¼ıÀÚ°¡ ³ª¿À°Ô ÇÏ´ÂÀÌº¥Æ®
+		// ìˆ«ìë¥¼ ëˆ„ë¥´ë©´ ìˆ«ìê°€ ë‚˜ì˜¤ê²Œ í•˜ëŠ”ì´ë²¤íŠ¸
 		
 		for(int i = 0; i<=10;i++)
 		{
@@ -173,7 +173,7 @@ public class Calculater extends JFrame implements ActionListener{
 			lb1.setText(temp);
 			}
 		}
-		// ±âÈ£
+		// ê¸°í˜¸
 		for(int i = 0; i<giho.length; i++)
 		{
 			if(e.getSource() == giho[i])
@@ -186,7 +186,7 @@ public class Calculater extends JFrame implements ActionListener{
 			}
 		}
 		
-		// ¼Ò¼öÁ¡ÀÌ Æ÷ÇÔµÇ¾î ÀÖ´Â °æ¿ì
+		// ì†Œìˆ˜ì ì´ í¬í•¨ë˜ì–´ ìˆëŠ” ê²½ìš°
 		
 		if(jum == true)
 		{
@@ -222,7 +222,7 @@ public class Calculater extends JFrame implements ActionListener{
 				
 		}
 		
-		// ¼Ò¼öÁ¡ ¹Ì Æ÷ÇÔµÇ¾î ÀÖ´Â °æ¿ì
+		// ì†Œìˆ˜ì  ë¯¸ í¬í•¨ë˜ì–´ ìˆëŠ” ê²½ìš°
 		if(jum == false)
 		{
 			if(e.getSource() == bt[11])

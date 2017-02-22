@@ -1,10 +1,10 @@
 package DB_Day2;
 /*
- * transaction : ³í¸®ÀûÀÎ ÀÛ¾÷ ´ÜÀ§
- * insert, delete, update µîÀÇ ÀÛ¾÷À» ÇÏ³ªÀÇ ³í¸®ÀûÀÎ ÀÛ¾÷ ´ÜÀ§·Î 
- * ¹­¾î¼­ Äõ¸® ½ÇÇà½Ã ¸ğµç ÀÛ¾÷ÀÌ Á¤»óÃ³¸®µÈ °æ¿ì¿¡´Â commitÀ»
- * ½ÇÇàÇØ¼­ DB¿¡ ¹İ¿µÇÏ°í Äõ¸® ½ÇÇàÁß ÇÏ³ª¶óµµ Á¤»óÃ³¸®°¡ µÇÁö ¾Ê¾ÒÀ» °æ¿ì
- * rollbackÀ» ½ÇÇàÇØ¼­ ÀÛ¾÷´ÜÀ§³»ÀÇ ¸ğµç ÀÛ¾÷À» Ãë¼ÒÇÔ 
+ * transaction : ë…¼ë¦¬ì ì¸ ì‘ì—… ë‹¨ìœ„
+ * insert, delete, update ë“±ì˜ ì‘ì—…ì„ í•˜ë‚˜ì˜ ë…¼ë¦¬ì ì¸ ì‘ì—… ë‹¨ìœ„ë¡œ 
+ * ë¬¶ì–´ì„œ ì¿¼ë¦¬ ì‹¤í–‰ì‹œ ëª¨ë“  ì‘ì—…ì´ ì •ìƒì²˜ë¦¬ëœ ê²½ìš°ì—ëŠ” commitì„
+ * ì‹¤í–‰í•´ì„œ DBì— ë°˜ì˜í•˜ê³  ì¿¼ë¦¬ ì‹¤í–‰ì¤‘ í•˜ë‚˜ë¼ë„ ì •ìƒì²˜ë¦¬ê°€ ë˜ì§€ ì•Šì•˜ì„ ê²½ìš°
+ * rollbackì„ ì‹¤í–‰í•´ì„œ ì‘ì—…ë‹¨ìœ„ë‚´ì˜ ëª¨ë“  ì‘ì—…ì„ ì·¨ì†Œí•¨ 
  * 
  */
 
@@ -14,12 +14,12 @@ public class DBEx08 {
 
 	public static void main(String[] args) {
 		
-		//µ¥ÀÌÅÍ »ğÀÔ
+		//ë°ì´í„° ì‚½ì…
 		StringBuffer sql1 = new StringBuffer();
 		sql1.append("insert into department ");
 		sql1.append("values(?,?,?,?) ");
 		
-		//µ¥ÀÌÅÍ ¼öÁ¤
+		//ë°ì´í„° ìˆ˜ì •
 		StringBuffer sql2 = new StringBuffer();
 		sql2.append("update department ");
 		sql2.append("set dname = ? , loc = ? ");
@@ -29,44 +29,44 @@ public class DBEx08 {
 		
 		try {
 			
-			//			Æ®·£Àè¼Ç ½ÃÀÛ 
-			//ÇÏ³ªÀÇ ³í¸®ÀûÀÎ ÀÛ¾÷ ´ÜÀ§ ½ÃÀÛ
-			//DB ¿¬°á
+			//			íŠ¸ëœì­ì…˜ ì‹œì‘ 
+			//í•˜ë‚˜ì˜ ë…¼ë¦¬ì ì¸ ì‘ì—… ë‹¨ìœ„ ì‹œì‘
+			//DB ì—°ê²°
 			con = ConnUtil.getConnection();
 			
-			//autoCommit()±â´ÉÀ» ºñÈ°¼ºÈ­ ÇÔ
+			//autoCommit()ê¸°ëŠ¥ì„ ë¹„í™œì„±í™” í•¨
 			con.setAutoCommit(false);
 			
-			//============= Ã¹¹øÂ° ÀÛ¾÷ (µ¥ÀÌÅÍ»ğÀÔ)============
+			//============= ì²«ë²ˆì§¸ ì‘ì—… (ë°ì´í„°ì‚½ì…)============
 			pstmt = con.prepareStatement(sql1.toString());
 			pstmt.setInt(1, 255);
-			pstmt.setString(2, "ÇÙ¹°¸®ÇĞ°ú");
+			pstmt.setString(2, "í•µë¬¼ë¦¬í•™ê³¼");
 			pstmt.setInt(3, 200);
-			pstmt.setString(4, "6È£°ü");
+			pstmt.setString(4, "6í˜¸ê´€");
 			pstmt.executeUpdate();
 			
-			//============ 1¹ø ÀÛ¾÷ Á¾·á =====================
+			//============ 1ë²ˆ ì‘ì—… ì¢…ë£Œ =====================
 
-			//============= µÎ¹øÂ° ÀÛ¾÷ (µ¥ÀÌÅÍ¼öÁ¤)============
+			//============= ë‘ë²ˆì§¸ ì‘ì—… (ë°ì´í„°ìˆ˜ì •)============
 			pstmt = con.prepareStatement(sql2.toString());
 			
-			pstmt.setString(1, "»ı¸í°øÇĞ°ú");
-			pstmt.setString(2, "4È£°ü");
+			pstmt.setString(1, "ìƒëª…ê³µí•™ê³¼");
+			pstmt.setString(2, "4í˜¸ê´€");
 			pstmt.setInt(3, 255);
 			pstmt.executeUpdate();
-			//============ 2¹ø ÀÛ¾÷ Á¾·á =====================
+			//============ 2ë²ˆ ì‘ì—… ì¢…ë£Œ =====================
 			
-			//Äõ¸®°¡ Á¤»óÀûÀ¸·Î ½ÇÇàµÈ °æ¿ì DB¿¡ ¹İ¿µ
+			//ì¿¼ë¦¬ê°€ ì •ìƒì ìœ¼ë¡œ ì‹¤í–‰ëœ ê²½ìš° DBì— ë°˜ì˜
 			con.commit();
-			System.out.println("DB¿¡ ¹İ¿µµÇ¾ú½À´Ï´Ù. ");
+			System.out.println("DBì— ë°˜ì˜ë˜ì—ˆìŠµë‹ˆë‹¤. ");
 			
 		} catch (SQLException e) {
 			// TODO: handle exception
 			e.printStackTrace();
-			//·Ñ¹é Ã³¸® 
+			//ë¡¤ë°± ì²˜ë¦¬ 
 			try{
 				con.rollback();
-				System.out.println("·Ñ¹é ½ÇÇà ");
+				System.out.println("ë¡¤ë°± ì‹¤í–‰ ");
 			}catch(SQLException s){
 				s.printStackTrace();
 			}
@@ -78,7 +78,7 @@ public class DBEx08 {
 				// TODO: handle exception
 				se.printStackTrace();
 			}
-			//===============Æ®·£Àè¼Ç Á¾·á================================
+			//===============íŠ¸ëœì­ì…˜ ì¢…ë£Œ================================
 		}
 		
 	}

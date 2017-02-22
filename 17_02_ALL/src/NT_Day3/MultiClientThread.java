@@ -4,9 +4,9 @@ import java.io.*;
 
 public class MultiClientThread extends Thread {
 
-   private BufferedReader in; //¼­¹ö°¡ Àü¼ÛÇÒ ¸Ş½ÃÁö¸¦ ¼ö½ÅÇÏ±â À§ÇÑ Å¬·¡½º
+   private BufferedReader in; //ì„œë²„ê°€ ì „ì†¡í•  ë©”ì‹œì§€ë¥¼ ìˆ˜ì‹ í•˜ê¸° ìœ„í•œ í´ë˜ìŠ¤
    
-   //°´Ã¼ »ı¼º½Ã¿¡ ¼­¹ö°¡ Àü´ŞÇÑ ¸Ş½ÃÁö¸¦ ÀĞ¾î µéÀÏ ¼ö ÀÖ´Â BufferedReader¸¦ Àü´Ş¹ŞÀ½
+   //ê°ì²´ ìƒì„±ì‹œì— ì„œë²„ê°€ ì „ë‹¬í•œ ë©”ì‹œì§€ë¥¼ ì½ì–´ ë“¤ì¼ ìˆ˜ ìˆëŠ” BufferedReaderë¥¼ ì „ë‹¬ë°›ìŒ
    public MultiClientThread(BufferedReader in) {
       // TODO Auto-generated constructor stub
       this.in = in;
@@ -20,7 +20,7 @@ public class MultiClientThread extends Thread {
          
          while(true){
             String text = in.readLine();
-            System.out.println("¼ö½Å¸Ş½ÃÁö:"+text);
+            System.out.println("ìˆ˜ì‹ ë©”ì‹œì§€:"+text);
          }
          
       }catch(IOException io){

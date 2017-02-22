@@ -14,22 +14,22 @@ import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.swing.border.EtchedBorder;
 
-//ÆĞ³Î·Î »ç¿ø Á¤º¸¸¦ ÀÔ·ÂÀ» À§ÇÑ Å¬·¡½º
+//íŒ¨ë„ë¡œ ì‚¬ì› ì •ë³´ë¥¼ ì…ë ¥ì„ ìœ„í•œ í´ë˜ìŠ¤
 
 /******************************************************************
- * »ç¿ëÀÚ·ÎºÎÅÍ ÀÔ·ÂÀ» ¹Ş°Å³ª Ã³¸®µÈ °á°ú¸¦ º¸¿©ÁÖ±â À§ÇÑ ¾îÇÃ¸®ÄÉÀÌ¼ÇÀÇ ÇÁ¸®Á¨Å×ÀÌ¼Ç ±â´ÉÀ» ±¸Çö
- * »ç¿ëÀÚ°¡ ½±°Ô »ç¿ëÇÒ ¼ö ÀÖµµ·Ï UI ÄÄÆ÷³ÍÆ®¸¦ ¹è¿­ÇÏ°í ³×ºñ°ÔÀÌ¼Ç Á¤Ã¥À» ¼ö¸³
+ * ì‚¬ìš©ìë¡œë¶€í„° ì…ë ¥ì„ ë°›ê±°ë‚˜ ì²˜ë¦¬ëœ ê²°ê³¼ë¥¼ ë³´ì—¬ì£¼ê¸° ìœ„í•œ ì–´í”Œë¦¬ì¼€ì´ì…˜ì˜ í”„ë¦¬ì  í…Œì´ì…˜ ê¸°ëŠ¥ì„ êµ¬í˜„
+ * ì‚¬ìš©ìê°€ ì‰½ê²Œ ì‚¬ìš©í•  ìˆ˜ ìˆë„ë¡ UI ì»´í¬ë„ŒíŠ¸ë¥¼ ë°°ì—´í•˜ê³  ë„¤ë¹„ê²Œì´ì…˜ ì •ì±…ì„ ìˆ˜ë¦½
  * 
- * AddPane():»ç¿øÁ¤º¸ÀÔ·Â ÅÇ °´Ã¼´Â Á¤º¸¸¦ ÀÔ·Â ¹Ş±â À§ÇÑ ÅØ½ºÆ® ÇÊµå ¹è¿­, 
- *            ÀúÀåÇÏ±â ¹öÆ°, ´Ù½Ã¾²±â ¹öÆ°À¸·Î ±¸¼ºÇÒ °ÍÀÓ
+ * AddPane():ì‚¬ì›ì •ë³´ì…ë ¥ íƒ­ ê°ì²´ëŠ” ì •ë³´ë¥¼ ì…ë ¥ ë°›ê¸° ìœ„í•œ í…ìŠ¤íŠ¸ í•„ë“œ ë°°ì—´, 
+ *            ì €ì¥í•˜ê¸° ë²„íŠ¼, ë‹¤ì‹œì“°ê¸° ë²„íŠ¼ìœ¼ë¡œ êµ¬ì„±í•  ê²ƒì„
  * 
- * actionPerformed(): ÀúÀåÇÏ±â ¹öÆ°À» ´©¸£¸é ÅØ½ºÆ®ÇÊµåÀÇ ³»¿ëÀ» µ¥ÀÌÅÍº£ÀÌ½º¿¡ ÀúÀåÇÔ
- *                 ´Ù½Ã¾²±â¹öÆ°À» ´©¸£¸é ÅØ½ºÆ®ÇÊµåÀÇ ³»¿ëÀ» ÃÊ±âÈ­ ÇÔ
+ * actionPerformed(): ì €ì¥í•˜ê¸° ë²„íŠ¼ì„ ëˆ„ë¥´ë©´ í…ìŠ¤íŠ¸í•„ë“œì˜ ë‚´ìš©ì„ ë°ì´í„°ë² ì´ìŠ¤ì— ì €ì¥í•¨
+ *                 ë‹¤ì‹œì“°ê¸°ë²„íŠ¼ì„ ëˆ„ë¥´ë©´ í…ìŠ¤íŠ¸í•„ë“œì˜ ë‚´ìš©ì„ ì´ˆê¸°í™” í•¨
  ******************************************************************/
 
 public class AddPane extends JPanel implements ActionListener, ItemListener {
    
-   //Swing °ü·Ã¸â¹ö
+   //Swing ê´€ë ¨ë©¤ë²„
    private JPanel jp[] = new JPanel[6];
    private JLabel jl[] = new JLabel[5];
    private JTextField tf[] = new JTextField[5];
@@ -37,8 +37,8 @@ public class AddPane extends JPanel implements ActionListener, ItemListener {
    private JButton rsb;
    private int department = 10;
    
-   //Á¦¸ñ
-   String[] caption = {"ÀÌ ¸§:", "Á÷ Ã¥:", "¸Ş ÀÏ:", "ºÎ ¼­:"};
+   //ì œëª©
+   String[] caption = {"ì´ ë¦„:", "ì§ ì±…:", "ë©” ì¼:", "ë¶€ ì„œ:"};
    
    public AddPane() {
       // TODO Auto-generated constructor stub
@@ -47,10 +47,10 @@ public class AddPane extends JPanel implements ActionListener, ItemListener {
       EtchedBorder eb = new EtchedBorder();
       setBorder(eb);
       
-      //ÀÔ·Â¹ŞÀ» Ç×¸ñÀÇ °³¼ö
+      //ì…ë ¥ë°›ì„ í•­ëª©ì˜ ê°œìˆ˜
       int size = caption.length;
       
-      //ÅØ½ºÆ®ÇÊµå¿Í ·¹ÀÌºíÀ» ÆĞ³Î¿¡ ¹­¾î¼­ AddPane¿¡ ºÙÀÓ
+      //í…ìŠ¤íŠ¸í•„ë“œì™€ ë ˆì´ë¸”ì„ íŒ¨ë„ì— ë¬¶ì–´ì„œ AddPaneì— ë¶™ì„
       int i;
       for(i=0; i<size-1; i++){
          
@@ -69,7 +69,7 @@ public class AddPane extends JPanel implements ActionListener, ItemListener {
       add(jp[i]);
       
       JComboBox combo = new JComboBox();
-      combo.addItem("ºÎ¼­¹øÈ£¸¦ ¼±ÅÃÇÏ¼¼¿ä");
+      combo.addItem("ë¶€ì„œë²ˆí˜¸ë¥¼ ì„ íƒí•˜ì„¸ìš”");
       
       for(int c = 1; c <=5; c++){
          combo.addItem(c*10);
@@ -81,10 +81,10 @@ public class AddPane extends JPanel implements ActionListener, ItemListener {
       combo.addItemListener(this);
       
       jp[size] = new JPanel();
-      okb = new JButton("ÀúÀåÇÏ±â");
+      okb = new JButton("ì €ì¥í•˜ê¸°");
       okb.addActionListener(this);
       //
-      rsb = new JButton("´Ù½Ã¾²±â");
+      rsb = new JButton("ë‹¤ì‹œì“°ê¸°");
       rsb.addActionListener(this);
       //
       
@@ -126,7 +126,7 @@ public class AddPane extends JPanel implements ActionListener, ItemListener {
          }
          
          if(edvo != null)
-            JOptionPane.showMessageDialog(this, tf[0].getText()+"´ÔÀÌ ¼º°øÀûÀ¸·Î Ãß°¡µÊ");
+            JOptionPane.showMessageDialog(this, tf[0].getText()+"ë‹˜ì´ ì„±ê³µì ìœ¼ë¡œ ì¶”ê°€ë¨");
          
       }else if(ae_type.equals(rsb.getText())){
          int size = caption.length;

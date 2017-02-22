@@ -6,10 +6,10 @@ public class DBEx10 {
 
 	public static void main(String[] args)throws SQLException, IOException {
 
-		//¼³Á¤ÆÄÀÏ °´Ã¼ ¾ò±â
+		//ì„¤ì •íŒŒì¼ ê°ì²´ ì–»ê¸°
 		Properties pro = new Properties();
 
-		//¼³Á¤ ÆÄÀÏ ºÒ·¯¿À±â 
+		//ì„¤ì • íŒŒì¼ ë¶ˆëŸ¬ì˜¤ê¸° 
 		pro.load(new FileInputStream("src/department.properties"));
 
 		Connection con = null;
@@ -19,21 +19,21 @@ public class DBEx10 {
 			
 			con = ConnUtil.getConnection();
 			
-			//department.properties ¿¡ Á¤ÀÇµÈ sqlÀ» °¡Á®¿Í¼­ 
-			//preparedStatement ¸¸µë
+			//department.properties ì— ì •ì˜ëœ sqlì„ ê°€ì ¸ì™€ì„œ 
+			//preparedStatement ë§Œë“¬
 			
 			pstmt = con.prepareStatement(pro.getProperty("department_update"));
 			
-			//parameter ¼³Á¤
+			//parameter ì„¤ì •
 			/*pstmt.setInt(1, 100);
-			pstmt.setString(2, "»ê¾÷°øÇĞ°ú");
+			pstmt.setString(2, "ì‚°ì—…ê³µí•™ê³¼");
 			pstmt.setInt(3, 200);
-			pstmt.setString(4, "4È£°ü");
+			pstmt.setString(4, "4í˜¸ê´€");
 			*/ 
 			//pstmt.setInt(1);
 		
 			//ResultSet i = pstmt.executeQuery();
-			//System.out.println(i+"°³ÀÇ ÇàÀÌ Ãß°¡µÇ¾ú½À´Ï´Ù.");
+			//System.out.println(i+"ê°œì˜ í–‰ì´ ì¶”ê°€ë˜ì—ˆìŠµë‹ˆë‹¤.");
 /*			while(i.next())
 			{
 				System.out.print(i.getInt("deptno" )+"\t");
@@ -44,7 +44,7 @@ public class DBEx10 {
 			}*/
 			
 			
-			pstmt.setString(1, "1È£°ü");
+			pstmt.setString(1, "1í˜¸ê´€");
 			pstmt.setInt(2, 100);
 			int j = pstmt.executeUpdate();
 			

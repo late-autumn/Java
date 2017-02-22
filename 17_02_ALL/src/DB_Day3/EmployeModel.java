@@ -1,5 +1,5 @@
 package DB_Day3;
-//»ç¿ø ÀüÃ¼¸¦ º¸±â À§ÇÑ °´Ã¼
+//ì‚¬ì› ì „ì²´ë¥¼ ë³´ê¸° ìœ„í•œ ê°ì²´
 
 import java.util.*;
 import javax.swing.*;
@@ -15,7 +15,7 @@ public class EmployeModel extends AbstractTableModel{
 	ArrayList<String> title;
 	ArrayList<EmployeeVO> list;
 	
-	public EmployeModel() {				//»ı¼ºÀÚ
+	public EmployeModel() {				//ìƒì„±ì
 		
 		title = emDao.getColumnName();
 		columnName = title.toArray();

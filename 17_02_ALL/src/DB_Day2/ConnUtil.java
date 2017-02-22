@@ -1,6 +1,6 @@
 package DB_Day2;
 
-//Driver¸¦ Á¦°øÇØ ÁÖ´Â ÄÁ³Ø¼Ç À¯Æ¿ Å¬·¡½º 
+//Driverë¥¼ ì œê³µí•´ ì£¼ëŠ” ì»¨ë„¥ì…˜ ìœ í‹¸ í´ë˜ìŠ¤ 
 import java.sql.*;
 public class ConnUtil {
 

@@ -1,6 +1,6 @@
 package NT_Day3;
-//»ç¿ëÀÚ°¡ ÀÔ·ÂÇÑ ¸Ş¼¼Áö¸¦ ¼­¹ö¿¡ Àü¼ÛÇÑ´Ù.
-//¼­¹ö Æ÷Æ®¹øÈ£ : 3000
+//ì‚¬ìš©ìê°€ ì…ë ¥í•œ ë©”ì„¸ì§€ë¥¼ ì„œë²„ì— ì „ì†¡í•œë‹¤.
+//ì„œë²„ í¬íŠ¸ë²ˆí˜¸ : 3000
 
 import java.io.*;
 import java.net.*;
@@ -8,13 +8,13 @@ import java.net.*;
 public class MultiClient {
 
 
-	private Socket socket;				//¼­¹ö¶û ¿¬°áµÈ Socket 
+	private Socket socket;				//ì„œë²„ë‘ ì—°ê²°ëœ Socket 
 	
-	private BufferedReader in;			//¼­¹ö°¡ º¸³½ ¸Ş¼¼Áö¸¦ ÀĞ¾îµéÀÏ ½ºÆ®¸²
+	private BufferedReader in;			//ì„œë²„ê°€ ë³´ë‚¸ ë©”ì„¸ì§€ë¥¼ ì½ì–´ë“¤ì¼ ìŠ¤íŠ¸ë¦¼
 	
-	private PrintWriter out;			//¼­¹ö·Î ¸Ş¼¼Áö¸¦ Àü¼ÛÇÒ ½ºÆ®¸²
+	private PrintWriter out;			//ì„œë²„ë¡œ ë©”ì„¸ì§€ë¥¼ ì „ì†¡í•  ìŠ¤íŠ¸ë¦¼
 	
-	private BufferedReader keyboard;	//Å°º¸µå·Î ÀÔ·Â³»¿ëÀ» ÀĞ¾îµéÀÏ ½ºÆ®¸²
+	private BufferedReader keyboard;	//í‚¤ë³´ë“œë¡œ ì…ë ¥ë‚´ìš©ì„ ì½ì–´ë“¤ì¼ ìŠ¤íŠ¸ë¦¼
 	
 	
 	public MultiClient() {
@@ -23,17 +23,17 @@ public class MultiClient {
 			socket = new Socket("localhost", 3000);
 			System.out.println("Server Connection Success.....");
 			
-	         //½ºÆ®¸²¿¬°á
+	         //ìŠ¤íŠ¸ë¦¼ì—°ê²°
 	         keyboard = new BufferedReader(new InputStreamReader(System.in));
 	         out = new PrintWriter(socket.getOutputStream(), true);
 	         in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
 			
-			//¼­¹ö·Î Àü¼ÛÇÑ ¸Ş¼¼Áö¸¦ ÀĞ¾îµéÀÏ ÀĞ±âÀü¿ë Thread »ı¼º 
-			//MultiSeverThread »ı¼º½Ã¿¡ ¼­¹ö°¡ Àü¼ÛÇÏ´Â ¸Ş¼¼Áö¸¦ ÀĞ¾îµéÀÏ ¼ö ÀÖ´Â ½ºÆ®¸²À» Àü´Ş 
+			//ì„œë²„ë¡œ ì „ì†¡í•œ ë©”ì„¸ì§€ë¥¼ ì½ì–´ë“¤ì¼ ì½ê¸°ì „ìš© Thread ìƒì„± 
+			//MultiSeverThread ìƒì„±ì‹œì— ì„œë²„ê°€ ì „ì†¡í•˜ëŠ” ë©”ì„¸ì§€ë¥¼ ì½ì–´ë“¤ì¼ ìˆ˜ ìˆëŠ” ìŠ¤íŠ¸ë¦¼ì„ ì „ë‹¬ 
 
 	         MultiClientThread t = new MultiClientThread(in);
 	         t.start();
-	         //Å°º¸µå·Î ÀÔ·ÂÇÑ ³»¿ëÀ» ÀĞ¾î¿Í¼­ ¼­¹ö·Î Àü¼Û
+	         //í‚¤ë³´ë“œë¡œ ì…ë ¥í•œ ë‚´ìš©ì„ ì½ì–´ì™€ì„œ ì„œë²„ë¡œ ì „ì†¡
 	         while(true)
 	         {
 	            String text = keyboard.readLine();

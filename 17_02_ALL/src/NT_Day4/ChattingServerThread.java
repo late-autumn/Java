@@ -12,7 +12,7 @@ public class ChattingServerThread extends Thread{
 	ObjectInputStream ois =null;
 	ObjectOutputStream oos = null;
 	
-	//´ëÈ­¸íÀ» ´ãÀ» º¯¼ö
+	//ëŒ€í™”ëª…ì„ ë‹´ì„ ë³€ìˆ˜
 	String chatName = null;
 	
 	public ChattingServerThread(ChattingServer cs) {
@@ -25,28 +25,28 @@ public class ChattingServerThread extends Thread{
 			oos = new ObjectOutputStream(cs.client.getOutputStream());
 			ois = new ObjectInputStream(cs.client.getInputStream());
 			
-			//Å¬¶óÀÌ¾ğÆ®¿¡¼­ º¸³»¿Â ¸Ş½ÃÁö ÀĞ±â
+			//í´ë¼ì´ì–¸íŠ¸ì—ì„œ ë³´ë‚´ì˜¨ ë©”ì‹œì§€ ì½ê¸°
 			
 			
-			//100#´ëÈ­¸í
-			//ROOM_IN#ÇÏÇÏ
-			//100¹øÀÌ¸é ´ëÈ­¹æ ÀÔÀå
+			//100#ëŒ€í™”ëª…
+			//ROOM_IN#í•˜í•˜
+			//100ë²ˆì´ë©´ ëŒ€í™”ë°© ì…ì¥
 			String message = (String)ois.readObject();
 			StringTokenizer st = new StringTokenizer(message, "#");
 			st.nextToken();
 			
 			chatName = st.nextToken();
 			
-			//¼­¹öÀÇ ·Î±×Ã¢¿¡ Ãâ·ÂÇÏ±â
+			//ì„œë²„ì˜ ë¡œê·¸ì°½ì— ì¶œë ¥í•˜ê¸°
 			cs.jta_log.append(message+"\n");
 			
-			//±âÁ¸ÀÇ Ã¤ÆÃ Âü¿©ÀÚ¿¡°Ô ÀÔÀå »ç½ÇÀ» Åëº¸ÇÔ
+			//ê¸°ì¡´ì˜ ì±„íŒ… ì°¸ì—¬ìì—ê²Œ ì…ì¥ ì‚¬ì‹¤ì„ í†µë³´í•¨
 			for(ChattingServerThread cst : cs.chatList){
 				String currentName = cst.chatName;
 				this.send(Protocol.ROOM_IN+"#"+currentName);
 			}
 			
-			//List¿¡ »õ·Î¿î »ç¿ëÀÚ Ãß°¡
+			//Listì— ìƒˆë¡œìš´ ì‚¬ìš©ì ì¶”ê°€
 			cs.chatList.add(this);
 			
 			this.broadCasting(message);
@@ -59,7 +59,7 @@ public class ChattingServerThread extends Thread{
 	}
 	
 	
-	//´ëÈ­¹æ¿¡ Âü¿©ÇÑ ¸ğµç »ç¶÷¿¡°Ô ¸Ş½ÃÁö¸¦ Ãâ·ÂÇÔ
+	//ëŒ€í™”ë°©ì— ì°¸ì—¬í•œ ëª¨ë“  ì‚¬ëŒì—ê²Œ ë©”ì‹œì§€ë¥¼ ì¶œë ¥í•¨
 	public void broadCasting(String message){
 		
 		for(ChattingServerThread cst : cs.chatList){
@@ -68,10 +68,10 @@ public class ChattingServerThread extends Thread{
 
 	}
 	
-	//Å¬¶óÀÌ¾ğÆ®·ÎºÎÅÍ ÀĞ¾î¿Â ¸Ş½ÃÁö¸¦ Ãâ·Â
+	//í´ë¼ì´ì–¸íŠ¸ë¡œë¶€í„° ì½ì–´ì˜¨ ë©”ì‹œì§€ë¥¼ ì¶œë ¥
 	public void send(String message){
 		
-		//ROOM_IN #´ëÈ­¸í
+		//ROOM_IN #ëŒ€í™”ëª…
 		
 		try {
 			oos.writeObject(message);
@@ -81,7 +81,7 @@ public class ChattingServerThread extends Thread{
 		
 	}
 	
-	//thread¸¦ ½ÇÇà½ÃÅ°±â À§ÇØ¼­´Â run¸Ş¼­µå°¡ ÇÊ¿ä
+	//threadë¥¼ ì‹¤í–‰ì‹œí‚¤ê¸° ìœ„í•´ì„œëŠ” runë©”ì„œë“œê°€ í•„ìš”
 	@Override
 	public void run() {
 		// TODO Auto-generated method stub
@@ -95,7 +95,7 @@ public class ChattingServerThread extends Thread{
 				
 				String message = (String)ois.readObject();
 				
-				//»ç¿ëÀÚ°¡ ÀÔ·ÂÇÑ ¸Ş½ÃÁö¸¦ ¼­¹ö·Î±×Ã¢¿¡ Ãâ·ÂÇÏ±â
+				//ì‚¬ìš©ìê°€ ì…ë ¥í•œ ë©”ì‹œì§€ë¥¼ ì„œë²„ë¡œê·¸ì°½ì— ì¶œë ¥í•˜ê¸°
 				cs.jta_log.append(message+"\n");
 				StringTokenizer st = null;
 				

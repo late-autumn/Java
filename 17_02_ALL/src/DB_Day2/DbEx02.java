@@ -1,7 +1,7 @@
 package DB_Day2;
 
 /*
- * µ¥ÀÌÅÍ ¾÷µ¥ÀÌÆ®(¼öÁ¤)
+ * ë°ì´í„° ì—…ë°ì´íŠ¸(ìˆ˜ì •)
  */
 
 import java.sql.Connection;
@@ -14,7 +14,7 @@ public class DbEx02 {
 		
 		StringBuffer sql = new StringBuffer();
 		sql.append("update department ");
-		sql.append("set dname='ÄÄÇ»ÅÍ°øÇĞ' ");
+		sql.append("set dname='ì»´í“¨í„°ê³µí•™' ");
 		sql.append("where deptno=203 ");		
 		
 		
@@ -26,22 +26,22 @@ public class DbEx02 {
 		String id = "scott";
 		String pw = "tiger";
 		try {
-			//jdbc µå¶óÀÌºê ¸Ş¸ğ¸®¿¡ ·Îµå
+			//jdbc ë“œë¼ì´ë¸Œ ë©”ëª¨ë¦¬ì— ë¡œë“œ
 			Class.forName("oracle.jdbc.driver.OracleDriver");
 			
-			//Connection °´Ã¼ ¾ò¾î¿À±â ( IP, Æ÷Æ®:SID, ¾ÆÀÌµğ, ÆĞ½º¿öµå) 
+			//Connection ê°ì²´ ì–»ì–´ì˜¤ê¸° ( IP, í¬íŠ¸:SID, ì•„ì´ë””, íŒ¨ìŠ¤ì›Œë“œ) 
 		
 			con = DriverManager.getConnection(url,id,pw);
-			System.out.println("µ¥ÀÌÅÍº£ÀÌ½º¿¡ ¿¬°áµÇ¾ú½À´Ï´Ù.");
-			//Statment °´Ã¼ ¾ò±â
+			System.out.println("ë°ì´í„°ë² ì´ìŠ¤ì— ì—°ê²°ë˜ì—ˆìŠµë‹ˆë‹¤.");
+			//Statment ê°ì²´ ì–»ê¸°
 			stmt = con.createStatement();
-			//update()¹® 
+			//update()ë¬¸ 
 			int result = stmt.executeUpdate(sql.toString());
-			System.out.println(result+"°³ ÇàÀÌ º¯°æ µÇ¾ú½À´Ï´Ù.");
+			System.out.println(result+"ê°œ í–‰ì´ ë³€ê²½ ë˜ì—ˆìŠµë‹ˆë‹¤.");
 		
 		} catch (ClassNotFoundException ce) {
 			// TODO: handle exception
-			System.out.println("µå¶óÀÌºê¸¦ Ã£À» ¼ö ¾ø½À´Ï´Ù. ");
+			System.out.println("ë“œë¼ì´ë¸Œë¥¼ ì°¾ì„ ìˆ˜ ì—†ìŠµë‹ˆë‹¤. ");
 		}catch(SQLException se){
 			se.printStackTrace();
 	    }finally{

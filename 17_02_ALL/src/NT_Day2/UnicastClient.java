@@ -12,49 +12,49 @@ public class UnicastClient {
 	
 	public UnicastClient() {
 		// TODO Auto-generated constructor stub
-		//¼ÒÄÏ »ı¼º 
+		//ì†Œì¼“ ìƒì„± 
 		try{
 			
 			socket = new Socket("127.0.0.1",5000);
 		}catch(UnknownHostException uh){
-			System.out.println("¼­¹ö¸¦ Ã£À» ¼ö ¾ø½À´Ï´Ù.");
+			System.out.println("ì„œë²„ë¥¼ ì°¾ì„ ìˆ˜ ì—†ìŠµë‹ˆë‹¤.");
 			System.exit(0);
 		}catch(IOException io){
-			System.out.println("¼­¹ö¿Í ¿¬°á ÇÒ ¼ö ¾ø½À´Ï´Ù.");
+			System.out.println("ì„œë²„ì™€ ì—°ê²° í•  ìˆ˜ ì—†ìŠµë‹ˆë‹¤.");
 			System.exit(0);
 		}
 		
 		
 		try{
-			//Å°º¸µå¿Í ¿¬°áµÈ ½ºÆ®¸² ¾ò±â 
+			//í‚¤ë³´ë“œì™€ ì—°ê²°ëœ ìŠ¤íŠ¸ë¦¼ ì–»ê¸° 
 			keyboard = new BufferedReader(new InputStreamReader(System.in));
 		
-			//socketÀ¸·Î ºÎÅÍ ½ºÆ®¸² ¾ò±â (¼­¹ö¿Í´Â ¹İ´ë·Î ) 
+			//socketìœ¼ë¡œ ë¶€í„° ìŠ¤íŠ¸ë¦¼ ì–»ê¸° (ì„œë²„ì™€ëŠ” ë°˜ëŒ€ë¡œ ) 
 				
 			bw = new BufferedWriter(new OutputStreamWriter(socket.getOutputStream()));
 			br = new BufferedReader(new InputStreamReader(socket.getInputStream()));			
 			
-			//¼­¹ö¿Í ¸Ş¼¼Áö ÁÖ°í ¹Ş±â 
+			//ì„œë²„ì™€ ë©”ì„¸ì§€ ì£¼ê³  ë°›ê¸° 
 			
 			while(true){
 				
-				//Å°º¸µå ÀÔ·Â ³»¿ë ÀĞ±â
-				System.out.print("Àü¼Û ¸Ş¼¼Áö");
+				//í‚¤ë³´ë“œ ì…ë ¥ ë‚´ìš© ì½ê¸°
+				System.out.print("ì „ì†¡ ë©”ì„¸ì§€");
 				String msg = keyboard.readLine();
 				
-				//¸Ş¼¼Áö ¼­¹ö·Î Àü¼ÛÇÏ±â
+				//ë©”ì„¸ì§€ ì„œë²„ë¡œ ì „ì†¡í•˜ê¸°
 				bw.write(msg+"\n");
 				bw.flush();
 				
-				//¼­¹ö°¡ Àü¼ÛÇÑ ¸Ş¼¼Áö ¼ö½Å 
+				//ì„œë²„ê°€ ì „ì†¡í•œ ë©”ì„¸ì§€ ìˆ˜ì‹  
 				String getMsg = br.readLine();
-				System.out.println("¼ö½Å¸Ş¼¼Áö:"+getMsg);
+				System.out.println("ìˆ˜ì‹ ë©”ì„¸ì§€:"+getMsg);
 			}
 			
 		}catch(IOException io){
-			//Å¬¶óÀÌ¾ğÆ®¿Í ¿¬°áÀÌ ²÷¾îÁø °æ¿ì ¹ß»ı
+			//í´ë¼ì´ì–¸íŠ¸ì™€ ì—°ê²°ì´ ëŠì–´ì§„ ê²½ìš° ë°œìƒ
 			
-			System.out.println("¼­¹ö¿ÍÀÇ ¿¬°áÀÌ ²÷¾îÁ³½À´Ï´Ù. ");
+			System.out.println("ì„œë²„ì™€ì˜ ì—°ê²°ì´ ëŠì–´ì¡ŒìŠµë‹ˆë‹¤. ");
 			System.exit(0);
 		}
 	}

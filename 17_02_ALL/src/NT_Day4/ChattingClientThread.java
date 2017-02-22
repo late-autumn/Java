@@ -25,7 +25,7 @@ public class ChattingClientThread extends Thread{
 			
 			int protocol = 0;			//100,200,300,400,500
 			
-			if(message!=null){			//¸Ş¼¼Áö°¡ ÀÖÀ»°æ¿ì
+			if(message!=null){			//ë©”ì„¸ì§€ê°€ ìˆì„ê²½ìš°
 				
 				st = new StringTokenizer(message, "#");
 				protocol = Integer.parseInt(st.nextToken()); 
@@ -33,20 +33,20 @@ public class ChattingClientThread extends Thread{
 			
 			switch(protocol){
 			
-			 //´ëÈ­¸í
+			 //ëŒ€í™”ëª…
 			case Protocol.ROOM_IN:{
 				String nickName = st.nextToken();
 				Vector<String> v = new Vector<>();
 				v.add(nickName);
 				cc.dtm.addRow(v);
-				cc.jta_display.append(nickName+"´ÔÀÌ ÀÔÀå ÇÏ¼Ì½À´Ï´Ù.");
+				cc.jta_display.append(nickName+"ë‹˜ì´ ì…ì¥ í•˜ì…¨ìŠµë‹ˆë‹¤.");
 				cc.jta_display.setCaretPosition(cc.jta_display.getDocument().getLength());
 			}
 			break;
 			
 			case Protocol.MESSAGE:{
 			
-				String nickName = st.nextToken(); //´ëÈ­¸í
+				String nickName = st.nextToken(); //ëŒ€í™”ëª…
 				String msg = st.nextToken();
 				cc.jta_display.append("["+nickName+"]"+msg+"\n");
 				cc.jta_display.setCaretPosition(cc.jta_display.getDocument().getLength());
@@ -58,45 +58,45 @@ public class ChattingClientThread extends Thread{
 				String nickName = st.nextToken();
 				String afterName = st.nextToken();
 				
-				//´ëÈ­¸í º¯°æÀü¿¡ ÇöÀç Å×ÀÌºí¿¡¼­ °¡Á®¿Â ´ëÈ­¸íÀ» ¹ŞÀ½ 
+				//ëŒ€í™”ëª… ë³€ê²½ì „ì— í˜„ì¬ í…Œì´ë¸”ì—ì„œ ê°€ì ¸ì˜¨ ëŒ€í™”ëª…ì„ ë°›ìŒ 
 				for(int i=0; i< cc.dtm.getRowCount();i++){
 					
 					String n1 = (String)cc.dtm.getValueAt(i, 0);
 					
-					//º¯°æÇÒ ´ëÈ­¸íÀ¸·Î Å×ÀÌºí ³»¿¡ ´ëÈ­¸í º¯°æ
+					//ë³€ê²½í•  ëŒ€í™”ëª…ìœ¼ë¡œ í…Œì´ë¸” ë‚´ì— ëŒ€í™”ëª… ë³€ê²½
 					if(n1.equals(nickName)){
 						cc.dtm.setValueAt(afterName, i, 0);
 						break;
 					}
 					
-					cc.jta_display.append(nickName+"´ÔÀÌ"+afterName+"´ÔÀ¸·Î º¯°æµÇ¾ú½À´Ï´Ù.");
+					cc.jta_display.append(nickName+"ë‹˜ì´"+afterName+"ë‹˜ìœ¼ë¡œ ë³€ê²½ë˜ì—ˆìŠµë‹ˆë‹¤.");
 					cc.jta_display.setCaretPosition(cc.jta_display.getDocument().getLength());
 					
-					//Ã¤ÆÃ ÆË¾÷Ã¢¿¡ Å¸ÀÌÆ² ¹æ¿¡µµ ´ëÈ­¸í º¯°æ
+					//ì±„íŒ… íŒì—…ì°½ì— íƒ€ì´í‹€ ë°©ì—ë„ ëŒ€í™”ëª… ë³€ê²½
 					if(nickName.equals(cc.nickName)){
-						cc.setTitle(afterName+"´ÔÀÇ ´ëÈ­Ã¢");
+						cc.setTitle(afterName+"ë‹˜ì˜ ëŒ€í™”ì°½");
 						cc.nickName = afterName;
 					}
 				}
 			}
 			break;
 			
-			//±Ó¼Ó¸»
+			//ê·“ì†ë§
 			case Protocol.WHISPER :{	
 				String nickName = st.nextToken();
 				String otherName = st.nextToken();
 				String msg = st.nextToken();
 				
-				cc.jta_display.append(nickName+"´ÔÀÌ"+otherName+"´Ô¿¡°Ô"+msg+"\n");
+				cc.jta_display.append(nickName+"ë‹˜ì´"+otherName+"ë‹˜ì—ê²Œ"+msg+"\n");
 				cc.jta_display.setCaretPosition(cc.jta_display.getDocument().getLength());
 				
 			}
 			break;
 			
-			//´ëÈ­¹æ ÅğÀå 
+			//ëŒ€í™”ë°© í‡´ì¥ 
 			case Protocol.ROOM_OUT : { 
 				String name = st.nextToken();
-				cc.jta_display.append(name+"´ÔÀÌ ÅğÀå ÇÏ¼Ì½À´Ï´Ù.\n");
+				cc.jta_display.append(name+"ë‹˜ì´ í‡´ì¥ í•˜ì…¨ìŠµë‹ˆë‹¤.\n");
 				cc.jta_display.setCaretPosition(cc.jta_display.getDocument().getLength());
 				
 				for(int i=0; i<cc.dtm.getRowCount();i++){

@@ -1,7 +1,7 @@
 package NT_Day3;
-/* MultiServer : ¸ğµç Å¬¶óÀÌ¾ğÆ®ÀÇ ¿¬°á¿äÃ»À» ¹Ş¾Æ¼­ SocketÀ» »ı¼ºÇÏ°í
- * SocketÀ» À¯ÁöÇÏ±â À§ÇÑ Thread¸¦ »ı¼ºÇÑ´Ù.
- * »ı¼ºµÈ ½º·¹µå °´Ã¼¸¦ Collection³»¿¡ ÀúÀåÇÑ´Ù.
+/* MultiServer : ëª¨ë“  í´ë¼ì´ì–¸íŠ¸ì˜ ì—°ê²°ìš”ì²­ì„ ë°›ì•„ì„œ Socketì„ ìƒì„±í•˜ê³ 
+ * Socketì„ ìœ ì§€í•˜ê¸° ìœ„í•œ Threadë¥¼ ìƒì„±í•œë‹¤.
+ * ìƒì„±ëœ ìŠ¤ë ˆë“œ ê°ì²´ë¥¼ Collectionë‚´ì— ì €ì¥í•œë‹¤.
  */
 import java.net.*;
 import java.io.*;
@@ -10,38 +10,38 @@ import java.util.*;
 public class MultiServer {
 
 	/*
-	 * Æ¯Á¤ Å¬¶óÀÌ¾ğÆ®°¡ º¸³½ ¸Ş¼¼Áö¸¦ ¸ğµç Å¬¶óÀÌ¾ğÆ®¿¡°Ô Àü´ŞÇÏ±â À§ÇØ
-	 * Å¬¶óÀÌ¾ğÆ®¿Í ¸Ş¼¼Áö ¼Û¼ö½Å ÇÒ ¼ö ÀÖ´Â ±â´ÉÀ» °¡Áø MultiServerThread°´Ã¼¸¦
-	 * ÀúÀåÇÒ ÀÚ·á±¸Á¶¸¦ ¼±¾ğÇÔ.
+	 * íŠ¹ì • í´ë¼ì´ì–¸íŠ¸ê°€ ë³´ë‚¸ ë©”ì„¸ì§€ë¥¼ ëª¨ë“  í´ë¼ì´ì–¸íŠ¸ì—ê²Œ ì „ë‹¬í•˜ê¸° ìœ„í•´
+	 * í´ë¼ì´ì–¸íŠ¸ì™€ ë©”ì„¸ì§€ ì†¡ìˆ˜ì‹  í•  ìˆ˜ ìˆëŠ” ê¸°ëŠ¥ì„ ê°€ì§„ MultiServerThreadê°ì²´ë¥¼
+	 * ì €ì¥í•  ìë£Œêµ¬ì¡°ë¥¼ ì„ ì–¸í•¨.
 	 */
 	
 	private ArrayList<MultiServerThread> clientList  = new ArrayList<>();
 	private ServerSocket server = null;
 	
 	public MultiServer() {
-		//???? ¹ø Æ÷Æ®¹øÈ£¿Í Å¬¶óÀÌ¾ğÆ®ÀÇ Á¢¼Ó È¿Ã»À» ±â´Ù¸®°íÀÖ´Â ¼­¹ö ¼ÒÄÏ »ı¼º
+		//???? ë²ˆ í¬íŠ¸ë²ˆí˜¸ì™€ í´ë¼ì´ì–¸íŠ¸ì˜ ì ‘ì† íš¨ì²­ì„ ê¸°ë‹¤ë¦¬ê³ ìˆëŠ” ì„œë²„ ì†Œì¼“ ìƒì„±
 		try{
 		server = new ServerSocket(3000);
-		System.out.println("¼­¹ö ½ÃÀÛµÊ.....");
+		System.out.println("ì„œë²„ ì‹œì‘ë¨.....");
 		
 		while(true){
-			//Å¬¶óÀÌ¾ğÆ®ÀÇ ¿¬°á ¿äÃ»À» ´ë±âÇÏ°í ÀÖ´Ù°¡ ¿¬°á ¿äÃ»ÀÌ 
-			//Á¢¼öµÇ¸é ÇØ´ç Å¬¶óÀÌ¾ğÆ®¶û Åë½Å ÇÒ ¼ö ÀÖ´Â ¼ÒÄÏÀ» ¸¸µé¾î¼­ ¹İÈ¯ÇÑ´Ù.
+			//í´ë¼ì´ì–¸íŠ¸ì˜ ì—°ê²° ìš”ì²­ì„ ëŒ€ê¸°í•˜ê³  ìˆë‹¤ê°€ ì—°ê²° ìš”ì²­ì´ 
+			//ì ‘ìˆ˜ë˜ë©´ í•´ë‹¹ í´ë¼ì´ì–¸íŠ¸ë‘ í†µì‹  í•  ìˆ˜ ìˆëŠ” ì†Œì¼“ì„ ë§Œë“¤ì–´ì„œ ë°˜í™˜í•œë‹¤.
 			
 			Socket socket = server.accept();
 			
-			//¼ÒÄÏÀ¸·ÎºÎÅÍ IPÁÖ¼Ò¿Í È£½ºÆ®¸íÀ» °¡Áö°í ÀÖ´Â InetAddress °´Ã¼ ¾ò±â 
+			//ì†Œì¼“ìœ¼ë¡œë¶€í„° IPì£¼ì†Œì™€ í˜¸ìŠ¤íŠ¸ëª…ì„ ê°€ì§€ê³  ìˆëŠ” InetAddress ê°ì²´ ì–»ê¸° 
 			InetAddress ip = socket.getInetAddress();
 			
-			//InetAddress °´Ã¼·Î ºÎÅÍ IPÁÖ¼Ò ¾ò±â
+			//InetAddress ê°ì²´ë¡œ ë¶€í„° IPì£¼ì†Œ ì–»ê¸°
 			String ipAddress = ip.getHostAddress();
 			
-			System.out.println(ipAddress+"µé¾î¿È");
+			System.out.println(ipAddress+"ë“¤ì–´ì˜´");
 			
-			/* Client¶û ¼Û¼ö½Å ÇÒ ¼ö ÀÖ´Â ±â´ÉÀ» °¡Áø 
-			  MultiServerThread¸¦ ÀúÀåÇÏ°í ÀÖ´Â clientList¿Í
-			  ÇØ´ç Å¬¶óÀÌ¾ğÆ®¿Í ¿¬°áµÈ Socket°´Ã¼¸¦ Àü´ŞÇØ¼­
-			  MultiServerThread °´Ã¼¸¦ »ı¼ºÇÑ´Ù.
+			/* Clientë‘ ì†¡ìˆ˜ì‹  í•  ìˆ˜ ìˆëŠ” ê¸°ëŠ¥ì„ ê°€ì§„ 
+			  MultiServerThreadë¥¼ ì €ì¥í•˜ê³  ìˆëŠ” clientListì™€
+			  í•´ë‹¹ í´ë¼ì´ì–¸íŠ¸ì™€ ì—°ê²°ëœ Socketê°ì²´ë¥¼ ì „ë‹¬í•´ì„œ
+			  MultiServerThread ê°ì²´ë¥¼ ìƒì„±í•œë‹¤.
 			 */
 			
 			MultiServerThread t = new MultiServerThread(clientList,socket);
@@ -49,7 +49,7 @@ public class MultiServer {
 			t.start();
 			
 			
-			//»ı¼ºµÈ MultiServerThread°´Ã¼¸¦ clientList¿¡ ÀúÀåÇÔ
+			//ìƒì„±ëœ MultiServerThreadê°ì²´ë¥¼ clientListì— ì €ì¥í•¨
 			clientList.add(t);
 			
 		}

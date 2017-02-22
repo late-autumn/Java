@@ -18,26 +18,26 @@ public class DBEx05 {
 		
 		try {
 			
-			//DB µå¶óÀÌ¹ö ¿¬°á 
+			//DB ë“œë¼ì´ë²„ ì—°ê²° 
 			
-			//PreparedStatement °´Ã¼ ¾ò±â
+			//PreparedStatement ê°ì²´ ì–»ê¸°
 			con = ConnUtil.getConnection();
 			pstmt = con.prepareStatement(sql.toString());
 			
-			//ÆÄ¶ó¹ÌÅÍ ¼ÂÆÃ
-			///Äõ¸®ÀÇ ?(¹ÙÀÎµù º¯¼ö)¿¡ ´ëÃ¼ µÉ ½ÇÁ¦ °ª ÀúÀåÇÏ±â 
+			//íŒŒë¼ë¯¸í„° ì…‹íŒ…
+			///ì¿¼ë¦¬ì˜ ?(ë°”ì¸ë”© ë³€ìˆ˜)ì— ëŒ€ì²´ ë  ì‹¤ì œ ê°’ ì €ì¥í•˜ê¸° 
 			
 			pstmt.setInt(1, 9921);
-			pstmt.setString(2, "ÃÖÁ¤¿ì");
+			pstmt.setString(2, "ìµœì •ìš°");
 			pstmt.setString(3, "jeongwoo");
-			pstmt.setString(4, "½Ã°£");
+			pstmt.setString(4, "ì‹œê°„");
 			pstmt.setInt(5, 460);
 			pstmt.setInt(6, 30);
 			pstmt.setInt(7, 206);
 			
-			//Äõ¸® ½ÇÇà
+			//ì¿¼ë¦¬ ì‹¤í–‰
 			int i = pstmt.executeUpdate();
-			System.out.println(i+"°³ÀÇ ÇàÀÌ Ãß°¡µÇ¾ú½À´Ï´Ù.");
+			System.out.println(i+"ê°œì˜ í–‰ì´ ì¶”ê°€ë˜ì—ˆìŠµë‹ˆë‹¤.");
 			
 		} catch (SQLException e) {
 			// TODO: handle exception

@@ -7,8 +7,8 @@ import java.net.MalformedURLException;
 import java.net.URL;
 
 /*
- *URL(Uniform Resource Locator): ÀÎÅÍ³İ¿¡¼­ Á¢±Ù °¡´ÉÇÑ ÀÚ¿øÀÇ ÁÖ¼Ò¸¦ 
- * Ç¥ÇöÇÒ ¼ö ÀÖ´Â Çü½ÄÀ» ¸»ÇÔ 
+ *URL(Uniform Resource Locator): ì¸í„°ë„·ì—ì„œ ì ‘ê·¼ ê°€ëŠ¥í•œ ìì›ì˜ ì£¼ì†Œë¥¼ 
+ * í‘œí˜„í•  ìˆ˜ ìˆëŠ” í˜•ì‹ì„ ë§í•¨ 
  * http://www.daum.net:/80/member/mem.jsp?name=ByungJun#Content
  * protocol    host     port    path    query           reference
  */
@@ -22,11 +22,11 @@ public class URLEx {
 		try{
 			URL url = new URL("http://www.daum.net/index.html");
 			
-			System.out.println("ÇÁ·ÎÅäÄİ:"+url.getProtocol());
-			System.out.println("È£½ºÆ® :"+url.getHost());
-			System.out.println("Æ÷Æ®¹øÈ£:"+url.getPort());
-			System.out.println("°æ·Î:"+url.getPath());
-			System.out.println("ÆÄÀÏ:"+url.getFile());
+			System.out.println("í”„ë¡œí† ì½œ:"+url.getProtocol());
+			System.out.println("í˜¸ìŠ¤íŠ¸ :"+url.getHost());
+			System.out.println("í¬íŠ¸ë²ˆí˜¸:"+url.getPort());
+			System.out.println("ê²½ë¡œ:"+url.getPath());
+			System.out.println("íŒŒì¼:"+url.getFile());
 			
 			br = new BufferedReader(new InputStreamReader(url.openStream()));
 			String str = null;

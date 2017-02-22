@@ -1,6 +1,6 @@
 package NT_Day3;
-//»ç¿ëÀÚ°¡ ÀÔ·ÂÇÑ ¸Ş¼¼Áö¸¦ ¼­¹ö¿¡ Àü¼ÛÇÑ´Ù.
-//¼­¹ö Æ÷Æ®¹øÈ£ : 3000
+//ì‚¬ìš©ìê°€ ì…ë ¥í•œ ë©”ì„¸ì§€ë¥¼ ì„œë²„ì— ì „ì†¡í•œë‹¤.
+//ì„œë²„ í¬íŠ¸ë²ˆí˜¸ : 3000
 
 import java.awt.CardLayout;
 import java.awt.Container;
@@ -22,13 +22,13 @@ import javax.swing.JTextField;
 
 public class Swing_Client extends JFrame implements ActionListener, Runnable {
 
-	private Socket socket;				//¼­¹ö¶û ¿¬°áµÈ Socket 
+	private Socket socket;				//ì„œë²„ë‘ ì—°ê²°ëœ Socket 
 	
-	private BufferedReader in;			//¼­¹ö°¡ º¸³½ ¸Ş¼¼Áö¸¦ ÀĞ¾îµéÀÏ ½ºÆ®¸²
+	private BufferedReader in;			//ì„œë²„ê°€ ë³´ë‚¸ ë©”ì„¸ì§€ë¥¼ ì½ì–´ë“¤ì¼ ìŠ¤íŠ¸ë¦¼
 	
-	private PrintWriter out;			//¼­¹ö·Î ¸Ş¼¼Áö¸¦ Àü¼ÛÇÒ ½ºÆ®¸²
+	private PrintWriter out;			//ì„œë²„ë¡œ ë©”ì„¸ì§€ë¥¼ ì „ì†¡í•  ìŠ¤íŠ¸ë¦¼
 	
-	private BufferedReader keyboard;	//Å°º¸µå·Î ÀÔ·Â³»¿ëÀ» ÀĞ¾îµéÀÏ ½ºÆ®¸²
+	private BufferedReader keyboard;	//í‚¤ë³´ë“œë¡œ ì…ë ¥ë‚´ìš©ì„ ì½ì–´ë“¤ì¼ ìŠ¤íŠ¸ë¦¼
 	
 	private Thread thread;
 	
@@ -39,9 +39,9 @@ public class Swing_Client extends JFrame implements ActionListener, Runnable {
 	JTextField text_field = new JTextField(15);
 	JTextField text_field2 =new JTextField(5);
 	
-	JButton okb	= new JButton("Àü¼Û");
-	JButton clb = new JButton("³ª°¡±â");
-	JButton inb = new JButton("ÀÔ·Â");
+	JButton okb	= new JButton("ì „ì†¡");
+	JButton clb = new JButton("ë‚˜ê°€ê¸°");
+	JButton inb = new JButton("ì…ë ¥");
 	JLabel l1 = new JLabel("ID");
 	
 	JPanel p1 = new JPanel();
@@ -49,10 +49,10 @@ public class Swing_Client extends JFrame implements ActionListener, Runnable {
     
 	private JPanel tp; 
 
-    // Ä«µå ·¹ÀÌ¾Æ¿ô °ü·Ã
+    // ì¹´ë“œ ë ˆì´ì•„ì›ƒ ê´€ë ¨
     private Container tab;
     private CardLayout clayout;
-    // »óÅÂ ÇÃ·¡±×
+    // ìƒíƒœ í”Œë˜ê·¸
     boolean status;
 	
 	public Swing_Client(String ip) {
@@ -76,7 +76,7 @@ public class Swing_Client extends JFrame implements ActionListener, Runnable {
 		tp = new JPanel();
 
 		getContentPane().add(tp);
-		setTitle("Ã¤ÆÃ¹æ");
+		setTitle("ì±„íŒ…ë°©");
 		
 		
 		setVisible(true);
@@ -86,59 +86,59 @@ public class Swing_Client extends JFrame implements ActionListener, Runnable {
 	
     public void connectServer() {
         try {
-            // ¼ÒÄÏ »ı¼º
+            // ì†Œì¼“ ìƒì„±
             socket = new Socket(ip, 4000);
-            System.out.println("[Client]Server ¿¬°á ¼º°ø!!");
+            System.out.println("[Client]Server ì—°ê²° ì„±ê³µ!!");
 
-            // ÀÔÃâ·Â ½ºÆ®¸² »ı¼º
+            // ì…ì¶œë ¥ ìŠ¤íŠ¸ë¦¼ ìƒì„±
             in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
             out = new PrintWriter(socket.getOutputStream(), true);
 
-            // ¼­¹ö¿¡ ·Î±×ÀÎ ¸Ş½ÃÁö Àü´Ş
+            // ì„œë²„ì— ë¡œê·¸ì¸ ë©”ì‹œì§€ ì „ë‹¬
             out.println(id+"/"+"login");
 
-            // ¸Ş½ÃÁö ¼ö½ÅÀ» À§ÇÑ ½º·¹µå »ı¼º
+            // ë©”ì‹œì§€ ìˆ˜ì‹ ì„ ìœ„í•œ ìŠ¤ë ˆë“œ ìƒì„±
             thread = new Thread(this);
             thread.start();
         } catch(Exception e) {
             // e.printStackTrace();
-            System.out.println("[MultiChatClient]connectServer() Exception ¹ß»ı!!");
+            System.out.println("[MultiChatClient]connectServer() Exception ë°œìƒ!!");
         }
     }
 
-    // ÀÌº¥Æ® Ã³¸®
+    // ì´ë²¤íŠ¸ ì²˜ë¦¬
     public void actionPerformed(ActionEvent arg0) {
         Object obj = arg0.getSource();
 
         connectServer();
         
-       /* // Á¾·á ¹öÆ° Ã³¸®
+       /* // ì¢…ë£Œ ë²„íŠ¼ ì²˜ë¦¬
         if(obj == exitButton) {
             System.exit(0);
         } else if(obj == loginButton) {
             id = idInput.getText();
 
-            label2.setText("´ëÈ­¸í : " + id);
+            label2.setText("ëŒ€í™”ëª… : " + id);
             clayout.show(tab, "logout");
             connectServer();
         } else if(obj == logoutButton) {
-            // ·Î±×¾Æ¿ô ¸Ş½ÃÁö Àü¼Û
+            // ë¡œê·¸ì•„ì›ƒ ë©”ì‹œì§€ ì „ì†¡
             outMsg.println(id + "/" + "logout");
-            // ´ëÈ­ Ã¢ Å¬¸®¾î
+            // ëŒ€í™” ì°½ í´ë¦¬ì–´
 */            //msgOut.setText("");
-            // ·Î±×ÀÎ ÆĞ³Î·Î ÀüÈ¯
+            // ë¡œê·¸ì¸ íŒ¨ë„ë¡œ ì „í™˜
          //   clayout.show(tab, "login");
           //  out.close();
         if(obj == text_field) {
-            // ¸Ş½ÃÁö Àü¼Û
+            // ë©”ì‹œì§€ ì „ì†¡
             out.println(id + "/" + text_field.getText());
-            // ÀÔ·Â Ã¢ Å¬¸®¾î
+            // ì…ë ¥ ì°½ í´ë¦¬ì–´
             text_field.setText("");
         }
     }
 
     public void run() {
-        // ¼ö½Å ¸Ş½ÃÁö¸¦ Ã³¸®ÇÏ´Â º¯¼ö
+        // ìˆ˜ì‹  ë©”ì‹œì§€ë¥¼ ì²˜ë¦¬í•˜ëŠ” ë³€ìˆ˜
         String msg;
         String[] rmsg;
 
@@ -146,14 +146,14 @@ public class Swing_Client extends JFrame implements ActionListener, Runnable {
 
         while(status) {
             try {
-                // ¸Ş½ÃÁö ¼ö½Å°ú ÆÄ½Ì
+                // ë©”ì‹œì§€ ìˆ˜ì‹ ê³¼ íŒŒì‹±
                 msg = in.readLine();
                 rmsg = msg.split("/");
 
-                // JTextArea¿¡ ¼ö½ÅµÈ ¸Ş½ÃÁö Ãß°¡
+                // JTextAreaì— ìˆ˜ì‹ ëœ ë©”ì‹œì§€ ì¶”ê°€
                 text_area.append(rmsg[0] + ">"+rmsg[1] + "\n");
 
-                // Ä¿¼­¸¦ ÇöÀç ´ëÈ­ ¸Ş½ÃÁö¿¡ Ç¥½Ã
+                // ì»¤ì„œë¥¼ í˜„ì¬ ëŒ€í™” ë©”ì‹œì§€ì— í‘œì‹œ
                 text_area.setCaretPosition(text_area.getDocument().getLength());
             } catch(IOException e) {
                 // e.printStackTrace();
@@ -161,7 +161,7 @@ public class Swing_Client extends JFrame implements ActionListener, Runnable {
             }
         }
 
-        System.out.println("[MultiChatClient]" + thread.getName() + "Á¾·áµÊ");
+        System.out.println("[MultiChatClient]" + thread.getName() + "ì¢…ë£Œë¨");
     }
 
     public static void main(String[] args) {

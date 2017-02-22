@@ -3,12 +3,12 @@ package DB_Day2;
 import java.sql.*;
 
 /*
- * 1. jdbc¸¦ ÀÌ¿ëÇÏ¿© ¿¬°áÇÒ¶§
- * 2. Driver °Ë»ö
- * 3. µ¥ÀÌÅÍº£ÀÌ½º ¿¬°á
- * 4. Äõ¸®¹® ÀÛ¼º
- * 5. °á°ú ´ã±â
- * 6. »ç¿ëÈÄ ¹İµå½Ã close()ÇÑ´Ù.
+ * 1. jdbcë¥¼ ì´ìš©í•˜ì—¬ ì—°ê²°í• ë•Œ
+ * 2. Driver ê²€ìƒ‰
+ * 3. ë°ì´í„°ë² ì´ìŠ¤ ì—°ê²°
+ * 4. ì¿¼ë¦¬ë¬¸ ì‘ì„±
+ * 5. ê²°ê³¼ ë‹´ê¸°
+ * 6. ì‚¬ìš©í›„ ë°˜ë“œì‹œ close()í•œë‹¤.
  */
 
 public class DbEx01 {
@@ -21,35 +21,35 @@ public class DbEx01 {
 		String id = "scott";
 		String pw = "tiger";
 		try {
-			//jdbc µå¶óÀÌºê ¸Ş¸ğ¸®¿¡ ·Îµå
+			//jdbc ë“œë¼ì´ë¸Œ ë©”ëª¨ë¦¬ì— ë¡œë“œ
 			Class.forName("oracle.jdbc.driver.OracleDriver");
 			
-			//Connection °´Ã¼ ¾ò¾î¿À±â ( IP, Æ÷Æ®:SID, ¾ÆÀÌµğ, ÆĞ½º¿öµå) 
+			//Connection ê°ì²´ ì–»ì–´ì˜¤ê¸° ( IP, í¬íŠ¸:SID, ì•„ì´ë””, íŒ¨ìŠ¤ì›Œë“œ) 
 		
 			con = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:orcl","scott","tiger");
-			System.out.println("µ¥ÀÌÅÍº£ÀÌ½º¿¡ ¿¬°áµÇ¾ú½À´Ï´Ù.");
+			System.out.println("ë°ì´í„°ë² ì´ìŠ¤ì— ì—°ê²°ë˜ì—ˆìŠµë‹ˆë‹¤.");
 			
-			//Statment °´Ã¼ ¾ò±â
+			//Statment ê°ì²´ ì–»ê¸°
 			stmt = con.createStatement();
 			
-			//Äõ¸® ÀÛ¼ºÇÏ±â
+			//ì¿¼ë¦¬ ì‘ì„±í•˜ê¸°
 			StringBuffer sql = new StringBuffer();
 			sql.append("insert into department ");
-			sql.append("values(206,'ÀüÆÄ°øÇĞ°ú',600,'9È£°ü')");
+			sql.append("values(206,'ì „íŒŒê³µí•™ê³¼',600,'9í˜¸ê´€')");
 			
-			//¶Ç´Ù¸¥ ¹æ¹ı 
+			//ë˜ë‹¤ë¥¸ ë°©ë²• 
 			/*String sql = "insert into department"; 
-			 *sql += "values(203,'ÀüÀÚ°øÇĞ°ú',200,'7È£°ü')"
+			 *sql += "values(203,'ì „ìê³µí•™ê³¼',200,'7í˜¸ê´€')"
 			 */
 			
-			//Äõ¸® ½ÇÇàÇÏ±â 
+			//ì¿¼ë¦¬ ì‹¤í–‰í•˜ê¸° 
 			int result = stmt.executeUpdate(sql.toString());
-			System.out.println(result+"°³ ÇàÀÌ Ãß°¡µÇ¾ú½À´Ï´Ù.");
+			System.out.println(result+"ê°œ í–‰ì´ ì¶”ê°€ë˜ì—ˆìŠµë‹ˆë‹¤.");
 			
 			
 		} catch (ClassNotFoundException ce) {
 			// TODO: handle exception
-			System.out.println("µå¶óÀÌºê¸¦ Ã£À» ¼ö ¾ø½À´Ï´Ù. ");
+			System.out.println("ë“œë¼ì´ë¸Œë¥¼ ì°¾ì„ ìˆ˜ ì—†ìŠµë‹ˆë‹¤. ");
 		}catch(SQLException se){
 			se.printStackTrace();
 	    }finally{

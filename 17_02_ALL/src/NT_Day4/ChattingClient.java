@@ -25,10 +25,10 @@ import javax.swing.table.DefaultTableModel;
 
 public class ChattingClient extends JFrame implements ActionListener {
 	
-	//¼±¾ğºÎ
+	//ì„ ì–¸ë¶€
 	Socket socket = null;
-	ObjectOutputStream oos = null; //³»°¡ ÀÔ·ÂÇÑ ¸Ş½ÃÁö¸¦ ¼­¹ö·Î º¸³¾ ¶§
-	ObjectInputStream ois = null; //¼­¹ö¿¡¼­ º¸³»¿Â ¸Ş½ÃÁö¸¦ ÀĞ¾î¿Ã¶§
+	ObjectOutputStream oos = null; //ë‚´ê°€ ì…ë ¥í•œ ë©”ì‹œì§€ë¥¼ ì„œë²„ë¡œ ë³´ë‚¼ ë•Œ
+	ObjectInputStream ois = null; //ì„œë²„ì—ì„œ ë³´ë‚´ì˜¨ ë©”ì‹œì§€ë¥¼ ì½ì–´ì˜¬ë•Œ
 
 	JPanel jp_center = new JPanel();
 	
@@ -38,7 +38,7 @@ public class ChattingClient extends JFrame implements ActionListener {
 	JTextField jtf_msg = new JTextField();
 	JPanel jp_east = new JPanel();
 	
-	String cols[] = {"´ëÈ­¸í"};
+	String cols[] = {"ëŒ€í™”ëª…"};
 	String data[][] = new String[0][0];
 	
 	DefaultTableModel dtm = new DefaultTableModel(data,cols);
@@ -46,20 +46,20 @@ public class ChattingClient extends JFrame implements ActionListener {
 	JScrollPane jsp_name = new JScrollPane(jtb_name);
 	
 	JPanel jp_east_south = new JPanel();
-	JButton jbtn_whisper = new JButton("±Ó¼Ó¸»ÇÏ±â");
-	JButton jbtn_change = new JButton("´ëÈ­¸í");
-	JButton jbtn_fontColor = new JButton("±ÛÀÚ»ö");
-	JButton jbtn_exit = new JButton("³ª°¡±â");
+	JButton jbtn_whisper = new JButton("ê·“ì†ë§í•˜ê¸°");
+	JButton jbtn_change = new JButton("ëŒ€í™”ëª…");
+	JButton jbtn_fontColor = new JButton("ê¸€ììƒ‰");
+	JButton jbtn_exit = new JButton("ë‚˜ê°€ê¸°");
 	
-	//´ëÈ­¸íÀ» ´ãÀ» º¯¼ö ¼±¾ğ
+	//ëŒ€í™”ëª…ì„ ë‹´ì„ ë³€ìˆ˜ ì„ ì–¸
 	String nickName = null;
 	
 	
-	//»ı¼ºÀÚ
+	//ìƒì„±ì
 	public ChattingClient() {
 		// TODO Auto-generated constructor stub
 		
-		nickName = JOptionPane.showInputDialog("´ëÈ­¸íÀ» ÀÔ·ÂÇÏ¼¼¿ä");
+		nickName = JOptionPane.showInputDialog("ëŒ€í™”ëª…ì„ ì…ë ¥í•˜ì„¸ìš”");
 		
 		try {
 			
@@ -78,10 +78,10 @@ public class ChattingClient extends JFrame implements ActionListener {
 	}
 
 	
-	//È­¸éÃ³¸®ºÎ
+	//í™”ë©´ì²˜ë¦¬ë¶€
 	public void initDisplay(){
 		
-		//ÀÌº¥Æ® ¸®½º³Ê
+		//ì´ë²¤íŠ¸ ë¦¬ìŠ¤ë„ˆ
 		jtf_msg.addActionListener(this);
 		jbtn_change.addActionListener(this);
 		jbtn_whisper.addActionListener(this);
@@ -118,19 +118,19 @@ public class ChattingClient extends JFrame implements ActionListener {
 		
 		this.add(jp_center);
 		this.add(jp_east);
-		this.setTitle(nickName+"´ÔÀÇ ´ëÈ­Ã¢");
+		this.setTitle(nickName+"ë‹˜ì˜ ëŒ€í™”ì°½");
 		this.setSize(500, 500);
 		this.setVisible(true);
 		
 	}
 	
 	
-	//³ª°¡±â ¹öÆ° È£Ãâ½Ã(Ã¢´İ±â Á÷Àü, Ã¢´İ±â ¹öÆ°À» Å¬¸¯½Ã)
+	//ë‚˜ê°€ê¸° ë²„íŠ¼ í˜¸ì¶œì‹œ(ì°½ë‹«ê¸° ì§ì „, ì°½ë‹«ê¸° ë²„íŠ¼ì„ í´ë¦­ì‹œ)
 	public void exitChat(){
 		
 		try {
 			
-			//¼­¹ö·Î ÅğÀå Á¤º¸¸¦ Åëº¸ÇÏ±â
+			//ì„œë²„ë¡œ í‡´ì¥ ì •ë³´ë¥¼ í†µë³´í•˜ê¸°
 			oos.writeObject(Protocol.ROOM_OUT+"#"+this.nickName);
 			
 		} catch (IOException e) {
@@ -144,28 +144,28 @@ public class ChattingClient extends JFrame implements ActionListener {
 	public void actionPerformed(ActionEvent e) {
 		// TODO Auto-generated method stub
 		
-		Object obj = e.getSource(); //ÀÌº¥Æ®°¡ °¨ÁöµÈ Å¬·¡½ºÀÇ ÁÖ¼Ò¹øÁö¸¦ ¹Ş¾Æ¿È
-		String msg = jtf_msg.getText(); //ÅØ½ºÆ®ÇÊµå·ÎºÎÅÍ ¸Ş½ÃÁö¸¦ °¡Á®´Ù°¡ msg¿¡ ÀúÀå
+		Object obj = e.getSource(); //ì´ë²¤íŠ¸ê°€ ê°ì§€ëœ í´ë˜ìŠ¤ì˜ ì£¼ì†Œë²ˆì§€ë¥¼ ë°›ì•„ì˜´
+		String msg = jtf_msg.getText(); //í…ìŠ¤íŠ¸í•„ë“œë¡œë¶€í„° ë©”ì‹œì§€ë¥¼ ê°€ì ¸ë‹¤ê°€ msgì— ì €ì¥
 		
 		if(obj==jtf_msg){
 			
-			//¸Ş½ÃÁö¸¦ ÀÔ·ÂÈÄ ¿£ÅÍÅ°¸¦ ÃÆÀ» ¶§
-			System.out.println("¸Ş½ÃÁö ÀÔ·Â È®ÀÎ");
-			jtf_msg.setText(""); //¿£ÅÍ¸¦ Ä¡°í ½ÇÇàÇÑ ´ÙÀ½ ÃÊ±âÈ­ÇÔ
+			//ë©”ì‹œì§€ë¥¼ ì…ë ¥í›„ ì—”í„°í‚¤ë¥¼ ì³¤ì„ ë•Œ
+			System.out.println("ë©”ì‹œì§€ ì…ë ¥ í™•ì¸");
+			jtf_msg.setText(""); //ì—”í„°ë¥¼ ì¹˜ê³  ì‹¤í–‰í•œ ë‹¤ìŒ ì´ˆê¸°í™”í•¨
 			
 			try {
 				oos.writeObject(Protocol.MESSAGE+"#"+nickName+"#"+msg);
 			} catch (IOException io) {
 				System.out.println(io.toString());
 			}
-		}//¸Ş½ÃÁö Àü¼Û ³¡
-		else if(obj==jbtn_change){//´ëÈ­¸í º¯°æ ¹öÆ° Å¬¸¯ÇßÀ»¶§
+		}//ë©”ì‹œì§€ ì „ì†¡ ë
+		else if(obj==jbtn_change){//ëŒ€í™”ëª… ë³€ê²½ ë²„íŠ¼ í´ë¦­í–ˆì„ë•Œ
 			
-			String afterName = JOptionPane.showInputDialog("º¯°æÇÒ ´ëÈ­¸íÀ» ÀÔ·ÂÇÏ¼¼¿ä:");
+			String afterName = JOptionPane.showInputDialog("ë³€ê²½í•  ëŒ€í™”ëª…ì„ ì…ë ¥í•˜ì„¸ìš”:");
 			
-			//º¯°æÇÒ ´ëÈ­¸íÀ» ÀÔ·ÂÇÏÁö ¾Ê¾ÒÀ» °æ¿ì
+			//ë³€ê²½í•  ëŒ€í™”ëª…ì„ ì…ë ¥í•˜ì§€ ì•Šì•˜ì„ ê²½ìš°
 			if(afterName ==null || afterName.trim().length()<1){
-				//actionPerformed ¸Ş¼Òµå ºüÁ®³ª°¨
+				//actionPerformed ë©”ì†Œë“œ ë¹ ì ¸ë‚˜ê°
 				return;
 			}
 			
@@ -175,15 +175,15 @@ public class ChattingClient extends JFrame implements ActionListener {
 			}catch(Exception e2){
 				e2.printStackTrace();
 			}
-			//´ëÈ­¸í º¯°æ ³¡
+			//ëŒ€í™”ëª… ë³€ê²½ ë
 		}
 		else if(obj == jbtn_whisper){
-			//±Ó¼Ó¸» ÇÒ ´ëÈ­ »ó´ë ¼±ÅÃÇÏ±â
+			//ê·“ì†ë§ í•  ëŒ€í™” ìƒëŒ€ ì„ íƒí•˜ê¸°
 			int row = jtb_name.getSelectedRow();
 			
 			if(row == -1){
-				JOptionPane.showMessageDialog(this, "±Ó¼Ó¸» »ó´ë¸¦ ¼±ÅÃÇÏ¼¼¿ä","INFO",JOptionPane.INFORMATION_MESSAGE);
-				return;		//actionPerformed¸Ş¼Òµå ºüÁ®³ª°¨
+				JOptionPane.showMessageDialog(this, "ê·“ì†ë§ ìƒëŒ€ë¥¼ ì„ íƒí•˜ì„¸ìš”","INFO",JOptionPane.INFORMATION_MESSAGE);
+				return;		//actionPerformedë©”ì†Œë“œ ë¹ ì ¸ë‚˜ê°
 				
 			}
 		
@@ -192,12 +192,12 @@ public class ChattingClient extends JFrame implements ActionListener {
 			String name = (String)dtm.getValueAt(row, 0);
 			if(nickName.equals(name)){
 				
-				JOptionPane.showMessageDialog(this, "´Ù¸¥»ó´ë¸¦ ¼±ÅÃÇÏ¼¼¿ä","INFO",JOptionPane.INFORMATION_MESSAGE);
-				//actionPerformed ¸Ş¼Òµå ºüÁ®³ª°¨
+				JOptionPane.showMessageDialog(this, "ë‹¤ë¥¸ìƒëŒ€ë¥¼ ì„ íƒí•˜ì„¸ìš”","INFO",JOptionPane.INFORMATION_MESSAGE);
+				//actionPerformed ë©”ì†Œë“œ ë¹ ì ¸ë‚˜ê°
 				return;
 			}
 			
-			String msg1 = JOptionPane.showInputDialog(name+"´Ô¿¡°Ô º¸³½ ¸Ş¼¼Áö ÀÔ·Â");
+			String msg1 = JOptionPane.showInputDialog(name+"ë‹˜ì—ê²Œ ë³´ë‚¸ ë©”ì„¸ì§€ ì…ë ¥");
 			try{
 				
 				oos.writeObject(Protocol.WHISPER+"#"+nickName+"#"+name+"#"+msg1);
@@ -205,9 +205,9 @@ public class ChattingClient extends JFrame implements ActionListener {
 				e2.printStackTrace();
 			}
 		}
-	}	//±Ó¼Ó¸» ´ëÈ­ ³¡ 
+	}	//ê·“ì†ë§ ëŒ€í™” ë 
 		
-		//³ª°¡±â ¹öÆ°
+		//ë‚˜ê°€ê¸° ë²„íŠ¼
 		else if(obj==jbtn_exit){
 			this.exitChat();
 			System.exit(0);

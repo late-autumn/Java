@@ -4,16 +4,16 @@ import java.io.*;
 public class UnicastServerThread extends Thread{
 
 	/*
-	 * °¢°¢ÀÇ Å¬¶óÀÌ¾ğÆ®¿Í ¿¬°áµÈ Socket °´Ã¼¸¦ °¡Áö°í ÀÖÀ¸¸ç,
-	 * Å¬¶óÀÌ¾ğÆ®¿Í Á¢¼ÓÀ» À¯ÁöÇÏ°í Åë½ÅÀ» ´ã´çÇÑ´Ù. 
+	 * ê°ê°ì˜ í´ë¼ì´ì–¸íŠ¸ì™€ ì—°ê²°ëœ Socket ê°ì²´ë¥¼ ê°€ì§€ê³  ìˆìœ¼ë©°,
+	 * í´ë¼ì´ì–¸íŠ¸ì™€ ì ‘ì†ì„ ìœ ì§€í•˜ê³  í†µì‹ ì„ ë‹´ë‹¹í•œë‹¤. 
 	 * 
 	 */
-		//¼­¹ö·ÎºÎÅÍ Àü´ŞµÈ Socket(Å¬¶óÀÌ¾ğÆ®¿Í ¿¬°áµÈ) À» ÀúÀåÇÑ´Ù. 
+		//ì„œë²„ë¡œë¶€í„° ì „ë‹¬ëœ Socket(í´ë¼ì´ì–¸íŠ¸ì™€ ì—°ê²°ëœ) ì„ ì €ì¥í•œë‹¤. 
 		Socket socket = null;
 		BufferedReader br =null;
 		BufferedWriter bw = null;
 		
-		//°´Ã¼ »ı¼º½Ã SocketÀ» Àü´Ş ¹Ş¾Æ¼­ ¸â¹ö º¯¼ö¿¡ ÀúÀåÇÏ´Â »ı¼ºÀÚ
+		//ê°ì²´ ìƒì„±ì‹œ Socketì„ ì „ë‹¬ ë°›ì•„ì„œ ë©¤ë²„ ë³€ìˆ˜ì— ì €ì¥í•˜ëŠ” ìƒì„±ì
 		
 	public UnicastServerThread(Socket socket) {
 		// TODO Auto-generated constructor stub
@@ -24,32 +24,32 @@ public class UnicastServerThread extends Thread{
 	@Override
 	public void run() {
 		// TODO Auto-generated method stub
-		//½ºÆ®¸² ¿¬°á
+		//ìŠ¤íŠ¸ë¦¼ ì—°ê²°
 		
 		try{
 			
 			br = new BufferedReader(new InputStreamReader(socket.getInputStream()));
 			bw = new BufferedWriter(new OutputStreamWriter(socket.getOutputStream()));
 			
-			//Å¬¶óÀÌ¾ğÆ®¿Í ¼Û¼ö½Å ÇÑ´Ù. 
+			//í´ë¼ì´ì–¸íŠ¸ì™€ ì†¡ìˆ˜ì‹  í•œë‹¤. 
 			while(true){
-				//Å¬¶óÀÌ¾ğÆ®°¡ Àü´ŞÇÑ ¸Ş¼¼Áö ¼ö½Å
+				//í´ë¼ì´ì–¸íŠ¸ê°€ ì „ë‹¬í•œ ë©”ì„¸ì§€ ìˆ˜ì‹ 
 				String msg = br.readLine();
 				System.out.println(msg);
 				
-				//Å¬¶óÀÌ¾ğÆ®¿¡°Ô ¸Ş¼¼Áö ÀçÀü¼Û
+				//í´ë¼ì´ì–¸íŠ¸ì—ê²Œ ë©”ì„¸ì§€ ì¬ì „ì†¡
 				
 				bw.write(msg+"\n");
-				//¸Ş¼¼Áö¸¦ Àü¼ÛÇÏ°í ¹öÆÛ¸¦ ºñ¿ò
+				//ë©”ì„¸ì§€ë¥¼ ì „ì†¡í•˜ê³  ë²„í¼ë¥¼ ë¹„ì›€
 				bw.flush();
 			}
 		}catch(IOException io){
-			//Å¬¶óÀÌ¾ğÆ®¿Í ¿¬°áÀÌ ²÷¾îÁø °æ¿ì ¹ß»ı
+			//í´ë¼ì´ì–¸íŠ¸ì™€ ì—°ê²°ì´ ëŠì–´ì§„ ê²½ìš° ë°œìƒ
 			
 			InetAddress ip = socket.getInetAddress();
 			String address = ip.getHostAddress();
 			
-			System.out.println("["+address+"]"+ "¿ÍÀÇ ¿¬°áÀÌ ²÷¾îÁ³½À´Ï´Ù. ");
+			System.out.println("["+address+"]"+ "ì™€ì˜ ì—°ê²°ì´ ëŠì–´ì¡ŒìŠµë‹ˆë‹¤. ");
 		}
 	}
 
